@@ -1,0 +1,44 @@
+---
+hide:
+ - toc
+---
+<details>
+  <summary>Click to expand image</summary>
+  <img src="/images/signal.jpg" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+<details>
+
+``` title="LocalDataSourceService.ts"
+ in this service class create your signal y to create in service file only means if u create in 
+ service then only one object will be created 
+	
+step:1 export class LocalDataSourceService {
+		currentMedSignal=signal<any>(null); //creating signal
+		 currentMedData(data: any) {
+			this.currentMedSignal.set(data);
+			}	
+			}
+Step:2  a component lo data manaki kavlao a comp.ts file ki velli  construcotr lo rayali ex:
+
+        constructro(private localDataService:LocalDataSourceService){}
+		currentMedications:any;
+		
+	    getCurrentMedicationData() {
+	     this.linkedMedications.getCurrentMedications(this.patientId).subscribe(res => {
+         this.currentMedications = res.body;
+         this.localdataService.currentMedData(this.currentMedications);//so here manki res.body lo 
+	     						vachina data ni signal lo petam 
+	    }
+	   }
+Step:3  now mana data anedi signal lo petesam ippude danni use cheskovali ante manaki a component lo kavalo ha component.ts file 
+        lo 1st contructor lo ha service ni import cheskoni dani tarvta use cheeskovali
+		  
+		  constructro(private localDataService:LocalDataSourceService){
+			effect(() => {
+			let transmitData=this.localdataService.currentMedSignal()
+				console.log(transmitData,'data using signal'); //here u will get data that ur can use 
+				were u want in this compont
+            }) 
+          }	  
+
+```

@@ -1,0 +1,68 @@
+site_name: Rajesh Angular Document 
+# https://<your-username>.github.io/<repo-name>/files/angular-ag-grid.docx
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.instant.preview
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - content.code.copy
+    
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences
+  - pymdownx.details   
+  - admonition
+  - pymdownx.highlight:
+      anchor_linenums: true
+nav:
+ - Home: index.md
+ - Angular:
+   - Encapsulation : angular/viewEncapsulation.md
+   - Binding: angular/binding.md
+   - Input: angular/input.md
+   - OutPut: angular/output.md
+   - ViewChild: angular/viewchild.md
+   - CustomPipe: angular/custompipe.md
+   - FormArray: angular/formarray.md  
+   - ReactiveForms: angular/reactiveForm.md  
+   - TemplateDrivenForms: angular/templateDrivenform.md  
+   - CustomValidator : angular/customValidator.md
+   - ComponentStructure : angular/componentStructure.md
+   - Services : angular/services.md
+   - Signal: angular/signal.md
+   - BehaviourSubject : angular/behaviour.md
+   - ForkJoin : angular/forkJoin.md
+   - LocalStorage: angular/localStorage.md
+   - LifeCycleHooks : angular/lifeCycleHooks.md
+   - NGRX: angular/ngrx.md
+   - Routes : angular/routes.md
+   - MatDialog: angular/matdilog.md
+   - SwalFire: angular/swal.md
+   - ClickEvent: angular/clickEvent.md
+   - GitHub: angular/github.md
+   - ShortCutKeys: angular/shortcutkeys.md
+  
+ - AG- GRID:
+   - AG-Grid: Ag-grid/ag-grid.md  
+   - CellRender: Ag-grid/cellrender.md
+ - Methods:
+   - ArrayMethods: Methods/arrayMethods.md
+   - StringMethods: Methods/stringMethods.md
+   - ObjectMethods: Methods/objectMethods.md
+ - DropDowns:
+   - matSelect: dropDowns/matSelect.md  
+   - ngSelect: dropDowns/ngselect.md  
+   - matAutoSelect: dropDowns/matAutoSelect.md  
+ - Material:
+   - MatSelect: material/matSelect.md   
+   - MatFormField: material/matFormField.md   
+ - ONLY IMAGES:
+   - images: Only-images/onlyimages.md    
+ - PDF Files:
+   - Files: files/file.md    
