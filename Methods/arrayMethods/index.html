@@ -1,0 +1,3650 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../Ag-grid/cellrender/">
+      
+      
+        <link rel="next" href="../stringMethods/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>ArrayMethods - Rajesh Angular Document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#for-more-array-methods-follow-this-link" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rajesh Angular Document" class="md-header__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rajesh Angular Document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              ArrayMethods
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../angular/viewEncapsulation/" class="md-tabs__link">
+          
+  
+  
+  Angular
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Ag-grid/ag-grid/" class="md-tabs__link">
+          
+  
+  
+  AG- GRID
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Methods
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dropDowns/matSelect/" class="md-tabs__link">
+          
+  
+  
+  DropDowns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../material/matSelect/" class="md-tabs__link">
+          
+  
+  
+  Material
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Only-images/onlyimages/" class="md-tabs__link">
+          
+  
+  
+  ONLY IMAGES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../files/file/" class="md-tabs__link">
+          
+  
+  
+  PDF Files
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rajesh Angular Document" class="md-nav__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Rajesh Angular Document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Angular
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Angular
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewEncapsulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encapsulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/binding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OutPut
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewchild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ViewChild
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/custompipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomPipe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/formarray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FormArray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/reactiveForm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReactiveForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/templateDrivenform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TemplateDrivenForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/customValidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomValidator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/componentStructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ComponentStructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/behaviour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BehaviourSubject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/forkJoin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ForkJoin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/localStorage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LocalStorage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/lifeCycleHooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LifeCycleHooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/ngrx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NGRX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/matdilog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatDialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/swal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SwalFire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/clickEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ClickEvent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/shortcutkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ShortCutKeys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AG- GRID
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AG- GRID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/ag-grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AG-Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/cellrender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CellRender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Methods
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Methods
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ArrayMethods
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    ArrayMethods
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#for-more-array-methods-follow-this-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      For more array methods follow this link
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      URLS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1javascript-array-concat" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.JavaScript Array concat()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-concat-method-returns-a-new-array-by-merging-two-or-more-valuesarrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      The concat() method returns a new array by merging two or more values/arrays.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-code-concat-syntax-the-syntax-of-the-concat-method-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Code concat() Syntax The syntax of the concat() method is:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concatenating-a-value-and-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      concatenating a value and array
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2javascript-array-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Javascript Array filter()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-filter-method-returns-a-new-array-with-all-elements-that-pass-the-test-defined-by-the-given-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      The filter() method returns a new array with all elements that pass the test defined by the given function.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3find-method-returns-the-value-of-the-first-array-element-that-satisfies-the-provided-test-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.find() : method returns the value of the first array element that satisfies the provided test function.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrow-function-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrow function syntax: ()=&gt;{}
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-returns-the-complete-object-with-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      find returns the complete object with elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4array-findindex-the-findindex-method-returns-the-index-of-the-first-array-element-that-satisfies-the-provided-test-function-or-else-returns-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Array findIndex(): The findIndex() method returns the index of the first array element that satisfies the provided test function or else returns -1.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example:2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrow-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrow function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5javascript-array-foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.Javascript Array forEach()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrow-function_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrow function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6javascript-arrayfrom-the-from-method-creates-a-new-array-from-any-array-like-or-iterable-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.Javascript Array.from(): The from() method creates a new array from any array-like or iterable object.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7javascript-array-includes-the-includes-method-checks-if-an-array-contains-a-specified-element-or-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.JavaScript Array includes(): The includes() method checks if an array contains a specified element or not.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.JavaScript Array includes(): The includes() method checks if an array contains a specified element or not.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8javascript-array-indexof-the-indexof-method-returns-the-first-index-of-occurance-of-an-array-element-or-1-if-it-is-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.JavaScript Array indexOf(): The indexOf() method returns the first index of occurance of an array element, or -1 if it is not found.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9javascript-array-lastindexof-the-lastindexof-method-returns-the-index-of-the-last-occurrence-of-a-specified-element-in-the-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.JavaScript Array lastIndexOf(): The lastIndexOf() method returns the index of the last occurrence of a specified element in the array.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10javascript-array-map-the-map-method-creates-a-new-array-with-the-results-of-calling-a-function-for-every-array-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.JavaScript Array map(): The map() method creates a new array with the results of calling a function for every array element.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arraow-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arraow function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11javascript-array-slice-returns-array-the-slice-method-returns-a-shallow-copy-of-a-portion-of-an-array-into-a-new-array-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.JavaScript Array slice(): (returns array ) The slice() method returns a shallow copy of a portion of an array into a new array object.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12javascript-array-some-returns-boolen" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.Javascript Array some() : (returns boolen)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#every" class="md-nav__link">
+    <span class="md-ellipsis">
+      Every()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-every-check-if-all-elements-pass-a-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. .every() — Check If All Elements Pass a Test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-array-splice-the-splice-method-modifies-an-array-adds-removes-or-replaces-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      13: Array splice() : The splice() method modifies an array (adds, removes or replaces elements).
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../stringMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    StringMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objectMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ObjectMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DropDowns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            DropDowns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/matSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    matSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/ngselect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ngSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/matAutoSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    matAutoSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Material
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Material
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matFormField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatFormField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ONLY IMAGES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            ONLY IMAGES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Only-images/onlyimages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PDF Files
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            PDF Files
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#for-more-array-methods-follow-this-link" class="md-nav__link">
+    <span class="md-ellipsis">
+      For more array methods follow this link
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      URLS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1javascript-array-concat" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.JavaScript Array concat()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-concat-method-returns-a-new-array-by-merging-two-or-more-valuesarrays" class="md-nav__link">
+    <span class="md-ellipsis">
+      The concat() method returns a new array by merging two or more values/arrays.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-code-concat-syntax-the-syntax-of-the-concat-method-is" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run Code concat() Syntax The syntax of the concat() method is:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concatenating-a-value-and-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      concatenating a value and array
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2javascript-array-filter" class="md-nav__link">
+    <span class="md-ellipsis">
+      2.Javascript Array filter()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-filter-method-returns-a-new-array-with-all-elements-that-pass-the-test-defined-by-the-given-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      The filter() method returns a new array with all elements that pass the test defined by the given function.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3find-method-returns-the-value-of-the-first-array-element-that-satisfies-the-provided-test-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.find() : method returns the value of the first array element that satisfies the provided test function.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrow-function-syntax" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrow function syntax: ()=&gt;{}
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#find-returns-the-complete-object-with-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      find returns the complete object with elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4array-findindex-the-findindex-method-returns-the-index-of-the-first-array-element-that-satisfies-the-provided-test-function-or-else-returns-1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.Array findIndex(): The findIndex() method returns the index of the first array element that satisfies the provided test function or else returns -1.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example:2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrow-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arrow function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5javascript-array-foreach" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.Javascript Array forEach()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arrow-function_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      arrow function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6javascript-arrayfrom-the-from-method-creates-a-new-array-from-any-array-like-or-iterable-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.Javascript Array.from(): The from() method creates a new array from any array-like or iterable object.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7javascript-array-includes-the-includes-method-checks-if-an-array-contains-a-specified-element-or-not" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.JavaScript Array includes(): The includes() method checks if an array contains a specified element or not.
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.JavaScript Array includes(): The includes() method checks if an array contains a specified element or not.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#8javascript-array-indexof-the-indexof-method-returns-the-first-index-of-occurance-of-an-array-element-or-1-if-it-is-not-found" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.JavaScript Array indexOf(): The indexOf() method returns the first index of occurance of an array element, or -1 if it is not found.
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9javascript-array-lastindexof-the-lastindexof-method-returns-the-index-of-the-last-occurrence-of-a-specified-element-in-the-array" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.JavaScript Array lastIndexOf(): The lastIndexOf() method returns the index of the last occurrence of a specified element in the array.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10javascript-array-map-the-map-method-creates-a-new-array-with-the-results-of-calling-a-function-for-every-array-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.JavaScript Array map(): The map() method creates a new array with the results of calling a function for every array element.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arraow-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      Arraow function
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11javascript-array-slice-returns-array-the-slice-method-returns-a-shallow-copy-of-a-portion-of-an-array-into-a-new-array-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      11.JavaScript Array slice(): (returns array ) The slice() method returns a shallow copy of a portion of an array into a new array object.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12javascript-array-some-returns-boolen" class="md-nav__link">
+    <span class="md-ellipsis">
+      12.Javascript Array some() : (returns boolen)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#every" class="md-nav__link">
+    <span class="md-ellipsis">
+      Every()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-every-check-if-all-elements-pass-a-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. .every() — Check If All Elements Pass a Test
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-array-splice-the-splice-method-modifies-an-array-adds-removes-or-replaces-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      13: Array splice() : The splice() method modifies an array (adds, removes or replaces elements).
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>ArrayMethods</h1>
+
+<h3 id="for-more-array-methods-follow-this-link">For more array methods follow this link</h3>
+<p><a href="https://www.programiz.com/java-programming/library/arraylist">
+  1. Click here to open 1st URL
+</a> <br>
+<a href="https://www.programiz.com/javascript/library/array">
+   2. Click here to open 2nd URL 
+</a></p>
+<h3 id="urls">URLS</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>https://www.programiz.com/java-programming/library/arraylist
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>https://www.programiz.com/javascript/library/array
+</code></pre></div>
+<details>
+  <summary>Test</summary>
+  <img src="/images/method1.png" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+<details>
+  <summary>forEach & map 1</summary>
+  <img src="/images/method2.png" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+<details>
+  <summary>forEach & map 2</summary>
+  <img src="/images/method4.png" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+
+<details>
+  <summary>map & filter</summary>
+  <img src="/images/method3.png" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+
+<details>
+  <summary>some 1</summary>
+  <img src="/images/method5.png" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+<details>
+  <summary>some 2</summary>
+  <img src="/images/method6.png" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+
+<details>
+  <summary>Every</summary>
+  <img src="/images/method7.png" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>1.concat() -&gt; (returns new array ())
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2.Javascript Array filter() -&gt; returns a new array with all elements
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>3.Find() -&gt; The find() method returns the value of the first array 
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>4.FindIndex() -&gt; findIndex() method returns the index of the first array element
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>5.Array forEach()
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>6.Array.from() -&gt;The from() method creates a new array from any 
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>                  array-like or iterable object
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>7.Array includes() -&gt; The includes() method checks if an array
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>                      contains a specified element or not.
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>8.Array indexOf() :
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  -&gt; The indexOf() method returns the first index of occurance 
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>     of an array element, or -1 if it is not found.
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>9. Array lastIndexOf() :
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  -&gt; The lastIndexOf() method returns the index of the last occurrence 
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>      of a specified element in the array.
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>10. Array map() :
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  -&gt; The map() method creates a new array with the results of calling a
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>     function for every array element. 
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>11. Array slice() :
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>   -&gt;(returns array)The slice() method returns a shallow copy of a
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>     portion of an array into a new arrayObject.
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>12. some() : Return Boolean value  
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>13. Array splice() : The splice() method modifies an array 
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    (adds, removes or replaces elements). 
+</code></pre></div>
+<h3 id="1javascript-array-concat">1.JavaScript Array concat()</h3>
+<h3 id="the-concat-method-returns-a-new-array-by-merging-two-or-more-valuesarrays">The concat() method returns a new array by merging two or more values/arrays.</h3>
+<details class="info" open="open">
+<summary>🔗 concat() — What It Does (Open by default)</summary>
+<ul>
+<li>The <code>concat()</code> method is used to <strong>merge arrays or add values</strong> to a new array.</li>
+<li>It <strong>does not change</strong> the existing arrays.</li>
+<li>Returns a <strong>new array</strong> with the combined values.</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nx">arr</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">value1</span><span class="p">,</span><span class="w"> </span><span class="nx">value2</span><span class="p">,</span><span class="w"> </span><span class="p">...,</span><span class="w"> </span><span class="nx">valueN</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>💡 Tip: Add Arrays or Values Easily</summary>
+<p>You can use <code>concat()</code> to combine:
+- Two or more arrays.
+- Arrays with individual values.
+- Even mixed types (strings, numbers, etc.).</p>
+</details>
+<details class="example">
+<summary>💻 Example 1: Join Two Arrays</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">primeNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">];</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">evenNumbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">];</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="c1">// Join two arrays </span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">let</span><span class="w"> </span><span class="nx">joinedArrays</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">primeNumbers</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="nx">evenNumbers</span><span class="p">);</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">joinedArrays</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">[</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="w"> </span><span class="p">]</span>
+</code></pre></div></p>
+</details>
+<details class="example">
+<summary>💻 Example 2: Concatenating a Value and an Array</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">languages1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Java&quot;</span><span class="p">];</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">languages2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;C++&quot;</span><span class="p">];</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="kd">var</span><span class="w"> </span><span class="nx">new_arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">languages2</span><span class="p">.</span><span class="nx">concat</span><span class="p">(</span><span class="s2">&quot;Lua&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">languages1</span><span class="p">);</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">new_arr1</span><span class="p">);</span>
+</code></pre></div>
+<p><strong>Output:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">[</span><span class="w"> </span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;C++&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Lua&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;JavaScript&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Python&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Java&#39;</span><span class="w"> </span><span class="p">]</span>
+</code></pre></div></p>
+</details>
+<details class="danger">
+<summary>⚠️ Remember</summary>
+<ul>
+<li><code>concat()</code> does <strong>not mutate</strong> the original arrays.</li>
+<li>The returned result must be stored in a <strong>new variable</strong> (or reassigned) to use it.</li>
+</ul>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>concat()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns new array?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Return required?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>✅ Merging arrays or adding values</td>
+</tr>
+<tr>
+<td>Good for logging?</td>
+<td>❌ Not directly</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>let primeNumbers = [2, 3, 5, 7]
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>let evenNumbers = [2, 4, 6, 8]
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>// Join two arrays 
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>let joinedArrays = primeNumbers.concat(evenNumbers);
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>console.log(joinedArrays);
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>Output:
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>[
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  2, 3, 5, 7,
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>  2, 4, 6, 8 
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>]
+</code></pre></div>
+<h3 id="run-code-concat-syntax-the-syntax-of-the-concat-method-is">Run Code concat() Syntax The syntax of the concat() method is:</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>arr.concat(value1, value2, ..., valueN)
+</code></pre></div>
+<h3 id="concatenating-a-value-and-array">concatenating a value and array</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>var new_arr1 = languages2.concat(&quot;Lua&quot;, languages1);
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>console.log(new_arr1); // [ &#39;C&#39;, &#39;C++&#39;, &#39;Lua&#39;, &#39;JavaScript&#39;, &#39;Python&#39;, &#39;Java&#39; ]
+</code></pre></div>
+<h3 id="2javascript-array-filter">2.Javascript Array filter()</h3>
+<h3 id="the-filter-method-returns-a-new-array-with-all-elements-that-pass-the-test-defined-by-the-given-function">The filter() method returns a new array with all elements that pass the test defined by the given function.</h3>
+<details class="info" open="open">
+<summary>🔍 filter() — What It Does (Open by default)</summary>
+<ul>
+<li><code>filter()</code> creates a <strong>new array</strong> with elements that <strong>pass a condition</strong>.</li>
+<li>It <strong>does not change</strong> the original array.</li>
+<li>Useful for narrowing down lists based on some criteria.</li>
+</ul>
+<p><strong>Basic Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">newArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">originalArray</span><span class="p">.</span><span class="nx">filter</span><span class="p">((</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">condition</span><span class="p">;</span><span class="w"> </span><span class="c1">// true to keep, false to exclude</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">});</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>💡 Tip: Use with Nested Structures</summary>
+<p><code>filter()</code> works great when combined with <code>map()</code> to selectively modify parts of a nested array structure.</p>
+<ul>
+<li>You can use it to <strong>filter items inside an object</strong> like <code>resultsData</code> inside <code>data</code>.</li>
+</ul>
+</details>
+<details class="example">
+<summary>💻 Code Example: Filter Inside a Map</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nx">category</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Chemistry&quot;</span><span class="p">,</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="nx">isPanel</span><span class="o">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="nx">resultsData</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">patientResultItemsId</span><span class="o">:</span><span class="w"> </span><span class="mf">61</span><span class="p">,</span><span class="w"> </span><span class="nx">patientResultId</span><span class="o">:</span><span class="w"> </span><span class="mf">53</span><span class="p">,</span><span class="w"> </span><span class="nx">testDesc</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Body Fluid LDH&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">patientResultItemsId</span><span class="o">:</span><span class="w"> </span><span class="mf">62</span><span class="p">,</span><span class="w"> </span><span class="nx">patientResultId</span><span class="o">:</span><span class="w"> </span><span class="mf">54</span><span class="p">,</span><span class="w"> </span><span class="nx">testDesc</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Body Fluid LDH&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">      </span><span class="p">{</span><span class="w"> </span><span class="nx">patientResultItemsId</span><span class="o">:</span><span class="w"> </span><span class="mf">65</span><span class="p">,</span><span class="w"> </span><span class="nx">patientResultId</span><span class="o">:</span><span class="w"> </span><span class="mf">55</span><span class="p">,</span><span class="w"> </span><span class="nx">testDesc</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Abs Eos Manual&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">    </span><span class="p">]</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="p">];</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="c1">// Filter only those items with testDesc = &quot;Body Fluid LDH&quot;</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="kd">const</span><span class="w"> </span><span class="nx">filteredResults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">section</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">    </span><span class="p">...</span><span class="nx">section</span><span class="p">,</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">    </span><span class="nx">resultsData</span><span class="o">:</span><span class="w"> </span><span class="nx">section</span><span class="p">.</span><span class="nx">resultsData</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">testDesc</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;Body Fluid LDH&quot;</span><span class="p">)</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">  </span><span class="p">};</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="p">});</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">filteredResults</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;filterdata&#39;</span><span class="p">);</span>
+</code></pre></div>
+</details>
+<details class="danger">
+<summary>⚠️ Avoid Mutating the Original Array</summary>
+<p><code>filter()</code> returns a <strong>new array</strong>, but if you assign it back to the same variable or mutate the reference manually, you may lose the original data unintentionally.</p>
+<p>Always <strong>return a new object</strong> or array when modifying nested structures (as shown in the <code>map</code> + <code>filter</code> combo above).</p>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>filter()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns new array?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Return required?</td>
+<td>✅ Yes (true/false condition)</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>✅ Filtering elements</td>
+</tr>
+<tr>
+<td>Good for logging?</td>
+<td>❌ Use forEach</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>// function to check even numbers
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>function checkEven(number) {
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>  if (number % 2 == 0)
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>    return true;
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>  else
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>    return false;
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>}
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>// create a new array by filter even numbers from the numbers array
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>let evenNumbers = numbers.filter(checkEven);
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>console.log(evenNumbers);
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>// Output: [ 2, 4, 6, 8, 10 ]
+</code></pre></div>
+<h3 id="3find-method-returns-the-value-of-the-first-array-element-that-satisfies-the-provided-test-function">3.find() :  method returns the value of the first array element that satisfies the provided test function.</h3>
+<details class="info" open="open">
+<summary>🔍 find() — What It Does (Open by default)</summary>
+<ul>
+<li><code>find()</code> returns the <strong>first</strong> element in the array that satisfies the provided testing function.</li>
+<li>It stops as soon as it finds the <strong>first match</strong>.</li>
+<li>If no elements satisfy the function, it returns <code>undefined</code>.</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nx">array</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">callback</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">))</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>💡 When to Use find()</summary>
+<ul>
+<li>When you want <strong>only the first match</strong>, not all matches (use <code>filter()</code> for that).</li>
+<li>When working with objects and you need to get the <strong>whole object</strong>.</li>
+</ul>
+</details>
+<details class="example">
+<summary>💻 Example 1: Basic Even Number Check</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">];</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kd">function</span><span class="w"> </span><span class="nx">isEven</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">}</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="kd">let</span><span class="w"> </span><span class="nx">evenNumber</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">isEven</span><span class="p">);</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">evenNumber</span><span class="p">);</span><span class="w"> </span><span class="c1">// 4</span>
+</code></pre></div>
+<p>✅ It returned the <strong>first</strong> even number (<code>4</code>), not <code>8</code>.</p>
+</details>
+<details class="example">
+<summary>💻 Example 2: Using Arrow Function</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">randomArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">98</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">];</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="kd">let</span><span class="w"> </span><span class="nx">firstEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">randomArray</span><span class="p">.</span><span class="nx">find</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstEven</span><span class="p">);</span><span class="w"> </span><span class="c1">// 8</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="kd">let</span><span class="w"> </span><span class="nx">firstOdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">randomArray</span><span class="p">.</span><span class="nx">find</span><span class="p">((</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstOdd</span><span class="p">);</span><span class="w"> </span><span class="c1">// 1</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example 3: Finding an Object with Condition</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">team</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bill&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">10</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Linus&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">15</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alan&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">20</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Steve&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">age</span><span class="o">:</span><span class="w"> </span><span class="mf">34</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="p">];</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="kd">function</span><span class="w"> </span><span class="nx">isAdult</span><span class="p">(</span><span class="nx">member</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">member</span><span class="p">.</span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">;</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="p">}</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">team</span><span class="p">.</span><span class="nx">find</span><span class="p">(</span><span class="nx">isAdult</span><span class="p">));</span><span class="w"> </span><span class="c1">// { name: &#39;Alan&#39;, age: 20 }</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="c1">// Arrow function with destructuring</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="kd">let</span><span class="w"> </span><span class="nx">adultMember</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">team</span><span class="p">.</span><span class="nx">find</span><span class="p">(({</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="p">})</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">age</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mf">18</span><span class="p">);</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">adultMember</span><span class="p">);</span><span class="w"> </span><span class="c1">// { name: &#39;Alan&#39;, age: 20 }</span>
+</code></pre></div>
+</details>
+<details class="danger">
+<summary>⚠️ Common Mistake</summary>
+<ul>
+<li>Thinking <code>find()</code> returns <strong>all matches</strong> – it <strong>only returns the first</strong>.</li>
+<li>If you need multiple matches, use <code>filter()</code> instead.</li>
+</ul>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>find()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns new array?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Return required?</td>
+<td>✅ Returns a single item</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>✅ Get the <strong>first match</strong></td>
+</tr>
+<tr>
+<td>Good for logging?</td>
+<td>✅ Yes</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>let numbers = [1, 3, 4, 9, 8];
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>  // function to check even number
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    function isEven(element) {
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>       return element % 2 == 0;
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>     }
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>   // get the first even number
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>    let evenNumber = numbers.find(isEven); //find () 
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    console.log(evenNumber);
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>    Output: 4 // see here it returned only 1st satisfied value
+</code></pre></div>
+<h3 id="arrow-function-syntax">Arrow function syntax: ()=&gt;{}</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>function isEven(element) {
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>  return element % 2 == 0;
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>}
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>let randomArray = [1, 45, 8, 98, 7];
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>let firstEven = randomArray.find(isEven);
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>console.log(firstEven); // 8
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>// using arrow operator
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>let firstOdd = randomArray.find((element) =&gt; element % 2 == 1); //arrowFunction
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>console.log(firstOdd); // 1
+</code></pre></div>
+<h3 id="find-returns-the-complete-object-with-elements">find returns the complete object with elements</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>const team = [
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>  { name: &quot;Bill&quot;, age: 10 },
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>  { name: &quot;Linus&quot;, age: 15 },
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>  { name: &quot;Alan&quot;, age: 20 },
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a>  { name: &quot;Steve&quot;, age: 34 },
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>];
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>function isAdult(member) {
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>  return member.age &gt;= 18;
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a>}
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>console.log(team.find(isAdult)); // { name: &#39;Alan&#39;, age: 20 }
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a>// using arrow function and deconstructing
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a>let adultMember = team.find(({ age }) =&gt; age &gt;= 18);
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a>console.log(adultMember); // { name: &#39;Alan&#39;, age: 20 }
+</code></pre></div>
+<h3 id="4array-findindex-the-findindex-method-returns-the-index-of-the-first-array-element-that-satisfies-the-provided-test-function-or-else-returns-1">4.Array findIndex(): The findIndex() method returns the index of the first array element that satisfies the provided test function or else returns -1.</h3>
+<details class="info" open="open">
+<summary>🔍 findIndex() — What It Does (Open by Default)</summary>
+<ul>
+<li>Returns the <strong>index</strong> of the <strong>first element</strong> that satisfies a provided condition.</li>
+<li>If <strong>no match</strong>, returns <code>-1</code>.</li>
+<li>Does <strong>not</strong> mutate the original array.</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nx">array</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">callbackFn</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">,</span><span class="w"> </span><span class="nx">array</span><span class="p">),</span><span class="w"> </span><span class="nx">thisArg</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>callbackFn</code>: Function to execute on each element.</li>
+<li><code>thisArg</code>: Optional context (<code>this</code>) to use in callback.</li>
+</ul>
+</details>
+<details class="example">
+<summary>💻 Example 1: Find First Odd Number</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">isOdd</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="p">}</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="kd">let</span><span class="w"> </span><span class="nx">firstOdd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">isOdd</span><span class="p">);</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstOdd</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: 2</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example 2: Find First Even Number</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">function</span><span class="w"> </span><span class="nx">isEven</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="p">}</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">45</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">,</span><span class="w"> </span><span class="mf">98</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">];</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="kd">let</span><span class="w"> </span><span class="nx">firstEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">(</span><span class="nx">isEven</span><span class="p">);</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">firstEven</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: 2</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example 3: Using Arrow Function</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">days</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Sunday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Wednesday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Tuesday&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Friday&quot;</span><span class="p">];</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="kd">let</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">days</span><span class="p">.</span><span class="nx">findIndex</span><span class="p">((</span><span class="nx">day</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">day</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;Wednesday&quot;</span><span class="p">);</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: 1</span>
+</code></pre></div>
+</details>
+<details class="tip">
+<summary>💡 Use Case</summary>
+<p>Use <code>findIndex()</code> when you need the <strong>position</strong> of the first item that matches a condition.<br />
+If you need the <strong>value</strong>, use <code>find()</code> instead.</p>
+</details>
+<details class="danger">
+<summary>⚠️ Gotchas</summary>
+<ul>
+<li>Returns <code>-1</code> if no element passes the test — <strong>not undefined!</strong></li>
+<li>Stops at the <strong>first match</strong>, even if more elements qualify.</li>
+</ul>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>findIndex()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns value?</td>
+<td>❌ No (returns index)</td>
+</tr>
+<tr>
+<td>Returns -1 if no match?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>✅ Find index by condition</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>// function that returns odd number
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>function isOdd(element) {
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>  return element % 2 !== 0;
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>}
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>// defining an array of integers
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>let numbers = [2, 8, 1, 3, 4];
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>// returns the index of the first odd number in the array
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a>let firstOdd = numbers.findIndex(isOdd);
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a>console.log(firstOdd);
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a>
+<a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a>// Output: 2
+</code></pre></div>
+<h3 id="example2">Example:2</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>// function that returns even number
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>function isEven(element) {
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a>  return element % 2 == 0;
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a>}
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a>// defining an array of integers
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a>let numbers = [1, 45, 8, 98, 7];
+<a id="__codelineno-25-8" name="__codelineno-25-8" href="#__codelineno-25-8"></a>
+<a id="__codelineno-25-9" name="__codelineno-25-9" href="#__codelineno-25-9"></a>// returns the index of the first even number in the array
+<a id="__codelineno-25-10" name="__codelineno-25-10" href="#__codelineno-25-10"></a>let firstEven = numbers.findIndex(isEven);
+<a id="__codelineno-25-11" name="__codelineno-25-11" href="#__codelineno-25-11"></a>
+<a id="__codelineno-25-12" name="__codelineno-25-12" href="#__codelineno-25-12"></a>console.log(firstEven); // 2
+</code></pre></div>
+<h3 id="arrow-function">Arrow function</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>// defining an array
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>let days = [&quot;Sunday&quot;, &quot;Wednesday&quot;, &quot;Tuesday&quot;, &quot;Friday&quot;];
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>// returns the first index of &#39;Wednesday&#39; in the array
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>let index = days.findIndex((day) =&gt; day === &quot;Wednesday&quot;);
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>console.log(index); // 1
+</code></pre></div>
+<h3 id="5javascript-array-foreach">5.Javascript Array forEach()</h3>
+<details class="info" open="open">
+<summary>🔁 forEach() — What It Does (Open by default)</summary>
+<ul>
+<li>Executes a <strong>callback function</strong> once for <strong>each array element</strong></li>
+<li>Does <strong>not</strong> return a new array</li>
+<li>Does <strong>not</strong> modify the original array, unless <strong>explicitly</strong> done inside the callback</li>
+</ul>
+<p><strong>Basic Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nx">array</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="w">  </span><span class="c1">// Do something with element</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="p">});</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>💡 Tip: Use When You Need to Loop</summary>
+<p><code>forEach()</code> is ideal when:</p>
+<ul>
+<li>You need to <strong>iterate</strong> over elements</li>
+<li>You want to <strong>log, modify</strong>, or perform side effects</li>
+<li>You <strong>don’t</strong> need a returned value</li>
+</ul>
+</details>
+<details class="danger">
+<summary>⚠️ Common Mistake: Expecting a Return Value</summary>
+<p>Many developers expect <code>forEach()</code> to return a new array — <strong>but it returns <code>undefined</code></strong>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nums</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// undefined ❗</span>
+</code></pre></div>
+<p>❗ <strong>Use <code>.map()</code> if you want to return a transformed array:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">doubled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nums</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">doubled</span><span class="p">);</span><span class="w"> </span><span class="c1">// [2, 4, 6]</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Code Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;cherry&quot;</span><span class="p">];</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
+<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="nx">fruits</span><span class="p">.</span><span class="nx">forEach</span><span class="p">((</span><span class="nx">fruit</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="sb">`</span><span class="si">${</span><span class="nx">index</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="si">}</span><span class="sb">: </span><span class="si">${</span><span class="nx">fruit</span><span class="si">}</span><span class="sb">`</span><span class="p">);</span>
+<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="p">});</span>
+</code></pre></div>
+<p>✅ Output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>1: apple
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>2: banana
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>3: cherry
+</code></pre></div></p>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>let numbers = [1, 3, 4, 9, 8];
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>// function to compute square of each number
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>function computeSquare(element) {
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a>  console.log(element * element);
+<a id="__codelineno-32-6" name="__codelineno-32-6" href="#__codelineno-32-6"></a>}
+<a id="__codelineno-32-7" name="__codelineno-32-7" href="#__codelineno-32-7"></a>
+<a id="__codelineno-32-8" name="__codelineno-32-8" href="#__codelineno-32-8"></a>// compute square root of each element
+<a id="__codelineno-32-9" name="__codelineno-32-9" href="#__codelineno-32-9"></a>numbers.forEach(computeSquare);
+<a id="__codelineno-32-10" name="__codelineno-32-10" href="#__codelineno-32-10"></a>
+<a id="__codelineno-32-11" name="__codelineno-32-11" href="#__codelineno-32-11"></a>/* Output:
+<a id="__codelineno-32-12" name="__codelineno-32-12" href="#__codelineno-32-12"></a>1
+<a id="__codelineno-32-13" name="__codelineno-32-13" href="#__codelineno-32-13"></a>9 
+<a id="__codelineno-32-14" name="__codelineno-32-14" href="#__codelineno-32-14"></a>16
+<a id="__codelineno-32-15" name="__codelineno-32-15" href="#__codelineno-32-15"></a>81
+<a id="__codelineno-32-16" name="__codelineno-32-16" href="#__codelineno-32-16"></a>64
+</code></pre></div>
+<h3 id="arrow-function_1">arrow function</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>const numbers = [1, 2, 3, 4, 5];
+<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
+<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a>// Using arrow function in forEach
+<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a>numbers.forEach((num, index) =&gt; {
+<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>  console.log(`Element at index ${index} is ${num}`);
+<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a>});
+<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a>
+<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a>output 
+<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a>
+<a id="__codelineno-33-10" name="__codelineno-33-10" href="#__codelineno-33-10"></a>Element at index 0 is 1
+<a id="__codelineno-33-11" name="__codelineno-33-11" href="#__codelineno-33-11"></a>Element at index 1 is 2
+<a id="__codelineno-33-12" name="__codelineno-33-12" href="#__codelineno-33-12"></a>Element at index 2 is 3
+<a id="__codelineno-33-13" name="__codelineno-33-13" href="#__codelineno-33-13"></a>Element at index 3 is 4
+<a id="__codelineno-33-14" name="__codelineno-33-14" href="#__codelineno-33-14"></a>Element at index 4 is 5
+</code></pre></div>
+<h3 id="6javascript-arrayfrom-the-from-method-creates-a-new-array-from-any-array-like-or-iterable-object">6.Javascript Array.from(): The from() method creates a new array from any array-like or iterable object.</h3>
+<details class="info" open="open">
+<summary>🆕 Array.from() — What It Does (Open by Default)</summary>
+<ul>
+<li>Creates a <strong>new array</strong> from an <strong>array-like</strong> or <strong>iterable</strong> object.</li>
+<li>Useful for converting strings, sets, maps, or even arguments into arrays.</li>
+<li>Returns a <strong>shallow-copied</strong> new array.</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">arrayLike</span><span class="p">,</span><span class="w"> </span><span class="nx">mapFn</span><span class="p">,</span><span class="w"> </span><span class="nx">thisArg</span><span class="p">)</span>
+</code></pre></div>
+- <code>arrayLike</code>: Iterable object (like a string or NodeList)
+- <code>mapFn</code> <em>(optional)</em>: Function to call on every element
+- <code>thisArg</code> <em>(optional)</em>: Value to use as <code>this</code> in <code>mapFn</code></p>
+</details>
+<details class="example">
+<summary>💻 Example 1: Convert String to Array</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">newArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">);</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArray</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="c1">// Output: [ &#39;a&#39;, &#39;b&#39;, &#39;c&#39; ]</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example 2: With Mapping Function</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">squares</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">],</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="nx">x</span><span class="p">);</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">squares</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="c1">// Output: [1, 4, 9]</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example 3: Convert Set to Array</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="p">([</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">]);</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">set</span><span class="p">);</span>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">arr</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="c1">// Output: [ &#39;apple&#39;, &#39;banana&#39; ]</span>
+</code></pre></div>
+</details>
+<details class="tip">
+<summary>💡 Use Cases</summary>
+<ul>
+<li>Convert a string to a character array</li>
+<li>Clone or transform a Set/Map into an array</li>
+<li>Convert NodeList (from DOM) to an array</li>
+</ul>
+</details>
+<details class="danger">
+<summary>⚠️ Gotchas</summary>
+<ul>
+<li>Doesn't work on non-iterables (like objects) unless you provide a way to iterate</li>
+<li>Use <code>.split('')</code> for strings if you don't need mapping logic</li>
+</ul>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Array.from()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Creates new array?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Works on iterables?</td>
+<td>✅ Yes (e.g., strings, Sets)</td>
+</tr>
+<tr>
+<td>Can transform elements?</td>
+<td>✅ Yes (with mapFn)</td>
+</tr>
+<tr>
+<td>Modifies original input?</td>
+<td>❌ No</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>// creating a new array from string
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>let newArray = Array.from(&quot;abc&quot;);
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>console.log(newArray);
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>// Output:
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>// [ &#39;a&#39;, &#39;b&#39;, &#39;c&#39; ]
+</code></pre></div>
+<h3 id="7javascript-array-includes-the-includes-method-checks-if-an-array-contains-a-specified-element-or-not">7.JavaScript Array includes(): The includes() method checks if an array contains a specified element or not.</h3>
+<details class="info" open="open">
+<summary>🔍 includes() — What It Does (Open by default)</summary>
+<ul>
+<li>The <code>includes()</code> method checks whether an array contains a certain <strong>element</strong>.</li>
+<li>Returns <code>true</code> if found, otherwise <code>false</code>.</li>
+<li>Case-sensitive &amp; does not search partial strings.</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nx">array</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">searchElement</span><span class="p">,</span><span class="w"> </span><span class="nx">fromIndex</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>💡 When to Use includes()</summary>
+<ul>
+<li>To perform <strong>simple existence checks</strong> in an array.</li>
+<li>More readable and cleaner than using <code>indexOf(...) !== -1</code>.</li>
+</ul>
+</details>
+<details class="example">
+<summary>💻 Example: Basic Check</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="c1">// defining an array</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">languages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;C&quot;</span><span class="p">];</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="c1">// checking whether the array contains &#39;Java&#39;</span>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="kd">let</span><span class="w"> </span><span class="nx">check</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">languages</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&quot;Java&quot;</span><span class="p">);</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">check</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example: Case-Sensitivity and Index</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;cherry&quot;</span><span class="p">];</span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&quot;Banana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// false ❌ (case-sensitive)</span>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&quot;banana&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// true ✅</span>
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a><span class="c1">// using fromIndex</span>
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">fruits</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="s2">&quot;apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">));</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div>
+</details>
+<details class="danger">
+<summary>⚠️ Common Mistakes</summary>
+<ul>
+<li>❌ Using wrong case (e.g., <code>'Java'</code> vs <code>'java'</code>)</li>
+<li>❌ Expecting partial match like <code>'ava'</code> — it must be exact match.</li>
+</ul>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>includes()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns new array?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Return required?</td>
+<td>✅ Returns boolean</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>✅ Check if array has an element</td>
+</tr>
+<tr>
+<td>Case-sensitive?</td>
+<td>✅ Yes</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>// defining an array
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>let languages = [&quot;JavaScript&quot;, &quot;Java&quot;, &quot;C&quot;];
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>// checking whether the array contains &#39;Java&#39;
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>let check = languages.includes(&quot;Java&quot;);
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>console.log(check); 
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>// Output: true
+</code></pre></div>
+<h4 id="8javascript-array-indexof-the-indexof-method-returns-the-first-index-of-occurance-of-an-array-element-or-1-if-it-is-not-found">8.JavaScript Array indexOf(): The indexOf() method returns the first index of occurance of an array element, or -1 if it is not found.</h4>
+<details class="info" open="open">
+<summary>🔎 indexOf() — What It Does (Open by Default)</summary>
+<ul>
+<li>The <code>indexOf()</code> method returns the <strong>first index</strong> at which a given element can be found in the array.</li>
+<li>Returns <code>-1</code> if the element is <strong>not found</strong>.</li>
+<li>Search is case-sensitive and starts from the beginning (unless <code>fromIndex</code> is specified).</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="nx">array</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nx">searchElement</span><span class="p">,</span><span class="w"> </span><span class="nx">fromIndex</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>💡 When to Use indexOf()</summary>
+<ul>
+<li>To find the <strong>position</strong> of an element in an array.</li>
+<li>Can be useful in <code>if</code> conditions or for modifying/replacing values at that index.</li>
+</ul>
+</details>
+<details class="example">
+<summary>💻 Example: Basic Usage</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">languages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">];</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="c1">// get the index of the first occurrence of &quot;JavaScript&quot;</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">languages</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;JavaScript&quot;</span><span class="p">);</span>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: 1</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example: From Specific Index &amp; Not Found Case</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">langs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Java&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Java&quot;</span><span class="p">];</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="c1">// Starts searching from index 2</span>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">langs</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;Java&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 3 ✅</span>
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a><span class="c1">// Element not in array</span>
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">langs</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s2">&quot;Ruby&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// -1 ❌</span>
+</code></pre></div>
+</details>
+<details class="danger">
+<summary>⚠️ Common Pitfalls</summary>
+<ul>
+<li>❌ <code>indexOf()</code> is <strong>case-sensitive</strong></li>
+<li>❌ Returns only the <strong>first match</strong> — doesn't find all indexes</li>
+</ul>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>indexOf()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns new array?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Return type</td>
+<td>✅ Number</td>
+</tr>
+<tr>
+<td>Case-sensitive?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Use case</td>
+<td>✅ Find first match index</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a>let languages = [&quot;Java&quot;, &quot;JavaScript&quot;, &quot;Python&quot;, &quot;JavaScript&quot;];
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>// get the index of the first occurrence of &quot;JavaScript&quot;
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a>let index = languages.indexOf(&quot;JavaScript&quot;);
+<a id="__codelineno-46-5" name="__codelineno-46-5" href="#__codelineno-46-5"></a>console.log(index);
+<a id="__codelineno-46-6" name="__codelineno-46-6" href="#__codelineno-46-6"></a>
+<a id="__codelineno-46-7" name="__codelineno-46-7" href="#__codelineno-46-7"></a>// Output: 1
+</code></pre></div>
+<h3 id="9javascript-array-lastindexof-the-lastindexof-method-returns-the-index-of-the-last-occurrence-of-a-specified-element-in-the-array">9.JavaScript Array lastIndexOf():  The lastIndexOf() method returns the index of the last occurrence of a specified element in the array.</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>let priceList = [10, 8, 2, 31, 10, 31, 65];
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>// finding the index of the last occurence of 31
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>let lastIndex = priceList.lastIndexOf(31);
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>console.log(lastIndex); 
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>
+<a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>// Output: 5
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a>let alphabets = [&quot;a&quot;, &quot;b&quot;, &quot;c&quot;, &quot;a&quot;, &quot;d&quot;];
+<a id="__codelineno-48-2" name="__codelineno-48-2" href="#__codelineno-48-2"></a>
+<a id="__codelineno-48-3" name="__codelineno-48-3" href="#__codelineno-48-3"></a>// finding the index of the last occurence of &#39;a&#39;
+<a id="__codelineno-48-4" name="__codelineno-48-4" href="#__codelineno-48-4"></a>let lastIndex1 = alphabets.lastIndexOf(&quot;a&quot;);
+<a id="__codelineno-48-5" name="__codelineno-48-5" href="#__codelineno-48-5"></a>
+<a id="__codelineno-48-6" name="__codelineno-48-6" href="#__codelineno-48-6"></a>console.log(lastIndex1);
+<a id="__codelineno-48-7" name="__codelineno-48-7" href="#__codelineno-48-7"></a>
+<a id="__codelineno-48-8" name="__codelineno-48-8" href="#__codelineno-48-8"></a>// finding the index of the last occurence of &#39;e&#39;
+<a id="__codelineno-48-9" name="__codelineno-48-9" href="#__codelineno-48-9"></a>let lastIndex2 = alphabets.lastIndexOf(&quot;e&quot;);
+<a id="__codelineno-48-10" name="__codelineno-48-10" href="#__codelineno-48-10"></a>
+<a id="__codelineno-48-11" name="__codelineno-48-11" href="#__codelineno-48-11"></a>console.log(lastIndex2);
+</code></pre></div></p>
+<h3 id="10javascript-array-map-the-map-method-creates-a-new-array-with-the-results-of-calling-a-function-for-every-array-element">10.JavaScript Array map(): The map() method creates a new array with the results of calling a function for every array element.</h3>
+<details class="info" open="open">
+<summary>🔄 map() — Overview (Open by default)</summary>
+<ul>
+<li><code>map()</code> creates a <strong>new array</strong> by applying a function to each element of the original array.</li>
+<li>Ideal for <strong>transforming data</strong>, not side effects (like logging).</li>
+<li>The <strong>original array remains unchanged</strong>.</li>
+</ul>
+<p><strong>Basic Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">newArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">originalArray</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">element</span><span class="p">,</span><span class="w"> </span><span class="nx">index</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-49-2" name="__codelineno-49-2" href="#__codelineno-49-2"></a><span class="w">  </span><span class="c1">// return transformed element</span>
+<a id="__codelineno-49-3" name="__codelineno-49-3" href="#__codelineno-49-3"></a><span class="p">});</span>
+</code></pre></div></p>
+<p><code>index</code> is optional in the callback.</p>
+</details>
+<details class="tip">
+<summary>💡 Tip: Use map() for Data Transformation</summary>
+<ul>
+<li>Use when you need to <strong>create a modified version</strong> of your array.</li>
+<li>Every callback <strong>must return</strong> a value.</li>
+<li>Great for extracting properties or converting data types.</li>
+</ul>
+</details>
+<details class="example">
+<summary>💻 Code Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">users</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-50-2" name="__codelineno-50-2" href="#__codelineno-50-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Alice&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-50-3" name="__codelineno-50-3" href="#__codelineno-50-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Bob&quot;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-50-4" name="__codelineno-50-4" href="#__codelineno-50-4"></a><span class="p">];</span>
+<a id="__codelineno-50-5" name="__codelineno-50-5" href="#__codelineno-50-5"></a>
+<a id="__codelineno-50-6" name="__codelineno-50-6" href="#__codelineno-50-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">users</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">user</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">user</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span>
+<a id="__codelineno-50-7" name="__codelineno-50-7" href="#__codelineno-50-7"></a>
+<a id="__codelineno-50-8" name="__codelineno-50-8" href="#__codelineno-50-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">names</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;Alice&quot;, &quot;Bob&quot;]</span>
+</code></pre></div>
+</details>
+<details class="danger">
+<summary>⚠️ Don’t Use map() Just for Logging</summary>
+<p><code>map()</code> should <strong>return a value</strong>, so using it only for logging is a mistake.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a>
+<a id="__codelineno-51-3" name="__codelineno-51-3" href="#__codelineno-51-3"></a><span class="nx">arr</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-51-4" name="__codelineno-51-4" href="#__codelineno-51-4"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w"> </span><span class="c1">// ✅ logs, but ❌ wastes map</span>
+<a id="__codelineno-51-5" name="__codelineno-51-5" href="#__codelineno-51-5"></a><span class="p">});</span>
+</code></pre></div>
+<p>❗ <strong>Better Alternative:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="nx">arr</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-52-2" name="__codelineno-52-2" href="#__codelineno-52-2"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span><span class="p">);</span><span class="w"> </span><span class="c1">// ✅ correct usage</span>
+<a id="__codelineno-52-3" name="__codelineno-52-3" href="#__codelineno-52-3"></a><span class="p">});</span>
+</code></pre></div></p>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>map()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns new array?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Return required?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>✅ Transforming data</td>
+</tr>
+<tr>
+<td>Good for logging?</td>
+<td>❌ Use forEach</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a>let numbers = [2, 4, 6, 8, 10];
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a>// function to return the square of a number
+<a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a>function square(number) {
+<a id="__codelineno-53-5" name="__codelineno-53-5" href="#__codelineno-53-5"></a>  return number * number;
+<a id="__codelineno-53-6" name="__codelineno-53-6" href="#__codelineno-53-6"></a>}
+<a id="__codelineno-53-7" name="__codelineno-53-7" href="#__codelineno-53-7"></a>
+<a id="__codelineno-53-8" name="__codelineno-53-8" href="#__codelineno-53-8"></a>// apply square() function to each item of the numbers list
+<a id="__codelineno-53-9" name="__codelineno-53-9" href="#__codelineno-53-9"></a>let square_numbers = numbers.map(square);
+<a id="__codelineno-53-10" name="__codelineno-53-10" href="#__codelineno-53-10"></a>console.log(square_numbers);
+<a id="__codelineno-53-11" name="__codelineno-53-11" href="#__codelineno-53-11"></a>
+<a id="__codelineno-53-12" name="__codelineno-53-12" href="#__codelineno-53-12"></a>// Output: [ 4, 16, 36, 64, 100 ]
+</code></pre></div>
+<h3 id="arraow-function">Arraow function</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>// custom arrow function
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>const string = &quot;JavaScript&quot;;
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>const stringArr = string.split(&#39;&#39;); // array with individual string character
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a>
+<a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a>let asciiArr = stringArr.map(x =&gt; x.charCodeAt(0));
+</code></pre></div>
+<h3 id="11javascript-array-slice-returns-array-the-slice-method-returns-a-shallow-copy-of-a-portion-of-an-array-into-a-new-array-object">11.JavaScript Array slice(): (returns array ) The slice() method returns a shallow copy of a portion of an array into a new array object.</h3>
+<details class="info" open="open">
+<summary>✂️ slice() — What It Does (Open by Default)</summary>
+<ul>
+<li>The <code>slice()</code> method returns a <strong>shallow copy</strong> of a portion of an array.</li>
+<li>It takes <strong>start</strong> and <strong>end (optional)</strong> index arguments and extracts up to (but not including) the <code>end</code> index.</li>
+<li><strong>Original array remains unchanged</strong>.</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span><span class="w"> </span><span class="nx">end</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>💡 When to Use slice()</summary>
+<ul>
+<li>When you want to <strong>copy</strong> a portion of an array.</li>
+<li>When you want a <strong>safe, non-mutating</strong> way to access subarrays.</li>
+</ul>
+</details>
+<details class="example">
+<summary>💻 Example: Basic Slicing</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">11</span><span class="p">,</span><span class="w"> </span><span class="mf">13</span><span class="p">,</span><span class="w"> </span><span class="mf">17</span><span class="p">];</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a>
+<a id="__codelineno-56-3" name="__codelineno-56-3" href="#__codelineno-56-3"></a><span class="c1">// create another array by slicing numbers from index 3 to 5</span>
+<a id="__codelineno-56-4" name="__codelineno-56-4" href="#__codelineno-56-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">newArray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">numbers</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">);</span>
+<a id="__codelineno-56-5" name="__codelineno-56-5" href="#__codelineno-56-5"></a>
+<a id="__codelineno-56-6" name="__codelineno-56-6" href="#__codelineno-56-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">newArray</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: [ 7, 11, 13 ]</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example: Different slice Scenarios</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">languages</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;JavaScript&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;C&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;C++&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Java&quot;</span><span class="p">];</span>
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a>
+<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="c1">// Full copy of array</span>
+<a id="__codelineno-57-4" name="__codelineno-57-4" href="#__codelineno-57-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">new_arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">languages</span><span class="p">.</span><span class="nx">slice</span><span class="p">();</span>
+<a id="__codelineno-57-5" name="__codelineno-57-5" href="#__codelineno-57-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">new_arr</span><span class="p">);</span><span class="w"> </span><span class="c1">// [ &#39;JavaScript&#39;, &#39;Python&#39;, &#39;C&#39;, &#39;C++&#39;, &#39;Java&#39; ]</span>
+<a id="__codelineno-57-6" name="__codelineno-57-6" href="#__codelineno-57-6"></a>
+<a id="__codelineno-57-7" name="__codelineno-57-7" href="#__codelineno-57-7"></a><span class="c1">// From 3rd element to end</span>
+<a id="__codelineno-57-8" name="__codelineno-57-8" href="#__codelineno-57-8"></a><span class="kd">let</span><span class="w"> </span><span class="nx">new_arr1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">languages</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">2</span><span class="p">);</span>
+<a id="__codelineno-57-9" name="__codelineno-57-9" href="#__codelineno-57-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">new_arr1</span><span class="p">);</span><span class="w"> </span><span class="c1">// [ &#39;C&#39;, &#39;C++&#39;, &#39;Java&#39; ]</span>
+<a id="__codelineno-57-10" name="__codelineno-57-10" href="#__codelineno-57-10"></a>
+<a id="__codelineno-57-11" name="__codelineno-57-11" href="#__codelineno-57-11"></a><span class="c1">// From 2nd to 4th element (index 1 to 3)</span>
+<a id="__codelineno-57-12" name="__codelineno-57-12" href="#__codelineno-57-12"></a><span class="kd">let</span><span class="w"> </span><span class="nx">new_arr2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">languages</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">);</span>
+<a id="__codelineno-57-13" name="__codelineno-57-13" href="#__codelineno-57-13"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">new_arr2</span><span class="p">);</span><span class="w"> </span><span class="c1">// [ &#39;Python&#39;, &#39;C&#39;, &#39;C++&#39; ]</span>
+</code></pre></div>
+</details>
+<details class="danger">
+<summary>⚠️ Common Mistakes</summary>
+<ul>
+<li>❗ <code>slice()</code> does <strong>not include the end index</strong>.</li>
+<li>❗ It does <strong>not modify the original array</strong> — this is useful but easy to forget.</li>
+<li>❗ Negative indices count from the end.</li>
+</ul>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>slice()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns new array?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Return type</td>
+<td>✅ Array</td>
+</tr>
+<tr>
+<td>End index included?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Use case</td>
+<td>✅ Safe subarray copies</td>
+</tr>
+</tbody>
+</table>
+</details>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a>let numbers = [2, 3, 5, 7, 11, 13, 17];
+<a id="__codelineno-58-2" name="__codelineno-58-2" href="#__codelineno-58-2"></a>
+<a id="__codelineno-58-3" name="__codelineno-58-3" href="#__codelineno-58-3"></a>// create another array by slicing numbers from index 3 to 5
+<a id="__codelineno-58-4" name="__codelineno-58-4" href="#__codelineno-58-4"></a>let newArray = numbers.slice(3, 6);
+<a id="__codelineno-58-5" name="__codelineno-58-5" href="#__codelineno-58-5"></a>console.log(newArray);
+<a id="__codelineno-58-6" name="__codelineno-58-6" href="#__codelineno-58-6"></a>
+<a id="__codelineno-58-7" name="__codelineno-58-7" href="#__codelineno-58-7"></a>// Output: [ 7, 11, 13 ]
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a>let languages = [&quot;JavaScript&quot;, &quot;Python&quot;, &quot;C&quot;, &quot;C++&quot;, &quot;Java&quot;];
+<a id="__codelineno-59-2" name="__codelineno-59-2" href="#__codelineno-59-2"></a>
+<a id="__codelineno-59-3" name="__codelineno-59-3" href="#__codelineno-59-3"></a>// slicing the array (from start to end)
+<a id="__codelineno-59-4" name="__codelineno-59-4" href="#__codelineno-59-4"></a>let new_arr = languages.slice();
+<a id="__codelineno-59-5" name="__codelineno-59-5" href="#__codelineno-59-5"></a>console.log(new_arr); // [ &#39;JavaScript&#39;, &#39;Python&#39;, &#39;C&#39;, &#39;C++&#39;, &#39;Java&#39; ]
+<a id="__codelineno-59-6" name="__codelineno-59-6" href="#__codelineno-59-6"></a>
+<a id="__codelineno-59-7" name="__codelineno-59-7" href="#__codelineno-59-7"></a>// slicing from the third element
+<a id="__codelineno-59-8" name="__codelineno-59-8" href="#__codelineno-59-8"></a>let new_arr1 = languages.slice(2);
+<a id="__codelineno-59-9" name="__codelineno-59-9" href="#__codelineno-59-9"></a>console.log(new_arr1); // [ &#39;C&#39;, &#39;C++&#39;, &#39;Java&#39; ]
+<a id="__codelineno-59-10" name="__codelineno-59-10" href="#__codelineno-59-10"></a>
+<a id="__codelineno-59-11" name="__codelineno-59-11" href="#__codelineno-59-11"></a>// slicing from the second element to fourth element
+<a id="__codelineno-59-12" name="__codelineno-59-12" href="#__codelineno-59-12"></a>let new_arr2 = languages.slice(1, 4);
+<a id="__codelineno-59-13" name="__codelineno-59-13" href="#__codelineno-59-13"></a>console.log(new_arr2); // [ &#39;Python&#39;, &#39;C&#39;, &#39;C++&#39; ]
+</code></pre></div></p>
+<h3 id="12javascript-array-some-returns-boolen">12.Javascript Array some() : (returns boolen)</h3>
+<details class="info" open="open">
+<summary>🔍 some() — What It Does (Open by Default)</summary>
+<ul>
+<li><code>some()</code> checks whether <strong>at least one element</strong> in the array passes the test implemented by the callback function.</li>
+<li>Returns <code>true</code> if <strong>any</strong> element satisfies the condition, otherwise returns <code>false</code>.</li>
+<li><strong>Does not modify</strong> the original array.</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="nx">array</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">callback</span><span class="p">(</span><span class="nx">element</span><span class="p">[,</span><span class="w"> </span><span class="nx">index</span><span class="p">[,</span><span class="w"> </span><span class="nx">array</span><span class="p">]])[,</span><span class="w"> </span><span class="nx">thisArg</span><span class="p">])</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>💡 When to Use some()</summary>
+<ul>
+<li>When you need to <strong>check for presence</strong> of at least one matching condition.</li>
+<li>Ideal for <strong>early exits</strong>—it stops once a match is found.</li>
+</ul>
+</details>
+<details class="example">
+<summary>💻 Example: Basic Usage</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="c1">// a test function: returns true for even numbers</span>
+<a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">isEven</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-61-4" name="__codelineno-61-4" href="#__codelineno-61-4"></a><span class="p">}</span>
+<a id="__codelineno-61-5" name="__codelineno-61-5" href="#__codelineno-61-5"></a>
+<a id="__codelineno-61-6" name="__codelineno-61-6" href="#__codelineno-61-6"></a><span class="c1">// defining an array</span>
+<a id="__codelineno-61-7" name="__codelineno-61-7" href="#__codelineno-61-7"></a><span class="kd">let</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
+<a id="__codelineno-61-8" name="__codelineno-61-8" href="#__codelineno-61-8"></a>
+<a id="__codelineno-61-9" name="__codelineno-61-9" href="#__codelineno-61-9"></a><span class="c1">// checks whether the array contains at least one even number</span>
+<a id="__codelineno-61-10" name="__codelineno-61-10" href="#__codelineno-61-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">isEven</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: true</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example: Using Arrow Function</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">,</span><span class="w"> </span><span class="mf">11</span><span class="p">];</span>
+<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>
+<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="c1">// checking for even number</span>
+<a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">hasEven</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nums</span><span class="p">.</span><span class="nx">some</span><span class="p">(</span><span class="nx">num</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">num</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a>
+<a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">hasEven</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: false</span>
+</code></pre></div>
+</details>
+<details class="danger">
+<summary>⚠️ Common Mistakes</summary>
+<ul>
+<li>❗ <code>some()</code> returns a <strong>boolean</strong>, not the element itself.</li>
+<li>❗ It <strong>short-circuits</strong>—stops checking once a <code>true</code> is returned.</li>
+</ul>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>some()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns new array?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>❌ No</td>
+</tr>
+<tr>
+<td>Return type</td>
+<td>✅ Boolean</td>
+</tr>
+<tr>
+<td>Stops early?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Use case</td>
+<td>✅ Existence check</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a>// a test function: returns an even number
+<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>function isEven(element) {
+<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a>  return element % 2 === 0;
+<a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a>}
+<a id="__codelineno-63-5" name="__codelineno-63-5" href="#__codelineno-63-5"></a>
+<a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a>// defining an array
+<a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a>let numbers = [1, 3, 2, 5, 4];
+<a id="__codelineno-63-8" name="__codelineno-63-8" href="#__codelineno-63-8"></a>
+<a id="__codelineno-63-9" name="__codelineno-63-9" href="#__codelineno-63-9"></a>// checks whether the numbers array contain at least one even number
+<a id="__codelineno-63-10" name="__codelineno-63-10" href="#__codelineno-63-10"></a>console.log(numbers.some(isEven));
+<a id="__codelineno-63-11" name="__codelineno-63-11" href="#__codelineno-63-11"></a>
+<a id="__codelineno-63-12" name="__codelineno-63-12" href="#__codelineno-63-12"></a>// Output: true 
+</code></pre></div>
+<h3 id="every">Every()</h3>
+<h3 id="13-every-check-if-all-elements-pass-a-test">13. <code>.every()</code> — Check If All Elements Pass a Test</h3>
+<details class="info" open="open">
+<summary>What It Does</summary>
+<ul>
+<li>Tests whether <strong>all elements</strong> in the array <strong>pass a test function</strong></li>
+<li>Returns <code>true</code> only if <strong>every element</strong> meets the condition</li>
+<li>Stops checking once a <strong>falsy result</strong> is found</li>
+</ul>
+</details>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="c1">// Test function: checks if element is even</span>
+<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">isEven</span><span class="p">(</span><span class="nx">element</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">element</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+<a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a><span class="p">}</span>
+<a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a>
+<a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a><span class="c1">// Array to test</span>
+<a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a><span class="kd">const</span><span class="w"> </span><span class="nx">numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">];</span>
+<a id="__codelineno-64-8" name="__codelineno-64-8" href="#__codelineno-64-8"></a>
+<a id="__codelineno-64-9" name="__codelineno-64-9" href="#__codelineno-64-9"></a><span class="c1">// Checks if all elements are even</span>
+<a id="__codelineno-64-10" name="__codelineno-64-10" href="#__codelineno-64-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">numbers</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">isEven</span><span class="p">));</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div>
+<p>✅ Output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>true
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>When to Use</summary>
+<ul>
+<li>
+<p>✅ Validate if <strong>all fields</strong> in a form are filled:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">formFields</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;John&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Doe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span><span class="p">];</span>
+<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">isValid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">formFields</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">field</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">field</span><span class="p">.</span><span class="nx">trim</span><span class="p">()</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">isValid</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>✅ Check if <strong>all products are in stock</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">products</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Book&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">inStock</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Pen&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">inStock</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a><span class="p">];</span>
+<a id="__codelineno-67-5" name="__codelineno-67-5" href="#__codelineno-67-5"></a><span class="kd">const</span><span class="w"> </span><span class="nx">allAvailable</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">products</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">p</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">p</span><span class="p">.</span><span class="nx">inStock</span><span class="p">);</span>
+<a id="__codelineno-67-6" name="__codelineno-67-6" href="#__codelineno-67-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">allAvailable</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>✅ Ensure all numbers are <strong>positive</strong>:
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">8</span><span class="p">];</span>
+<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">allPositive</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">nums</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0</span><span class="p">);</span>
+<a id="__codelineno-68-3" name="__codelineno-68-3" href="#__codelineno-68-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">allPositive</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></p>
+</li>
+</ul>
+</details>
+<h3 id="13-array-splice-the-splice-method-modifies-an-array-adds-removes-or-replaces-elements">13: Array splice() : The splice() method modifies an array (adds, removes or replaces elements).</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>1. Remove Elements:
+<a id="__codelineno-69-2" name="__codelineno-69-2" href="#__codelineno-69-2"></a>   Remove 2 elements starting from index 1 (removes 2 and 3 from the array).
+<a id="__codelineno-69-3" name="__codelineno-69-3" href="#__codelineno-69-3"></a>   let arr = [1, 2, 3, 4, 5];
+<a id="__codelineno-69-4" name="__codelineno-69-4" href="#__codelineno-69-4"></a>   arr.splice(1, 2);  // Removes elements at index 1 and 2
+<a id="__codelineno-69-5" name="__codelineno-69-5" href="#__codelineno-69-5"></a>   console.log(arr);  // Output: [1, 4, 5]
+<a id="__codelineno-69-6" name="__codelineno-69-6" href="#__codelineno-69-6"></a>
+<a id="__codelineno-69-7" name="__codelineno-69-7" href="#__codelineno-69-7"></a>2. Add Elements:
+<a id="__codelineno-69-8" name="__codelineno-69-8" href="#__codelineno-69-8"></a>   Add elements starting from index 2. This does not remove anything.
+<a id="__codelineno-69-9" name="__codelineno-69-9" href="#__codelineno-69-9"></a>   let arr = [1, 2, 3, 4, 5];
+<a id="__codelineno-69-10" name="__codelineno-69-10" href="#__codelineno-69-10"></a>   arr.splice(2, 0, &#39;a&#39;, &#39;b&#39;);  // Adds &#39;a&#39; and &#39;b&#39; at index 2, without removing 
+<a id="__codelineno-69-11" name="__codelineno-69-11" href="#__codelineno-69-11"></a>    any element
+<a id="__codelineno-69-12" name="__codelineno-69-12" href="#__codelineno-69-12"></a>   console.log(arr);  // Output: [1, 2, &#39;a&#39;, &#39;b&#39;, 3, 4, 5]
+<a id="__codelineno-69-13" name="__codelineno-69-13" href="#__codelineno-69-13"></a>
+<a id="__codelineno-69-14" name="__codelineno-69-14" href="#__codelineno-69-14"></a>3. Replace Elements:
+<a id="__codelineno-69-15" name="__codelineno-69-15" href="#__codelineno-69-15"></a>   Remove 2 elements starting from index 1, and add new elements in their place.
+<a id="__codelineno-69-16" name="__codelineno-69-16" href="#__codelineno-69-16"></a>   let arr = [1, 2, 3, 4, 5];
+<a id="__codelineno-69-17" name="__codelineno-69-17" href="#__codelineno-69-17"></a>   arr.splice(1, 2, &#39;x&#39;, &#39;y&#39;);  // Removes &#39;2&#39; and &#39;3&#39;, and adds &#39;x&#39; and &#39;y&#39;
+<a id="__codelineno-69-18" name="__codelineno-69-18" href="#__codelineno-69-18"></a>   console.log(arr);  // Output: [1, &#39;x&#39;, &#39;y&#39;, 4, 5]
+<a id="__codelineno-69-19" name="__codelineno-69-19" href="#__codelineno-69-19"></a>
+<a id="__codelineno-69-20" name="__codelineno-69-20" href="#__codelineno-69-20"></a>4. Remove the Last Element:
+<a id="__codelineno-69-21" name="__codelineno-69-21" href="#__codelineno-69-21"></a>   If you want to remove just the last element of an array, use splice()
+<a id="__codelineno-69-22" name="__codelineno-69-22" href="#__codelineno-69-22"></a>    with the last index of the array:
+<a id="__codelineno-69-23" name="__codelineno-69-23" href="#__codelineno-69-23"></a>
+<a id="__codelineno-69-24" name="__codelineno-69-24" href="#__codelineno-69-24"></a>let arr = [1, 2, 3, 4, 5];
+<a id="__codelineno-69-25" name="__codelineno-69-25" href="#__codelineno-69-25"></a>arr.splice(arr.length - 1, 1);  // Removes the last element
+<a id="__codelineno-69-26" name="__codelineno-69-26" href="#__codelineno-69-26"></a>console.log(arr);  // Output: [1, 2, 3, 4]
+<a id="__codelineno-69-27" name="__codelineno-69-27" href="#__codelineno-69-27"></a>Practical Use Case for splice():
+<a id="__codelineno-69-28" name="__codelineno-69-28" href="#__codelineno-69-28"></a>Removing an element by index: When you need to delete a specific element 
+<a id="__codelineno-69-29" name="__codelineno-69-29" href="#__codelineno-69-29"></a>from an array, such as when the user deletes a row or item from a list.
+<a id="__codelineno-69-30" name="__codelineno-69-30" href="#__codelineno-69-30"></a> This is exactly what you are doing in the delete() method in your code.
+<a id="__codelineno-69-31" name="__codelineno-69-31" href="#__codelineno-69-31"></a>
+<a id="__codelineno-69-32" name="__codelineno-69-32" href="#__codelineno-69-32"></a>Inserting or replacing elements: If you need to update an existing item or
+<a id="__codelineno-69-33" name="__codelineno-69-33" href="#__codelineno-69-33"></a>insert new items into an array at a specific position, splice() is a great
+<a id="__codelineno-69-34" name="__codelineno-69-34" href="#__codelineno-69-34"></a> way to do it.
+</code></pre></div>
+<details class="info" open="open">
+<summary>✂️ splice() — What It Does (Open by Default)</summary>
+<ul>
+<li><code>splice()</code> changes the contents of an array by <strong>removing</strong>, <strong>replacing</strong>, or <strong>adding</strong> elements in place.</li>
+<li><strong>Modifies</strong> the original array and returns an array of the removed elements.</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a><span class="nx">array</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="nx">start</span><span class="p">,</span><span class="w"> </span><span class="nx">deleteCount</span><span class="p">,</span><span class="w"> </span><span class="nx">item1</span><span class="p">,</span><span class="w"> </span><span class="nx">item2</span><span class="p">,</span><span class="w"> </span><span class="p">...)</span>
+</code></pre></div>
+- <code>start</code>: Index to begin changes.
+- <code>deleteCount</code>: Number of items to remove.
+- <code>item1, item2, ...</code>: Optional values to insert.</p>
+</details>
+<details class="tip">
+<summary>💡 Use Cases</summary>
+<ul>
+<li>Insert elements into a specific index.</li>
+<li>Remove elements from a certain position.</li>
+<li>Replace elements with new ones.</li>
+</ul>
+</details>
+<details class="example">
+<summary>💻 Example: Replace One Element</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">prime_numbers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">9</span><span class="p">,</span><span class="w"> </span><span class="mf">11</span><span class="p">];</span>
+<a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a>
+<a id="__codelineno-71-3" name="__codelineno-71-3" href="#__codelineno-71-3"></a><span class="c1">// replace 1 element from index 4 with 13</span>
+<a id="__codelineno-71-4" name="__codelineno-71-4" href="#__codelineno-71-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">removedElement</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">prime_numbers</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">13</span><span class="p">);</span>
+<a id="__codelineno-71-5" name="__codelineno-71-5" href="#__codelineno-71-5"></a>
+<a id="__codelineno-71-6" name="__codelineno-71-6" href="#__codelineno-71-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">removedElement</span><span class="p">);</span><span class="w">     </span><span class="c1">// Output: [ 9 ]</span>
+<a id="__codelineno-71-7" name="__codelineno-71-7" href="#__codelineno-71-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">prime_numbers</span><span class="p">);</span><span class="w">      </span><span class="c1">// Output: [ 2, 3, 5, 7, 13, 11 ]</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>💻 Example: Add Elements Without Deletion</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">];</span>
+<a id="__codelineno-72-2" name="__codelineno-72-2" href="#__codelineno-72-2"></a>
+<a id="__codelineno-72-3" name="__codelineno-72-3" href="#__codelineno-72-3"></a><span class="c1">// insert 3 and 4 at index 2</span>
+<a id="__codelineno-72-4" name="__codelineno-72-4" href="#__codelineno-72-4"></a><span class="nx">nums</span><span class="p">.</span><span class="nx">splice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">);</span>
+<a id="__codelineno-72-5" name="__codelineno-72-5" href="#__codelineno-72-5"></a>
+<a id="__codelineno-72-6" name="__codelineno-72-6" href="#__codelineno-72-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">nums</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: [1, 2, 3, 4, 5]</span>
+</code></pre></div>
+</details>
+<details class="danger">
+<summary>⚠️ Common Pitfalls</summary>
+<ul>
+<li>❗ <code>splice()</code> <strong>mutates</strong> the original array.</li>
+<li>❗ Returns the removed elements — not the updated array.</li>
+</ul>
+</details>
+<details class="info">
+<summary>🧾 Summary Table</summary>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>splice()</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Returns new array?</td>
+<td>✅ Removed items only</td>
+</tr>
+<tr>
+<td>Modifies original?</td>
+<td>✅ Yes</td>
+</tr>
+<tr>
+<td>Return required?</td>
+<td>✅ Optional insert</td>
+</tr>
+<tr>
+<td>Purpose</td>
+<td>✅ Add / Remove / Replace</td>
+</tr>
+</tbody>
+</table>
+</details>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>let prime_numbers = [2, 3, 5, 7, 9, 11];
+<a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a>
+<a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>// replace 1 element from index 4 by 13
+<a id="__codelineno-73-4" name="__codelineno-73-4" href="#__codelineno-73-4"></a>let removedElement = prime_numbers.splice(4, 1, 13);
+<a id="__codelineno-73-5" name="__codelineno-73-5" href="#__codelineno-73-5"></a>console.log(removedElement);
+<a id="__codelineno-73-6" name="__codelineno-73-6" href="#__codelineno-73-6"></a>console.log(prime_numbers);
+<a id="__codelineno-73-7" name="__codelineno-73-7" href="#__codelineno-73-7"></a>
+<a id="__codelineno-73-8" name="__codelineno-73-8" href="#__codelineno-73-8"></a>// Output: [ 9 ]
+<a id="__codelineno-73-9" name="__codelineno-73-9" href="#__codelineno-73-9"></a>//         [ 2, 3, 5, 7, 13, 11 ]
+</code></pre></div>
+<details class="info" open="open">
+<summary>13. 🧩 <code>Array.from()</code> — Convert to Array from Iterable or Array-like</summary>
+<ul>
+<li>Converts array-like or iterable objects (e.g. strings, sets, NodeLists) into a <strong>real array</strong></li>
+<li>You can also <strong>map</strong> each element during conversion</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a><span class="c1">// Convert a string to an array of characters</span>
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello&quot;</span><span class="p">;</span>
+<a id="__codelineno-74-3" name="__codelineno-74-3" href="#__codelineno-74-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">str</span><span class="p">));</span><span class="w"> </span><span class="c1">// [&quot;H&quot;, &quot;e&quot;, &quot;l&quot;, &quot;l&quot;, &quot;o&quot;]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="c1">// Convert a Set to an array</span>
+<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">uniqueNums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">Set</span><span class="p">([</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">]);</span>
+<a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">uniqueNums</span><span class="p">));</span><span class="w"> </span><span class="c1">// [1, 2, 3]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="c1">// Apply a map function while converting</span>
+<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">nums</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">];</span>
+<a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">doubled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">nums</span><span class="p">,</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">x</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span>
+<a id="__codelineno-76-4" name="__codelineno-76-4" href="#__codelineno-76-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">doubled</span><span class="p">);</span><span class="w"> </span><span class="c1">// [2, 4, 6]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="c1">// Generate array of N values</span>
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span>
+<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">filled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">({</span><span class="w"> </span><span class="nx">length</span><span class="o">:</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">(</span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<a id="__codelineno-77-4" name="__codelineno-77-4" href="#__codelineno-77-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">filled</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 3, 4, 5]</span>
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>

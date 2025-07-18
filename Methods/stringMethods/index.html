@@ -1,0 +1,3698 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../arrayMethods/">
+      
+      
+        <link rel="next" href="../objectMethods/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>StringMethods - Rajesh Angular Document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1length-method-returns-string-these-methods-return-a-new-string-with-little-change-from-the-original-string-the-length-is-a-string-property-that-is-used-to-find-the-length-of-a-string-it-returns-the-number-of-characters-in-the-string-including-spaces-read-only-means-that-the-strings-created-in-javascript-are-immutable-the-length-property-returns-the-number-of-characters-in-a-string" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rajesh Angular Document" class="md-header__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rajesh Angular Document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              StringMethods
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../angular/viewEncapsulation/" class="md-tabs__link">
+          
+  
+  
+  Angular
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Ag-grid/ag-grid/" class="md-tabs__link">
+          
+  
+  
+  AG- GRID
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../arrayMethods/" class="md-tabs__link">
+          
+  
+  
+  Methods
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dropDowns/matSelect/" class="md-tabs__link">
+          
+  
+  
+  DropDowns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../material/matSelect/" class="md-tabs__link">
+          
+  
+  
+  Material
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Only-images/onlyimages/" class="md-tabs__link">
+          
+  
+  
+  ONLY IMAGES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../files/file/" class="md-tabs__link">
+          
+  
+  
+  PDF Files
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rajesh Angular Document" class="md-nav__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Rajesh Angular Document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Angular
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Angular
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewEncapsulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encapsulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/binding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OutPut
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewchild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ViewChild
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/custompipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomPipe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/formarray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FormArray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/reactiveForm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReactiveForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/templateDrivenform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TemplateDrivenForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/customValidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomValidator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/componentStructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ComponentStructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/behaviour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BehaviourSubject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/forkJoin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ForkJoin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/localStorage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LocalStorage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/lifeCycleHooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LifeCycleHooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/ngrx/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NGRX
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/matdilog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatDialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/swal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SwalFire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/clickEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ClickEvent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/shortcutkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ShortCutKeys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AG- GRID
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AG- GRID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/ag-grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AG-Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/cellrender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CellRender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Methods
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Methods
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../arrayMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ArrayMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    StringMethods
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    StringMethods
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1length-method-returns-string-these-methods-return-a-new-string-with-little-change-from-the-original-string-the-length-is-a-string-property-that-is-used-to-find-the-length-of-a-string-it-returns-the-number-of-characters-in-the-string-including-spaces-read-only-means-that-the-strings-created-in-javascript-are-immutable-the-length-property-returns-the-number-of-characters-in-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Length() Method : (returns string) These methods return a new string with little change from the original string. The length is a string property that is used to find the length of a string. It returns the number of characters in the string including spaces. Read-only means that the strings created in JavaScript are immutable The length property returns the number of characters in a string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-repeat-retuns-string-the-repeat-method-concatenates-a-passed-string-by-a-specified-number-of-times-and-return-it-as-a-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. repeat : (retuns string) The repeat() method concatenates a passed string by a specified number of times and return it as a new string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-number-of-times-string-is-to-be-repeated-is-passed-as-an-argument-in-the-method-where-the-number-lies-between-0-and-infinity-if-a-decimal-value-is-passed-then-it-will-be-converted-to-an-integer-when-passed-the-method-reports-an-error-for-a-negative-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      A number of times string is to be repeated is passed as an argument in the method, where the number lies between 0 and +Infinity. If a decimal value is passed then it will be converted to an Integer when passed. The method reports an error for a negative number.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3replace-returns-the-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.replace : (returns the new string )
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4replaceall-returns-the-new-string-it-is-replace-with-every-word-or-charector-in-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.replaceAll(): (returns the new string) it is replace with every word or charector in it
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-while-using-regular-expression-in-the-replaceall-method-using-a-global-flag-g-is-compulsory-with-it-otherwise-it-will-throw-a-typeerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: While using regular expression in the replaceAll() method using a global flag (g) is compulsory with it otherwise it will throw a 'TypeError'
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-returns-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      search: (returns number)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-the-index-of-the-match-string-search-also-work-as-same-as-the-match-string-match-and-string-search-the-match-method-returns-an-array-of-matches-the-search-method-returns-the-position-of-the-first-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns the index of the match string search also work as same as the match String match() and String search() The match() method returns an array of matches. The search() method returns the position of the first match.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slice-method-returns-new-string-the-slice-string-method-in-javascript-extracts-a-part-of-the-string-and-returns-it-as-a-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      slice method: (returns new string) The slice string method in javascript extracts a part of the string and returns it as a new string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slice-consist-of-2-indexs-or-argumenst" class="md-nav__link">
+    <span class="md-ellipsis">
+      slice consist of 2 indexs or argumenst
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="slice consist of 2 indexs or argumenst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strslicestartindx-lastindex-print-between-those-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      str.slice(startindx , lastindex )- print between those values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7split-returns-string-the-split-string-method-in-javascript-divides-the-given-string-intro-substring-and-returns-an-array-of-substrings" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.split: (returns string) The split string method in javascript divides the given string intro substring and returns an array of substrings.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8startswith-returns-boolean-the-startswith-string-method-in-javascript-determines-whether-a-string-starts-with-some-given-substring-or-not-if-it-starts-with-the-desired-string-then-it-returns-true-else-return-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.startsWith: (returns boolean) The startsWith string method in javascript determines whether a string starts with some given substring or not. If it starts with the desired string then it returns true else return false.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-search-string-is-passed-as-the-first-argument-to-the-method-there-is-also-an-optional-argument-that-defines-the-position-from-where-the-method-should-start-checking-the-startswith-method-is-case-sensitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      The search string is passed as the first argument to the method. There is also an optional argument that defines the position from where the method should start checking. The startsWith method is case-sensitive.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9substring-returns-string-the-substring-method-in-javascript-is-used-to-extract-a-part-of-a-string-between-two-indices-or-positions-its-a-common-method-and-can-be-used-within-any-javascript-code-including-angular-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.substring: (returns string) The substring method in JavaScript is used to extract a part of a string between two indices or positions. It's a common method and can be used within any JavaScript code, including Angular components.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#startindex-the-position-where-the-extraction-begins-endindex-optional-the-position-where-the-extraction-ends-but-does-not-include-the-character-at-this-index-if-omitted-the-method-will-extract-to-the-end-of-the-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      startIndex: The position where the extraction begins. endIndex (optional): The position where the extraction ends (but does not include the character at this index). If omitted, the method will extract to the end of the string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differnce-between-substring-and-substr" class="md-nav__link">
+    <span class="md-ellipsis">
+      differnce between substring and substr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-substring-if-you-need-to-work-with-two-indices-or-if-you-are-concerned-about-browser-compatibility-and-future-proofing-your-code-use-substr-if-you-need-to-extract-a-specific-number-of-characters-from-a-certain-position-but-keep-in-mind-that-it-is-deprecated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use substring() if you need to work with two indices, or if you are concerned about browser compatibility and future-proofing your code. Use substr() if you need to extract a specific number of characters from a certain position, but keep in mind that it is deprecated.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-trim-returns-string-the-trim-string-method-in-javascript-removes-whitespaces-from-both-ends-of-the-string-whitespaces-are-space-tabs-newline-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      11: trim(): (returns string) The trim() string method in javascript removes whitespaces from both ends of the string. Whitespaces are space, tabs, newline, etc.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-valueof-the-valueof-string-method-in-javascript-returns-the-primitive-value-of-a-string-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      12: valueOf: The valueOf() string method in javascript returns the primitive value of a String object.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-replace-replace-part-of-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. .replace() — Replace Part of a String
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3replace-returns-the-new-string_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.replace : (returns the new string )
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-replaceall-replace-all-occurrences" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. .replaceAll() — Replace All Occurrences
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4replaceall-returns-the-new-string-it-is-replace-with-every-word-or-charector-in-it_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.replaceAll(): (returns the new string) it is replace with every word or charector in it
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-while-using-regular-expression-in-the-replaceall-method-using-a-global-flag-g-is-compulsory-with-it-otherwise-it-will-throw-a-typeerror_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: While using regular expression in the replaceAll() method using a global flag (g) is compulsory with it otherwise it will throw a 'TypeError'
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-search-find-position-of-first-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. .search() — Find Position of First Match
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5search-returns-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.search: (returns number)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-the-index-of-the-match-string-search-also-work-as-same-as-the-match-string-match-and-string-search-the-match-method-returns-an-array-of-matches-the-search-method-returns-the-position-of-the-first-match_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns the index of the match string search also work as same as the match String match() and String search() The match() method returns an array of matches. The search() method returns the position of the first match.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-slice-extract-substring-or-array-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. .slice() — Extract Substring or Array Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6slice-method-returns-new-string-the-slice-string-method-in-javascript-extracts-a-part-of-the-string-and-returns-it-as-a-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.slice method: (returns new string) The slice string method in javascript extracts a part of the string and returns it as a new string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slice-consist-of-2-indexs-or-argumenst_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      slice consist of 2 indexs or argumenst
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="slice consist of 2 indexs or argumenst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strslicestartindx-lastindex-print-between-those-values_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      str.slice(startindx , lastindex )- print between those values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-split-divide-a-string-into-substrings" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. .split() — Divide a String into Substrings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7split-returns-string-the-split-string-method-in-javascript-divides-the-given-string-intro-substring-and-returns-an-array-of-substrings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.split: (returns string) The split string method in javascript divides the given string intro substring and returns an array of substrings.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-startswith-check-how-a-string-begins" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. .startsWith() — Check How a String Begins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8startswith-returns-boolean-the-startswith-string-method-in-javascript-determines-whether-a-string-starts-with-some-given-substring-or-not-if-it-starts-with-the-desired-string-then-it-returns-true-else-return-false_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.startsWith: (returns boolean) The startsWith string method in javascript determines whether a string starts with some given substring or not. If it starts with the desired string then it returns true else return false.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-search-string-is-passed-as-the-first-argument-to-the-method-there-is-also-an-optional-argument-that-defines-the-position-from-where-the-method-should-start-checking-the-startswith-method-is-case-sensitive_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The search string is passed as the first argument to the method. There is also an optional argument that defines the position from where the method should start checking. The startsWith method is case-sensitive.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-substring-extract-a-portion-of-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. .substring() — Extract a Portion of a String
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9substring-returns-string-the-substring-method-in-javascript-is-used-to-extract-a-part-of-a-string-between-two-indices-or-positions-its-a-common-method-and-can-be-used-within-any-javascript-code-including-angular-components_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.substring: (returns string) The substring method in JavaScript is used to extract a part of a string between two indices or positions. It's a common method and can be used within any JavaScript code, including Angular components.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-substring-with-startindex-and-optional-endindex" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. .substring() — With startIndex and Optional endIndex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-substring-vs-substr-deprecated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference: substring() vs substr() (deprecated)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10startindex-the-position-where-the-extraction-begins-endindex-optional-the-position-where-the-extraction-ends-but-does-not-include-the-character-at-this-index-if-omitted-the-method-will-extract-to-the-end-of-the-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.startIndex: The position where the extraction begins. endIndex (optional): The position where the extraction ends (but does not include the character at this index). If omitted, the method will extract to the end of the string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differnce-between-substring-and-substr_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      differnce between substring and substr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-substring-if-you-need-to-work-with-two-indices-or-if-you-are-concerned-about-browser-compatibility-and-future-proofing-your-code-use-substr-if-you-need-to-extract-a-specific-number-of-characters-from-a-certain-position-but-keep-in-mind-that-it-is-deprecated_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use substring() if you need to work with two indices, or if you are concerned about browser compatibility and future-proofing your code. Use substr() if you need to extract a specific number of characters from a certain position, but keep in mind that it is deprecated.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-trim-remove-whitespace-from-both-ends" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. .trim() — Remove Whitespace from Both Ends
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-trim-returns-string-the-trim-string-method-in-javascript-removes-whitespaces-from-both-ends-of-the-string-whitespaces-are-space-tabs-newline-etc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      11: trim(): (returns string) The trim() string method in javascript removes whitespaces from both ends of the string. Whitespaces are space, tabs, newline, etc.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-valueof-get-primitive-value-of-a-string-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. .valueOf() — Get Primitive Value of a String Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-valueof-the-valueof-string-method-in-javascript-returns-the-primitive-value-of-a-string-object_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      12: valueOf: The valueOf() string method in javascript returns the primitive value of a String object.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#above-examples-only-but-in-one-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Above examples only but in one place
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../objectMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ObjectMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DropDowns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            DropDowns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/matSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    matSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/ngselect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ngSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/matAutoSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    matAutoSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Material
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Material
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matFormField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatFormField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ONLY IMAGES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            ONLY IMAGES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Only-images/onlyimages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PDF Files
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            PDF Files
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1length-method-returns-string-these-methods-return-a-new-string-with-little-change-from-the-original-string-the-length-is-a-string-property-that-is-used-to-find-the-length-of-a-string-it-returns-the-number-of-characters-in-the-string-including-spaces-read-only-means-that-the-strings-created-in-javascript-are-immutable-the-length-property-returns-the-number-of-characters-in-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      1.Length() Method : (returns string) These methods return a new string with little change from the original string. The length is a string property that is used to find the length of a string. It returns the number of characters in the string including spaces. Read-only means that the strings created in JavaScript are immutable The length property returns the number of characters in a string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-repeat-retuns-string-the-repeat-method-concatenates-a-passed-string-by-a-specified-number-of-times-and-return-it-as-a-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. repeat : (retuns string) The repeat() method concatenates a passed string by a specified number of times and return it as a new string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-number-of-times-string-is-to-be-repeated-is-passed-as-an-argument-in-the-method-where-the-number-lies-between-0-and-infinity-if-a-decimal-value-is-passed-then-it-will-be-converted-to-an-integer-when-passed-the-method-reports-an-error-for-a-negative-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      A number of times string is to be repeated is passed as an argument in the method, where the number lies between 0 and +Infinity. If a decimal value is passed then it will be converted to an Integer when passed. The method reports an error for a negative number.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3replace-returns-the-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.replace : (returns the new string )
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4replaceall-returns-the-new-string-it-is-replace-with-every-word-or-charector-in-it" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.replaceAll(): (returns the new string) it is replace with every word or charector in it
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-while-using-regular-expression-in-the-replaceall-method-using-a-global-flag-g-is-compulsory-with-it-otherwise-it-will-throw-a-typeerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: While using regular expression in the replaceAll() method using a global flag (g) is compulsory with it otherwise it will throw a 'TypeError'
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#search-returns-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      search: (returns number)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-the-index-of-the-match-string-search-also-work-as-same-as-the-match-string-match-and-string-search-the-match-method-returns-an-array-of-matches-the-search-method-returns-the-position-of-the-first-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns the index of the match string search also work as same as the match String match() and String search() The match() method returns an array of matches. The search() method returns the position of the first match.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slice-method-returns-new-string-the-slice-string-method-in-javascript-extracts-a-part-of-the-string-and-returns-it-as-a-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      slice method: (returns new string) The slice string method in javascript extracts a part of the string and returns it as a new string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slice-consist-of-2-indexs-or-argumenst" class="md-nav__link">
+    <span class="md-ellipsis">
+      slice consist of 2 indexs or argumenst
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="slice consist of 2 indexs or argumenst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strslicestartindx-lastindex-print-between-those-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      str.slice(startindx , lastindex )- print between those values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7split-returns-string-the-split-string-method-in-javascript-divides-the-given-string-intro-substring-and-returns-an-array-of-substrings" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.split: (returns string) The split string method in javascript divides the given string intro substring and returns an array of substrings.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8startswith-returns-boolean-the-startswith-string-method-in-javascript-determines-whether-a-string-starts-with-some-given-substring-or-not-if-it-starts-with-the-desired-string-then-it-returns-true-else-return-false" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.startsWith: (returns boolean) The startsWith string method in javascript determines whether a string starts with some given substring or not. If it starts with the desired string then it returns true else return false.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-search-string-is-passed-as-the-first-argument-to-the-method-there-is-also-an-optional-argument-that-defines-the-position-from-where-the-method-should-start-checking-the-startswith-method-is-case-sensitive" class="md-nav__link">
+    <span class="md-ellipsis">
+      The search string is passed as the first argument to the method. There is also an optional argument that defines the position from where the method should start checking. The startsWith method is case-sensitive.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9substring-returns-string-the-substring-method-in-javascript-is-used-to-extract-a-part-of-a-string-between-two-indices-or-positions-its-a-common-method-and-can-be-used-within-any-javascript-code-including-angular-components" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.substring: (returns string) The substring method in JavaScript is used to extract a part of a string between two indices or positions. It's a common method and can be used within any JavaScript code, including Angular components.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#startindex-the-position-where-the-extraction-begins-endindex-optional-the-position-where-the-extraction-ends-but-does-not-include-the-character-at-this-index-if-omitted-the-method-will-extract-to-the-end-of-the-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      startIndex: The position where the extraction begins. endIndex (optional): The position where the extraction ends (but does not include the character at this index). If omitted, the method will extract to the end of the string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differnce-between-substring-and-substr" class="md-nav__link">
+    <span class="md-ellipsis">
+      differnce between substring and substr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-substring-if-you-need-to-work-with-two-indices-or-if-you-are-concerned-about-browser-compatibility-and-future-proofing-your-code-use-substr-if-you-need-to-extract-a-specific-number-of-characters-from-a-certain-position-but-keep-in-mind-that-it-is-deprecated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use substring() if you need to work with two indices, or if you are concerned about browser compatibility and future-proofing your code. Use substr() if you need to extract a specific number of characters from a certain position, but keep in mind that it is deprecated.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-trim-returns-string-the-trim-string-method-in-javascript-removes-whitespaces-from-both-ends-of-the-string-whitespaces-are-space-tabs-newline-etc" class="md-nav__link">
+    <span class="md-ellipsis">
+      11: trim(): (returns string) The trim() string method in javascript removes whitespaces from both ends of the string. Whitespaces are space, tabs, newline, etc.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-valueof-the-valueof-string-method-in-javascript-returns-the-primitive-value-of-a-string-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      12: valueOf: The valueOf() string method in javascript returns the primitive value of a String object.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-replace-replace-part-of-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. .replace() — Replace Part of a String
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3replace-returns-the-new-string_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.replace : (returns the new string )
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-replaceall-replace-all-occurrences" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. .replaceAll() — Replace All Occurrences
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4replaceall-returns-the-new-string-it-is-replace-with-every-word-or-charector-in-it_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4.replaceAll(): (returns the new string) it is replace with every word or charector in it
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#note-while-using-regular-expression-in-the-replaceall-method-using-a-global-flag-g-is-compulsory-with-it-otherwise-it-will-throw-a-typeerror_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: While using regular expression in the replaceAll() method using a global flag (g) is compulsory with it otherwise it will throw a 'TypeError'
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-search-find-position-of-first-match" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. .search() — Find Position of First Match
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5search-returns-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.search: (returns number)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#returns-the-index-of-the-match-string-search-also-work-as-same-as-the-match-string-match-and-string-search-the-match-method-returns-an-array-of-matches-the-search-method-returns-the-position-of-the-first-match_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      returns the index of the match string search also work as same as the match String match() and String search() The match() method returns an array of matches. The search() method returns the position of the first match.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-slice-extract-substring-or-array-elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. .slice() — Extract Substring or Array Elements
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6slice-method-returns-new-string-the-slice-string-method-in-javascript-extracts-a-part-of-the-string-and-returns-it-as-a-new-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      6.slice method: (returns new string) The slice string method in javascript extracts a part of the string and returns it as a new string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#slice-consist-of-2-indexs-or-argumenst_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      slice consist of 2 indexs or argumenst
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="slice consist of 2 indexs or argumenst">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#strslicestartindx-lastindex-print-between-those-values_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      str.slice(startindx , lastindex )- print between those values
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-split-divide-a-string-into-substrings" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. .split() — Divide a String into Substrings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7split-returns-string-the-split-string-method-in-javascript-divides-the-given-string-intro-substring-and-returns-an-array-of-substrings_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      7.split: (returns string) The split string method in javascript divides the given string intro substring and returns an array of substrings.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-startswith-check-how-a-string-begins" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. .startsWith() — Check How a String Begins
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8startswith-returns-boolean-the-startswith-string-method-in-javascript-determines-whether-a-string-starts-with-some-given-substring-or-not-if-it-starts-with-the-desired-string-then-it-returns-true-else-return-false_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.startsWith: (returns boolean) The startsWith string method in javascript determines whether a string starts with some given substring or not. If it starts with the desired string then it returns true else return false.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-search-string-is-passed-as-the-first-argument-to-the-method-there-is-also-an-optional-argument-that-defines-the-position-from-where-the-method-should-start-checking-the-startswith-method-is-case-sensitive_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      The search string is passed as the first argument to the method. There is also an optional argument that defines the position from where the method should start checking. The startsWith method is case-sensitive.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-substring-extract-a-portion-of-a-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. .substring() — Extract a Portion of a String
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9substring-returns-string-the-substring-method-in-javascript-is-used-to-extract-a-part-of-a-string-between-two-indices-or-positions-its-a-common-method-and-can-be-used-within-any-javascript-code-including-angular-components_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      9.substring: (returns string) The substring method in JavaScript is used to extract a part of a string between two indices or positions. It's a common method and can be used within any JavaScript code, including Angular components.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-substring-with-startindex-and-optional-endindex" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. .substring() — With startIndex and Optional endIndex
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#difference-substring-vs-substr-deprecated" class="md-nav__link">
+    <span class="md-ellipsis">
+      Difference: substring() vs substr() (deprecated)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10startindex-the-position-where-the-extraction-begins-endindex-optional-the-position-where-the-extraction-ends-but-does-not-include-the-character-at-this-index-if-omitted-the-method-will-extract-to-the-end-of-the-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      10.startIndex: The position where the extraction begins. endIndex (optional): The position where the extraction ends (but does not include the character at this index). If omitted, the method will extract to the end of the string.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#differnce-between-substring-and-substr_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      differnce between substring and substr
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#use-substring-if-you-need-to-work-with-two-indices-or-if-you-are-concerned-about-browser-compatibility-and-future-proofing-your-code-use-substr-if-you-need-to-extract-a-specific-number-of-characters-from-a-certain-position-but-keep-in-mind-that-it-is-deprecated_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Use substring() if you need to work with two indices, or if you are concerned about browser compatibility and future-proofing your code. Use substr() if you need to extract a specific number of characters from a certain position, but keep in mind that it is deprecated.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-trim-remove-whitespace-from-both-ends" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. .trim() — Remove Whitespace from Both Ends
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-trim-returns-string-the-trim-string-method-in-javascript-removes-whitespaces-from-both-ends-of-the-string-whitespaces-are-space-tabs-newline-etc_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      11: trim(): (returns string) The trim() string method in javascript removes whitespaces from both ends of the string. Whitespaces are space, tabs, newline, etc.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-valueof-get-primitive-value-of-a-string-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. .valueOf() — Get Primitive Value of a String Object
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-valueof-the-valueof-string-method-in-javascript-returns-the-primitive-value-of-a-string-object_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      12: valueOf: The valueOf() string method in javascript returns the primitive value of a String object.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#above-examples-only-but-in-one-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 Above examples only but in one place
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<p>&lt;!-- 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1.Length() Method -&gt; (returns string)
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2.repeat(): (retuns string)
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>3.replace(): (returns the new string )
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>4.replaceAll(): (returns the new string) it is replace with every word or
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                                     charector in it
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>5.search(): (returns number)
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>6.slice() method: (returns new string)
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>7.split(): (returns string) The split string method in javascript divides
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>           the given string intro substring and returns an array of substrings.
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>8.startsWith(): (returns boolean) 
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>9.substring() : (returns string)
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>10.To lowercase(),To upper case() :(returns the new string) to covert 
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                               LowerCase to convert into upper case
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>11.trim(): (returns string) 
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>12.valueOf(): The valueOf() string method in javascript returns the 
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                            primitive value of a String object.
+</code></pre></div></p>
+<h3 id="1length-method-returns-string-these-methods-return-a-new-string-with-little-change-from-the-original-string-the-length-is-a-string-property-that-is-used-to-find-the-length-of-a-string-it-returns-the-number-of-characters-in-the-string-including-spaces-read-only-means-that-the-strings-created-in-javascript-are-immutable-the-length-property-returns-the-number-of-characters-in-a-string">1.Length() Method : (returns string) These methods return a new string with little change from the original string. The length is a string property that is used to find the length of a string. It returns the number of characters in the string including spaces. Read-only means that the strings created in JavaScript are immutable The length property returns the number of characters in a string.</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>var str = &quot;Hello World&quot;;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  str.length; // 11
+</code></pre></div>
+<h3 id="2-repeat-retuns-string-the-repeat-method-concatenates-a-passed-string-by-a-specified-number-of-times-and-return-it-as-a-new-string">2. repeat : (retuns string) The repeat() method concatenates a passed string by a specified number of times and return it as a new string.</h3>
+<h3 id="a-number-of-times-string-is-to-be-repeated-is-passed-as-an-argument-in-the-method-where-the-number-lies-between-0-and-infinity-if-a-decimal-value-is-passed-then-it-will-be-converted-to-an-integer-when-passed-the-method-reports-an-error-for-a-negative-number">A number of times string is to be repeated is passed as an argument in the method, where the number lies between 0 and +Infinity. If a decimal value is passed then it will be converted to an Integer when passed. The method reports an error for a negative number.</h3>
+<div class="highlight"><span class="filename">Example.html</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>const str = &quot;Tick tock, &quot;;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>// repeat the string by 2 times
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>console.log(str.repeat(2));
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>// converts the decimal value to integer
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>console.log(str.repeat(3.5));
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>// repeat 0 times
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>console.log(str.repeat(0));
+</code></pre></div>
+<h3 id="3replace-returns-the-new-string">3.replace : (returns the new string )</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>const message = &quot;bbb ccc&quot;;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>// replace the first b with c
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>let result = message.replace(&#39;b&#39;, &#39;c&#39;);
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>console.log(result);
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>resut = &quot;cbb ccc&quot;  here we can see that only starting value is changed here 
+</code></pre></div>
+<h3 id="4replaceall-returns-the-new-string-it-is-replace-with-every-word-or-charector-in-it">4.replaceAll(): (returns the new string) it is replace with every word or charector in it</h3>
+<h3 id="note-while-using-regular-expression-in-the-replaceall-method-using-a-global-flag-g-is-compulsory-with-it-otherwise-it-will-throw-a-typeerror">Note: While using regular expression in the replaceAll() method using a global flag (g) is compulsory with it otherwise it will throw a 'TypeError'</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>const str = &quot;Carbon emission is increasing day by day.&quot;;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>// select all match using both string or regular expression
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>console.log(str.replaceAll(&quot;day&quot;, &quot;year&quot;));
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>console.log(str.replaceAll(/day/g, &quot;month&quot;));
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>Carbon emission is increasing year by year.
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>Carbon emission is increasing month by month.
+</code></pre></div>
+<h3 id="search-returns-number">search: (returns number)</h3>
+<h3 id="returns-the-index-of-the-match-string-search-also-work-as-same-as-the-match-string-match-and-string-search-the-match-method-returns-an-array-of-matches-the-search-method-returns-the-position-of-the-first-match">returns the index of the match string search also work as same as the match String match() and String search() The match() method returns an array of matches. The search() method returns the position of the first match.</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>const text = &quot;The quick brown fox jumps over the lazy dog.&quot;;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>const index = text.search(&quot;fox&quot;);
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>console.log(index); // Output: 16
+</code></pre></div>
+<h3 id="slice-method-returns-new-string-the-slice-string-method-in-javascript-extracts-a-part-of-the-string-and-returns-it-as-a-new-string">slice method: (returns new string) The slice string method in javascript extracts a part of the string and returns it as a new string.</h3>
+<h3 id="slice-consist-of-2-indexs-or-argumenst">slice consist of 2 indexs or argumenst</h3>
+<h4 id="strslicestartindx-lastindex-print-between-those-values">str.slice(startindx , lastindex )- print between those values</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Lemon&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>const citrus = fruits.slice(1, 3);
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>output - Orange,Lemon
+</code></pre></div>
+<h3 id="7split-returns-string-the-split-string-method-in-javascript-divides-the-given-string-intro-substring-and-returns-an-array-of-substrings">7.split: (returns string) The split string method in javascript divides the given string intro substring and returns an array of substrings.</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>const sentence = &quot;Carbon emission is increasing day by day&quot;;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>// no pattern -&gt; return whole string in array
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>console.log(sentence.split());
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>// split at each space
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>console.log(sentence.split(&#39;&#39;));
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>// split at each space
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>console.log(sentence.split(&#39; &#39;));
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>// split at each &#39;is&#39;
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>console.log(sentence.split(&#39;is&#39;));
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>console.log(&quot;ABCDEF&quot;.split(&quot;&quot;)); // [ &#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39; ]
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>const text = &quot;Java is awesome. Java is fun.&quot;;
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>let pattern = &quot;.&quot;;
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>let newText = text.split(pattern);
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>console.log(newText); // [ &#39;Java is awesome&#39;, &#39; Java is fun&#39;, &#39;&#39; ]
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>let pattern1 = &quot;.&quot;;
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>// only split string to maximum to parts
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>let newText1 = text.split(pattern1, 2);
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>console.log(newText1); // [ &#39;Java is awesome&#39;, &#39; Java is fun&#39; ]
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>const text2 = &quot;JavaScript ;  Python ;C;C++&quot;;
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>let pattern2 = &quot;;&quot;;
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>let newText2 = text2.split(pattern2);
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>console.log(newText2); // [ &#39;JavaScript &#39;, &#39;  Python &#39;, &#39;C&#39;, &#39;C++&#39; ]
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>// using RegEx
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>let pattern3 = /\s*(?:;|$)\s*/;
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>let newText3 = text2.split(pattern3);
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>console.log(newText3); // [ &#39;JavaScript&#39;, &#39;Python&#39;, &#39;C&#39;, &#39;C++&#39; ]
+</code></pre></div>
+<h3 id="8startswith-returns-boolean-the-startswith-string-method-in-javascript-determines-whether-a-string-starts-with-some-given-substring-or-not-if-it-starts-with-the-desired-string-then-it-returns-true-else-return-false">8.startsWith: (returns boolean) The startsWith string method in javascript determines whether a string starts with some given substring or not. If it starts with the desired string then it returns true else return false.</h3>
+<h3 id="the-search-string-is-passed-as-the-first-argument-to-the-method-there-is-also-an-optional-argument-that-defines-the-position-from-where-the-method-should-start-checking-the-startswith-method-is-case-sensitive">The search string is passed as the first argument to the method. There is also an optional argument that defines the position from where the method should start checking. The startsWith method is case-sensitive.</h3>
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Example:
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>const sentence = &quot;Carbon emission is increasing day by day&quot;;
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>console.log(sentence.startsWith(&quot;Car&quot;));
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>console.log(sentence.startsWith(&quot;carbon&quot;)); // return false case-sensitive
+</code></pre></div>
+<h3 id="9substring-returns-string-the-substring-method-in-javascript-is-used-to-extract-a-part-of-a-string-between-two-indices-or-positions-its-a-common-method-and-can-be-used-within-any-javascript-code-including-angular-components">9.substring: (returns string) The substring method in JavaScript is used to extract a part of a string between two indices or positions. It's a common method and can be used within any JavaScript code, including Angular components.</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>string.substring(startIndex, endIndex)
+</code></pre></div>
+<h3 id="startindex-the-position-where-the-extraction-begins-endindex-optional-the-position-where-the-extraction-ends-but-does-not-include-the-character-at-this-index-if-omitted-the-method-will-extract-to-the-end-of-the-string">startIndex: The position where the extraction begins. endIndex (optional): The position where the extraction ends (but does not include the character at this index). If omitted, the method will extract to the end of the string.</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>fullText: string = &#39;Hello, Angular!&#39;;
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>extractedText: string;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>// Extract a substring starting from index 7 to the end
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>this.extractedText = this.fullText.substring(7);
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>// Output: &#39;Angular!&#39;
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>// Extract a substring from index 7 to 13 (not including 13)
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>const partialText = this.fullText.substring(7, 13);
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>console.log(partialText); // Output: &#39;Angular&#39;
+</code></pre></div>
+<h3 id="differnce-between-substring-and-substr">differnce between substring and substr</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>string.substring(startIndex, endIndex)
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>string.substr(startIndex, length)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>let text = &quot;JavaScript&quot;;
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>// Extracts 6 characters starting from index 4
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>console.log(text.substr(4, 6)); // Output: &quot;Script&quot;
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>// Extracts from the end of the string if negative index is provided
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>console.log(text.substr(-6, 6)); // Output: &quot;Script&quot;
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>// Extracts to the end if length is omitted
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>console.log(text.substr(4)); // Output: &quot;Script&quot;
+</code></pre></div>
+<div class="highlight"><span class="filename">substr</span><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>let text = &quot;JavaScript&quot;;
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>// Extracts 6 characters starting from index 4
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>console.log(text.substr(4, 6)); // Output: &quot;Script&quot;
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>// Extracts from the end of the string if negative index is provided
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>console.log(text.substr(-6, 6)); // Output: &quot;Script&quot;
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>// Extracts to the end if length is omitted
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>console.log(text.substr(4)); // Output: &quot;Script&quot;
+</code></pre></div></p>
+<h3 id="use-substring-if-you-need-to-work-with-two-indices-or-if-you-are-concerned-about-browser-compatibility-and-future-proofing-your-code-use-substr-if-you-need-to-extract-a-specific-number-of-characters-from-a-certain-position-but-keep-in-mind-that-it-is-deprecated">Use substring() if you need to work with two indices, or if you are concerned about browser compatibility and future-proofing your code. Use substr() if you need to extract a specific number of characters from a certain position, but keep in mind that it is deprecated.</h3>
+<h3 id="11-trim-returns-string-the-trim-string-method-in-javascript-removes-whitespaces-from-both-ends-of-the-string-whitespaces-are-space-tabs-newline-etc">11: trim(): (returns string) The trim() string method in javascript removes whitespaces from both ends of the string. Whitespaces are space, tabs, newline, etc.</h3>
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>const str = &quot;    TutorialsTonight    &quot;;
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>console.log(str.trim());
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>oputput- TutorialsTonight
+</code></pre></div>
+<h3 id="12-valueof-the-valueof-string-method-in-javascript-returns-the-primitive-value-of-a-string-object">12: valueOf: The valueOf() string method in javascript returns the primitive value of a String object.</h3>
+<p><div class="highlight"><span class="filename">Example</span><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>const str = new String(&quot;hello world&quot;);
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>console.log(str.valueOf(str))
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>output - Hello world without string 
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>``` --&gt;
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a> ### STRING METHODS()
+</code></pre></div>
+1.Length() Method -&gt; (returns string)
+2.repeat(): (retuns string)
+3.replace(): (returns the new string )
+4.replaceAll(): (returns the new string) it is replace with every word or
+                                                     charector in it
+5.search(): (returns number)
+6.slice() method: (returns new string)
+7.split(): (returns string) The split string method in javascript divides
+           the given string intro substring and returns an array of substrings.
+8.startsWith(): (returns boolean) 
+9.substring() : (returns string)
+10.To lowercase(),To upper case() :(returns the new string) to covert 
+                               LowerCase to convert into upper case
+11.trim(): (returns string) 
+12.valueOf(): The valueOf() string method in javascript returns the 
+                            primitive value of a String object.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>### 1. `.length` — Get String Length
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>???+ info &quot;What `.length` Does&quot;
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>    - Returns the **number of characters** in a string, including **spaces**
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    - It’s a **property**, not a function — so **no parentheses**
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>    - JavaScript strings are **immutable**, so the length cannot be changed
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>    **Syntax:**
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>    ```javascript
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a>    string.length
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>    ```
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a>??? tip &quot;Use Cases with Examples&quot;
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a>    - Get the **character count**  
+<a id="__codelineno-16-17" name="__codelineno-16-17" href="#__codelineno-16-17"></a>      `const msg = &quot;Welcome!&quot;; console.log(msg.length); // 8`
+<a id="__codelineno-16-18" name="__codelineno-16-18" href="#__codelineno-16-18"></a>
+<a id="__codelineno-16-19" name="__codelineno-16-19" href="#__codelineno-16-19"></a>    - Validate **input length** in forms  
+<a id="__codelineno-16-20" name="__codelineno-16-20" href="#__codelineno-16-20"></a>      `if (username.length &lt; 3) alert(&quot;Username too short!&quot;);`
+<a id="__codelineno-16-21" name="__codelineno-16-21" href="#__codelineno-16-21"></a>
+<a id="__codelineno-16-22" name="__codelineno-16-22" href="#__codelineno-16-22"></a>    - Loop or slice strings based on size  
+<a id="__codelineno-16-23" name="__codelineno-16-23" href="#__codelineno-16-23"></a>      `for (let i = 0; i &lt; str.length; i++) { console.log(str[i]); }`
+<a id="__codelineno-16-24" name="__codelineno-16-24" href="#__codelineno-16-24"></a>
+<a id="__codelineno-16-25" name="__codelineno-16-25" href="#__codelineno-16-25"></a>??? danger &quot;Common Confusion&quot;
+<a id="__codelineno-16-26" name="__codelineno-16-26" href="#__codelineno-16-26"></a>
+<a id="__codelineno-16-27" name="__codelineno-16-27" href="#__codelineno-16-27"></a>    Developers often confuse `.length` with a method — but it&#39;s a property:
+<a id="__codelineno-16-28" name="__codelineno-16-28" href="#__codelineno-16-28"></a>
+<a id="__codelineno-16-29" name="__codelineno-16-29" href="#__codelineno-16-29"></a>    ```javascript
+<a id="__codelineno-16-30" name="__codelineno-16-30" href="#__codelineno-16-30"></a>    const str = &quot;Hello World&quot;;
+<a id="__codelineno-16-31" name="__codelineno-16-31" href="#__codelineno-16-31"></a>
+<a id="__codelineno-16-32" name="__codelineno-16-32" href="#__codelineno-16-32"></a>    console.log(str.length);   // ✅ 11
+<a id="__codelineno-16-33" name="__codelineno-16-33" href="#__codelineno-16-33"></a>    console.log(str.length()); // ❌ TypeError: str.length is not a function
+<a id="__codelineno-16-34" name="__codelineno-16-34" href="#__codelineno-16-34"></a>    ```
+<a id="__codelineno-16-35" name="__codelineno-16-35" href="#__codelineno-16-35"></a>
+<a id="__codelineno-16-36" name="__codelineno-16-36" href="#__codelineno-16-36"></a>??? example &quot;Code Example&quot;
+<a id="__codelineno-16-37" name="__codelineno-16-37" href="#__codelineno-16-37"></a>
+<a id="__codelineno-16-38" name="__codelineno-16-38" href="#__codelineno-16-38"></a>    ```javascript
+<a id="__codelineno-16-39" name="__codelineno-16-39" href="#__codelineno-16-39"></a>    var str = &quot;Hello World&quot;;
+<a id="__codelineno-16-40" name="__codelineno-16-40" href="#__codelineno-16-40"></a>    console.log(str.length); // 11
+<a id="__codelineno-16-41" name="__codelineno-16-41" href="#__codelineno-16-41"></a>    ```
+<a id="__codelineno-16-42" name="__codelineno-16-42" href="#__codelineno-16-42"></a>
+<a id="__codelineno-16-43" name="__codelineno-16-43" href="#__codelineno-16-43"></a>### 1.Length() Method : (returns string) These methods return a new string with little change from the original string. The length is a string property that is used to find the length of a string. It returns the number of characters in the string including spaces. Read-only means that the strings created in JavaScript are immutable The length property returns the number of characters in a string.
+</code></pre></div>
+var str = "Hello World";
+  str.length; // 11</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>### 2. `.repeat()` — Repeat a String
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>???+ info &quot;What `.repeat()` Does&quot;
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>    - Returns a **new string** with the original string **repeated n times**
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    - Takes a **number** as the argument (between 0 and Infinity)
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>    - If given a **decimal**, it is **converted to an integer**
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    - Throws a **RangeError** for negative numbers
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>    **Syntax:**
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>    ```javascript
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>    string.repeat(count)
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a>    ```
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a>??? tip &quot;Use Cases with Examples&quot;
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>    - Create **visual dividers or padding**  
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a>      `&quot;=&quot;.repeat(10); // &#39;==========&#39;`
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a>    - Generate **test content** or fill placeholders  
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a>      `&quot;lorem &quot;.repeat(3); // &#39;lorem lorem lorem &#39;`
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>    - Repeat **letters/symbols** dynamically  
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a>      `let stars = &quot;*&quot;.repeat(5); console.log(stars); // &#39;*****&#39;`
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a>
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a>??? danger &quot;Common Pitfalls&quot;
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a>
+<a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>    - **Negative values** will throw an error  
+<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a>      `&quot;abc&quot;.repeat(-1); // ❌ RangeError`
+<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a>
+<a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a>    - **Very large values** can freeze or crash the page  
+<a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a>      `&quot;abc&quot;.repeat(1e9); // ⚠️ Not recommended`
+<a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a>
+<a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a>??? example &quot;Code Example&quot;
+<a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a>
+<a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a>    ```javascript
+<a id="__codelineno-17-37" name="__codelineno-17-37" href="#__codelineno-17-37"></a>    const str = &quot;Tick tock, &quot;;
+<a id="__codelineno-17-38" name="__codelineno-17-38" href="#__codelineno-17-38"></a>
+<a id="__codelineno-17-39" name="__codelineno-17-39" href="#__codelineno-17-39"></a>    console.log(str.repeat(2));     // Tick tock, Tick tock, 
+<a id="__codelineno-17-40" name="__codelineno-17-40" href="#__codelineno-17-40"></a>    console.log(str.repeat(3.5));   // Tick tock, Tick tock, Tick tock, 
+<a id="__codelineno-17-41" name="__codelineno-17-41" href="#__codelineno-17-41"></a>    console.log(str.repeat(0));     // &#39;&#39;
+<a id="__codelineno-17-42" name="__codelineno-17-42" href="#__codelineno-17-42"></a>    ```
+<a id="__codelineno-17-43" name="__codelineno-17-43" href="#__codelineno-17-43"></a>
+<a id="__codelineno-17-44" name="__codelineno-17-44" href="#__codelineno-17-44"></a>### 2. repeat : (retuns string) The repeat() method concatenates a passed string by a specified number of times and return it as a new string.
+<a id="__codelineno-17-45" name="__codelineno-17-45" href="#__codelineno-17-45"></a>### A number of times string is to be repeated is passed as an argument in the method, where the number lies between 0 and +Infinity. If a decimal value is passed then it will be converted to an Integer when passed. The method reports an error for a negative number.
+<a id="__codelineno-17-46" name="__codelineno-17-46" href="#__codelineno-17-46"></a>
+<a id="__codelineno-17-47" name="__codelineno-17-47" href="#__codelineno-17-47"></a>``` title=&quot;Example.html&quot;
+<a id="__codelineno-17-48" name="__codelineno-17-48" href="#__codelineno-17-48"></a>const str = &quot;Tick tock, &quot;;
+<a id="__codelineno-17-49" name="__codelineno-17-49" href="#__codelineno-17-49"></a>
+<a id="__codelineno-17-50" name="__codelineno-17-50" href="#__codelineno-17-50"></a>// repeat the string by 2 times
+<a id="__codelineno-17-51" name="__codelineno-17-51" href="#__codelineno-17-51"></a>console.log(str.repeat(2));
+<a id="__codelineno-17-52" name="__codelineno-17-52" href="#__codelineno-17-52"></a>// converts the decimal value to integer
+<a id="__codelineno-17-53" name="__codelineno-17-53" href="#__codelineno-17-53"></a>console.log(str.repeat(3.5));
+<a id="__codelineno-17-54" name="__codelineno-17-54" href="#__codelineno-17-54"></a>// repeat 0 times
+<a id="__codelineno-17-55" name="__codelineno-17-55" href="#__codelineno-17-55"></a>console.log(str.repeat(0));
+</code></pre></div>
+<h3 id="3-replace-replace-part-of-a-string">3. <code>.replace()</code> — Replace Part of a String</h3>
+<details class="info" open="open">
+<summary>What <code>.replace()</code> Does</summary>
+<ul>
+<li>Returns a <strong>new string</strong> with the <strong>first match replaced</strong></li>
+<li>Takes <strong>two arguments</strong>:</li>
+<li>The <strong>pattern</strong> to search for (string or regex)</li>
+<li>The <strong>replacement</strong> string or function</li>
+<li>Only replaces the <strong>first occurrence</strong> by default (unless using regex with <code>/g</code>)</li>
+<li><strong>Does not modify</strong> the original string</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nx">string</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="nx">searchValue</span><span class="p">,</span><span class="w"> </span><span class="nx">newValue</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Use Cases with Examples</summary>
+<ul>
+<li>
+<p>Replace <strong>the first match only</strong><br />
+<code>"hello world".replace("l", "L"); // 'heLlo world'</code></p>
+</li>
+<li>
+<p>Substitute values in <strong>template strings</strong><br />
+<code>"My name is NAME".replace("NAME", "Alice"); // 'My name is Alice'</code></p>
+</li>
+<li>
+<p>Use <strong>regex</strong> for pattern matching<br />
+<code>"a1b2c3".replace(/\d/, "X"); // 'aXb2c3'</code></p>
+</li>
+</ul>
+</details>
+<details class="danger">
+<summary>Common Pitfalls</summary>
+<ul>
+<li>
+<p>Only replaces the <strong>first match</strong>, unless using <code>/g</code> flag<br />
+<code>"aaa".replace("a", "b"); // 'baa'</code><br />
+<code>"aaa".replace(/a/g, "b"); // 'bbb'"</code></p>
+</li>
+<li>
+<p>Be careful with <strong>special characters</strong> in regex<br />
+<code>"1+1=2".replace("+", "-"); // '1-1=2'"</code>"1+1=2".replace(/+/, "-"); // safer"`</p>
+</li>
+</ul>
+</details>
+<details class="example">
+<summary>Code Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;bbb ccc&quot;</span><span class="p">;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="c1">// Replace the first &#39;b&#39; with &#39;c&#39;</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s1">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;c&#39;</span><span class="p">);</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// &#39;cbb ccc&#39;</span>
+</code></pre></div>
+</details>
+<h3 id="3replace-returns-the-new-string_1">3.replace : (returns the new string )</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>const message = &quot;bbb ccc&quot;;
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a>// replace the first b with c
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>let result = message.replace(&#39;b&#39;, &#39;c&#39;);
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a>console.log(result);
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>resut = &quot;cbb ccc&quot;  here we can see that only starting value is changed here 
+</code></pre></div>
+<h3 id="4-replaceall-replace-all-occurrences">4. <code>.replaceAll()</code> — Replace All Occurrences</h3>
+<details class="info" open="open">
+<summary>What <code>.replaceAll()</code> Does</summary>
+<ul>
+<li>Returns a <strong>new string</strong> with <strong>all occurrences</strong> of a substring or pattern replaced</li>
+<li>Supports both <strong>string values</strong> and <strong>regular expressions</strong></li>
+<li>Regular expressions <strong>must include the global (<code>g</code>) flag</strong>, or it throws an error</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nx">string</span><span class="p">.</span><span class="nx">replaceAll</span><span class="p">(</span><span class="nx">searchValue</span><span class="p">,</span><span class="w"> </span><span class="nx">newValue</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Use Cases with Examples</summary>
+<ul>
+<li>
+<p><strong>Clean up repeated words or characters</strong><br />
+<code>"ha ha ha".replaceAll("ha", "ho"); // "ho ho ho"</code></p>
+</li>
+<li>
+<p><strong>Replace multiple occurrences in a sentence</strong><br />
+<code>"foo is foo".replaceAll("foo", "bar"); // "bar is bar"</code></p>
+</li>
+<li>
+<p><strong>Use regex for complex matching</strong><br />
+<code>"123-456-7890".replaceAll(/\d/g, "*"); // "***-***-****"</code></p>
+</li>
+</ul>
+</details>
+<details class="danger">
+<summary>Common Mistakes</summary>
+<ul>
+<li>Using a <strong>RegExp without the <code>g</code> flag</strong> will throw a <code>TypeError</code></li>
+<li><code>replaceAll()</code> is <strong>not supported in IE</strong> (use polyfill or fallback to <code>replace</code> with regex)</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;test test&quot;</span><span class="p">;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">replaceAll</span><span class="p">(</span><span class="sr">/test/</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;done&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// ❌ Error — missing &#39;g&#39; flag</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>Code Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Carbon emission is increasing day by day.&quot;</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="c1">// Replace all &quot;day&quot; with &quot;year&quot;</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">replaceAll</span><span class="p">(</span><span class="s2">&quot;day&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;year&quot;</span><span class="p">));</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="c1">// Output: Carbon emission is increasing year by year.</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="c1">// Using a regular expression (must include &#39;g&#39;)</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">replaceAll</span><span class="p">(</span><span class="sr">/day/g</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;month&quot;</span><span class="p">));</span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="c1">// Output: Carbon emission is increasing month by month.</span>
+</code></pre></div>
+</details>
+<h3 id="4replaceall-returns-the-new-string-it-is-replace-with-every-word-or-charector-in-it_1">4.replaceAll(): (returns the new string) it is replace with every word or charector in it</h3>
+<h3 id="note-while-using-regular-expression-in-the-replaceall-method-using-a-global-flag-g-is-compulsory-with-it-otherwise-it-will-throw-a-typeerror_1">Note: While using regular expression in the replaceAll() method using a global flag (g) is compulsory with it otherwise it will throw a 'TypeError'</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>const str = &quot;Carbon emission is increasing day by day.&quot;;
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>// select all match using both string or regular expression
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>console.log(str.replaceAll(&quot;day&quot;, &quot;year&quot;));
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a>console.log(str.replaceAll(/day/g, &quot;month&quot;));
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>Carbon emission is increasing year by year.
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a>Carbon emission is increasing month by month.
+</code></pre></div>
+<h3 id="5-search-find-position-of-first-match">5. <code>.search()</code> — Find Position of First Match</h3>
+<details class="info" open="open">
+<summary>What <code>.search()</code> Does</summary>
+<ul>
+<li>Returns the <strong>index</strong> of the <strong>first match</strong> of a substring or regex</li>
+<li>Returns <code>-1</code> if <strong>no match</strong> is found</li>
+<li>Accepts <strong>string or regular expression</strong> as input</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nx">string</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">searchValue</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Use Cases with Examples</summary>
+<ul>
+<li>
+<p><strong>Find the position</strong> of a word in a sentence<br />
+<code>"The sky is blue".search("blue"); // 11</code></p>
+</li>
+<li>
+<p>Use <strong>regex to search patterns</strong><br />
+<code>"Code123".search(/\d/); // 4</code> — finds the first digit</p>
+</li>
+<li>
+<p><strong>Case-insensitive search</strong> using regex<br />
+<code>"HELLO".search(/hello/i); // 0</code></p>
+</li>
+</ul>
+</details>
+<details class="danger">
+<summary>Common Mistakes</summary>
+<ul>
+<li>
+<p><code>search()</code> <strong>only returns index</strong>, not matched text<br />
+  To get the actual match, use <code>.match()</code> instead</p>
+</li>
+<li>
+<p>It <strong>always finds only the first match</strong>, even if multiple exist</p>
+</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;abc abc abc&quot;</span><span class="p">;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">&quot;abc&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// 0 — not 4 or 8</span>
+</code></pre></div>
+</details>
+<details class="example">
+<summary>Code Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;The quick brown fox jumps over the lazy dog.&quot;</span><span class="p">;</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">index</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">text</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">&quot;fox&quot;</span><span class="p">);</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">index</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: 16</span>
+</code></pre></div>
+</details>
+<h3 id="5search-returns-number">5.search: (returns number)</h3>
+<h3 id="returns-the-index-of-the-match-string-search-also-work-as-same-as-the-match-string-match-and-string-search-the-match-method-returns-an-array-of-matches-the-search-method-returns-the-position-of-the-first-match_1">returns the index of the match string search also work as same as the match String match() and String search() The match() method returns an array of matches. The search() method returns the position of the first match.</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>const text = &quot;The quick brown fox jumps over the lazy dog.&quot;;
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>const index = text.search(&quot;fox&quot;);
+<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a>
+<a id="__codelineno-28-4" name="__codelineno-28-4" href="#__codelineno-28-4"></a>console.log(index); // Output: 16
+</code></pre></div>
+<h3 id="6-slice-extract-substring-or-array-elements">6. <code>.slice()</code> — Extract Substring or Array Elements</h3>
+<details class="info" open="open">
+<summary>What <code>.slice()</code> Does</summary>
+<ul>
+<li>Extracts a <strong>portion</strong> of a string or array</li>
+<li>Returns a <strong>new</strong> string/array without modifying the original</li>
+<li>Accepts two arguments: <code>startIndex</code> and <code>endIndex</code> (end is <strong>not included</strong>)</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nx">string</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">startIndex</span><span class="p">,</span><span class="w"> </span><span class="nx">endIndex</span><span class="p">)</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="nx">array</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="nx">startIndex</span><span class="p">,</span><span class="w"> </span><span class="nx">endIndex</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Use Cases with Examples</summary>
+<ul>
+<li>
+<p><strong>Extract characters from a string</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="s2">&quot;JavaScript&quot;</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Java&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Slice from a specific index to the end</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="s2">&quot;Hello World&quot;</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">6</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;World&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Use with arrays to copy or extract elements</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">];</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nx">arr</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// [2, 3]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Use negative indices to count from the end</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="s2">&quot;Example&quot;</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="o">-</span><span class="mf">3</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;ple&quot;</span>
+</code></pre></div></p>
+</li>
+</ul>
+</details>
+<details class="danger">
+<summary>Common Mistakes</summary>
+<ul>
+<li>
+<p><code>endIndex</code> is <strong>not included</strong> in the result<br />
+<code>slice(1, 3)</code> gets elements at index 1 and 2 — <strong>not</strong> 3</p>
+</li>
+<li>
+<p>Original data is <strong>not modified</strong>, it’s non-destructive</p>
+</li>
+</ul>
+</details>
+<details class="example">
+<summary>Code Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Lemon&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mango&quot;</span><span class="p">];</span>
+<a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">citrus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fruits</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span>
+<a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>
+<a id="__codelineno-34-4" name="__codelineno-34-4" href="#__codelineno-34-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">citrus</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: [ &#39;Orange&#39;, &#39;Lemon&#39; ]</span>
+</code></pre></div>
+</details>
+<h3 id="6slice-method-returns-new-string-the-slice-string-method-in-javascript-extracts-a-part-of-the-string-and-returns-it-as-a-new-string">6.slice method: (returns new string) The slice string method in javascript extracts a part of the string and returns it as a new string.</h3>
+<h3 id="slice-consist-of-2-indexs-or-argumenst_1">slice consist of 2 indexs or argumenst</h3>
+<h4 id="strslicestartindx-lastindex-print-between-those-values_1">str.slice(startindx , lastindex )- print between those values</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>const fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Lemon&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a>const citrus = fruits.slice(1, 3);
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a>output - Orange,Lemon
+</code></pre></div>
+<h3 id="7-split-divide-a-string-into-substrings">7. <code>.split()</code> — Divide a String into Substrings</h3>
+<details class="info" open="open">
+<summary>What <code>.split()</code> Does</summary>
+<ul>
+<li>Divides a <strong>string</strong> into an <strong>array</strong> of substrings</li>
+<li>Takes a <strong>separator</strong> (character, string, or RegExp)</li>
+<li>Optionally accepts a <strong>limit</strong> to control number of splits</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nx">string</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">separator</span><span class="p">,</span><span class="w"> </span><span class="nx">limit</span><span class="o">?</span><span class="p">)</span>
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>Use Cases with Examples</summary>
+<ul>
+<li>
+<p><strong>Split a sentence into words</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="s2">&quot;Hello World&quot;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;Hello&quot;, &quot;World&quot;]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Split into characters</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="s2">&quot;ABCDEF&quot;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;A&quot;, &quot;B&quot;, &quot;C&quot;, &quot;D&quot;, &quot;E&quot;, &quot;F&quot;]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Split with a custom delimiter</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="s2">&quot;Java;Python;C++&quot;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;Java&quot;, &quot;Python&quot;, &quot;C++&quot;]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Split using regular expressions</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">langs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript ;  Python ;C;C++&quot;</span><span class="p">;</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">langs</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="sr">/\s*(?:;|$)\s*/</span><span class="p">);</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;JavaScript&quot;, &quot;Python&quot;, &quot;C&quot;, &quot;C++&quot;]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Limit the number of results</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="s2">&quot;Java is fun. Java is fast.&quot;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">);</span><span class="w"> </span>
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a><span class="c1">// [&quot;Java is fun&quot;, &quot; Java is fast&quot;]</span>
+</code></pre></div></p>
+</li>
+</ul>
+</details>
+<details class="danger">
+<summary>Common Mistakes</summary>
+<ul>
+<li>
+<p>Omitting separator returns entire string as 1 array element<br />
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="s2">&quot;Text here&quot;</span><span class="p">.</span><span class="nx">split</span><span class="p">();</span><span class="w"> </span><span class="c1">// [&quot;Text here&quot;]</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Passing empty string splits every character<br />
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="s2">&quot;Hi!&quot;</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// [&quot;H&quot;, &quot;i&quot;, &quot;!&quot;]</span>
+</code></pre></div></p>
+</li>
+</ul>
+</details>
+<details class="example">
+<summary>Code Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">sentence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Carbon emission is increasing day by day&quot;</span><span class="p">;</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">split</span><span class="p">());</span><span class="w">         </span><span class="c1">// [ &#39;Carbon emission is increasing day by day&#39; ]</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">));</span><span class="w">       </span><span class="c1">// [&#39;C&#39;,&#39;a&#39;,&#39;r&#39;,...]</span>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">));</span><span class="w">      </span><span class="c1">// [&#39;Carbon&#39;,&#39;emission&#39;,&#39;is&#39;,...]</span>
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s1">&#39;is&#39;</span><span class="p">));</span><span class="w">     </span><span class="c1">// [&#39;Carbon emission &#39;, &#39; increasing day by day&#39;]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Java is awesome. Java is fun.&quot;</span><span class="p">;</span>
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">));</span><span class="w">          </span><span class="c1">// [&#39;Java is awesome&#39;, &#39; Java is fun&#39;, &#39;&#39;]</span>
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">2</span><span class="p">));</span><span class="w">       </span><span class="c1">// [&#39;Java is awesome&#39;, &#39; Java is fun&#39;]</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">text2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript ;  Python ;C;C++&quot;</span><span class="p">;</span>
+<a id="__codelineno-46-2" name="__codelineno-46-2" href="#__codelineno-46-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">pattern</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sr">/\s*(?:;|$)\s*/</span><span class="p">;</span>
+<a id="__codelineno-46-3" name="__codelineno-46-3" href="#__codelineno-46-3"></a>
+<a id="__codelineno-46-4" name="__codelineno-46-4" href="#__codelineno-46-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text2</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="nx">pattern</span><span class="p">));</span><span class="w">     </span><span class="c1">// [&#39;JavaScript&#39;, &#39;Python&#39;, &#39;C&#39;, &#39;C++&#39;]</span>
+</code></pre></div>
+</details>
+<h3 id="7split-returns-string-the-split-string-method-in-javascript-divides-the-given-string-intro-substring-and-returns-an-array-of-substrings_1">7.split: (returns string) The split string method in javascript divides the given string intro substring and returns an array of substrings.</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a>const sentence = &quot;Carbon emission is increasing day by day&quot;;
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a>
+<a id="__codelineno-47-3" name="__codelineno-47-3" href="#__codelineno-47-3"></a>// no pattern -&gt; return whole string in array
+<a id="__codelineno-47-4" name="__codelineno-47-4" href="#__codelineno-47-4"></a>console.log(sentence.split());
+<a id="__codelineno-47-5" name="__codelineno-47-5" href="#__codelineno-47-5"></a>// split at each space
+<a id="__codelineno-47-6" name="__codelineno-47-6" href="#__codelineno-47-6"></a>console.log(sentence.split(&#39;&#39;));
+<a id="__codelineno-47-7" name="__codelineno-47-7" href="#__codelineno-47-7"></a>// split at each space
+<a id="__codelineno-47-8" name="__codelineno-47-8" href="#__codelineno-47-8"></a>console.log(sentence.split(&#39; &#39;));
+<a id="__codelineno-47-9" name="__codelineno-47-9" href="#__codelineno-47-9"></a>// split at each &#39;is&#39;
+<a id="__codelineno-47-10" name="__codelineno-47-10" href="#__codelineno-47-10"></a>console.log(sentence.split(&#39;is&#39;));
+<a id="__codelineno-47-11" name="__codelineno-47-11" href="#__codelineno-47-11"></a>
+<a id="__codelineno-47-12" name="__codelineno-47-12" href="#__codelineno-47-12"></a>console.log(&quot;ABCDEF&quot;.split(&quot;&quot;)); // [ &#39;A&#39;, &#39;B&#39;, &#39;C&#39;, &#39;D&#39;, &#39;E&#39;, &#39;F&#39; ]
+<a id="__codelineno-47-13" name="__codelineno-47-13" href="#__codelineno-47-13"></a>
+<a id="__codelineno-47-14" name="__codelineno-47-14" href="#__codelineno-47-14"></a>const text = &quot;Java is awesome. Java is fun.&quot;;
+<a id="__codelineno-47-15" name="__codelineno-47-15" href="#__codelineno-47-15"></a>
+<a id="__codelineno-47-16" name="__codelineno-47-16" href="#__codelineno-47-16"></a>let pattern = &quot;.&quot;;
+<a id="__codelineno-47-17" name="__codelineno-47-17" href="#__codelineno-47-17"></a>let newText = text.split(pattern);
+<a id="__codelineno-47-18" name="__codelineno-47-18" href="#__codelineno-47-18"></a>console.log(newText); // [ &#39;Java is awesome&#39;, &#39; Java is fun&#39;, &#39;&#39; ]
+<a id="__codelineno-47-19" name="__codelineno-47-19" href="#__codelineno-47-19"></a>
+<a id="__codelineno-47-20" name="__codelineno-47-20" href="#__codelineno-47-20"></a>let pattern1 = &quot;.&quot;;
+<a id="__codelineno-47-21" name="__codelineno-47-21" href="#__codelineno-47-21"></a>// only split string to maximum to parts
+<a id="__codelineno-47-22" name="__codelineno-47-22" href="#__codelineno-47-22"></a>let newText1 = text.split(pattern1, 2);
+<a id="__codelineno-47-23" name="__codelineno-47-23" href="#__codelineno-47-23"></a>console.log(newText1); // [ &#39;Java is awesome&#39;, &#39; Java is fun&#39; ]
+<a id="__codelineno-47-24" name="__codelineno-47-24" href="#__codelineno-47-24"></a>
+<a id="__codelineno-47-25" name="__codelineno-47-25" href="#__codelineno-47-25"></a>const text2 = &quot;JavaScript ;  Python ;C;C++&quot;;
+<a id="__codelineno-47-26" name="__codelineno-47-26" href="#__codelineno-47-26"></a>let pattern2 = &quot;;&quot;;
+<a id="__codelineno-47-27" name="__codelineno-47-27" href="#__codelineno-47-27"></a>let newText2 = text2.split(pattern2);
+<a id="__codelineno-47-28" name="__codelineno-47-28" href="#__codelineno-47-28"></a>console.log(newText2); // [ &#39;JavaScript &#39;, &#39;  Python &#39;, &#39;C&#39;, &#39;C++&#39; ]
+<a id="__codelineno-47-29" name="__codelineno-47-29" href="#__codelineno-47-29"></a>
+<a id="__codelineno-47-30" name="__codelineno-47-30" href="#__codelineno-47-30"></a>// using RegEx
+<a id="__codelineno-47-31" name="__codelineno-47-31" href="#__codelineno-47-31"></a>let pattern3 = /\s*(?:;|$)\s*/;
+<a id="__codelineno-47-32" name="__codelineno-47-32" href="#__codelineno-47-32"></a>let newText3 = text2.split(pattern3);
+<a id="__codelineno-47-33" name="__codelineno-47-33" href="#__codelineno-47-33"></a>console.log(newText3); // [ &#39;JavaScript&#39;, &#39;Python&#39;, &#39;C&#39;, &#39;C++&#39; ]
+</code></pre></div>
+<h3 id="8-startswith-check-how-a-string-begins">8. <code>.startsWith()</code> — Check How a String Begins</h3>
+<details class="info" open="open">
+<summary>What <code>.startsWith()</code> Does</summary>
+<ul>
+<li>Checks whether a string <strong>starts with</strong> a specified substring</li>
+<li>Returns a <strong>boolean</strong> (<code>true</code> or <code>false</code>)</li>
+<li>It is <strong>case-sensitive</strong></li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="nx">string</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="nx">searchString</span><span class="p">,</span><span class="w"> </span><span class="nx">position</span><span class="o">?</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>searchString</code>: the text to search for</li>
+<li><code>position</code> <em>(optional)</em>: the index at which to begin the search (default is <code>0</code>)</li>
+</ul>
+</details>
+<details class="tip">
+<summary>Use Cases with Examples</summary>
+<ul>
+<li>
+<p><strong>Check for a prefix</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="s2">&quot;Hello World&quot;</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Check with lowercase mismatch</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="s2">&quot;Hello World&quot;</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Start checking from a specific position</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="s2">&quot;JavaScript is fun&quot;</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;Script&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</code></pre></div></p>
+</li>
+</ul>
+</details>
+<details class="danger">
+<summary>Common Mistakes</summary>
+<ul>
+<li>
+<p><code>.startsWith()</code> is <strong>case-sensitive</strong><br />
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="s2">&quot;Test&quot;</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;test&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// false</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Not checking from intended position<br />
+  Always specify the correct <code>position</code> if checking later parts of a string.</p>
+</li>
+</ul>
+</details>
+<details class="example">
+<summary>Code Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">sentence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Carbon emission is increasing day by day&quot;</span><span class="p">;</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a>
+<a id="__codelineno-53-3" name="__codelineno-53-3" href="#__codelineno-53-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;Car&quot;</span><span class="p">));</span><span class="w">     </span><span class="c1">// true</span>
+<a id="__codelineno-53-4" name="__codelineno-53-4" href="#__codelineno-53-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;carbon&quot;</span><span class="p">));</span><span class="w">  </span><span class="c1">// false (case-sensitive)</span>
+<a id="__codelineno-53-5" name="__codelineno-53-5" href="#__codelineno-53-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;emission&quot;</span><span class="p">,</span><span class="w"> </span><span class="mf">7</span><span class="p">));</span><span class="w"> </span><span class="c1">// true (starts at index 7)</span>
+</code></pre></div>
+</details>
+<h3 id="8startswith-returns-boolean-the-startswith-string-method-in-javascript-determines-whether-a-string-starts-with-some-given-substring-or-not-if-it-starts-with-the-desired-string-then-it-returns-true-else-return-false_1">8.startsWith: (returns boolean) The startsWith string method in javascript determines whether a string starts with some given substring or not. If it starts with the desired string then it returns true else return false.</h3>
+<h3 id="the-search-string-is-passed-as-the-first-argument-to-the-method-there-is-also-an-optional-argument-that-defines-the-position-from-where-the-method-should-start-checking-the-startswith-method-is-case-sensitive_1">The search string is passed as the first argument to the method. There is also an optional argument that defines the position from where the method should start checking. The startsWith method is case-sensitive.</h3>
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a>Example:
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a>const sentence = &quot;Carbon emission is increasing day by day&quot;;
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a>console.log(sentence.startsWith(&quot;Car&quot;));
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a>console.log(sentence.startsWith(&quot;carbon&quot;)); // return false case-sensitive
+</code></pre></div>
+<h3 id="9-substring-extract-a-portion-of-a-string">9. <code>.substring()</code> — Extract a Portion of a String</h3>
+<details class="info" open="open">
+<summary>What <code>.substring()</code> Does</summary>
+<ul>
+<li>Extracts characters <strong>between two indices</strong></li>
+<li>Returns a <strong>new string</strong></li>
+<li>Does <strong>not modify</strong> the original string</li>
+<li>If <code>endIndex</code> is omitted, extracts till the end of the string</li>
+<li>If <code>startIndex &gt; endIndex</code>, it swaps them internally</li>
+</ul>
+<p><strong>Syntax:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="nx">string</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="nx">startIndex</span><span class="p">,</span><span class="w"> </span><span class="nx">endIndex</span><span class="p">)</span>
+</code></pre></div></p>
+<ul>
+<li><code>startIndex</code>: index at which to begin extraction (included)</li>
+<li><code>endIndex</code>: index before which to stop (excluded)</li>
+</ul>
+</details>
+<details class="tip">
+<summary>Use Cases with Examples</summary>
+<ul>
+<li>
+<p><strong>Extract substring from index 0 to 5</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">;</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">5</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;JavaS&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Omit end index to go till end</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;Script&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Automatically swaps indices</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;Sc&quot;</span>
+</code></pre></div></p>
+</li>
+</ul>
+</details>
+<details class="danger">
+<summary>Common Mistakes</summary>
+<ul>
+<li>
+<p><code>.substring()</code> treats negative values as <code>0</code>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="o">-</span><span class="mf">2</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;hello&quot;</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Unlike <code>.slice()</code>, it does not support negative indexes</p>
+</li>
+</ul>
+</details>
+<details class="example">
+<summary>Code Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">fullText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello, Angular!&quot;</span><span class="p">;</span>
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a>
+<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="c1">// Extract from index 7 to end</span>
+<a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a><span class="kd">const</span><span class="w"> </span><span class="nx">extractedText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fullText</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">7</span><span class="p">);</span>
+<a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">extractedText</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Angular!&quot;</span>
+<a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a>
+<a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a><span class="c1">// Extract from index 7 to 13 (not including 13)</span>
+<a id="__codelineno-60-8" name="__codelineno-60-8" href="#__codelineno-60-8"></a><span class="kd">const</span><span class="w"> </span><span class="nx">partialText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fullText</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">13</span><span class="p">);</span>
+<a id="__codelineno-60-9" name="__codelineno-60-9" href="#__codelineno-60-9"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">partialText</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Angular&quot;</span>
+</code></pre></div>
+</details>
+<h3 id="9substring-returns-string-the-substring-method-in-javascript-is-used-to-extract-a-part-of-a-string-between-two-indices-or-positions-its-a-common-method-and-can-be-used-within-any-javascript-code-including-angular-components_1">9.substring: (returns string) The substring method in JavaScript is used to extract a part of a string between two indices or positions. It's a common method and can be used within any JavaScript code, including Angular components.</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a>string.substring(startIndex, endIndex)
+</code></pre></div>
+<h3 id="10-substring-with-startindex-and-optional-endindex">10. <code>.substring()</code> — With <code>startIndex</code> and Optional <code>endIndex</code></h3>
+<details class="info" open="open">
+<summary>What It Does</summary>
+<ul>
+<li>Extracts characters <strong>from <code>startIndex</code> to <code>endIndex</code> (exclusive)</strong></li>
+<li>If <code>endIndex</code> is omitted, extraction continues <strong>to the end of the string</strong></li>
+<li>If <code>startIndex &gt; endIndex</code>, the method automatically swaps them</li>
+<li><strong>Does not include the character at <code>endIndex</code></strong></li>
+</ul>
+</details>
+<details class="example">
+<summary>Examples</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="nx">fullText</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Hello, Angular!&#39;</span><span class="p">;</span>
+<a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a><span class="nx">extractedText</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a>
+<a id="__codelineno-62-4" name="__codelineno-62-4" href="#__codelineno-62-4"></a><span class="c1">// Extract from index 7 to the end</span>
+<a id="__codelineno-62-5" name="__codelineno-62-5" href="#__codelineno-62-5"></a><span class="k">this</span><span class="p">.</span><span class="nx">extractedText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">fullText</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">7</span><span class="p">);</span>
+<a id="__codelineno-62-6" name="__codelineno-62-6" href="#__codelineno-62-6"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">extractedText</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Angular!&quot;</span>
+<a id="__codelineno-62-7" name="__codelineno-62-7" href="#__codelineno-62-7"></a>
+<a id="__codelineno-62-8" name="__codelineno-62-8" href="#__codelineno-62-8"></a><span class="c1">// Extract from index 7 to 13 (not including 13)</span>
+<a id="__codelineno-62-9" name="__codelineno-62-9" href="#__codelineno-62-9"></a><span class="kd">const</span><span class="w"> </span><span class="nx">partialText</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">fullText</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">13</span><span class="p">);</span>
+<a id="__codelineno-62-10" name="__codelineno-62-10" href="#__codelineno-62-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">partialText</span><span class="p">);</span><span class="w"> </span><span class="c1">// &quot;Angular&quot;</span>
+</code></pre></div>
+</details>
+<hr />
+<h3 id="difference-substring-vs-substr-deprecated">Difference: <code>substring()</code> vs <code>substr()</code> (deprecated)</h3>
+<details class="info" open="open">
+<summary>Key Differences</summary>
+<ul>
+<li><code>substring(startIndex, endIndex)</code></li>
+<li>Extracts between two <strong>indices</strong></li>
+<li><code>substr(startIndex, length)</code></li>
+<li>Extracts <strong>number of characters</strong> starting from an index</li>
+<li><code>substr()</code> supports <strong>negative index</strong> (counts from end)</li>
+<li><code>substr()</code> is <strong>deprecated</strong> — avoid using in modern code</li>
+</ul>
+</details>
+<details class="example">
+<summary>Side-by-Side Code Examples</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">;</span>
+<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a>
+<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a><span class="c1">// Using substring</span>
+<a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">10</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;Script&quot;</span>
+<a id="__codelineno-63-5" name="__codelineno-63-5" href="#__codelineno-63-5"></a>
+<a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a><span class="c1">// Using substr: extract 6 characters starting at index 4</span>
+<a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;Script&quot;</span>
+<a id="__codelineno-63-8" name="__codelineno-63-8" href="#__codelineno-63-8"></a>
+<a id="__codelineno-63-9" name="__codelineno-63-9" href="#__codelineno-63-9"></a><span class="c1">// Using substr with negative index</span>
+<a id="__codelineno-63-10" name="__codelineno-63-10" href="#__codelineno-63-10"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;Script&quot;</span>
+<a id="__codelineno-63-11" name="__codelineno-63-11" href="#__codelineno-63-11"></a>
+<a id="__codelineno-63-12" name="__codelineno-63-12" href="#__codelineno-63-12"></a><span class="c1">// Omitting length extracts to the end</span>
+<a id="__codelineno-63-13" name="__codelineno-63-13" href="#__codelineno-63-13"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mf">4</span><span class="p">));</span><span class="w"> </span><span class="c1">// &quot;Script&quot;</span>
+</code></pre></div>
+</details>
+<details class="danger">
+<summary>Avoid Using <code>substr()</code> in New Code</summary>
+<p>While <code>substr()</code> may still work in some environments, it is deprecated and not recommended for long-term use.</p>
+<p>✅ Prefer <code>substring()</code> or <code>slice()</code> for extracting parts of strings.</p>
+</details>
+<h3 id="10startindex-the-position-where-the-extraction-begins-endindex-optional-the-position-where-the-extraction-ends-but-does-not-include-the-character-at-this-index-if-omitted-the-method-will-extract-to-the-end-of-the-string">10.startIndex: The position where the extraction begins. endIndex (optional): The position where the extraction ends (but does not include the character at this index). If omitted, the method will extract to the end of the string.</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a>fullText: string = &#39;Hello, Angular!&#39;;
+<a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a>extractedText: string;
+<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a>// Extract a substring starting from index 7 to the end
+<a id="__codelineno-64-4" name="__codelineno-64-4" href="#__codelineno-64-4"></a>this.extractedText = this.fullText.substring(7);
+<a id="__codelineno-64-5" name="__codelineno-64-5" href="#__codelineno-64-5"></a>// Output: &#39;Angular!&#39;
+<a id="__codelineno-64-6" name="__codelineno-64-6" href="#__codelineno-64-6"></a>
+<a id="__codelineno-64-7" name="__codelineno-64-7" href="#__codelineno-64-7"></a>// Extract a substring from index 7 to 13 (not including 13)
+<a id="__codelineno-64-8" name="__codelineno-64-8" href="#__codelineno-64-8"></a>const partialText = this.fullText.substring(7, 13);
+<a id="__codelineno-64-9" name="__codelineno-64-9" href="#__codelineno-64-9"></a>console.log(partialText); // Output: &#39;Angular&#39;
+</code></pre></div>
+<h3 id="differnce-between-substring-and-substr_1">differnce between substring and substr</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a>string.substring(startIndex, endIndex)
+<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a>string.substr(startIndex, length)
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a>let text = &quot;JavaScript&quot;;
+<a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a>
+<a id="__codelineno-66-3" name="__codelineno-66-3" href="#__codelineno-66-3"></a>// Extracts 6 characters starting from index 4
+<a id="__codelineno-66-4" name="__codelineno-66-4" href="#__codelineno-66-4"></a>console.log(text.substr(4, 6)); // Output: &quot;Script&quot;
+<a id="__codelineno-66-5" name="__codelineno-66-5" href="#__codelineno-66-5"></a>
+<a id="__codelineno-66-6" name="__codelineno-66-6" href="#__codelineno-66-6"></a>// Extracts from the end of the string if negative index is provided
+<a id="__codelineno-66-7" name="__codelineno-66-7" href="#__codelineno-66-7"></a>console.log(text.substr(-6, 6)); // Output: &quot;Script&quot;
+<a id="__codelineno-66-8" name="__codelineno-66-8" href="#__codelineno-66-8"></a>
+<a id="__codelineno-66-9" name="__codelineno-66-9" href="#__codelineno-66-9"></a>// Extracts to the end if length is omitted
+<a id="__codelineno-66-10" name="__codelineno-66-10" href="#__codelineno-66-10"></a>console.log(text.substr(4)); // Output: &quot;Script&quot;
+</code></pre></div>
+<div class="highlight"><span class="filename">substr</span><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a>let text = &quot;JavaScript&quot;;
+<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a>
+<a id="__codelineno-67-3" name="__codelineno-67-3" href="#__codelineno-67-3"></a>// Extracts 6 characters starting from index 4
+<a id="__codelineno-67-4" name="__codelineno-67-4" href="#__codelineno-67-4"></a>console.log(text.substr(4, 6)); // Output: &quot;Script&quot;
+<a id="__codelineno-67-5" name="__codelineno-67-5" href="#__codelineno-67-5"></a>
+<a id="__codelineno-67-6" name="__codelineno-67-6" href="#__codelineno-67-6"></a>// Extracts from the end of the string if negative index is provided
+<a id="__codelineno-67-7" name="__codelineno-67-7" href="#__codelineno-67-7"></a>console.log(text.substr(-6, 6)); // Output: &quot;Script&quot;
+<a id="__codelineno-67-8" name="__codelineno-67-8" href="#__codelineno-67-8"></a>
+<a id="__codelineno-67-9" name="__codelineno-67-9" href="#__codelineno-67-9"></a>// Extracts to the end if length is omitted
+<a id="__codelineno-67-10" name="__codelineno-67-10" href="#__codelineno-67-10"></a>console.log(text.substr(4)); // Output: &quot;Script&quot;
+</code></pre></div></p>
+<h3 id="use-substring-if-you-need-to-work-with-two-indices-or-if-you-are-concerned-about-browser-compatibility-and-future-proofing-your-code-use-substr-if-you-need-to-extract-a-specific-number-of-characters-from-a-certain-position-but-keep-in-mind-that-it-is-deprecated_1">Use substring() if you need to work with two indices, or if you are concerned about browser compatibility and future-proofing your code. Use substr() if you need to extract a specific number of characters from a certain position, but keep in mind that it is deprecated.</h3>
+<h3 id="11-trim-remove-whitespace-from-both-ends">11. <code>.trim()</code> — Remove Whitespace from Both Ends</h3>
+<details class="info" open="open">
+<summary>What It Does</summary>
+<ul>
+<li>Removes <strong>leading and trailing whitespaces</strong> from a string</li>
+<li>Whitespace includes <strong>spaces, tabs, and newlines</strong></li>
+<li>The original string is <strong>not modified</strong>, a new trimmed string is returned</li>
+</ul>
+</details>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-68-1" name="__codelineno-68-1" href="#__codelineno-68-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;    TutorialsTonight    &quot;</span><span class="p">;</span>
+<a id="__codelineno-68-2" name="__codelineno-68-2" href="#__codelineno-68-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">trim</span><span class="p">());</span><span class="w"> </span><span class="c1">// &quot;TutorialsTonight&quot;</span>
+</code></pre></div>
+<p>✅ Output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-69-1" name="__codelineno-69-1" href="#__codelineno-69-1"></a>TutorialsTonight
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>When to Use</summary>
+<ul>
+<li>Clean user input before validation</li>
+<li>Remove accidental spaces from form fields or pasted text</li>
+<li>Normalize strings before storing or comparing</li>
+</ul>
+</details>
+<h3 id="11-trim-returns-string-the-trim-string-method-in-javascript-removes-whitespaces-from-both-ends-of-the-string-whitespaces-are-space-tabs-newline-etc_1">11: trim(): (returns string) The trim() string method in javascript removes whitespaces from both ends of the string. Whitespaces are space, tabs, newline, etc.</h3>
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code><a id="__codelineno-70-1" name="__codelineno-70-1" href="#__codelineno-70-1"></a>const str = &quot;    TutorialsTonight    &quot;;
+<a id="__codelineno-70-2" name="__codelineno-70-2" href="#__codelineno-70-2"></a>console.log(str.trim());
+<a id="__codelineno-70-3" name="__codelineno-70-3" href="#__codelineno-70-3"></a>
+<a id="__codelineno-70-4" name="__codelineno-70-4" href="#__codelineno-70-4"></a>oputput- TutorialsTonight
+</code></pre></div>
+<h3 id="12-valueof-get-primitive-value-of-a-string-object">12. <code>.valueOf()</code> — Get Primitive Value of a String Object</h3>
+<details class="info" open="open">
+<summary>What It Does</summary>
+<ul>
+<li>Returns the <strong>primitive string value</strong> of a <code>String</code> object</li>
+<li>Useful when dealing with objects created via <code>new String()</code></li>
+<li>Normally called <strong>automatically</strong> by JavaScript in most string operations</li>
+</ul>
+</details>
+<details class="example">
+<summary>Example</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-71-1" name="__codelineno-71-1" href="#__codelineno-71-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">String</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">);</span>
+<a id="__codelineno-71-2" name="__codelineno-71-2" href="#__codelineno-71-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">());</span>
+</code></pre></div>
+<p>✅ Output:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-72-1" name="__codelineno-72-1" href="#__codelineno-72-1"></a>hello world
+</code></pre></div></p>
+</details>
+<details class="tip">
+<summary>When to Use</summary>
+<ul>
+<li>When working with string <strong>objects</strong>, not primitives</li>
+<li>To safely extract the <strong>plain string</strong> value from a <code>String</code> object</li>
+<li>When comparing or serializing string objects</li>
+</ul>
+</details>
+<h3 id="12-valueof-the-valueof-string-method-in-javascript-returns-the-primitive-value-of-a-string-object_1">12: valueOf: The valueOf() string method in javascript returns the primitive value of a String object.</h3>
+<div class="highlight"><span class="filename">Example</span><pre><span></span><code><a id="__codelineno-73-1" name="__codelineno-73-1" href="#__codelineno-73-1"></a>const str = new String(&quot;hello world&quot;);
+<a id="__codelineno-73-2" name="__codelineno-73-2" href="#__codelineno-73-2"></a>console.log(str.valueOf(str))
+<a id="__codelineno-73-3" name="__codelineno-73-3" href="#__codelineno-73-3"></a>
+<a id="__codelineno-73-4" name="__codelineno-73-4" href="#__codelineno-73-4"></a>output - Hello world without string 
+</code></pre></div>
+<h1 id="above-examples-only-but-in-one-place">📚 Above examples only but in one place</h1>
+<details class="info" open="open">
+<summary>1. 🔢 <code>.length</code> — Get String Length</summary>
+<ul>
+<li>Returns the number of characters (including spaces) in a string.</li>
+<li>It’s a property, not a function (no parentheses needed).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-74-1" name="__codelineno-74-1" href="#__codelineno-74-1"></a> &lt;span style=&quot;font-weight: bold; font-size: 1.2em;&quot;&gt;var str = &quot;Hello World&quot;;&lt;/span&gt;&lt;br&gt;
+<a id="__codelineno-74-2" name="__codelineno-74-2" href="#__codelineno-74-2"></a>&lt;span style=&quot;font-weight: bold; font-size: 1.2em;&quot;&gt;console.log(str.length); // Output: 11&lt;/span&gt;
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>2. 🔁 <code>.repeat()</code> — Repeat a String</summary>
+<ul>
+<li>Repeats a string a specified number of times.</li>
+<li>Decimal values are converted to integers.</li>
+<li>Negative values throw an error.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-75-1" name="__codelineno-75-1" href="#__codelineno-75-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Tick tock, &quot;</span><span class="p">;</span>
+<a id="__codelineno-75-2" name="__codelineno-75-2" href="#__codelineno-75-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">2</span><span class="p">));</span><span class="w">     </span><span class="c1">// Tick tock, Tick tock,</span>
+<a id="__codelineno-75-3" name="__codelineno-75-3" href="#__codelineno-75-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">3.5</span><span class="p">));</span><span class="w">   </span><span class="c1">// Tick tock, Tick tock, Tick tock,</span>
+<a id="__codelineno-75-4" name="__codelineno-75-4" href="#__codelineno-75-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">repeat</span><span class="p">(</span><span class="mf">0</span><span class="p">));</span><span class="w">     </span><span class="c1">// (empty string)</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>3. ♻️ <code>.replace()</code> — Replace First Match</summary>
+<ul>
+<li>Replaces the <strong>first</strong> match of a substring or pattern.</li>
+<li>Returns a new string.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-76-1" name="__codelineno-76-1" href="#__codelineno-76-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">message</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;bbb ccc&quot;</span><span class="p">;</span>
+<a id="__codelineno-76-2" name="__codelineno-76-2" href="#__codelineno-76-2"></a><span class="kd">let</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">message</span><span class="p">.</span><span class="nx">replace</span><span class="p">(</span><span class="s2">&quot;b&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="p">);</span>
+<a id="__codelineno-76-3" name="__codelineno-76-3" href="#__codelineno-76-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: &quot;cbb ccc&quot;</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>4. 🔁 <code>.replaceAll()</code> — Replace All Matches</summary>
+<ul>
+<li>Replaces <strong>all occurrences</strong> of a string or pattern.</li>
+<li>Regex must use <code>/g</code> (global flag) or it throws a <code>TypeError</code>.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-77-1" name="__codelineno-77-1" href="#__codelineno-77-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Carbon emission is increasing day by day.&quot;</span><span class="p">;</span>
+<a id="__codelineno-77-2" name="__codelineno-77-2" href="#__codelineno-77-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">replaceAll</span><span class="p">(</span><span class="s2">&quot;day&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;year&quot;</span><span class="p">));</span>
+<a id="__codelineno-77-3" name="__codelineno-77-3" href="#__codelineno-77-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">replaceAll</span><span class="p">(</span><span class="sr">/day/g</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;month&quot;</span><span class="p">));</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>5. 🔍 <code>.search()</code> — Find Index of First Match</summary>
+<ul>
+<li>Returns the index of the first match.</li>
+<li>Similar to <code>.match()</code> but returns a number.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-78-1" name="__codelineno-78-1" href="#__codelineno-78-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;The quick brown fox jumps over the lazy dog.&quot;</span><span class="p">;</span>
+<a id="__codelineno-78-2" name="__codelineno-78-2" href="#__codelineno-78-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="s2">&quot;fox&quot;</span><span class="p">));</span><span class="w"> </span><span class="c1">// Output: 16</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>6. ✂️ <code>.slice()</code> — Extract a Portion of a String</summary>
+<ul>
+<li>Extracts part of a string using indices.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-79-1" name="__codelineno-79-1" href="#__codelineno-79-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">fruits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Banana&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Orange&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Lemon&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Apple&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Mango&quot;</span><span class="p">];</span>
+<a id="__codelineno-79-2" name="__codelineno-79-2" href="#__codelineno-79-2"></a><span class="kd">const</span><span class="w"> </span><span class="nx">citrus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">fruits</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="mf">3</span><span class="p">);</span>
+<a id="__codelineno-79-3" name="__codelineno-79-3" href="#__codelineno-79-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">citrus</span><span class="p">);</span><span class="w"> </span><span class="c1">// [ &#39;Orange&#39;, &#39;Lemon&#39; ]</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>7. 🧩 <code>.split()</code> — Divide String into Array</summary>
+<ul>
+<li>Splits string into array of substrings using a delimiter.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-80-1" name="__codelineno-80-1" href="#__codelineno-80-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">sentence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Carbon emission is increasing day by day&quot;</span><span class="p">;</span>
+<a id="__codelineno-80-2" name="__codelineno-80-2" href="#__codelineno-80-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">split</span><span class="p">());</span><span class="w">            </span><span class="c1">// [ &#39;Carbon emission is increasing day by day&#39; ]</span>
+<a id="__codelineno-80-3" name="__codelineno-80-3" href="#__codelineno-80-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">));</span><span class="w">          </span><span class="c1">// [ &#39;C&#39;, &#39;a&#39;, &#39;r&#39;, ... ]</span>
+<a id="__codelineno-80-4" name="__codelineno-80-4" href="#__codelineno-80-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">));</span><span class="w">         </span><span class="c1">// [ &#39;Carbon&#39;, &#39;emission&#39;, &#39;is&#39;, ... ]</span>
+<a id="__codelineno-80-5" name="__codelineno-80-5" href="#__codelineno-80-5"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&quot;is&quot;</span><span class="p">));</span><span class="w">        </span><span class="c1">// [ &#39;Carbon emission &#39;, &#39; increasing day by day&#39; ]</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>8. 🟢 <code>.startsWith()</code> — Check Start of String</summary>
+<ul>
+<li>Checks if string starts with given substring (case-sensitive).</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-81-1" name="__codelineno-81-1" href="#__codelineno-81-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">sentence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Carbon emission is increasing day by day&quot;</span><span class="p">;</span>
+<a id="__codelineno-81-2" name="__codelineno-81-2" href="#__codelineno-81-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;Car&quot;</span><span class="p">));</span><span class="w">     </span><span class="c1">// true</span>
+<a id="__codelineno-81-3" name="__codelineno-81-3" href="#__codelineno-81-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">sentence</span><span class="p">.</span><span class="nx">startsWith</span><span class="p">(</span><span class="s2">&quot;carbon&quot;</span><span class="p">));</span><span class="w">  </span><span class="c1">// false</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>9. 📍 <code>.substring()</code> — Extract Characters by Index</summary>
+<ul>
+<li>Extracts characters between two indexes.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-82-1" name="__codelineno-82-1" href="#__codelineno-82-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello, Angular!&quot;</span><span class="p">;</span>
+<a id="__codelineno-82-2" name="__codelineno-82-2" href="#__codelineno-82-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">7</span><span class="p">));</span><span class="w">       </span><span class="c1">// Angular!</span>
+<a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">substring</span><span class="p">(</span><span class="mf">7</span><span class="p">,</span><span class="w"> </span><span class="mf">13</span><span class="p">));</span><span class="w">   </span><span class="c1">// Angular</span>
+</code></pre></div>
+<p><strong>Difference vs <code>substr()</code></strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;JavaScript&quot;</span><span class="p">;</span>
+<a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="mf">4</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">));</span><span class="w">     </span><span class="c1">// Script</span>
+<a id="__codelineno-83-3" name="__codelineno-83-3" href="#__codelineno-83-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">text</span><span class="p">.</span><span class="nx">substr</span><span class="p">(</span><span class="o">-</span><span class="mf">6</span><span class="p">,</span><span class="w"> </span><span class="mf">6</span><span class="p">));</span><span class="w">    </span><span class="c1">// Script</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>10. 🔠 <code>.toLowerCase()</code> / <code>.toUpperCase()</code> — Change Case</summary>
+<ul>
+<li>Converts string to all lowercase or all uppercase.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="kd">let</span><span class="w"> </span><span class="nx">greeting</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello World&quot;</span><span class="p">;</span>
+<a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// hello world</span>
+<a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">greeting</span><span class="p">.</span><span class="nx">toUpperCase</span><span class="p">());</span><span class="w"> </span><span class="c1">// HELLO WORLD</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>11. 🚿 <code>.trim()</code> — Remove Whitespace</summary>
+<ul>
+<li>Removes whitespace from both ends of a string.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-85-1" name="__codelineno-85-1" href="#__codelineno-85-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;    TutorialsTonight    &quot;</span><span class="p">;</span>
+<a id="__codelineno-85-2" name="__codelineno-85-2" href="#__codelineno-85-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">trim</span><span class="p">());</span><span class="w"> </span><span class="c1">// TutorialsTonight</span>
+</code></pre></div>
+</details>
+<details class="info" open="open">
+<summary>12. 🧱 <code>.valueOf()</code> — Get Primitive Value</summary>
+<ul>
+<li>Returns the primitive string value from a <code>String</code> object.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-86-1" name="__codelineno-86-1" href="#__codelineno-86-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nb">String</span><span class="p">(</span><span class="s2">&quot;hello world&quot;</span><span class="p">);</span>
+<a id="__codelineno-86-2" name="__codelineno-86-2" href="#__codelineno-86-2"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">str</span><span class="p">.</span><span class="nx">valueOf</span><span class="p">());</span><span class="w"> </span><span class="c1">// &quot;hello world&quot;</span>
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
