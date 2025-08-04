@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#realtimeex" class="md-skip">
+        <a href="#stackblitz-example" class="md-skip">
           Skip to content
         </a>
       
@@ -393,6 +393,26 @@
   
   
   mk_docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tasks/tasks/" class="md-tabs__link">
+          
+  
+  
+  Tasks
 
         </a>
       </li>
@@ -746,6 +766,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stackblitz-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      stackblitz Example
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#realtimeex" class="md-nav__link">
@@ -2106,6 +2135,81 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tasks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2131,6 +2235,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#stackblitz-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      stackblitz Example
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#realtimeex" class="md-nav__link">
@@ -2171,6 +2284,10 @@
   <h1>FormArray</h1>
 
 <details>
+  <summary>FormArray</summary>
+  <img src="/rajeshgotti/images/formArray3.jpg" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+<details>
   <summary>FormArray1</summary>
   <img src="/rajeshgotti/images/formArray1.jpg" alt="Output image" style="max-width: 100%; height: auto;" />
 </details>
@@ -2179,60 +2296,141 @@
   <img src="/rajeshgotti/images/formArray2.jpg" alt="Output image" style="max-width: 100%; height: auto;" />
 </details>
 
-<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;hello name=&quot;{{ name }}&quot;&gt;&lt;/hello&gt;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;p&gt;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  Start editing to see some magic happen 
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>&lt;/p&gt;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>&lt;div [formGroup]=&quot;orderForm&quot;&gt;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>&lt;div formArrayName=&quot;items&quot;
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  *ngFor=&quot;let item of orderForm.get(&#39;items&#39;).controls; let i = index;&quot;&gt;
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  &lt;div [formGroupName]=&quot;i&quot;&gt;
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    &lt;input formControlName=&quot;name&quot; placeholder=&quot;Item name&quot;&gt;
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    &lt;input formControlName=&quot;description&quot; placeholder=&quot;Item description&quot;&gt;
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    &lt;input formControlName=&quot;price&quot; placeholder=&quot;Item price&quot;&gt;
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  &lt;/div&gt;
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  Chosen name: {{ orderForm.controls.items.controls[i].controls.name.value }}
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>&lt;/div&gt;
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>&lt;/div&gt;
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>&lt;button (click)=&quot;addItem()&quot;&gt;Add&lt;/button&gt;
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import { CommonModule } from &#39;@angular/common&#39;;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>import {  FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from &#39;@angular/forms&#39;;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>import { MatSelectModule } from &#39;@angular/material/select&#39;;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>@Component({
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  selector: &#39;app-parent&#39;,
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  imports: [MatFormFieldModule, MatSelectModule, CommonModule,ReactiveFormsModule,FormsModule,MatInputModule],
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  templateUrl: &#39;./parent.html&#39;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>})
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>export class Parent implements OnInit{
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a> myform:FormGroup
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>ngOnInit(): void {
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  this.myform=new FormGroup({
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    firstNameFc:new FormControl(&#39;&#39;),
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>    lastNameFc:new FormControl(&#39;&#39;),
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>    formArrayFc:new FormArray([])
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>  })
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>}
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>get formArrayFc(){
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  return this.myform.get(&#39;formArrayFc&#39;) as FormArray
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>}
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>addButton(){
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>  this.formArrayFc.push(this.createNew())
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>}
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>createNew():FormGroup{
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>  return new FormGroup({
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    middleFc:new FormControl(&#39;&#39;),
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    endFc:new FormControl(&#39;&#39;)
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>  })
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>}
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>remove(i: number): void {
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>  // (this.myform.get(&#39;formArrayFc&#39;) as FormArray).removeAt(i);
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>              (or)   
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>  //   this below one also u can use which is simple we use this below one only in realTime
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>  this.formArrayFc.removeAt(i) 
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a> }
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>}
 </code></pre></div>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import { Component } from &#39;@angular/core&#39;;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from &#39;@angular/forms&#39;;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>@Component({
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  selector: &#39;my-app&#39;,
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  templateUrl: &#39;./app.component.html&#39;,
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  styleUrls: [ &#39;./app.component.css&#39; ]
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>})
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>export class AppComponent  {
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  orderForm: FormGroup;
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>items: FormArray;
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>constructor(private formBuilder: FormBuilder) {}
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>ngOnInit() {
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  this.orderForm = new FormGroup({
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    items: new FormArray([])
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  });
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>}
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>createItem(): FormGroup {
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  return this.formBuilder.group({
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    name: &#39;&#39;,
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    description: &#39;&#39;,
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>    price: &#39;&#39;
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>  });
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>}
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>addItem(): void {
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>  this.items = this.orderForm.get(&#39;items&#39;) as FormArray;
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>  this.items.push(this.createItem());
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>}
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a> removeSkill(index: number) {
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>    this.skills.removeAt(index);
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>  }
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>}
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;div class=&quot;card m-2&quot;&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   &lt;form [formGroup]=&quot;myform&quot;&gt;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      &lt;div class=&quot;d-flex m-2&quot;&gt;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>         &lt;div class=&quot;col-3&quot;&gt;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>         &lt;!-- First Name --&gt;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>            &lt;mat-form-field appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>               &lt;mat-label&gt;First Name&lt;/mat-label&gt;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>               &lt;input matInput formControlName=&quot;firstNameFc&quot; placeholder=&quot;Enter first name&quot; /&gt;
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>            &lt;/mat-form-field&gt;
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>         &lt;/div&gt;
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>         &lt;div class=&quot;col-3&quot;&gt;
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>              &lt;!-- Last Name --&gt;
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            &lt;mat-form-field appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>               &lt;mat-label&gt;Last Name&lt;/mat-label&gt;
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>               &lt;input matInput formControlName=&quot;lastNameFc&quot; placeholder=&quot;Enter last name&quot; /&gt;
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>            &lt;/mat-form-field&gt;
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>         &lt;/div&gt;
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>      &lt;/div&gt;
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>&lt;!-- middle Name formArray starts from here --&gt;
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>      &lt;div formArrayName=&quot;formArrayFc&quot;&gt;
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>         &lt;div *ngFor=&quot;let item of formArrayFc.controls; let i=index&quot; [formGroupName]=&quot;i&quot;&gt;
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>            &lt;mat-form-field appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>               &lt;mat-label&gt;middle Name&lt;/mat-label&gt;
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>               &lt;input matInput formControlName=&quot;middleFc&quot; placeholder=&quot;Enter last name&quot; /&gt;
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>            &lt;/mat-form-field&gt;
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>            &lt;mat-form-field appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>               &lt;mat-label&gt;end Name&lt;/mat-label&gt;
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>               &lt;input matInput formControlName=&quot;endFc&quot; placeholder=&quot;Enter last name&quot; /&gt;
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>            &lt;/mat-form-field&gt;
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>            &lt;button (click)=&quot;remove(i)&quot;&gt;remove&lt;/button&gt;
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>         &lt;/div&gt;
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>      &lt;/div&gt;
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>      &lt;button (click)=&quot;aaddButton()&quot;&gt;Add&lt;/button&gt;
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>   &lt;/form&gt;
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>&lt;/div&gt;
+</code></pre></div>
+<h3 id="stackblitz-example">stackblitz Example</h3>
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;hello name=&quot;{{ name }}&quot;&gt;&lt;/hello&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;p&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  Start editing to see some magic happen 
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&lt;/p&gt;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>&lt;div [formGroup]=&quot;orderForm&quot;&gt;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&lt;div formArrayName=&quot;items&quot;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  *ngFor=&quot;let item of orderForm.get(&#39;items&#39;).controls; let i = index;&quot;&gt;
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  &lt;div [formGroupName]=&quot;i&quot;&gt;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    &lt;input formControlName=&quot;name&quot; placeholder=&quot;Item name&quot;&gt;
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    &lt;input formControlName=&quot;description&quot; placeholder=&quot;Item description&quot;&gt;
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    &lt;input formControlName=&quot;price&quot; placeholder=&quot;Item price&quot;&gt;
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  &lt;/div&gt;
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>  Chosen name: {{ orderForm.controls.items.controls[i].controls.name.value }}
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>&lt;/div&gt;
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>&lt;/div&gt;
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>&lt;button (click)=&quot;addItem()&quot;&gt;Add&lt;/button&gt;
+</code></pre></div>
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import { Component } from &#39;@angular/core&#39;;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>import { FormBuilder, FormGroup, FormArray, FormControl, Validators } from &#39;@angular/forms&#39;;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>@Component({
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  selector: &#39;my-app&#39;,
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  templateUrl: &#39;./app.component.html&#39;,
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  styleUrls: [ &#39;./app.component.css&#39; ]
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>})
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>export class AppComponent  {
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  orderForm: FormGroup;
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>items: FormArray;
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>constructor(private formBuilder: FormBuilder) {}
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>ngOnInit() {
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>  this.orderForm = new FormGroup({
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    items: new FormArray([])
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>  });
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>}
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>createItem(): FormGroup {
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>  return this.formBuilder.group({
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    name: &#39;&#39;,
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    description: &#39;&#39;,
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    price: &#39;&#39;
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>  });
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>}
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>addItem(): void {
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>  this.items = this.orderForm.get(&#39;items&#39;) as FormArray;
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>  this.items.push(this.createItem());
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>}
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a> removeSkill(index: number) {
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    this.skills.removeAt(index);
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  }
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>}
 </code></pre></div>
 <details>
   <summary>FormArray Using ForEach()</summary>
@@ -2240,134 +2438,134 @@
 </details>
 
 <h3 id="realtimeex">RealTimeEx</h3>
-<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Note: first we need to write the formgroup, formarrayName,formgroupname in that controlers
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>&lt;form [formGroup]=&quot;formArray&quot; class=&quot;custom-form&quot; (ngSubmit)=&quot;onSubmit()&quot;&gt;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  &lt;h4 class=&quot;form-title&quot;&gt;User Information&lt;/h4&gt;
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  &lt;div formArrayName=&quot;userDetails&quot; *ngFor=&quot;let user of userDetails.controls; let i = index&quot;&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    &lt;div [formGroupName]=&quot;i&quot; class=&quot;form-group&quot;&gt;
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>      &lt;!-- Firstname --&gt;
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>      &lt;label for=&quot;firstname&quot;&gt;First Name&lt;/label&gt;
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>      &lt;input type=&quot;text&quot; formControlName=&quot;firstname&quot; placeholder=&quot;Enter first name&quot;&gt;
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>      &lt;!-- Lastname --&gt;
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>      &lt;label for=&quot;lastname&quot;&gt;Last Name&lt;/label&gt;
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>      &lt;input type=&quot;text&quot; formControlName=&quot;lastname&quot; placeholder=&quot;Enter last name&quot;&gt;
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>      &lt;!-- Gender --&gt;
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>      &lt;label&gt;Gender&lt;/label&gt;
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>      &lt;div class=&quot;radio-group&quot;&gt;
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        &lt;label for=&quot;genderMale&quot;&gt;
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>          &lt;input type=&quot;radio&quot; formControlName=&quot;gender&quot; value=&quot;Male&quot; id=&quot;genderMale&quot;&gt; Male
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        &lt;/label&gt;
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        &lt;label for=&quot;genderFemale&quot;&gt;
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>          &lt;input type=&quot;radio&quot; formControlName=&quot;gender&quot; value=&quot;Female&quot; id=&quot;genderFemale&quot;&gt; Female
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>        &lt;/label&gt;
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>      &lt;/div&gt;
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>      &lt;!-- Message --&gt;
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>      &lt;label for=&quot;textme&quot;&gt;Message&lt;/label&gt;
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>      &lt;textarea formControlName=&quot;textme&quot; placeholder=&quot;Enter your message&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>      &lt;!-- Preferences --&gt;
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>      &lt;label&gt;Preferences&lt;/label&gt;
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>      &lt;div class=&quot;checkbox-group&quot;&gt;
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>        &lt;label for=&quot;checkYes&quot;&gt;
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>          &lt;input type=&quot;checkbox&quot; formControlName=&quot;yes&quot; id=&quot;checkYes&quot;&gt; Yes
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>        &lt;/label&gt;
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>        &lt;label for=&quot;checkNo&quot;&gt;
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>          &lt;input type=&quot;checkbox&quot; formControlName=&quot;no&quot; id=&quot;checkNo&quot;&gt; No
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>        &lt;/label&gt;
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>      &lt;/div&gt;
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>      &lt;!-- Remove Button for this form group --&gt;
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>      &lt;button type=&quot;button&quot; (click)=&quot;removeUser(i)&quot;&gt;Remove&lt;/button&gt;
-<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>    &lt;/div&gt;
-<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>  &lt;/div&gt;
-<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>
-<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>  &lt;button type=&quot;button&quot; (click)=&quot;addUser()&quot;&gt;Add User&lt;/button&gt;
-<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>  &lt;button type=&quot;submit&quot; class=&quot;submit-btn&quot;&gt;Submit&lt;/button&gt;
-<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>&lt;/form&gt;
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Note: first we need to write the formgroup, formarrayName,formgroupname in that controlers
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&lt;form [formGroup]=&quot;formArray&quot; class=&quot;custom-form&quot; (ngSubmit)=&quot;onSubmit()&quot;&gt;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  &lt;h4 class=&quot;form-title&quot;&gt;User Information&lt;/h4&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  &lt;div formArrayName=&quot;userDetails&quot; *ngFor=&quot;let user of userDetails.controls; let i = index&quot;&gt;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    &lt;div [formGroupName]=&quot;i&quot; class=&quot;form-group&quot;&gt;
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>      &lt;!-- Firstname --&gt;
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>      &lt;label for=&quot;firstname&quot;&gt;First Name&lt;/label&gt;
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>      &lt;input type=&quot;text&quot; formControlName=&quot;firstname&quot; placeholder=&quot;Enter first name&quot;&gt;
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>      &lt;!-- Lastname --&gt;
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>      &lt;label for=&quot;lastname&quot;&gt;Last Name&lt;/label&gt;
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>      &lt;input type=&quot;text&quot; formControlName=&quot;lastname&quot; placeholder=&quot;Enter last name&quot;&gt;
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>      &lt;!-- Gender --&gt;
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>      &lt;label&gt;Gender&lt;/label&gt;
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>      &lt;div class=&quot;radio-group&quot;&gt;
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>        &lt;label for=&quot;genderMale&quot;&gt;
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>          &lt;input type=&quot;radio&quot; formControlName=&quot;gender&quot; value=&quot;Male&quot; id=&quot;genderMale&quot;&gt; Male
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        &lt;/label&gt;
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>        &lt;label for=&quot;genderFemale&quot;&gt;
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>          &lt;input type=&quot;radio&quot; formControlName=&quot;gender&quot; value=&quot;Female&quot; id=&quot;genderFemale&quot;&gt; Female
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>        &lt;/label&gt;
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>      &lt;/div&gt;
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>      &lt;!-- Message --&gt;
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>      &lt;label for=&quot;textme&quot;&gt;Message&lt;/label&gt;
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>      &lt;textarea formControlName=&quot;textme&quot; placeholder=&quot;Enter your message&quot; rows=&quot;5&quot;&gt;&lt;/textarea&gt;
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>      &lt;!-- Preferences --&gt;
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>      &lt;label&gt;Preferences&lt;/label&gt;
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>      &lt;div class=&quot;checkbox-group&quot;&gt;
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>        &lt;label for=&quot;checkYes&quot;&gt;
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>          &lt;input type=&quot;checkbox&quot; formControlName=&quot;yes&quot; id=&quot;checkYes&quot;&gt; Yes
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>        &lt;/label&gt;
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>        &lt;label for=&quot;checkNo&quot;&gt;
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>          &lt;input type=&quot;checkbox&quot; formControlName=&quot;no&quot; id=&quot;checkNo&quot;&gt; No
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>        &lt;/label&gt;
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>      &lt;/div&gt;
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>      &lt;!-- Remove Button for this form group --&gt;
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>      &lt;button type=&quot;button&quot; (click)=&quot;removeUser(i)&quot;&gt;Remove&lt;/button&gt;
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>    &lt;/div&gt;
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>  &lt;/div&gt;
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>  &lt;button type=&quot;button&quot; (click)=&quot;addUser()&quot;&gt;Add User&lt;/button&gt;
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>  &lt;button type=&quot;submit&quot; class=&quot;submit-btn&quot;&gt;Submit&lt;/button&gt;
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>&lt;/form&gt;
 </code></pre></div>
 <h3 id="after-completing-the-form-array-in-the-html">after completing the form array in the html</h3>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>step 1 - 
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>     ngOnInit(): void {
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        this.formarray()
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>      }
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        formarray(){
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>            this.formArray = this.fb.group({
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>                userDetails: this.fb.array([this.createUser()])
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>          });
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        }(formarray is the group ) it is creating intially -- by using this method (this.creatUser())
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        createUser(): FormGroup {
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        return this.fb.group({
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>            firstname: [&#39;&#39;],
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>            lastname: [&#39;&#39;],
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>            gender: [&#39;&#39;],
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>            textme: [&#39;&#39;],
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>            yes: [false],
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>            no: [false],
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>        });
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>        }
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>step 2 - add button 
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>        get userDetails() {
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>       return (this.formArray.get(&#39;userDetails&#39;) as FormArray);
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>       } 
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>
-<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    //adding the controllers 
-<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
-<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        addUser(){
-<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>        this.userDetails.push(this.createUser());
-<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>        }
-<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>
-<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>        this.creatUser is added sucessfully and used 
-<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>
-<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>        // remove form array 
-<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>        removeUser(index: number) {
-<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>        this.userDetails.removeAt(index);
-<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>        }
-<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>
-<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>step 3 post --
-<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>
-<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>    this.userDetails.controls.forEach(control =&gt; {
-<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>      const formData = this.extractFormData(control);
-<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>      formarradtaa.push(formData);
-<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>    });
-<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>
-<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>      private extractFormData(control: AbstractControl): any {
-<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>    return {
-<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>      firstname: control.get(&#39;firstname&#39;)?.value,
-<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>      lastname: control.get(&#39;lastname&#39;)?.value,
-<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>      gender: control.get(&#39;gender&#39;)?.value,
-<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>      checkboxYes: control.get(&#39;yes&#39;)?.value,
-<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>      checkboxNo: control.get(&#39;no&#39;)?.value,
-<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>    };
-<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>  }
-<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>//  here the data is pushed as per the loop 
-<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>
-<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>step 4 get and patch 
-<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>    patchValue() {
-<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>    // Iterate over each object in getdata
-<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>    this.getdata.forEach((data, index) =&gt; {
-<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>      // Get the specific FormGroup from the FormArray by index
-<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>      const formGroup = this.userDetails.at(index) as FormGroup;
-<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>
-<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>      // Patch values into the FormGroup
-<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>      formGroup.patchValue({
-<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>        firstname: data.firstname,
-<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>        lastname: data.lastname,
-<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>        gender: data.gender,
-<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>        yes: data.checkboxYes,
-<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>        no: data.checkboxNo,
-<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>      });
-<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>    });
-<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>  }
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>step 1 - 
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>     ngOnInit(): void {
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>        this.formarray()
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>      }
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        formarray(){
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>            this.formArray = this.fb.group({
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>                userDetails: this.fb.array([this.createUser()])
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>          });
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>        }(formarray is the group ) it is creating intially -- by using this method (this.creatUser())
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>        createUser(): FormGroup {
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        return this.fb.group({
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>            firstname: [&#39;&#39;],
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>            lastname: [&#39;&#39;],
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>            gender: [&#39;&#39;],
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>            textme: [&#39;&#39;],
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>            yes: [false],
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>            no: [false],
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>        });
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>        }
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>step 2 - add button 
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>        get userDetails() {
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>       return (this.formArray.get(&#39;userDetails&#39;) as FormArray);
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>       } 
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>    //adding the controllers 
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>        addUser(){
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>        this.userDetails.push(this.createUser());
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>        }
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>        this.creatUser is added sucessfully and used 
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>        // remove form array 
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>        removeUser(index: number) {
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>        this.userDetails.removeAt(index);
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>        }
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>
+<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>step 3 post --
+<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>
+<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>    this.userDetails.controls.forEach(control =&gt; {
+<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>      const formData = this.extractFormData(control);
+<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a>      formarradtaa.push(formData);
+<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a>    });
+<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a>
+<a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a>      private extractFormData(control: AbstractControl): any {
+<a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a>    return {
+<a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a>      firstname: control.get(&#39;firstname&#39;)?.value,
+<a id="__codelineno-5-52" name="__codelineno-5-52" href="#__codelineno-5-52"></a>      lastname: control.get(&#39;lastname&#39;)?.value,
+<a id="__codelineno-5-53" name="__codelineno-5-53" href="#__codelineno-5-53"></a>      gender: control.get(&#39;gender&#39;)?.value,
+<a id="__codelineno-5-54" name="__codelineno-5-54" href="#__codelineno-5-54"></a>      checkboxYes: control.get(&#39;yes&#39;)?.value,
+<a id="__codelineno-5-55" name="__codelineno-5-55" href="#__codelineno-5-55"></a>      checkboxNo: control.get(&#39;no&#39;)?.value,
+<a id="__codelineno-5-56" name="__codelineno-5-56" href="#__codelineno-5-56"></a>    };
+<a id="__codelineno-5-57" name="__codelineno-5-57" href="#__codelineno-5-57"></a>  }
+<a id="__codelineno-5-58" name="__codelineno-5-58" href="#__codelineno-5-58"></a>//  here the data is pushed as per the loop 
+<a id="__codelineno-5-59" name="__codelineno-5-59" href="#__codelineno-5-59"></a>
+<a id="__codelineno-5-60" name="__codelineno-5-60" href="#__codelineno-5-60"></a>step 4 get and patch 
+<a id="__codelineno-5-61" name="__codelineno-5-61" href="#__codelineno-5-61"></a>    patchValue() {
+<a id="__codelineno-5-62" name="__codelineno-5-62" href="#__codelineno-5-62"></a>    // Iterate over each object in getdata
+<a id="__codelineno-5-63" name="__codelineno-5-63" href="#__codelineno-5-63"></a>    this.getdata.forEach((data, index) =&gt; {
+<a id="__codelineno-5-64" name="__codelineno-5-64" href="#__codelineno-5-64"></a>      // Get the specific FormGroup from the FormArray by index
+<a id="__codelineno-5-65" name="__codelineno-5-65" href="#__codelineno-5-65"></a>      const formGroup = this.userDetails.at(index) as FormGroup;
+<a id="__codelineno-5-66" name="__codelineno-5-66" href="#__codelineno-5-66"></a>
+<a id="__codelineno-5-67" name="__codelineno-5-67" href="#__codelineno-5-67"></a>      // Patch values into the FormGroup
+<a id="__codelineno-5-68" name="__codelineno-5-68" href="#__codelineno-5-68"></a>      formGroup.patchValue({
+<a id="__codelineno-5-69" name="__codelineno-5-69" href="#__codelineno-5-69"></a>        firstname: data.firstname,
+<a id="__codelineno-5-70" name="__codelineno-5-70" href="#__codelineno-5-70"></a>        lastname: data.lastname,
+<a id="__codelineno-5-71" name="__codelineno-5-71" href="#__codelineno-5-71"></a>        gender: data.gender,
+<a id="__codelineno-5-72" name="__codelineno-5-72" href="#__codelineno-5-72"></a>        yes: data.checkboxYes,
+<a id="__codelineno-5-73" name="__codelineno-5-73" href="#__codelineno-5-73"></a>        no: data.checkboxNo,
+<a id="__codelineno-5-74" name="__codelineno-5-74" href="#__codelineno-5-74"></a>      });
+<a id="__codelineno-5-75" name="__codelineno-5-75" href="#__codelineno-5-75"></a>    });
+<a id="__codelineno-5-76" name="__codelineno-5-76" href="#__codelineno-5-76"></a>  }
 </code></pre></div>
 
 

@@ -400,6 +400,26 @@
   
 
       
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tasks/tasks/" class="md-tabs__link">
+          
+  
+  
+  Tasks
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -1143,9 +1163,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#03-mat-select-selectionchangedemo" class="md-nav__link">
+  <a href="#03-mat-select-selectionchangeonselectionchangeevent" class="md-nav__link">
     <span class="md-ellipsis">
-      03: mat-select (selectionChange)="demo()"
+      03: mat-select (selectionChange)="onSelectionChange($event)"
     </span>
   </a>
   
@@ -2223,6 +2243,81 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tasks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2340,9 +2435,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#03-mat-select-selectionchangedemo" class="md-nav__link">
+  <a href="#03-mat-select-selectionchangeonselectionchangeevent" class="md-nav__link">
     <span class="md-ellipsis">
-      03: mat-select (selectionChange)="demo()"
+      03: mat-select (selectionChange)="onSelectionChange($event)"
     </span>
   </a>
   
@@ -2742,8 +2837,8 @@
 <a id="__codelineno-18-48" name="__codelineno-18-48" href="#__codelineno-18-48"></a>    this.triggerValidations();
 <a id="__codelineno-18-49" name="__codelineno-18-49" href="#__codelineno-18-49"></a>  }
 </code></pre></div></p>
-<h3 id="03-mat-select-selectionchangedemo">03: mat-select (selectionChange)="demo()"</h3>
-<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>&lt;mat-select [ngModel]=&quot; &quot; (selectChange)=&quot;onSelectionChange($event)&quot;&gt;
+<h3 id="03-mat-select-selectionchangeonselectionchangeevent">03: mat-select (selectionChange)="onSelectionChange($event)"</h3>
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>&lt;mat-select [ngModel]=&quot; &quot; (selectionChange)=&quot;onSelectionChange($event)&quot;&gt;
 <a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a>
 <a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a>   ---ts.file--
 <a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>   onSelectionChange(event){

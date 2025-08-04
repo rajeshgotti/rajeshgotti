@@ -400,6 +400,26 @@
   
 
       
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tasks/tasks/" class="md-tabs__link">
+          
+  
+  
+  Tasks
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -2106,6 +2126,81 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tasks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2170,200 +2265,208 @@
 
   <h1>LocalStorage</h1>
 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>What Is localStorage?
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>localStorage is a Web API that allows you to store key-value pairs in the user&#39;s browser permanently 
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>(until explicitly cleared).Stored data persists across page reloads.All data is stored as strings.
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Telugu: localStoreage lo data anedi key-value paris lo store avtundi e data anedi perminent ga
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>store avtudni untill manam explicitly ga remove cheste ne remove avtundi and e data anedi 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>string format lo store avtundi
+</code></pre></div>
 <h3 id="-how-to-use-local-storage-in-angular-">---- How to Use Local Storage in Angular --------</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1. Set a Value
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   localStorage.setItem(&#39;username&#39;, &#39;Rajesh&#39;);
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>2. Get a Value
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   const name = localStorage.getItem(&#39;username&#39;);
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>   console.log(name);
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>3. Remove a Value
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>   localStorage.removeItem(&#39;username&#39;);
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>4. Clear All Local Storage
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>   localStorage.clear();
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>1. Set a Value
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>   localStorage.setItem(&#39;username&#39;, &#39;Rajesh&#39;);
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>2. Get a Value
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   const name = localStorage.getItem(&#39;username&#39;);
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>   console.log(name);
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>3. Remove a Value
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>   localStorage.removeItem(&#39;username&#39;);
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>4. Clear All Local Storage
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>   localStorage.clear();
 </code></pre></div>
 <h3 id="local-storage-with-crud-and-displaying-in-the-table">Local storage with crud and displaying in the table</h3>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import { CommonModule, NgFor, NgIf } from &#39;@angular/common&#39;;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>import { tick } from &#39;@angular/core/testing&#39;;
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>import {
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>  AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule,
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  ValidationErrors, ValidatorFn, Validators
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>} from &#39;@angular/forms&#39;;
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>import { MatButtonModule } from &#39;@angular/material/button&#39;;
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>import { MatRadioModule } from &#39;@angular/material/radio&#39;;
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>import { MatSelectModule } from &#39;@angular/material/select&#39;;
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>import { timeStamp } from &#39;console&#39;;
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>import e from &#39;express&#39;;
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>@Component({
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  selector: &#39;app-localstorage&#39;,
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  standalone: true,
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  imports: [NgIf, MatRadioModule, MatButtonModule, NgFor, MatFormFieldModule, MatSelectModule,
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    MatInputModule, ReactiveFormsModule, FormsModule],
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>  templateUrl: &#39;./localstorage.component.html&#39;,
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  styleUrl: &#39;./localstorage.component.css&#39;
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>})
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>export class LocalstorageComponent implements OnInit {
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>  constructor(private fb: FormBuilder) { }
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>  form!: FormGroup
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  ngOnInit(): void {
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    this.form = new FormGroup({
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>      name: new FormControl(&#39;&#39;, [Validators.required, this.createPasswordStrengthValidator]),
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>      gender: new FormControl(),
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>      age: new FormControl(),
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>      item: new FormArray([])
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>    });
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>    let submitted = false;
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>    this.add()
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>    this.getlocaldata()
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>  }
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>  get name() {
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    return this.form.get(&#39;name&#39;)?.value
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>  }
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>  createPasswordStrengthValidator(name: any) {
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>    if (name?.value?.startsWith(&#39; &#39;)) {
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>      return { &#39;noplace&#39;: true }
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>    }
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>    if (name?.value?.endsWith(&#39; &#39;)) {
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>      return { &#39;noplace&#39;: true }
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    }
-<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>
-<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>    else
-<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>      return null
-<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>  }
-<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>  ok() {
-<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>    return this.fb.group({
-<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>      hobbies: new FormControl()
-<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>    })
-<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>  }
-<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>  get item() {
-<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>    return this.form.get(&#39;item&#39;) as FormArray
-<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>  }
-<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>  length = 60
-<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>  arrayage: any[] = []
-<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>  add() {
-<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>    console.log(this.form.value)
-<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>    for (let i = 0; i &lt;= 60; i++) { this.arrayage.push(i) } debugger this.item.push(this.ok())
-<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>  } del(i: number) {
-<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>    debugger
-<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>    this.item.removeAt(i)
-<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>  } deletee(i: number) {
-<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>    this.array.splice(i, 1) localStorage.setItem(&quot;completedata&quot;,
-<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>      JSON.stringify(this.array))
-<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>  } array: any[] = [] onsubmit() {
-<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>    if (this.form.invalid) {
-<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>      this.form.markAllAsTouched()
-<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>      return
-<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>    } this.array.push(this.form.value) localStorage.setItem(&quot;completedata&quot;, JSON.stringify(this.array))
-<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>    this.form.reset(), this.item.clear(), this.add()
-<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>  } edit(e: any) {
-<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>    debugger this.form.patchValue({
-<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>      name: e.name,
-<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>      gender: e.gender, age: e.age
-<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>    }) e.item.forEach((obj: any, i: any) =&gt; {
-<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>      console.log(obj, &#39;lololo&#39;)
-<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>      this.item.at(i).patchValue({
-<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>        hobbies: obj.hobbies
-<a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>      })
-<a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>    })
-<a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>  }
-<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>  getlocaldata() {
-<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>    let localdata = localStorage.getItem(&quot;completedata&quot;)
-<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>    if (localdata)
-<a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>      this.array = JSON.parse(localdata)
-<a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a>  }
-<a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>
-<a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>  test() {
-<a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a>    console.log(this.form.get(&#39;name&#39;));
-<a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a>  }
-<a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>
-<a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a>}
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>import { CommonModule, NgFor, NgIf } from &#39;@angular/common&#39;;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>import { tick } from &#39;@angular/core/testing&#39;;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>import {
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  AbstractControl, FormArray, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule,
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  ValidationErrors, ValidatorFn, Validators
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>} from &#39;@angular/forms&#39;;
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>import { MatButtonModule } from &#39;@angular/material/button&#39;;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>import { MatRadioModule } from &#39;@angular/material/radio&#39;;
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>import { MatSelectModule } from &#39;@angular/material/select&#39;;
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>import { timeStamp } from &#39;console&#39;;
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>import e from &#39;express&#39;;
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>@Component({
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  selector: &#39;app-localstorage&#39;,
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  standalone: true,
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  imports: [NgIf, MatRadioModule, MatButtonModule, NgFor, MatFormFieldModule, MatSelectModule,
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    MatInputModule, ReactiveFormsModule, FormsModule],
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>  templateUrl: &#39;./localstorage.component.html&#39;,
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  styleUrl: &#39;./localstorage.component.css&#39;
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>})
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>export class LocalstorageComponent implements OnInit {
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>  constructor(private fb: FormBuilder) { }
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>  form!: FormGroup
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>  ngOnInit(): void {
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>    this.form = new FormGroup({
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>      name: new FormControl(&#39;&#39;, [Validators.required, this.createPasswordStrengthValidator]),
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>      gender: new FormControl(),
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>      age: new FormControl(),
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>      item: new FormArray([])
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    });
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    let submitted = false;
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>    this.add()
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>    this.getlocaldata()
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>  }
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>  get name() {
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    return this.form.get(&#39;name&#39;)?.value
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>  }
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>  createPasswordStrengthValidator(name: any) {
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>    if (name?.value?.startsWith(&#39; &#39;)) {
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>      return { &#39;noplace&#39;: true }
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>    }
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>    if (name?.value?.endsWith(&#39; &#39;)) {
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>      return { &#39;noplace&#39;: true }
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>    }
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>    else
+<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>      return null
+<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>  }
+<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>  ok() {
+<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>    return this.fb.group({
+<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>      hobbies: new FormControl()
+<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>    })
+<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>  }
+<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>  get item() {
+<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>    return this.form.get(&#39;item&#39;) as FormArray
+<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>  }
+<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>  length = 60
+<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>  arrayage: any[] = []
+<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>  add() {
+<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>    console.log(this.form.value)
+<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>    for (let i = 0; i &lt;= 60; i++) { this.arrayage.push(i) } debugger this.item.push(this.ok())
+<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>  } del(i: number) {
+<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>    debugger
+<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>    this.item.removeAt(i)
+<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>  } deletee(i: number) {
+<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>    this.array.splice(i, 1) localStorage.setItem(&quot;completedata&quot;,
+<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>      JSON.stringify(this.array))
+<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>  } array: any[] = [] onsubmit() {
+<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>    if (this.form.invalid) {
+<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>      this.form.markAllAsTouched()
+<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>      return
+<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>    } this.array.push(this.form.value) localStorage.setItem(&quot;completedata&quot;, JSON.stringify(this.array))
+<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>    this.form.reset(), this.item.clear(), this.add()
+<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>  } edit(e: any) {
+<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>    debugger this.form.patchValue({
+<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>      name: e.name,
+<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>      gender: e.gender, age: e.age
+<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>    }) e.item.forEach((obj: any, i: any) =&gt; {
+<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>      console.log(obj, &#39;lololo&#39;)
+<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>      this.item.at(i).patchValue({
+<a id="__codelineno-2-84" name="__codelineno-2-84" href="#__codelineno-2-84"></a>        hobbies: obj.hobbies
+<a id="__codelineno-2-85" name="__codelineno-2-85" href="#__codelineno-2-85"></a>      })
+<a id="__codelineno-2-86" name="__codelineno-2-86" href="#__codelineno-2-86"></a>    })
+<a id="__codelineno-2-87" name="__codelineno-2-87" href="#__codelineno-2-87"></a>  }
+<a id="__codelineno-2-88" name="__codelineno-2-88" href="#__codelineno-2-88"></a>  getlocaldata() {
+<a id="__codelineno-2-89" name="__codelineno-2-89" href="#__codelineno-2-89"></a>    let localdata = localStorage.getItem(&quot;completedata&quot;)
+<a id="__codelineno-2-90" name="__codelineno-2-90" href="#__codelineno-2-90"></a>    if (localdata)
+<a id="__codelineno-2-91" name="__codelineno-2-91" href="#__codelineno-2-91"></a>      this.array = JSON.parse(localdata)
+<a id="__codelineno-2-92" name="__codelineno-2-92" href="#__codelineno-2-92"></a>  }
+<a id="__codelineno-2-93" name="__codelineno-2-93" href="#__codelineno-2-93"></a>
+<a id="__codelineno-2-94" name="__codelineno-2-94" href="#__codelineno-2-94"></a>  test() {
+<a id="__codelineno-2-95" name="__codelineno-2-95" href="#__codelineno-2-95"></a>    console.log(this.form.get(&#39;name&#39;));
+<a id="__codelineno-2-96" name="__codelineno-2-96" href="#__codelineno-2-96"></a>  }
+<a id="__codelineno-2-97" name="__codelineno-2-97" href="#__codelineno-2-97"></a>
+<a id="__codelineno-2-98" name="__codelineno-2-98" href="#__codelineno-2-98"></a>}
 </code></pre></div>
-<div class="highlight"><span class="filename">html</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;form [formGroup]=&quot;form&quot;&gt;
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &lt;div class=&quot;body&quot;&gt;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>         &lt;mat-form-field class=&#39;example-full-width&#39; appearance=&#39;outline&#39;&gt;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>            &lt;mat-label&gt;Name&lt;/mat-label&gt;
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            &lt;input matInput formControlName=&quot;name&quot; /&gt;
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>            &lt;mat-error *ngIf=&quot;form.get(&#39;name&#39;)?.hasError(&#39;required&#39;); else nospace&quot;&gt; first is required &lt;/mat-error&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            &lt;ng-template #nospace&gt;
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                &lt;mat-error *ngIf=&quot;form.get(&#39;name&#39;)?.hasError(&#39;noplace&#39;)&quot;&gt;no white space&lt;/mat-error&gt;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>            &lt;/ng-template&gt;
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        &lt;/mat-form-field&gt;
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        &lt;div class=&quot;form-group&quot;&gt;
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>            &lt;mat-radio-group aria-label=&quot;Select an option&quot; formControlName=&quot;gender&quot;&gt;
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>                &lt;mat-radio-button value=&quot;male&quot;&gt;male&lt;/mat-radio-button&gt;
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>                &lt;mat-radio-button value=&quot;female&quot;&gt; Female&lt;/mat-radio-button&gt;
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>            &lt;/mat-radio-group&gt;
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        &lt;/div&gt;
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        &lt;div class=&quot;form-group&quot;&gt;
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>            &lt;div formArrayName=&quot;item&quot;&gt;
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>                &lt;div *ngFor=&quot;let item of item?.controls; let i=index&quot;&gt;
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>                    &lt;div [formGroupName]=&quot;i&quot;&gt;
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>                        &lt;label&gt;HOBBIES&lt;/label&gt;
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>                        &lt;div class=&quot;d-flex&quot;&gt;
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>                            &lt;input id=&quot;hobbies&quot; type=&quot;text&quot; placeholder=&quot;add your hobbies&quot; classs=&quot;form-control&quot;
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>                                formControlName=&quot;hobbies&quot;&gt;
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>                            &lt;button (click)=&quot;del(i)&quot; *ngIf=&quot;i!==0&quot;&gt;DELETE &lt;/button&gt;
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>                        &lt;/div&gt;
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>                    &lt;/div&gt;
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>                &lt;/div&gt;
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>                &lt;button type=&quot;button&quot; (click)=&quot;add()&quot;
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>                    [disabled]=&quot;!(this.item.value[this.item.length-1].hobbies)&quot;&gt;ADDME+&lt;/button&gt;
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>            &lt;/div&gt;
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>        &lt;/div&gt;
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>        &lt;div&gt;
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>            &lt;mat-form-field&gt;
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>                &lt;mat-label&gt;age&lt;/mat-label&gt;
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>                &lt;mat-select formControlName=&quot;age&quot;&gt;
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>                    @for (num of arrayage; track num) {
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>                    &lt;mat-option [value]=&quot;num&quot;&gt;{{num}}&lt;/mat-option&gt;
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>                    }
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>                &lt;/mat-select&gt;
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>            &lt;/mat-form-field&gt;
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>        &lt;/div&gt;&lt;br&gt;&lt;br&gt;
-<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; (click)=&quot;onsubmit()&quot;&gt;submit&lt;/button&gt;
-<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>    &lt;/div&gt;
-<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>&lt;/form&gt;
-<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>&lt;div class=&quot;container&quot;&gt;
-<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>    &lt;div class=&quot;row&quot;&gt;
-<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>        &lt;div class=&quot;col-12&quot;&gt;
-<a id="__codelineno-2-50" name="__codelineno-2-50" href="#__codelineno-2-50"></a>            &lt;table class=&quot;table table-border&quot;&gt;
-<a id="__codelineno-2-51" name="__codelineno-2-51" href="#__codelineno-2-51"></a>                &lt;thead&gt;
-<a id="__codelineno-2-52" name="__codelineno-2-52" href="#__codelineno-2-52"></a>                    &lt;tr&gt;
-<a id="__codelineno-2-53" name="__codelineno-2-53" href="#__codelineno-2-53"></a>                        &lt;th&gt;si no&lt;/th&gt;
-<a id="__codelineno-2-54" name="__codelineno-2-54" href="#__codelineno-2-54"></a>                        &lt;th&gt;name&lt;/th&gt;
-<a id="__codelineno-2-55" name="__codelineno-2-55" href="#__codelineno-2-55"></a>                        &lt;th&gt;gender&lt;/th&gt;
-<a id="__codelineno-2-56" name="__codelineno-2-56" href="#__codelineno-2-56"></a>                        &lt;th&gt;age&lt;/th&gt;
-<a id="__codelineno-2-57" name="__codelineno-2-57" href="#__codelineno-2-57"></a>                        &lt;th&gt;hobbies&lt;/th&gt;
-<a id="__codelineno-2-58" name="__codelineno-2-58" href="#__codelineno-2-58"></a>                        &lt;!-- &lt;th&gt;edit&lt;/th&gt; --&gt;
-<a id="__codelineno-2-59" name="__codelineno-2-59" href="#__codelineno-2-59"></a>                        &lt;th&gt;delete&lt;/th&gt;
-<a id="__codelineno-2-60" name="__codelineno-2-60" href="#__codelineno-2-60"></a>                    &lt;/tr&gt;
-<a id="__codelineno-2-61" name="__codelineno-2-61" href="#__codelineno-2-61"></a>                &lt;/thead&gt;
-<a id="__codelineno-2-62" name="__codelineno-2-62" href="#__codelineno-2-62"></a>                &lt;tbody&gt;
-<a id="__codelineno-2-63" name="__codelineno-2-63" href="#__codelineno-2-63"></a>                    &lt;tr *ngFor=&quot;let data of array ;let i = index&quot;&gt;
-<a id="__codelineno-2-64" name="__codelineno-2-64" href="#__codelineno-2-64"></a>                        &lt;td&gt;{{i+1}}&lt;/td&gt;
-<a id="__codelineno-2-65" name="__codelineno-2-65" href="#__codelineno-2-65"></a>                        &lt;td&gt;{{data.name}}&lt;/td&gt;
-<a id="__codelineno-2-66" name="__codelineno-2-66" href="#__codelineno-2-66"></a>                        &lt;td&gt;{{data.gender}}&lt;/td&gt;
-<a id="__codelineno-2-67" name="__codelineno-2-67" href="#__codelineno-2-67"></a>                        &lt;td&gt;{{data.age}}&lt;/td&gt;
-<a id="__codelineno-2-68" name="__codelineno-2-68" href="#__codelineno-2-68"></a>                        &lt;!-- &lt;span *ngFor=&quot;let hobbies of data.item&quot; &gt;
-<a id="__codelineno-2-69" name="__codelineno-2-69" href="#__codelineno-2-69"></a>              &lt;td&gt;{{hobbies.hobbies}}&lt;/td&gt;
-<a id="__codelineno-2-70" name="__codelineno-2-70" href="#__codelineno-2-70"></a>            &lt;/span&gt; --&gt;
-<a id="__codelineno-2-71" name="__codelineno-2-71" href="#__codelineno-2-71"></a>                        &lt;td&gt;
-<a id="__codelineno-2-72" name="__codelineno-2-72" href="#__codelineno-2-72"></a>                            &lt;span *ngFor=&quot;let hobbies of data.item&quot;&gt;
-<a id="__codelineno-2-73" name="__codelineno-2-73" href="#__codelineno-2-73"></a>                                {{hobbies.hobbies}}
-<a id="__codelineno-2-74" name="__codelineno-2-74" href="#__codelineno-2-74"></a>                            &lt;/span&gt;
-<a id="__codelineno-2-75" name="__codelineno-2-75" href="#__codelineno-2-75"></a>                        &lt;/td&gt;
-<a id="__codelineno-2-76" name="__codelineno-2-76" href="#__codelineno-2-76"></a>                        &lt;!-- &lt;td&gt; &lt;button (click)=&quot;edit(data)&quot;&gt;edit&lt;/button&gt;&lt;/td&gt; --&gt;
-<a id="__codelineno-2-77" name="__codelineno-2-77" href="#__codelineno-2-77"></a>                        &lt;td&gt; &lt;button (click)=&quot;deletee(i)&quot;&gt;delete &lt;/button&gt;&lt;/td&gt;
-<a id="__codelineno-2-78" name="__codelineno-2-78" href="#__codelineno-2-78"></a>                    &lt;/tr&gt;
-<a id="__codelineno-2-79" name="__codelineno-2-79" href="#__codelineno-2-79"></a>                &lt;/tbody&gt;
-<a id="__codelineno-2-80" name="__codelineno-2-80" href="#__codelineno-2-80"></a>            &lt;/table&gt;
-<a id="__codelineno-2-81" name="__codelineno-2-81" href="#__codelineno-2-81"></a>        &lt;/div&gt;
-<a id="__codelineno-2-82" name="__codelineno-2-82" href="#__codelineno-2-82"></a>    &lt;/div&gt;
-<a id="__codelineno-2-83" name="__codelineno-2-83" href="#__codelineno-2-83"></a>&lt;/div&gt; 
+<div class="highlight"><span class="filename">html</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;form [formGroup]=&quot;form&quot;&gt;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    &lt;div class=&quot;body&quot;&gt;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>         &lt;mat-form-field class=&#39;example-full-width&#39; appearance=&#39;outline&#39;&gt;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>            &lt;mat-label&gt;Name&lt;/mat-label&gt;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>            &lt;input matInput formControlName=&quot;name&quot; /&gt;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>            &lt;mat-error *ngIf=&quot;form.get(&#39;name&#39;)?.hasError(&#39;required&#39;); else nospace&quot;&gt; first is required &lt;/mat-error&gt;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>            &lt;ng-template #nospace&gt;
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>                &lt;mat-error *ngIf=&quot;form.get(&#39;name&#39;)?.hasError(&#39;noplace&#39;)&quot;&gt;no white space&lt;/mat-error&gt;
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>            &lt;/ng-template&gt;
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        &lt;/mat-form-field&gt;
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        &lt;div class=&quot;form-group&quot;&gt;
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>            &lt;mat-radio-group aria-label=&quot;Select an option&quot; formControlName=&quot;gender&quot;&gt;
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>                &lt;mat-radio-button value=&quot;male&quot;&gt;male&lt;/mat-radio-button&gt;
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>                &lt;mat-radio-button value=&quot;female&quot;&gt; Female&lt;/mat-radio-button&gt;
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>            &lt;/mat-radio-group&gt;
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        &lt;/div&gt;
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        &lt;div class=&quot;form-group&quot;&gt;
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>            &lt;div formArrayName=&quot;item&quot;&gt;
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>                &lt;div *ngFor=&quot;let item of item?.controls; let i=index&quot;&gt;
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>                    &lt;div [formGroupName]=&quot;i&quot;&gt;
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>                        &lt;label&gt;HOBBIES&lt;/label&gt;
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>                        &lt;div class=&quot;d-flex&quot;&gt;
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>                            &lt;input id=&quot;hobbies&quot; type=&quot;text&quot; placeholder=&quot;add your hobbies&quot; classs=&quot;form-control&quot;
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>                                formControlName=&quot;hobbies&quot;&gt;
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>                            &lt;button (click)=&quot;del(i)&quot; *ngIf=&quot;i!==0&quot;&gt;DELETE &lt;/button&gt;
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>                        &lt;/div&gt;
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>                    &lt;/div&gt;
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>                &lt;/div&gt;
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>                &lt;button type=&quot;button&quot; (click)=&quot;add()&quot;
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>                    [disabled]=&quot;!(this.item.value[this.item.length-1].hobbies)&quot;&gt;ADDME+&lt;/button&gt;
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>            &lt;/div&gt;
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>        &lt;/div&gt;
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>        &lt;div&gt;
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>            &lt;mat-form-field&gt;
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>                &lt;mat-label&gt;age&lt;/mat-label&gt;
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>                &lt;mat-select formControlName=&quot;age&quot;&gt;
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>                    @for (num of arrayage; track num) {
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>                    &lt;mat-option [value]=&quot;num&quot;&gt;{{num}}&lt;/mat-option&gt;
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>                    }
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>                &lt;/mat-select&gt;
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>            &lt;/mat-form-field&gt;
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>        &lt;/div&gt;&lt;br&gt;&lt;br&gt;
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; (click)=&quot;onsubmit()&quot;&gt;submit&lt;/button&gt;
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>    &lt;/div&gt;
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>&lt;/form&gt;
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>&lt;div class=&quot;container&quot;&gt;
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>    &lt;div class=&quot;row&quot;&gt;
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>        &lt;div class=&quot;col-12&quot;&gt;
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>            &lt;table class=&quot;table table-border&quot;&gt;
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>                &lt;thead&gt;
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>                    &lt;tr&gt;
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>                        &lt;th&gt;si no&lt;/th&gt;
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>                        &lt;th&gt;name&lt;/th&gt;
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>                        &lt;th&gt;gender&lt;/th&gt;
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>                        &lt;th&gt;age&lt;/th&gt;
+<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>                        &lt;th&gt;hobbies&lt;/th&gt;
+<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>                        &lt;!-- &lt;th&gt;edit&lt;/th&gt; --&gt;
+<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>                        &lt;th&gt;delete&lt;/th&gt;
+<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>                    &lt;/tr&gt;
+<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>                &lt;/thead&gt;
+<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>                &lt;tbody&gt;
+<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>                    &lt;tr *ngFor=&quot;let data of array ;let i = index&quot;&gt;
+<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>                        &lt;td&gt;{{i+1}}&lt;/td&gt;
+<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>                        &lt;td&gt;{{data.name}}&lt;/td&gt;
+<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>                        &lt;td&gt;{{data.gender}}&lt;/td&gt;
+<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>                        &lt;td&gt;{{data.age}}&lt;/td&gt;
+<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>                        &lt;!-- &lt;span *ngFor=&quot;let hobbies of data.item&quot; &gt;
+<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>              &lt;td&gt;{{hobbies.hobbies}}&lt;/td&gt;
+<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>            &lt;/span&gt; --&gt;
+<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>                        &lt;td&gt;
+<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>                            &lt;span *ngFor=&quot;let hobbies of data.item&quot;&gt;
+<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>                                {{hobbies.hobbies}}
+<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>                            &lt;/span&gt;
+<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>                        &lt;/td&gt;
+<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>                        &lt;!-- &lt;td&gt; &lt;button (click)=&quot;edit(data)&quot;&gt;edit&lt;/button&gt;&lt;/td&gt; --&gt;
+<a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>                        &lt;td&gt; &lt;button (click)=&quot;deletee(i)&quot;&gt;delete &lt;/button&gt;&lt;/td&gt;
+<a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>                    &lt;/tr&gt;
+<a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>                &lt;/tbody&gt;
+<a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>            &lt;/table&gt;
+<a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>        &lt;/div&gt;
+<a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>    &lt;/div&gt;
+<a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a>&lt;/div&gt; 
 </code></pre></div>
 
 
