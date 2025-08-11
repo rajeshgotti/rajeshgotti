@@ -1230,6 +1230,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/searchFilter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SearchFilter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1611,6 +1634,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nativeselect-withoutloop" class="md-nav__link">
+    <span class="md-ellipsis">
+      NativeSelect withOutLoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nativeselect-withloop" class="md-nav__link">
+    <span class="md-ellipsis">
+      nativeSelect WithLoop
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1656,6 +1697,29 @@
   
   <span class="md-ellipsis">
     MatExpansionalPanel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../matdialog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatDialog
     
   </span>
   
@@ -2227,6 +2291,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#nativeselect-withoutloop" class="md-nav__link">
+    <span class="md-ellipsis">
+      NativeSelect withOutLoop
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nativeselect-withloop" class="md-nav__link">
+    <span class="md-ellipsis">
+      nativeSelect WithLoop
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2247,107 +2329,190 @@
 
   <h1>MatSelect</h1>
 
+<div class="highlight"><span class="filename">allImports.ts</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import {MatFormFieldModule} from &#39;@angular/material/form-field&#39;;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>import {MatInputModule} from &#39;@angular/material/input&#39;;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>import {MatCheckboxModule} from &#39;@angular/material/checkbox&#39;;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>import {MatRadioModule} from &#39;@angular/material/radio&#39;;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>import {MatSelectModule} from &#39;@angular/material/select&#39;;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>import {MatIconModule} from &#39;@angular/material/icon&#39;;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>import {MatAutocompleteModule} from &#39;@angular/material/autocomplete&#39;;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>import {MatSidenavModule} from &#39;@angular/material/sidenav&#39;;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>import {MatDatepickerModule} from &#39;@angular/material/datepicker&#39;;
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>import {provideNativeDateAdapter} from &#39;@angular/material/core&#39;;
+</code></pre></div>
 <h3 id="steps-to-follow-when-we-use-mat-select">steps to follow when we use mat-select</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>1.import mat-form-fieldMoudle,inputModule,mat-select-module
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>2.declare formName and import reactiveFormsModule,controls etc..
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>4.call ur getServices and store res in oneVariable
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>3.Goto html file use &lt;mat-option&gt; to loop ur Data
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Note:formControlName and  (selectionChange)=&quot;selectChange($event)&quot; WHERE to place
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>   ex: &lt;mat-select  formControlName=&quot;phoneNameFc&quot; (selectionChange)=&quot;selectChange($event)&quot;&gt;&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>1.import mat-form-fieldMoudle,inputModule,mat-select-module
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>2.declare formName and import reactiveFormsModule,controls etc..
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>4.call ur getServices and store res in oneVariable
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>3.Goto html file use &lt;mat-option&gt; to loop ur Data
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Note:formControlName and  (selectionChange)=&quot;selectChange($event)&quot; WHERE to place
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>   ex: &lt;mat-select  formControlName=&quot;phoneNameFc&quot; (selectionChange)=&quot;selectChange($event)&quot;&gt;&gt;
 </code></pre></div>
-<p><div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import { CommonModule } from &#39;@angular/common&#39;;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>import { FormControl, FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>import { MatSelectModule } from &#39;@angular/material/select&#39;;
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>export interface PhoneModel { //interface is just for typeCaste purpose
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  phoneId: number;
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  phoneName: string;
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  phoneModel: string;
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  phonePrice: number;
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>}
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>@Component({
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  selector: &#39;app-parent&#39;,
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  imports: [MatFormFieldModule, MatSelectModule, CommonModule,ReactiveFormsModule],
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  templateUrl: &#39;./parent.html&#39;
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>})
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>export class Parent implements OnInit {
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>  phoneForm:FormGroup
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>  phoneData: PhoneModel[] = [];//variableName:type=&quot;emptyArray&quot;
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>  ngOnInit(): void {
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    this.getCarData(); //getMethod()
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    this.phoneForm=new FormGroup({
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>      phoneIdFc:new FormControl(),
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>      phoneNameFc:new FormControl(&#39;&#39;,validators.required),
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>      phoneModelFc:new FormControl(),
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>      phonePriceFc:new FormControl()
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>    })
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>  }
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>  getCarData(): void {
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>    this.phoneData = [
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>      { phoneId: 1, phoneName: &#39;Moto&#39;, phoneModel: &#39;Edge 650&#39;, phonePrice: 22.999 },
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>      { phoneId: 2, phoneName: &#39;MI&#39;, phoneModel: &#39;note 5 pro&#39;, phonePrice: 15.999 },
-<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>      { phoneId: 3, phoneName: &#39;inFocus&#39;, phoneModel: &#39;neto pro&#39;, phonePrice: 10.999 },
-<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>      { phoneId: 4, phoneName: &#39;iPhone&#39;, phoneModel: &#39;proMax&#39;, phonePrice: 75.500 },
-<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>      { phoneId: 5, phoneName: &#39;Samsung&#39;, phoneModel: &#39;S24&#39;, phonePrice: 89.299 }
-<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    ];
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>  }
-<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>  selectChange(event):void{ //here user e filed ni select chesina tarvta vere konni fileds ni patch chestunam
-<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>      this.phoneForm.patchValue({
-<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>      phonePriceFc:event?.value?.phonePrice,
-<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>      phoneIdFc:event?.value?.phoneId
-<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>    })
-<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>  }
-<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>}
+<p><div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>import { CommonModule } from &#39;@angular/common&#39;;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>import { FormControl, FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>import { MatSelectModule } from &#39;@angular/material/select&#39;;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>export interface PhoneModel { //interface is just for typeCaste purpose
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  phoneId: number;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  phoneName: string;
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  phoneModel: string;
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  phonePrice: number;
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>}
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>@Component({
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  selector: &#39;app-parent&#39;,
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>  imports: [MatFormFieldModule, MatSelectModule, CommonModule,ReactiveFormsModule],
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  templateUrl: &#39;./parent.html&#39;
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>})
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>export class Parent implements OnInit {
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>  phoneForm:FormGroup
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>  phoneData: PhoneModel[] = [];//variableName:type=&quot;emptyArray&quot;
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  ngOnInit(): void {
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    this.getCarData(); //getMethod()
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    this.phoneForm=new FormGroup({
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>      phoneIdFc:new FormControl(),
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>      phoneNameFc:new FormControl(&#39;&#39;,validators.required),
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>      phoneModelFc:new FormControl(),
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>      phonePriceFc:new FormControl()
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>    })
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>  }
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>  getCarData(): void {
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    this.phoneData = [
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>      { phoneId: 1, phoneName: &#39;Moto&#39;, phoneModel: &#39;Edge 650&#39;, phonePrice: 22.999 },
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>      { phoneId: 2, phoneName: &#39;MI&#39;, phoneModel: &#39;note 5 pro&#39;, phonePrice: 15.999 },
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>      { phoneId: 3, phoneName: &#39;inFocus&#39;, phoneModel: &#39;neto pro&#39;, phonePrice: 10.999 },
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>      { phoneId: 4, phoneName: &#39;iPhone&#39;, phoneModel: &#39;proMax&#39;, phonePrice: 75.500 },
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>      { phoneId: 5, phoneName: &#39;Samsung&#39;, phoneModel: &#39;S24&#39;, phonePrice: 89.299 }
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>    ];
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>  }
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>  selectChange(event):void{ //here user e filed ni select chesina tarvta vere konni fileds ni patch chestunam
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>      this.phoneForm.patchValue({
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>      phonePriceFc:event?.value?.phonePrice,
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>      phoneIdFc:event?.value?.phoneId
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>    })
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>  }
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>}
 </code></pre></div>
-<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;div class=&quot;container-fluid mx-5&quot; &gt;
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &lt;form [formGroup]=&quot;phoneForm&quot;&gt;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        &lt;mat-form-field appearance=&quot;outline&quot; class=&quot;col-2&quot;&gt;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>            &lt;!-- phoneName --&gt;
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            &lt;mat-label&gt;PhoneName&lt;/mat-label&gt;
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>            &lt;mat-select  formControlName=&quot;phoneNameFc&quot;&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            &lt;mat-option *ngFor=&quot;let item of phoneData&quot; [value]=&quot;item.phoneName&quot; placeholder=&quot;phoneName&quot;&gt;
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>                {{item.phoneName}}
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>            &lt;/mat-option&gt;
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>        &lt;/mat-select&gt;
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>        &lt;!-- Validation error for phoneNameFc --&gt;
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>        &lt;mat-error *ngIf=&quot;phoneForm.controls[&#39;phoneNameFc&#39;]?.hasError(&#39;required&#39;) &amp;&amp; phoneForm.controls
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>             [&#39;phoneNameFc&#39;]?.touched&quot;&gt; Phone Name is required.
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        &lt;/mat-error&gt;
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    &lt;/mat-form-field&gt;
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    &lt;mat-form-field appearance=&quot;outline&quot; class=&quot;col-2 mx-2&quot;&gt;
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        &lt;!-- phoneModel --&gt;
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>        &lt;mat-label&gt;Phone Model&lt;/mat-label&gt;
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        &lt;mat-select formControlName=&quot;phoneModelFc&quot; (selectionChange)=&quot;selectChange($event)&quot;&gt;//selectionChange
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>            &lt;mat-option *ngFor=&quot;let item of phoneData&quot; [value]=&quot;item&quot; placeholder=&quot;phoneModel&quot;&gt;
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>                {{item.phoneModel}}
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>            &lt;/mat-option&gt;
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>        &lt;/mat-select&gt;
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>    &lt;/mat-form-field&gt;
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    &lt;mat-form-field appearance=&quot;outline&quot;&gt;
-<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>        &lt;mat-label&gt;Phone Price&lt;/mat-label&gt;
-<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>        &lt;mat-select formControlName=&quot;phonePriceFc&quot;&gt;
-<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>            &lt;mat-option *ngFor=&quot;let item of phoneData&quot; [value]=&quot;item.phonePrice&quot; placeholder=&quot;phonePrice&quot;&gt;
-<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>                {{item.phonePrice}}
-<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>            &lt;/mat-option&gt;
-<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>        &lt;/mat-select&gt;
-<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>    &lt;/mat-form-field&gt;
-<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>    &lt;mat-form-field appearance=&quot;outline&quot; class=&quot;mx-2&quot;&gt;
-<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>        &lt;mat-label&gt;Patch Field&lt;/mat-label&gt;
-<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>        &lt;mat-select formControlName=&quot;phoneIdFc&quot;&gt;
-<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>            &lt;mat-option *ngFor=&quot;let item of phoneData&quot; [value]=&quot;item.phoneId&quot; placeholder=&quot;Patch&quot;&gt;
-<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>                {{item.phoneId}} - ( {{item.phoneName}} )
-<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>            &lt;/mat-option&gt;
-<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>        &lt;/mat-select&gt;
-<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>    &lt;/mat-form-field&gt;
-<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>&lt;/form&gt;
-<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>&lt;/div&gt;
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;div class=&quot;container-fluid mx-5&quot; &gt;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    &lt;form [formGroup]=&quot;phoneForm&quot;&gt;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        &lt;mat-form-field appearance=&quot;outline&quot; class=&quot;col-2&quot;&gt;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>            &lt;!-- phoneName --&gt;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>            &lt;mat-label&gt;PhoneName&lt;/mat-label&gt;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>            &lt;mat-select  formControlName=&quot;phoneNameFc&quot;&gt;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>            &lt;mat-option *ngFor=&quot;let item of phoneData&quot; [value]=&quot;item.phoneName&quot; placeholder=&quot;phoneName&quot;&gt;
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>                {{item.phoneName}}
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>            &lt;/mat-option&gt;
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        &lt;/mat-select&gt;
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        &lt;!-- Validation error for phoneNameFc --&gt;
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        &lt;mat-error *ngIf=&quot;phoneForm.controls[&#39;phoneNameFc&#39;]?.hasError(&#39;required&#39;) &amp;&amp; phoneForm.controls
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>             [&#39;phoneNameFc&#39;]?.touched&quot;&gt; Phone Name is required.
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        &lt;/mat-error&gt;
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    &lt;/mat-form-field&gt;
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    &lt;mat-form-field appearance=&quot;outline&quot; class=&quot;col-2 mx-2&quot;&gt;
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        &lt;!-- phoneModel --&gt;
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        &lt;mat-label&gt;Phone Model&lt;/mat-label&gt;
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>        &lt;mat-select formControlName=&quot;phoneModelFc&quot; (selectionChange)=&quot;selectChange($event)&quot;&gt;//selectionChange
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>            &lt;mat-option *ngFor=&quot;let item of phoneData&quot; [value]=&quot;item&quot; placeholder=&quot;phoneModel&quot;&gt;
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>                {{item.phoneModel}}
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>            &lt;/mat-option&gt;
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        &lt;/mat-select&gt;
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    &lt;/mat-form-field&gt;
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    &lt;mat-form-field appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>        &lt;mat-label&gt;Phone Price&lt;/mat-label&gt;
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        &lt;mat-select formControlName=&quot;phonePriceFc&quot;&gt;
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>            &lt;mat-option *ngFor=&quot;let item of phoneData&quot; [value]=&quot;item.phonePrice&quot; placeholder=&quot;phonePrice&quot;&gt;
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>                {{item.phonePrice}}
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>            &lt;/mat-option&gt;
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>        &lt;/mat-select&gt;
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>    &lt;/mat-form-field&gt;
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    &lt;mat-form-field appearance=&quot;outline&quot; class=&quot;mx-2&quot;&gt;
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>        &lt;mat-label&gt;Patch Field&lt;/mat-label&gt;
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>        &lt;mat-select formControlName=&quot;phoneIdFc&quot;&gt;
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>            &lt;mat-option *ngFor=&quot;let item of phoneData&quot; [value]=&quot;item.phoneId&quot; placeholder=&quot;Patch&quot;&gt;
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>                {{item.phoneId}} - ( {{item.phoneName}} )
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>            &lt;/mat-option&gt;
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>        &lt;/mat-select&gt;
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>    &lt;/mat-form-field&gt;
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>&lt;/form&gt;
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>&lt;/div&gt;
 </code></pre></div></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>-----------mat-select-----
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>step:1  
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>       interface Food {  //create interface for typeSafe
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>       id:number;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>       fooName: string;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>       }
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>step:2 import MatSelectModule and MatSelectChange  here noNeed to import MatSelectChange in imports:[]
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  export class AggridComponent implements OnInit{
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a> import { MatSelectChange, MatSelectModule } from &quot;@angular/material/select&quot;;
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  imports: [MatFormFieldModule,MatInputModule,MatSelectModule]
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  //favoriteFoodFc = new FormControl(&#39;&#39;, Validators.required);
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>          (or)
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  favoriteFoodFc = new FormControl&lt;number | null&gt;(null, Validators.required);
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  myFoodData:Food[]=[];//variable:typ=[]
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  ngOnInit(): void {
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  this.foodData(); //method
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>}
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>foodData():void{
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>this.myFoodData=[
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>  {id:0, fooName: &#39;Steak&#39;},
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>  {id: 1, fooName: &#39;Pizza&#39;},
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>  {id:2, fooName: &#39;Tacos&#39;},
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>];
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>}
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>onFoodChange(event: MatSelectChange) {
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  console.log(&#39;Selected food:&#39;, event.value);
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>}       
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>--html---
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>note:here in myFoodData allData is present that we stored in item and we use this item like item.id or item.name etc..
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>   &lt;mat-form-field&gt;
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>      &lt;mat-label&gt;Favorite food&lt;/mat-label&gt;
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>        &lt;mat-select [formControl]=&quot;favoriteFoodFc&quot; (selectionChange)=&quot;onFoodChange($event)&quot;&gt;
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>          @for (item of myFoodData; track item) {
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>                &lt;mat-option [value]=&quot;item.id&quot;&gt;{{ item?.fooName }} - {{ item?.id }}&lt;/mat-option&gt;
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>             }
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>        &lt;/mat-select&gt;
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>             @if (favoriteFoodFc.hasError(&#39;required&#39;)) {
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>         &lt;mat-error&gt;Please choose a favorite food&lt;/mat-error&gt;
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>          }
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>       &lt;mat-hint&gt;You can pick up your favorite car here&lt;/mat-hint&gt;
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>    &lt;/mat-form-field&gt;
+</code></pre></div>
+<h3 id="nativeselect-withoutloop">NativeSelect withOutLoop</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>--native select only use for &lt;select&gt; not for &lt;mat-select&gt;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&lt;mat-form-field&gt;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  &lt;mat-label&gt;Cars&lt;/mat-label&gt;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  &lt;select matNativeControl required&gt;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    &lt;option value=&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  &lt;/select&gt;
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>&lt;/mat-form-field&gt;
+</code></pre></div>
+<h3 id="nativeselect-withloop">nativeSelect WithLoop</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>--with loop---
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&lt;mat-form-field&gt;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    &lt;mat-label&gt;Favorite car&lt;/mat-label&gt;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    &lt;select matNativeControl [(ngModel)]=&quot;selectedCar&quot; name=&quot;car&quot;&gt;
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      &lt;option value=&quot;&quot; selected&gt;&lt;/option&gt;
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>      @for (car of cars; track car) {
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        &lt;option [value]=&quot;car.value&quot;&gt;{{car.viewValue}}&lt;/option&gt;
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>      }
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    &lt;/select&gt;
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  &lt;/mat-form-field&gt;
+</code></pre></div>
 
 
 
