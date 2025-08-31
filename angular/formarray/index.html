@@ -420,6 +420,26 @@
   
 
       
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DotNet/mysql2/" class="md-tabs__link">
+          
+  
+  
+  DotNet
+
+        </a>
+      </li>
+    
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -807,6 +827,15 @@
   <a href="#crud-with-formarray" class="md-nav__link">
     <span class="md-ellipsis">
       Crud with formArray
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      REALTIME EXAMPLE
     </span>
   </a>
   
@@ -2274,6 +2303,127 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DotNet
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            DotNet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DotNet/mysql2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sql
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DotNet/mysql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    storeProcedure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DotNet/Crud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -2340,6 +2490,15 @@
   <a href="#crud-with-formarray" class="md-nav__link">
     <span class="md-ellipsis">
       Crud with formArray
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      REALTIME EXAMPLE
     </span>
   </a>
   
@@ -2866,6 +3025,208 @@
 <a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>    &lt;/tbody&gt;
 <a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>  &lt;/table&gt;
 <a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>&lt;/div&gt;
+</code></pre></div>
+<h3 id="realtime-example">REALTIME EXAMPLE</h3>
+<p><div class="highlight"><span class="filename">Model.ts</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>--model-class--
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  export class PharmacyDrug {
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>   //vaccinationForm
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a> public selectedBarcode:string; 
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a> public vaccineLotsList: VaccinationList[];  //formarray
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a> public doseStrength:string;
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a> public doseUnit:string;
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a> public expireDate:string;
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a> }
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a> export class VaccinationList{
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a> public vaccineLotID:number;
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a> public vaccineType:string;
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a> public lotNumber:string;
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a> public expireDate:string;
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a> public enteredBy:number;
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>}
+</code></pre></div>
+<div class="highlight"><span class="filename">radioButton.ts</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>//this is radioButton so e event loki dropDown yokka type vastundi ex: Vaccine
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a> selectedDrugType: string = &#39;ALL&#39;;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>   onChangeDrugType(event: any) {
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>    this.pharmacyForm.reset()
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>  this.selectedDrugType=event
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>  const selected = event;
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>  if (selected === &#39;Vaccine&#39;) {
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>    this.vaccinationForm.reset();
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  }
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a> else{
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>      this.vaccineType=false
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>    }
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>}
+</code></pre></div>
+<div class="highlight"><span class="filename">save</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a> -save--
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>  savePharmaDrugs(){
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  let type = this.selectedDrugType
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  let pharmaObj= new PharmacyDrug();
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a> if(type===&#39;vaccine&#39;){
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>  pharmaObj.drugid=this.SearchDrugId ? this.SearchDrugId?.toString() :&#39;0&#39;; //this is for edit if
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>    drugId vunte then EditOpeartion drugId lekunte then 0 send chestam which is saveOperation 
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>   pharmaObj.route=this.vaccinationForm.get(&#39;routeName&#39;).value?.meD_ROUTE_ID?.toString() ?? null;
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>   pharmaObj.barCodes=this.savedBarcodes.join(&#39;,&#39;)
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>   pharmaObj.vaccineLotsList=this.vaccineLotsListData(); // this is method    
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>   }
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>  vaccineLotsListData() {
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>    const vaccineType: VaccinationList[] = [];
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>    const lotObj = this.vaccinationForm?.get(&#39;vaccineLotsList&#39;)?.value ?? [];
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>    lotObj.forEach((ele, index) =&gt; {
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>      if (ele.lotNumber || ele.expireDate) { 
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>        const vaccineTypeList = new VaccinationList();
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>        vaccineTypeList.vaccineLotID =this.pharmacyDrugInfoData?.vaccineLotsList[index]?.vaccineLotID || 0;
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>        vaccineTypeList.vaccineType = this.vaccinationForm?.get(&#39;vaccineType&#39;)?.value?.toString() ?? null;
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>        vaccineTypeList.lotNumber = ele.lotNumber ?? null;
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>        vaccineTypeList.enteredBy = this.userId;
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>        vaccineTypeList.expireDate = ele.expireDate ? this.datePipe.transform(ele.expireDate, &#39;MM-dd-yyyy&#39;) : null;
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>        vaccineType.push(vaccineTypeList);
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>        // console.log(Processed lot ${index}:, vaccineTypeList,&#39;foramarrayList &#39;); // Debug each lot
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>      }
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>    });
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>     return vaccineType;
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>  }  
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>  this.pharmacyService.savePharmacyDrug(JSON.stringify(pharmaObj)).pipe(takeUntil(this.onDestroy$)).subscribe(res=&gt;
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>  {
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>  if(res.status==200){
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>   this.snackBar.open(&#39;Saved successfully pharmacy Drug&#39;,&#39;Ok&#39;,{
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>          duration:1000,
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>         })  
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>          this.pharmacyForm.reset()
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>        this.closeSideNav.emit(&#39;close&#39;)
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>        const queryParams = {patientId:0,moduleId:this.moduleId,pageId:this.pageId,
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>        moduleMnemonic:this.moduleMnemonic,pageMnemonic:this.pageMnemonic,};
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>        this._store.dispatch(new QueryParamsAction(queryParams));
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>        this.router.navigate([&#39;/Home/Pharmacy/viewdrugs&#39;]);
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>        },
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>      error:(err)=&gt;{
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>      }
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>       })
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>       }
+<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a>
+<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a>-----------Patch-----
+<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a>ngOnInit(): void {
+<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a> if(this.drugLibraryId){  // if ID present then(editOprtion) this method will execute else save
+<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a>      this.pharmacyDrugInfo();
+<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a>    }
+<a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a>}
+<a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a>
+<a id="__codelineno-11-58" name="__codelineno-11-58" href="#__codelineno-11-58"></a>pharmacyDrugInfo(): void {
+<a id="__codelineno-11-59" name="__codelineno-11-59" href="#__codelineno-11-59"></a>  this.pharmacyService.getpharmacyDrugDetails(this.type, this.drugLibraryId, &#39;&#39;)
+<a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a>    .pipe(takeUntil(this.onDestroy$))
+<a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a>    .subscribe(res =&gt; {
+<a id="__codelineno-11-62" name="__codelineno-11-62" href="#__codelineno-11-62"></a>      this.pharmacyDrugInfoData = res.body[0];
+<a id="__codelineno-11-63" name="__codelineno-11-63" href="#__codelineno-11-63"></a>      this.SearchDrugId = this.pharmacyDrugInfoData?.drugid?.toString();
+<a id="__codelineno-11-64" name="__codelineno-11-64" href="#__codelineno-11-64"></a>
+<a id="__codelineno-11-65" name="__codelineno-11-65" href="#__codelineno-11-65"></a>      if (this.selectedDrugType !== &#39;Vaccine&#39;) {
+<a id="__codelineno-11-66" name="__codelineno-11-66" href="#__codelineno-11-66"></a>        this.pharmacyForm.reset();
+<a id="__codelineno-11-67" name="__codelineno-11-67" href="#__codelineno-11-67"></a>        this.pharmacyForm.patchValue({
+<a id="__codelineno-11-68" name="__codelineno-11-68" href="#__codelineno-11-68"></a>          // Unit Dose Patch
+<a id="__codelineno-11-69" name="__codelineno-11-69" href="#__codelineno-11-69"></a>          drugName: this.pharmacyDrugInfoData?.genericname ?? null,
+<a id="__codelineno-11-70" name="__codelineno-11-70" href="#__codelineno-11-70"></a>          barndName: this.pharmacyDrugInfoData?.drugname ?? null,
+<a id="__codelineno-11-71" name="__codelineno-11-71" href="#__codelineno-11-71"></a>        });
+<a id="__codelineno-11-72" name="__codelineno-11-72" href="#__codelineno-11-72"></a>      }
+<a id="__codelineno-11-73" name="__codelineno-11-73" href="#__codelineno-11-73"></a>
+<a id="__codelineno-11-74" name="__codelineno-11-74" href="#__codelineno-11-74"></a>      if (this.selectedDrugType === &#39;Vaccine&#39;) {
+<a id="__codelineno-11-75" name="__codelineno-11-75" href="#__codelineno-11-75"></a>        this.vaccinationFormPatch();
+<a id="__codelineno-11-76" name="__codelineno-11-76" href="#__codelineno-11-76"></a>      }
+<a id="__codelineno-11-77" name="__codelineno-11-77" href="#__codelineno-11-77"></a>    });
+<a id="__codelineno-11-78" name="__codelineno-11-78" href="#__codelineno-11-78"></a>}
+<a id="__codelineno-11-79" name="__codelineno-11-79" href="#__codelineno-11-79"></a>
+<a id="__codelineno-11-80" name="__codelineno-11-80" href="#__codelineno-11-80"></a>vaccinationFormPatch(): void {
+<a id="__codelineno-11-81" name="__codelineno-11-81" href="#__codelineno-11-81"></a>  this.getSelectedVaccinationData(this.pharmacyDrugInfoData?.vaccineLotsList);
+<a id="__codelineno-11-82" name="__codelineno-11-82" href="#__codelineno-11-82"></a>
+<a id="__codelineno-11-83" name="__codelineno-11-83" href="#__codelineno-11-83"></a>  this.vaccinationForm.patchValue({
+<a id="__codelineno-11-84" name="__codelineno-11-84" href="#__codelineno-11-84"></a>    vaccineName: this.pharmacyDrugInfoData?.genericname || null,
+<a id="__codelineno-11-85" name="__codelineno-11-85" href="#__codelineno-11-85"></a>    doseStrength: this.pharmacyDrugInfoData?.med_strength || null,
+<a id="__codelineno-11-86" name="__codelineno-11-86" href="#__codelineno-11-86"></a>    doseUnit: this.pharmacyDrugInfoData?.med_unit || null,
+<a id="__codelineno-11-87" name="__codelineno-11-87" href="#__codelineno-11-87"></a>    routeName: this.routes?.find(
+<a id="__codelineno-11-88" name="__codelineno-11-88" href="#__codelineno-11-88"></a>      ele =&gt; ele.meD_ROUTE_ID == this.pharmacyDrugInfoData?.route
+<a id="__codelineno-11-89" name="__codelineno-11-89" href="#__codelineno-11-89"></a>    ) ?? null,
+<a id="__codelineno-11-90" name="__codelineno-11-90" href="#__codelineno-11-90"></a>    rxNormCode: this.pharmacyDrugInfoData?.rxNormCode || null,
+<a id="__codelineno-11-91" name="__codelineno-11-91" href="#__codelineno-11-91"></a>    ndc: this.pharmacyDrugInfoData?.ndc || null,
+<a id="__codelineno-11-92" name="__codelineno-11-92" href="#__codelineno-11-92"></a>    note: this.pharmacyDrugInfoData?.note || null,
+<a id="__codelineno-11-93" name="__codelineno-11-93" href="#__codelineno-11-93"></a>  });
+<a id="__codelineno-11-94" name="__codelineno-11-94" href="#__codelineno-11-94"></a>
+<a id="__codelineno-11-95" name="__codelineno-11-95" href="#__codelineno-11-95"></a>  const lotsFormArray = this.vaccineLotsList;
+<a id="__codelineno-11-96" name="__codelineno-11-96" href="#__codelineno-11-96"></a>
+<a id="__codelineno-11-97" name="__codelineno-11-97" href="#__codelineno-11-97"></a>  while (lotsFormArray.length) {
+<a id="__codelineno-11-98" name="__codelineno-11-98" href="#__codelineno-11-98"></a>    lotsFormArray.removeAt(0);
+<a id="__codelineno-11-99" name="__codelineno-11-99" href="#__codelineno-11-99"></a>  }
+<a id="__codelineno-11-100" name="__codelineno-11-100" href="#__codelineno-11-100"></a>
+<a id="__codelineno-11-101" name="__codelineno-11-101" href="#__codelineno-11-101"></a>  if (this.pharmacyDrugInfoData?.vaccineLotsList?.length) {
+<a id="__codelineno-11-102" name="__codelineno-11-102" href="#__codelineno-11-102"></a>    this.pharmacyDrugInfoData.vaccineLotsList.forEach((lot: VaccinationList) =&gt; {
+<a id="__codelineno-11-103" name="__codelineno-11-103" href="#__codelineno-11-103"></a>      lotsFormArray.push(this.createLot(lot));
+<a id="__codelineno-11-104" name="__codelineno-11-104" href="#__codelineno-11-104"></a>    });
+<a id="__codelineno-11-105" name="__codelineno-11-105" href="#__codelineno-11-105"></a>  }
+<a id="__codelineno-11-106" name="__codelineno-11-106" href="#__codelineno-11-106"></a>}
+<a id="__codelineno-11-107" name="__codelineno-11-107" href="#__codelineno-11-107"></a>
+<a id="__codelineno-11-108" name="__codelineno-11-108" href="#__codelineno-11-108"></a>private createLot(lot: VaccinationList): FormGroup {
+<a id="__codelineno-11-109" name="__codelineno-11-109" href="#__codelineno-11-109"></a>  return this.fb.group({
+<a id="__codelineno-11-110" name="__codelineno-11-110" href="#__codelineno-11-110"></a>    vaccineLotID: [lot?.vaccineLotID || null],
+<a id="__codelineno-11-111" name="__codelineno-11-111" href="#__codelineno-11-111"></a>    lotNumber: [lot?.lotNumber || null],
+<a id="__codelineno-11-112" name="__codelineno-11-112" href="#__codelineno-11-112"></a>    expireDate: [lot?.expireDate ? new Date(lot.expireDate) : null],
+<a id="__codelineno-11-113" name="__codelineno-11-113" href="#__codelineno-11-113"></a>  });
+<a id="__codelineno-11-114" name="__codelineno-11-114" href="#__codelineno-11-114"></a>}
+</code></pre></div></p>
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>  &lt;div class=&quot;row col-12&quot; formArrayName=&quot;vaccineLotsList&quot;&gt;
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>      &lt;div *ngFor=&quot;let item of vaccineLotsList.controls; let i = index&quot; [formGroupName]=&quot;i&quot; [class]=&quot;className&quot;&gt;
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>        &lt;div class=&quot;row&quot;&gt;
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>            &lt;!-- Lot --&gt;
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>            &lt;div class=&quot;col-4&quot;&gt;
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>                &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>                  &lt;mat-label&gt;Lot&lt;/mat-label&gt;
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>                  &lt;input type=&quot;text&quot; matInput formControlName=&quot;vaccineLotsList&quot;&gt;
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>                &lt;/mat-form-field&gt;
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>              &lt;/div&gt;
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>                &lt;!-- Expiry Date --&gt;
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>                  &lt;div class=&quot;col-6&quot;&gt;
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>                    &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>                      &lt;mat-label&gt;Expiry Date&lt;/mat-label&gt;
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>                      &lt;input matInput minlength=&quot;10&quot;
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>                             appMaskDate [type]=&quot;&#39;datetime&#39;&quot;
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>                             [matDatepicker]=&quot;picker3&quot;
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>                             formControlName=&quot;expireDate&quot;
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>                             [min]=&quot;minDateForStopDate&quot;/&gt;
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>                      &lt;mat-datepicker-toggle matSuffix [for]=&quot;picker3&quot;&gt;&lt;/mat-datepicker-toggle&gt;
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>                      &lt;mat-datepicker #picker3&gt;&lt;/mat-datepicker&gt;
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>                    &lt;/mat-form-field&gt;
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>        &lt;/div&gt;
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a>
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>               &lt;!-- Add / Remove --&gt;
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>               &lt;div class=&quot;col-2 mt-4&quot;&gt;
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>                &lt;!-- ADD image if last row &amp; has value --&gt;
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>                &lt;!-- &lt;span
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>                  *ngIf=&quot;i === vaccineLotsList.length - 1 &amp;&amp; item.get(&#39;vaccineLotsList&#39;)?.value?.trim()&quot;
+<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>                  (click)=&quot;addLot($event); $event.stopPropagation()&quot;
+<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a>                  style=&quot;cursor: pointer;&quot;&gt;
+<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>                  &lt;img width=&quot;20&quot; height=&quot;20&quot; [src]=&quot;environment.imageBaseUrl + &#39;/Assets?path=Images/assets/images/plus-icon.png&#39;&quot; alt=&quot;&quot;&gt;
+<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a>                &lt;/span&gt; --&gt;
+<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a>                &lt;mat-icon
+<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a>                *ngIf=&quot;i === vaccineLotsList.length - 1 &amp;&amp; item.get(&#39;vaccineLotsList&#39;)?.value?.trim()&quot;
+<a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a>                (click)=&quot;addLot($event); $event.stopPropagation()&quot;
+<a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a>                style=&quot;cursor: pointer;&quot;&gt;
+<a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a>                add
+<a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a>              &lt;/mat-icon&gt;
+<a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a>
+<a id="__codelineno-12-43" name="__codelineno-12-43" href="#__codelineno-12-43"></a>                &lt;!-- DELETE icon if NOT last row --&gt;
+<a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a>                &lt;span
+<a id="__codelineno-12-45" name="__codelineno-12-45" href="#__codelineno-12-45"></a>                  *ngIf=&quot;i !== vaccineLotsList.length - 1&quot;
+<a id="__codelineno-12-46" name="__codelineno-12-46" href="#__codelineno-12-46"></a>                  (click)=&quot;removeLot(i); $event.stopPropagation()&quot;
+<a id="__codelineno-12-47" name="__codelineno-12-47" href="#__codelineno-12-47"></a>                  style=&quot;cursor: pointer;&quot;&gt;
+<a id="__codelineno-12-48" name="__codelineno-12-48" href="#__codelineno-12-48"></a>                  &lt;i class=&quot;far fa-trash-alt Medication-Activities-header-icon&quot;&gt;&lt;/i&gt;
+<a id="__codelineno-12-49" name="__codelineno-12-49" href="#__codelineno-12-49"></a>                &lt;/span&gt;
+<a id="__codelineno-12-50" name="__codelineno-12-50" href="#__codelineno-12-50"></a>          &lt;/div&gt;
+<a id="__codelineno-12-51" name="__codelineno-12-51" href="#__codelineno-12-51"></a>    &lt;/div&gt;
+<a id="__codelineno-12-52" name="__codelineno-12-52" href="#__codelineno-12-52"></a>     &lt;/div&gt;
+<a id="__codelineno-12-53" name="__codelineno-12-53" href="#__codelineno-12-53"></a>    &lt;/div&gt;
 </code></pre></div>
 
 
