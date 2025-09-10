@@ -727,6 +727,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#innerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      InnerHtml
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      RealTime Example
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2414,6 +2441,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#innerhtml" class="md-nav__link">
+    <span class="md-ellipsis">
+      InnerHtml
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      RealTime Example
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2522,6 +2576,49 @@
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        expireDate: this._datePipe.transform(ele?.expireDate, &#39;dd/MM/yyyy&#39;) //this is format
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        };
 <a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a> }) || [];
+</code></pre></div>
+<h3 id="innerhtml">InnerHtml</h3>
+<h3 id="basic-example">Basic Example</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> ==ts.file==
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  htmlContent = &quot;&lt;b&gt;This is bold&lt;/b&gt; and &lt;i&gt;this is italic&lt;/i&gt; &lt;strong&gt;This is strong&lt;/strong&gt;;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>===html.file===
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    &lt;p [innerHtml]=&quot;htmlContent&quot;&gt;&lt;/p&gt;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>   op: This is bold and This is italic This is strong 
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>   note: here bold ane text BOLD lo and Italic ane content ITALIC lo etc.. vastundi
+</code></pre></div>
+<h3 id="realtime-example">RealTime Example</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a> ----------inner html-----
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a> syntax:[innerHtml]=&quot;yourName&quot;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  ======ts.file====
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>   viewtext :any; //declare Variable 
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>   htmlView:any; //declare Variable
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>   if(data){
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>     this.convertBlobToXmlString(data?.alldata).then((xmlString) =&gt; {
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        const divEle = document.createElement(&#39;div&#39;);
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>         this.htmlView =div?.htmlView;  //assigne value to that above variable
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        this.viewtext = divEle?.innerHTML;
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>      }).catch((error) =&gt; {
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        console.error(&quot;Error reading Blob:&quot;, error);
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>      });
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>   } 
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>=======html======
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    &lt;!-- viewtext --&gt;
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>&lt;div *ngIf=&quot;data.fileType === &#39;txt&#39;&quot;&gt;
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>  &lt;strong&gt;Text Preview&lt;/strong&gt;
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>  &lt;div class=&quot;modal_body&quot; mat-dialog-content&gt;
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    &lt;div [innerHTML]=&quot;viewtext&quot;&gt;&lt;/div&gt; //here we use that variable ex: [innerHtml]=&quot;&quot;
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>  &lt;/div&gt;
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>&lt;/div&gt;
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>     &lt;!-- htmlView --&gt;
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>&lt;div *ngIf=&quot;data.fileType === &#39;htm&#39; || data.fileType === &#39;html&#39;&quot;&gt;
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>  &lt;strong&gt;HTML Preview&lt;/strong&gt;
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>  &lt;div class=&quot;modal_body&quot; mat-dialog-content&gt;
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>    &lt;div  [innerHTML]=&quot;htmlView&quot;&gt;&lt;/div&gt;
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>  &lt;/div&gt;
 </code></pre></div>
 
 

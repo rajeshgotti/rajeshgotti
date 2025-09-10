@@ -2436,37 +2436,38 @@
 
 <h3 id="how-to-crete-angular-project">How to crete Angular Project</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>step:1 npm install -g @angular/cli    
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>step:2 ng new yourProjectName
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>step:3 move to ur directory -&gt; cd yourProjectName
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>       -&gt; To skip the spec (test) file:--&gt;ng g c ComponentName --skip-tests
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>       -&gt; if you want no style file at all (just .ts and .html):
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>          ng g c ComponentName --skip-tests --inline-style
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>step:3 to create component -&gt; ng g c compName
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>       to create service   -&gt; ng g s serviceName
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>step:4 go to your html file and give routerLink
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>       &lt;button routerLink=&quot;/parent&quot;&gt;Parent&lt;/button&gt;  
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>step:5 to use routes go to app.routes.ts file and declar ur componets
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        export const routes: Routes = [
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        {path:&#39;parent&#39;,component:Parent},
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        {path:&#39;child&#39;,component:Child}
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>       ];
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>step:6 go to app.ts file and import routerModule
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>       ex:imports: [RouterOutlet,RouterModule],
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>step:7 to use bootstrap and angular/material use this cmds
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>       -&gt; npm i bootstrap
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>       -&gt; ng add @angular/material         
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>       and open angular.json file and add urls in styles[]
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>       ex:    &quot;styles&quot;: [
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>              &quot;@angular/material/prebuilt-themes/azure-blue.css&quot;,
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>              &quot;node_modules/bootstrap/dist/css/bootstrap.css&quot;
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>            ]
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>step:8 to run  noraml:      i)   ng s   (OR) ng s --o
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>          with portNo:     ii)   ng s --port 2423
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>        with localPortNO: iii)   ng s --host 192.168.21.59 --port 4200               
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>step:2 ng new yourProjectName                       EX: ng new Employee
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>step:3 move to ur directory -&gt; cd yourProjectName   EX: cd Employee
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>       -&gt; To skip the spec (test) file:--&gt;ng g c ComponentName --skip-tests 
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>           EX: ng g c HomeComponent --skip-tests
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>       -&gt; if you want no style file at all (just .ts and .html):
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>          ng g c ComponentName --skip-tests --inline-style
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>step:3 to create component -&gt; ng g c compName
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>       to create service   -&gt; ng g s serviceName
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>step:4 go to your html file and give routerLink
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>       &lt;button routerLink=&quot;/parent&quot;&gt;Parent&lt;/button&gt;  
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>step:5 to use routes go to app.routes.ts file and declar ur componets
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>           export const routes: Routes = [
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>              {path:&#39;parent&#39;,component:Parent},
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>              {path:&#39;child&#39;,component:Child}
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>             ];
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>step:6 go to app.ts file and import routerModule
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>       ex:imports: [RouterOutlet,RouterModule],
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>step:7 to use bootstrap and angular/material use this cmds
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>       -&gt; npm i bootstrap
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>       -&gt; ng add @angular/material         
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>      and open ANGULAR.json file and add urls in styles[]
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>       ex:    &quot;styles&quot;: [
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>              &quot;@angular/material/prebuilt-themes/azure-blue.css&quot;,
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>              &quot;node_modules/bootstrap/dist/css/bootstrap.css&quot;
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>            ]
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>step:8 to run  noraml:      i)   ng s   (OR) ng s --o
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>          with portNo:     ii)   ng s --port 2423
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>        with localPortNO: iii)   ng s --host 192.168.21.59 --port 4200               
 </code></pre></div>
 
 
