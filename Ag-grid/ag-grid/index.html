@@ -946,12 +946,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../angular/ngrx/" class="md-nav__link">
+      <a href="../../angular/ngrxStore/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    NGRX
+    NGRX(Store)
     
   </span>
   
@@ -1272,6 +1272,15 @@
   <a href="#how-to-use-ag-grid" class="md-nav__link">
     <span class="md-ellipsis">
       How to use AG-GRID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
     </span>
   </a>
   
@@ -2487,6 +2496,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#ag-grid-realtime" class="md-nav__link">
     <span class="md-ellipsis">
       Ag-grid realTime
@@ -2601,258 +2619,304 @@
 </details>
 
 <h3 id="how-to-use-ag-grid">How to use AG-GRID</h3>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>step:1 npm install ag-grid-angular ag-grid-community
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>STEP:1 npm install ag-grid-angular ag-grid-community
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>STPE:2 open style.css file and paste this url at the top
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>          @import &#39;ag-grid-community/styles/ag-theme-alpine.css&#39;; 
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>stpe:3 go to main.ts file import this
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>          import { ModuleRegistry, AllCommunityModule } from &#39;ag-grid-community&#39;;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>         ModuleRegistry.registerModules([AllCommunityModule]);      
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Step:3  open ts.file and import ag-gridModule and coldef this
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        import { AgGridModule } from &#39;ag-grid-angular&#39;;
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        import { ColDef } from &#39;ag-grid-community&#39;;      
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>        export class Emp{
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>         empData: any;
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>          columnDef: ColDef[] = [];
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>         ngOnInit(): void {
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>            this.getAllEmp();
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>            this.getAgGrid();
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>            }
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>         getAllEmp(){
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            this.ser.getEmp().subscribe({
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>                next:(res)=&gt;{
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                console.log(res,&#39;getEmp&#39;)
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                this.empData = Array.isArray(res) ? res : res || [];
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>                }
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>              })
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>            }
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>        getAgGrid(){
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>          this.columnDef=[
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>             {field:&#39;firstName&#39;,headerName:&#39;Name&#39;},
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>             {field:&#39;lastName&#39;,headerName:&#39;LastName&#39;},
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>                ]
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>            }
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>         }
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>stpe:4 html.file
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>       &lt;ag-grid-angular
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>          style=&quot;width: 100%; height: 500px;&quot;
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>          class=&quot;ag-theme-alpine&quot;
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>          [rowData]=&quot;empData&quot;
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>          [columnDefs]=&quot;columnDef&quot;
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>          rowSelection=&quot;multiple&quot;
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>         &gt;
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>        &lt;/ag-grid-angular&gt;  
 </code></pre></div>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import { AgGridModule } from &#39;ag-grid-angular&#39;;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>import { ClientSideRowModelModule, ColDef, ModuleRegistry } from &#39;ag-grid-community&#39;;
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>// ✅ Register the module
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>ModuleRegistry.registerModules([ClientSideRowModelModule]);
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>@Component({
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  selector: &#39;app-aggrid&#39;,
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  standalone: true,
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  imports: [AgGridModule],
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  templateUrl: &#39;./aggrid.html&#39;,
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  styleUrl: &#39;./aggrid.css&#39;
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>})
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>export class Aggrid implements OnInit {
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  columnDefs: ColDef[] = [];
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  rowData: any[] = [];
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>  ngOnInit() {
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    this.columnDefs = [
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>      { field: &#39;make&#39;, tooltipField: &#39;make&#39; },
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>      { field: &#39;model&#39;, tooltipField: &#39;model&#39; },
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>      { field: &#39;price&#39;, tooltipField: &#39;price&#39; }
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    ];
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    this.rowData = [
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>      { make: &#39;Toyota&#39;, model: &#39;Celica&#39;, price: 35000 },
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>      { make: &#39;Ford&#39;, model: &#39;Mondeo&#39;, price: 32000 },
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>      { make: &#39;Porsche&#39;, model: &#39;Boxster&#39;, price: 72000 }
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>    ];
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>  }
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>}
-</code></pre></div></p>
-<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;ag-grid-angular
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  class=&quot;ag-theme-alpine&quot;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  style=&quot;width: 100%; height: 100%;&quot;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  [rowData]=&quot;rowData&quot;
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>  [columnDefs]=&quot;columnDefs&quot;
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a> &gt;
+<h3 id="example">Example</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>step:1 npm install ag-grid-angular ag-grid-community
+</code></pre></div>
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import { AgGridModule } from &#39;ag-grid-angular&#39;;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>import { ClientSideRowModelModule, ColDef, ModuleRegistry } from &#39;ag-grid-community&#39;;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>// ✅ Register the module
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>ModuleRegistry.registerModules([ClientSideRowModelModule]);
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>&lt;/ag-grid-angular&gt;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>---style.css--globalstyle---
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>@import &quot;ag-grid-community/styles/ag-grid.css&quot;;
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>@import &quot;ag-grid-community/styles/ag-theme-alpine.css&quot;;
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>/* Your styles AFTER imports */
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>html, body {
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  height: 100%;
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  margin: 0;
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>}
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>@Component({
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  selector: &#39;app-aggrid&#39;,
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  standalone: true,
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  imports: [AgGridModule],
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>  templateUrl: &#39;./aggrid.html&#39;,
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  styleUrl: &#39;./aggrid.css&#39;
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>})
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>export class Aggrid implements OnInit {
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>  columnDefs: ColDef[] = [];
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  rowData: any[] = [];
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  ngOnInit() {
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    this.columnDefs = [
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>      { field: &#39;make&#39;, tooltipField: &#39;make&#39; },
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>      { field: &#39;model&#39;, tooltipField: &#39;model&#39; },
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>      { field: &#39;price&#39;, tooltipField: &#39;price&#39; }
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    ];
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    this.rowData = [
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>      { make: &#39;Toyota&#39;, model: &#39;Celica&#39;, price: 35000 },
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>      { make: &#39;Ford&#39;, model: &#39;Mondeo&#39;, price: 32000 },
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>      { make: &#39;Porsche&#39;, model: &#39;Boxster&#39;, price: 72000 }
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>    ];
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>  }
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>}
+</code></pre></div></p>
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;ag-grid-angular
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  class=&quot;ag-theme-alpine&quot;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  style=&quot;width: 100%; height: 100%;&quot;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  [rowData]=&quot;rowData&quot;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  [columnDefs]=&quot;columnDefs&quot;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a> &gt;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>&lt;/ag-grid-angular&gt;
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>---style.css--globalstyle---
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>@import &quot;ag-grid-community/styles/ag-grid.css&quot;;
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>@import &quot;ag-grid-community/styles/ag-theme-alpine.css&quot;;
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>/* Your styles AFTER imports */
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>html, body {
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>  height: 100%;
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>  margin: 0;
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>}
 </code></pre></div>
 <h3 id="ag-grid-realtime">Ag-grid realTime</h3>
-<p><div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;div class=&quot;body h-100&quot;&gt;
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    &lt;div class=&quot;col-12 h-100&quot;&gt;
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>      &lt;div class=&quot;row h-100&quot;&gt;
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        &lt;ag-grid-angular
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>          #agGrid 
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>          style=&quot;width:100%&quot;
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>          class=&quot;ag-statusbar-control ag-grid-cell-first-chk ag-theme-material ag_height-100_2 my-grid&quot;
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>          [rowData]=&quot;rowData&quot;
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>          [columnDefs]=&quot;colDefs&quot;
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>          [defaultColDef]=&quot;defaultColDef&quot;
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>          rowSelection=&quot;multiple&quot;
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>          [sideBar]=&quot;sideBar&quot;&gt;
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>        &lt;/ag-grid-angular&gt;
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>      &lt;/div&gt;
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    &lt;/div&gt;
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>  &lt;/div&gt;
+<p><div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;div class=&quot;body h-100&quot;&gt;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    &lt;div class=&quot;col-12 h-100&quot;&gt;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>      &lt;div class=&quot;row h-100&quot;&gt;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        &lt;ag-grid-angular
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>          #agGrid 
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>          style=&quot;width:100%&quot;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>          class=&quot;ag-statusbar-control ag-grid-cell-first-chk ag-theme-material ag_height-100_2 my-grid&quot;
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>          [rowData]=&quot;rowData&quot;
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>          [columnDefs]=&quot;colDefs&quot;
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>          [defaultColDef]=&quot;defaultColDef&quot;
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>          rowSelection=&quot;multiple&quot;
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>          [sideBar]=&quot;sideBar&quot;&gt;
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        &lt;/ag-grid-angular&gt;
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>      &lt;/div&gt;
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    &lt;/div&gt;
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  &lt;/div&gt;
 </code></pre></div>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import { Component, OnInit } from &quot;@angular/core&quot;;
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>import { AgGridModule } from &quot;ag-grid-angular&quot;;
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>import { ColDef } from &quot;ag-grid-community&quot;;
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>@Component({
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  selector: &#39;app-aggrid&#39;,
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  standalone: true,
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  imports: [AgGridModule],
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  templateUrl: &#39;./aggrid.component.html&#39;,
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>  styleUrls: [&#39;./aggrid.component.scss&#39;],
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>})
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>export class AggridComponent {
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  rowData = [
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>    { modelName: &quot;Redmi Note 12&quot;, price: 18000, batteryMah: 5000, frontCam: 16, backCam: 50 },
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    { modelName: &quot;Motorola Edge 40&quot;, price: 25000, batteryMah: 4400, frontCam: 32, backCam: 50 },
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    { modelName: &quot;Samsung Galaxy S21&quot;, price: 55000, batteryMah: 4800, frontCam: 10, backCam: 64 },
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    { modelName: &quot;iPhone 13&quot;, price: 65000, batteryMah: 3240, frontCam: 12, backCam: 12 },
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    { modelName: &quot;Nokia G21&quot;, price: 12999, batteryMah: 5050, frontCam: 8, backCam: 50 }
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  ];
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>  colDefs: ColDef[] = [
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    { headerCheckboxSelection: true, checkboxSelection: true, field: &quot;modelName&quot;,
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>          headerName: &quot;Model Name&quot; },// so e checkbox&#39;s anni kuda vastai bz of rowSelection=&quot;multiple&quot;
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    { field: &quot;price&quot;, headerName: &quot;Price (₹)&quot; },
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>    { field: &quot;batteryMah&quot;, headerName: &quot;Battery (mAh)&quot; },
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>    { field: &quot;frontCam&quot;, headerName: &quot;Front Camera (MP)&quot; },
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    { field: &quot;backCam&quot;, headerName: &quot;Back Camera (MP)&quot; }
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>  ];
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  defaultColDef = { filter: true };
-<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>
-<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>  //side ki columns ravali ante 
-<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>  sideBar = {
-<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>    toolPanels: [&#39;columns&#39;, &#39;filters&#39;],
-<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>    position: &#39;right&#39;,
-<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>    defaultToolPanel: &#39;none&#39;,
-<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>    hiddenByDefault: false
-<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>  };
-<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>
-<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>}
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>import { Component, OnInit } from &quot;@angular/core&quot;;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>import { AgGridModule } from &quot;ag-grid-angular&quot;;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>import { ColDef } from &quot;ag-grid-community&quot;;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>@Component({
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>  selector: &#39;app-aggrid&#39;,
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>  standalone: true,
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>  imports: [AgGridModule],
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  templateUrl: &#39;./aggrid.component.html&#39;,
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  styleUrls: [&#39;./aggrid.component.scss&#39;],
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>})
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>export class AggridComponent {
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  rowData = [
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    { modelName: &quot;Redmi Note 12&quot;, price: 18000, batteryMah: 5000, frontCam: 16, backCam: 50 },
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>    { modelName: &quot;Motorola Edge 40&quot;, price: 25000, batteryMah: 4400, frontCam: 32, backCam: 50 },
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    { modelName: &quot;Samsung Galaxy S21&quot;, price: 55000, batteryMah: 4800, frontCam: 10, backCam: 64 },
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    { modelName: &quot;iPhone 13&quot;, price: 65000, batteryMah: 3240, frontCam: 12, backCam: 12 },
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>    { modelName: &quot;Nokia G21&quot;, price: 12999, batteryMah: 5050, frontCam: 8, backCam: 50 }
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  ];
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>  colDefs: ColDef[] = [
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    { headerCheckboxSelection: true, checkboxSelection: true, field: &quot;modelName&quot;,
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>          headerName: &quot;Model Name&quot; },// so e checkbox&#39;s anni kuda vastai bz of rowSelection=&quot;multiple&quot;
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>    { field: &quot;price&quot;, headerName: &quot;Price (₹)&quot; },
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>    { field: &quot;batteryMah&quot;, headerName: &quot;Battery (mAh)&quot; },
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>    { field: &quot;frontCam&quot;, headerName: &quot;Front Camera (MP)&quot; },
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>    { field: &quot;backCam&quot;, headerName: &quot;Back Camera (MP)&quot; }
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>  ];
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>  defaultColDef = { filter: true };
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>  //side ki columns ravali ante 
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>  sideBar = {
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>    toolPanels: [&#39;columns&#39;, &#39;filters&#39;],
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>    position: &#39;right&#39;,
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>    defaultToolPanel: &#39;none&#39;,
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>    hiddenByDefault: false
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>  };
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>}
 </code></pre></div></p>
 <h3 id="valueformater">valueFormater</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>valueFormatter:The valueFormatter is used in AG Grid to format the raw value from your data 
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>before displaying it in the cell.
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  - It does not change the actual data — only how it looks in the UI.
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  -Imagine your data contains a raw timestamp, 
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>Example: {
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>            lastModifiedDate: &quot;2025-08-08T14:23:45.000Z&quot;
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>         } 
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a> You probably don’t want to show that long timestamp You want to show something 
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  friendly like:08/08/2025 14:23 then use valueFormater
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>{ 
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>  field: &#39;lastModifiedDate&#39;,
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  headerName: &#39;Status&#39;,
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  headerTooltip: &quot;lastModifiedDate&quot;,
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  valueFormatter: function (params) {
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>    return moment(params.value).format(&#39;MM/DD/YYYY HH:mm&#39;);
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>  }
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>valueFormatter:The valueFormatter is used in AG Grid to format the raw value from your data 
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>before displaying it in the cell.
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>  - It does not change the actual data — only how it looks in the UI.
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  -Imagine your data contains a raw timestamp, 
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>Example: {
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>            lastModifiedDate: &quot;2025-08-08T14:23:45.000Z&quot;
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>         } 
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a> You probably don’t want to show that long timestamp You want to show something 
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>  friendly like:08/08/2025 14:23 then use valueFormater
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>{ 
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>  field: &#39;lastModifiedDate&#39;,
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  headerName: &#39;Status&#39;,
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>  headerTooltip: &quot;lastModifiedDate&quot;,
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>  valueFormatter: function (params) {
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    return moment(params.value).format(&#39;MM/DD/YYYY HH:mm&#39;);
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>  }
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>}
 </code></pre></div>
 <h3 id="valuegetter-to-combine-2-fields-we-use-this">valueGetter (to combine 2 fields we use this)</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>-&gt;valueGetter:Add two fields? (e.g., price + tax) =&gt; Combine fields? (e.g., firstName + lastName)
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>   =&gt;Use a conditional? (e.g., if (stock &gt; 0) &#39;In Stock&#39; else &#39;Out of Stock&#39;) 
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Example:{
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>          headerName: &#39;Full Name&#39;,
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>          valueGetter: (params) =&gt; {
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>          return params.data.firstName + &#39; &#39; + params.data.lastName;
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>         }
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        }
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>Example:2{
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>          headerName: &#39;Full Name&#39;,
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>          valueGetter: params =&gt; ${params.data.firstName} ${params.data.lastName}
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>          }
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>          Calculate a new field:{
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>              headerName: &#39;Total Price&#39;,
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>              valueGetter: params =&gt; params.data.price + params.data.tax
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>            }
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>Example 3: Conditional value
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>          {
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>            headerName: &#39;Availability&#39;,
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>            valueGetter: params =&gt; params.data.stock &gt; 0 ? &#39;In Stock&#39; : &#39;Out of Stock&#39;
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>          }
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>-&gt;valueGetter:Add two fields? (e.g., price + tax) =&gt; Combine fields? (e.g., firstName + lastName)
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>   =&gt;Use a conditional? (e.g., if (stock &gt; 0) &#39;In Stock&#39; else &#39;Out of Stock&#39;) 
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>Example:{
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>          headerName: &#39;Full Name&#39;,
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>          valueGetter: (params) =&gt; {
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>          return params.data.firstName + &#39; &#39; + params.data.lastName;
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>         }
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        }
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>Example:2{
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>          headerName: &#39;Full Name&#39;,
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>          valueGetter: params =&gt; ${params.data.firstName} ${params.data.lastName}
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>          }
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>          Calculate a new field:{
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>              headerName: &#39;Total Price&#39;,
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>              valueGetter: params =&gt; params.data.price + params.data.tax
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>            }
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>Example 3: Conditional value
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>          {
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>            headerName: &#39;Availability&#39;,
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>            valueGetter: params =&gt; params.data.stock &gt; 0 ? &#39;In Stock&#39; : &#39;Out of Stock&#39;
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>          }
 </code></pre></div>
 <h3 id="cellclassrules">cellclassRules</h3>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>import { Component, OnInit } from &quot;@angular/core&quot;;
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>import { AgGridModule } from &quot;ag-grid-angular&quot;;
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>import { ColDef } from &quot;ag-grid-community&quot;;
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>@Component({
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  selector: &#39;app-aggrid&#39;,
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>  standalone: true,
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  imports: [AgGridModule],
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>  templateUrl: &#39;./aggrid.component.html&#39;,
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  styleUrls: [&#39;./aggrid.component.scss&#39;],
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>})
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>export class AggridComponent {
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>  rowData = [
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    { modelName: &quot;Redmi Note 12&quot;, price: 18000, batteryMah: 5000, frontCam: 16, backCam: 50 },
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>    { modelName: &quot;Motorola Edge 40&quot;, price: 25000, batteryMah: 4400, frontCam: 32, backCam: 50 },
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    { modelName: &quot;Samsung Galaxy S21&quot;, price: 55000, batteryMah: 4800, frontCam: 10, backCam: 64 },
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>    { modelName: &quot;iPhone 13&quot;, price: 65000, batteryMah: 3240, frontCam: 12, backCam: 12 },
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>    { modelName: &quot;Nokia G21&quot;, price: 12999, batteryMah: 5050, frontCam: 8, backCam: 50 }
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>  ];
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>Note: here if phone price anedi &gt;3000 vunte green &lt;20000 vunte red color ravali ante then 
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>      we use this cellClassRules
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>  colDefs: ColDef[] = [
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>    { headerCheckboxSelection: true, checkboxSelection: true, field: &quot;modelName&quot;, headerName: &quot;Model Name&quot; },
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>    { field: &quot;price&quot;, headerName: &quot;Price (₹)&quot;,
-<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>      cellClassRules: {
-<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>        &#39;text-success&#39;: params =&gt; params.value &gt; 30000,
-<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>        &#39;text-danger&#39;: params =&gt; params.value &lt; 20000
-<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a>      }
-<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a>     },  
-<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a>    { field: &quot;batteryMah&quot;, headerName: &quot;Battery (mAh)&quot; },
-<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a>    { field: &quot;frontCam&quot;, headerName: &quot;Front Camera (MP)&quot; },
-<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>    { field: &quot;backCam&quot;, headerName: &quot;Back Camera (MP)&quot; }
-<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a>  ];
-<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a> }
-<a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a>--css-file--
-<a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>.text-success {
-<a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a>  color: green;
-<a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a>  font-weight: bold;
-<a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a>}
-<a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a>
-<a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a>.text-danger {
-<a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a>  color: red;
-<a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a>  font-weight: bold;
-<a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a>}
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>import { Component, OnInit } from &quot;@angular/core&quot;;
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>import { AgGridModule } from &quot;ag-grid-angular&quot;;
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>import { ColDef } from &quot;ag-grid-community&quot;;
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>@Component({
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>  selector: &#39;app-aggrid&#39;,
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  standalone: true,
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  imports: [AgGridModule],
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  templateUrl: &#39;./aggrid.component.html&#39;,
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>  styleUrls: [&#39;./aggrid.component.scss&#39;],
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>})
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>export class AggridComponent {
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>  rowData = [
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>    { modelName: &quot;Redmi Note 12&quot;, price: 18000, batteryMah: 5000, frontCam: 16, backCam: 50 },
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>    { modelName: &quot;Motorola Edge 40&quot;, price: 25000, batteryMah: 4400, frontCam: 32, backCam: 50 },
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    { modelName: &quot;Samsung Galaxy S21&quot;, price: 55000, batteryMah: 4800, frontCam: 10, backCam: 64 },
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>    { modelName: &quot;iPhone 13&quot;, price: 65000, batteryMah: 3240, frontCam: 12, backCam: 12 },
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>    { modelName: &quot;Nokia G21&quot;, price: 12999, batteryMah: 5050, frontCam: 8, backCam: 50 }
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>  ];
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>Note: here if phone price anedi &gt;3000 vunte green &lt;20000 vunte red color ravali ante then 
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>      we use this cellClassRules
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>  colDefs: ColDef[] = [
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>    { headerCheckboxSelection: true, checkboxSelection: true, field: &quot;modelName&quot;, headerName: &quot;Model Name&quot; },
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>    { field: &quot;price&quot;, headerName: &quot;Price (₹)&quot;,
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>      cellClassRules: {
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>        &#39;text-success&#39;: params =&gt; params.value &gt; 30000,
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>        &#39;text-danger&#39;: params =&gt; params.value &lt; 20000
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>      }
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>     },  
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>    { field: &quot;batteryMah&quot;, headerName: &quot;Battery (mAh)&quot; },
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>    { field: &quot;frontCam&quot;, headerName: &quot;Front Camera (MP)&quot; },
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>    { field: &quot;backCam&quot;, headerName: &quot;Back Camera (MP)&quot; }
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>  ];
+<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a> }
+<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>--css-file--
+<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>.text-success {
+<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>  color: green;
+<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>  font-weight: bold;
+<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a>}
+<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a>
+<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a>.text-danger {
+<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a>  color: red;
+<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a>  font-weight: bold;
+<a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a>}
 </code></pre></div>
 <h3 id="rowclassrules">rowClassRules</h3>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>  rowClassRules is just like cellClassRules — but it applies CSS classes to entire rows,
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  instead of individual cells.
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Purpose:
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>To dynamically style full rows based on conditions in your data.
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a> Basic Syntax:
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a> rowClassRules: {
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>  &#39;row-error&#39;: params =&gt; params.data.status === &#39;error&#39;,
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  &#39;row-success&#39;: params =&gt; params.data.status === &#39;success&#39;
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>}
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>----html----
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>&lt;ag-grid-angular
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>  class=&quot;ag-theme-alpine&quot;
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>  [rowData]=&quot;rowData&quot;
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>  [columnDefs]=&quot;columnDefs&quot;
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>  [rowClassRules]=&quot;rowClassRules&quot;&gt;//rowClassRules
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>&lt;/ag-grid-angular&gt;
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>---ts.file----
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>rowClassRules = {
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>  &#39;row-success&#39;: params =&gt; params.data.status === &#39;success&#39;,
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>  &#39;row-error&#39;: params =&gt; params.data.status === &#39;error&#39;,
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>  &#39;row-pending&#39;: params =&gt; params.data.status === &#39;pending&#39;
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>};
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>--css.file--
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>.row-success {
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>  background-color: #e0fce0 !important;
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>}
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>.row-error {
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>  background-color: #fde0e0 !important;
-<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>}
-<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>
-<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>.row-pending {
-<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>  background-color: #fff8e0 !important;
-<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>}
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>  rowClassRules is just like cellClassRules — but it applies CSS classes to entire rows,
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  instead of individual cells.
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>Purpose:
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>To dynamically style full rows based on conditions in your data.
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a> Basic Syntax:
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a> rowClassRules: {
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>  &#39;row-error&#39;: params =&gt; params.data.status === &#39;error&#39;,
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>  &#39;row-success&#39;: params =&gt; params.data.status === &#39;success&#39;
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>}
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>----html----
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>&lt;ag-grid-angular
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>  class=&quot;ag-theme-alpine&quot;
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>  [rowData]=&quot;rowData&quot;
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>  [columnDefs]=&quot;columnDefs&quot;
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>  [rowClassRules]=&quot;rowClassRules&quot;&gt;//rowClassRules
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>&lt;/ag-grid-angular&gt;
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>---ts.file----
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>rowClassRules = {
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>  &#39;row-success&#39;: params =&gt; params.data.status === &#39;success&#39;,
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>  &#39;row-error&#39;: params =&gt; params.data.status === &#39;error&#39;,
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>  &#39;row-pending&#39;: params =&gt; params.data.status === &#39;pending&#39;
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>};
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>--css.file--
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>.row-success {
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>  background-color: #e0fce0 !important;
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>}
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>.row-error {
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>  background-color: #fde0e0 !important;
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>}
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>.row-pending {
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>  background-color: #fff8e0 !important;
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>}
 </code></pre></div>
 <h3 id="edit-type">Edit type</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>-----EditType---
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>step:1 defaultColDef = {editable:true};
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>step:2 declare variable with value  editType = &quot;fullRow&quot;; // fullRow ante row motam edit option vastundi 
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>                                    editType = &quot;cell&quot;; // cell ante onlyCell ki matrame edit option vastundi 
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>step:3 
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>       &lt;ag-grid-angular
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>           [editType]=&quot;editType&quot;
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>        &gt;
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>        &lt;/ag-grid-angular&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>-----EditType---
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>step:1 defaultColDef = {editable:true};
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>step:2 declare variable with value  editType = &quot;fullRow&quot;; // fullRow ante row motam edit option vastundi 
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>                                    editType = &quot;cell&quot;; // cell ante onlyCell ki matrame edit option vastundi 
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>step:3 
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>       &lt;ag-grid-angular
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>           [editType]=&quot;editType&quot;
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        &gt;
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>        &lt;/ag-grid-angular&gt;
 </code></pre></div>
 
 

@@ -946,12 +946,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../angular/ngrx/" class="md-nav__link">
+      <a href="../../angular/ngrxStore/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    NGRX
+    NGRX(Store)
     
   </span>
   
@@ -2456,7 +2456,7 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>step:1 npm install --save @ng-select/ng-select
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>step:2 import ng-select and reactiveFromsModule
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>         ex: import { FormControl, FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>         ex: import { NgSelectComponent } from &#39;@ng-select/ng-select&#39;;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>         ex: import { NgSelectModule } from &#39;@ng-select/ng-select&#39;; 
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>step:3 take formGroup and formcontrol with validation and takeOne variable and in your  getMethod() 
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>       after ur services calling u will get result na sotre ur result in that declared vairable 
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>       ex:pronounsData
@@ -2504,7 +2504,7 @@
 </code></pre></div>
 <div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import { Component } from &#39;@angular/core&#39;;
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import { FormControl, FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>import { NgSelectComponent } from &#39;@ng-select/ng-select&#39;;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>import { NgSelectModule } from &#39;@ng-select/ng-select&#39;; 
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>   &lt;!-- interface this is for type secure --&gt;
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>export interface Pronouns{
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  code:number,
@@ -2515,7 +2515,7 @@
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>}
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>@Component({
 <a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  selector: &#39;app-home&#39;,
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  imports: [NgSelectComponent,ReactiveFormsModule],
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  imports: [[NgSelectModule],ReactiveFormsModule],
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  templateUrl: &#39;./home.html&#39;,
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  styleUrl: &#39;./home.css&#39;
 <a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>})
