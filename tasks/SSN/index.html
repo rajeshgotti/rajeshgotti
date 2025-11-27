@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../tasks/">
       
       
-        <link rel="next" href="../binding/">
+        <link rel="next" href="../conditionInHtml/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Encapsulation - Rajesh Angular Document</title>
+        <title>SSN - Rajesh Angular Document</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#in-angular-encapsulation-refers-to-the-ability-of-a-component-to-control-how-its-internal-styles-and-templates-are-applied-which-can-help-avoid-style-leakage-and-conflicts-between-components" class="md-skip">
+        <a href="#how-to-add-ssn-number-validation" class="md-skip">
           Skip to content
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Encapsulation
+              SSN
             
           </span>
         </div>
@@ -182,13 +182,11 @@
   
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../angular/viewEncapsulation/" class="md-tabs__link">
           
   
   
@@ -404,11 +402,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../tasks/tasks/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../tasks/" class="md-tabs__link">
           
   
   
@@ -527,31 +527,28 @@
       
   
   
-    
   
   
-  
     
     
     
     
-      
-        
-        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
             
   
   
@@ -564,7 +561,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Angular
@@ -575,30 +572,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    Encapsulation
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../angular/viewEncapsulation/" class="md-nav__link">
         
   
   
@@ -609,129 +586,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#in-angular-encapsulation-refers-to-the-ability-of-a-component-to-control-how-its-internal-styles-and-templates-are-applied-which-can-help-avoid-style-leakage-and-conflicts-between-components" class="md-nav__link">
-    <span class="md-ellipsis">
-      In Angular, encapsulation refers to the ability of a component to control how its internal styles and templates are applied, which can help avoid style leakage and conflicts between components.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#angular-provides-three-encapsulation-modes-for-component-styles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Angular provides three encapsulation modes for component styles:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#emulated-default-styles-are-scoped-to-the-component-with-angular-automatically-adding-attributes-to-elements-to-avoid-style-conflicts-native-uses-the-browsers-native-shadow-dom-to-encapsulate-styles-and-templates-isolating-them-completely-none-no-encapsulation-styles-are-applied-globally-to-the-entire-application-example-of-encapsulation-in-angular-consider-a-simple-angular-component" class="md-nav__link">
-    <span class="md-ellipsis">
-      Emulated (default) - Styles are scoped to the component, with Angular automatically adding attributes to elements to avoid style conflicts. Native - Uses the browser's native Shadow DOM to encapsulate styles and templates, isolating them completely. None - No encapsulation, styles are applied globally to the entire application. Example of Encapsulation in Angular: Consider a simple Angular component:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encapsulation-modes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Encapsulation Modes:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1emulated-default" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.Emulated (Default):
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-styles-defined-in-the-component-are-scoped-to-it-angular-uses-attributes-like-ng-content-to-isolate-the-styles-in-this-example-the-h1-and-p-tags-will-have-styles-applied-only-within-this-components-template" class="md-nav__link">
-    <span class="md-ellipsis">
-      The styles defined in the component are scoped to it. Angular uses attributes like ng-content to isolate the styles. In this example, the h1 and p tags will have styles applied only within this component's template.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2native-shadow-dom" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.Native (Shadow DOM):
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#in-this-mode-angular-will-use-the-browsers-native-shadow-dom-to-encapsulate-the-styles-styles-will-not-leak-outside-the-component-and-external-styles-will-not-affect-it-to-use-native-encapsulation-update-the-encapsulation-property-like-this" class="md-nav__link">
-    <span class="md-ellipsis">
-      In this mode, Angular will use the browser's native Shadow DOM to encapsulate the styles. Styles will not leak outside the component, and external styles will not affect it. To use Native encapsulation, update the encapsulation property like this:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      syntax:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3none-global-styles" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.None (Global Styles):
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.None (Global Styles):">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this-mode-removes-any-encapsulation-meaning-the-styles-defined-in-the-component-will-be-global-and-affect-the-entire-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      This mode removes any encapsulation, meaning the styles defined in the component will be global and affect the entire application.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -744,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../binding/" class="md-nav__link">
+      <a href="../../angular/binding/" class="md-nav__link">
         
   
   
@@ -767,7 +621,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../input/" class="md-nav__link">
+      <a href="../../angular/input/" class="md-nav__link">
         
   
   
@@ -790,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../output/" class="md-nav__link">
+      <a href="../../angular/output/" class="md-nav__link">
         
   
   
@@ -813,7 +667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../viewchild/" class="md-nav__link">
+      <a href="../../angular/viewchild/" class="md-nav__link">
         
   
   
@@ -836,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../custompipe/" class="md-nav__link">
+      <a href="../../angular/custompipe/" class="md-nav__link">
         
   
   
@@ -859,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../reactiveForm/" class="md-nav__link">
+      <a href="../../angular/reactiveForm/" class="md-nav__link">
         
   
   
@@ -882,7 +736,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../templateDrivenform/" class="md-nav__link">
+      <a href="../../angular/templateDrivenform/" class="md-nav__link">
         
   
   
@@ -905,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../formarray/" class="md-nav__link">
+      <a href="../../angular/formarray/" class="md-nav__link">
         
   
   
@@ -928,7 +782,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../customValidator/" class="md-nav__link">
+      <a href="../../angular/customValidator/" class="md-nav__link">
         
   
   
@@ -951,7 +805,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../componentStructure/" class="md-nav__link">
+      <a href="../../angular/componentStructure/" class="md-nav__link">
         
   
   
@@ -974,7 +828,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../services/" class="md-nav__link">
+      <a href="../../angular/services/" class="md-nav__link">
         
   
   
@@ -997,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../signal/" class="md-nav__link">
+      <a href="../../angular/signal/" class="md-nav__link">
         
   
   
@@ -1020,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../behaviour/" class="md-nav__link">
+      <a href="../../angular/behaviour/" class="md-nav__link">
         
   
   
@@ -1043,7 +897,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../forkJoin/" class="md-nav__link">
+      <a href="../../angular/forkJoin/" class="md-nav__link">
         
   
   
@@ -1066,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../localStorage/" class="md-nav__link">
+      <a href="../../angular/localStorage/" class="md-nav__link">
         
   
   
@@ -1089,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../lifeCycleHooks/" class="md-nav__link">
+      <a href="../../angular/lifeCycleHooks/" class="md-nav__link">
         
   
   
@@ -1112,7 +966,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ngrxStore/" class="md-nav__link">
+      <a href="../../angular/ngrxStore/" class="md-nav__link">
         
   
   
@@ -1135,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routes/" class="md-nav__link">
+      <a href="../../angular/routes/" class="md-nav__link">
         
   
   
@@ -2326,28 +2180,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
         
           
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
-        
-          
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
             
   
   
@@ -2360,7 +2217,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_13">
             <span class="md-nav__icon md-icon"></span>
             Tasks
@@ -2374,7 +2231,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tasks/tasks/" class="md-nav__link">
+      <a href="../tasks/" class="md-nav__link">
         
   
   
@@ -2394,10 +2251,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../tasks/SSN/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    SSN
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2408,6 +2285,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-add-ssn-number-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to add SSN number VALIDATION
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2420,7 +2324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tasks/conditionInHtml/" class="md-nav__link">
+      <a href="../conditionInHtml/" class="md-nav__link">
         
   
   
@@ -2443,7 +2347,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tasks/NoramSearch/" class="md-nav__link">
+      <a href="../NoramSearch/" class="md-nav__link">
         
   
   
@@ -2689,107 +2593,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#in-angular-encapsulation-refers-to-the-ability-of-a-component-to-control-how-its-internal-styles-and-templates-are-applied-which-can-help-avoid-style-leakage-and-conflicts-between-components" class="md-nav__link">
+  <a href="#how-to-add-ssn-number-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      In Angular, encapsulation refers to the ability of a component to control how its internal styles and templates are applied, which can help avoid style leakage and conflicts between components.
+      How to add SSN number VALIDATION
     </span>
   </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#angular-provides-three-encapsulation-modes-for-component-styles" class="md-nav__link">
-    <span class="md-ellipsis">
-      Angular provides three encapsulation modes for component styles:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#emulated-default-styles-are-scoped-to-the-component-with-angular-automatically-adding-attributes-to-elements-to-avoid-style-conflicts-native-uses-the-browsers-native-shadow-dom-to-encapsulate-styles-and-templates-isolating-them-completely-none-no-encapsulation-styles-are-applied-globally-to-the-entire-application-example-of-encapsulation-in-angular-consider-a-simple-angular-component" class="md-nav__link">
-    <span class="md-ellipsis">
-      Emulated (default) - Styles are scoped to the component, with Angular automatically adding attributes to elements to avoid style conflicts. Native - Uses the browser's native Shadow DOM to encapsulate styles and templates, isolating them completely. None - No encapsulation, styles are applied globally to the entire application. Example of Encapsulation in Angular: Consider a simple Angular component:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#encapsulation-modes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Encapsulation Modes:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#1emulated-default" class="md-nav__link">
-    <span class="md-ellipsis">
-      1.Emulated (Default):
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#the-styles-defined-in-the-component-are-scoped-to-it-angular-uses-attributes-like-ng-content-to-isolate-the-styles-in-this-example-the-h1-and-p-tags-will-have-styles-applied-only-within-this-components-template" class="md-nav__link">
-    <span class="md-ellipsis">
-      The styles defined in the component are scoped to it. Angular uses attributes like ng-content to isolate the styles. In this example, the h1 and p tags will have styles applied only within this component's template.
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#2native-shadow-dom" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.Native (Shadow DOM):
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#in-this-mode-angular-will-use-the-browsers-native-shadow-dom-to-encapsulate-the-styles-styles-will-not-leak-outside-the-component-and-external-styles-will-not-affect-it-to-use-native-encapsulation-update-the-encapsulation-property-like-this" class="md-nav__link">
-    <span class="md-ellipsis">
-      In this mode, Angular will use the browser's native Shadow DOM to encapsulate the styles. Styles will not leak outside the component, and external styles will not affect it. To use Native encapsulation, update the encapsulation property like this:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#syntax" class="md-nav__link">
-    <span class="md-ellipsis">
-      syntax:
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#3none-global-styles" class="md-nav__link">
-    <span class="md-ellipsis">
-      3.None (Global Styles):
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3.None (Global Styles):">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#this-mode-removes-any-encapsulation-meaning-the-styles-defined-in-the-component-will-be-global-and-affect-the-entire-application" class="md-nav__link">
-    <span class="md-ellipsis">
-      This mode removes any encapsulation, meaning the styles defined in the component will be global and affect the entire application.
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2811,50 +2619,56 @@
 
 
 
-  <h1>Encapsulation</h1>
+  <h1>SSN</h1>
 
-<h4 id="in-angular-encapsulation-refers-to-the-ability-of-a-component-to-control-how-its-internal-styles-and-templates-are-applied-which-can-help-avoid-style-leakage-and-conflicts-between-components">In Angular, encapsulation refers to the ability of a component to control how its internal styles and templates are applied, which can help avoid style leakage and conflicts between components.</h4>
-<h3 id="angular-provides-three-encapsulation-modes-for-component-styles">Angular provides three encapsulation modes for component styles:</h3>
-<h3 id="emulated-default-styles-are-scoped-to-the-component-with-angular-automatically-adding-attributes-to-elements-to-avoid-style-conflicts-native-uses-the-browsers-native-shadow-dom-to-encapsulate-styles-and-templates-isolating-them-completely-none-no-encapsulation-styles-are-applied-globally-to-the-entire-application-example-of-encapsulation-in-angular-consider-a-simple-angular-component">Emulated (default) - Styles are scoped to the component, with Angular automatically adding attributes to elements to avoid style conflicts. Native - Uses the browser's native Shadow DOM to encapsulate styles and templates, isolating them completely. None - No encapsulation, styles are applied globally to the entire application. Example of Encapsulation in Angular: Consider a simple Angular component:</h3>
-<div class="highlight"><span class="filename">app.component.ts</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import { Component } from &#39;@angular/core&#39;;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>@Component({
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  selector: &#39;app-root&#39;,
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  template: `
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>           &lt;div class=&quot;container&quot;&gt;
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>            &lt;h1&gt;Welcome to Angular Encapsulation Example&lt;/h1&gt;
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>            &lt;p&gt;This is a paragraph with component-specific styles.&lt;/p&gt;
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>           &lt;/div&gt;
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>          `,
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  styles: [
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    `
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>      .container {
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>        background-color: lightblue;
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        padding: 20px;
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>      }
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      h1 {
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>        color: darkblue;
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>      }
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>      p {
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        color: darkgreen;
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>      }
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    `
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>  ],
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  encapsulation: ViewEncapsulation.Emulated // Default encapsulation
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>})
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>export class AppComponent {}
-</code></pre></div>
-<h3 id="encapsulation-modes">Encapsulation Modes:</h3>
-<h3 id="1emulated-default">1.Emulated (Default):</h3>
-<h3 id="the-styles-defined-in-the-component-are-scoped-to-it-angular-uses-attributes-like-ng-content-to-isolate-the-styles-in-this-example-the-h1-and-p-tags-will-have-styles-applied-only-within-this-components-template">The styles defined in the component are scoped to it. Angular uses attributes like ng-content to isolate the styles. In this example, the h1 and p tags will have styles applied only within this component's template.</h3>
-<h3 id="2native-shadow-dom">2.Native (Shadow DOM):</h3>
-<h3 id="in-this-mode-angular-will-use-the-browsers-native-shadow-dom-to-encapsulate-the-styles-styles-will-not-leak-outside-the-component-and-external-styles-will-not-affect-it-to-use-native-encapsulation-update-the-encapsulation-property-like-this">In this mode, Angular will use the browser's native Shadow DOM to encapsulate the styles. Styles will not leak outside the component, and external styles will not affect it. To use Native encapsulation, update the encapsulation property like this:</h3>
-<h3 id="syntax">syntax:</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>encapsulation: ViewEncapsulation.Native
-</code></pre></div>
-<h2 id="3none-global-styles">3.None (Global Styles):</h2>
-<h3 id="this-mode-removes-any-encapsulation-meaning-the-styles-defined-in-the-component-will-be-global-and-affect-the-entire-application">This mode removes any encapsulation, meaning the styles defined in the component will be global and affect the entire application.</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>encapsulation: ViewEncapsulation.None
+<h3 id="how-to-add-ssn-number-validation">How to add SSN number VALIDATION</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>s-1: import { PatientRegistrationService } from &#39;@core/service/patient-registration/
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>     patient-registration.service&#39;;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>s-2: patientRegistartionService=inject(PatientRegistrationService)  
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>s-3: ssn_error_msg: string;//edi manaki view lo minLength error ni cupistundi ex: min length 9 
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>s-4: constructor(){
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        ssn:new UntypedFormControl(null, [Validators.minLength(9)],this.ssnDuplicateCheck()),
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        }
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a> s-5: ngOnInit(): void {
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        this.ssn_error_msg = environment.ssn_error_msg;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        }
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a> s-6:
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>// check ssn duplicate check
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>     ssnDuplicateCheck(): AsyncValidatorFn {
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>      return (control: AbstractControl): Observable&lt;ValidationErrors | null&gt; =&gt; {
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>       if (!control.dirty ||!control.value || control.value === &#39;999-99-9999&#39;) {
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>          return of(null);
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        }
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        if (control.value) {
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>          return this.patientRegistartionService.checkPatientSSN(control.value, &#39;SSN&#39;).pipe(
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>            map((response: any) =&gt; {
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>              const [{ status }] = response.body;
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>              if (status) {
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                control.markAsTouched();
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>                return { ssnDuplicate: true };
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>              } else {
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>                return null; 
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>              }
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>            }),
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>            catchError((error) =&gt; {
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>              return of(null);
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>            })
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>          );
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>        }
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>      };
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    }
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>  s-7:=== HTML===  
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>&lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>    &lt;mat-label&gt;SSN&lt;/mat-label&gt;
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    &lt;input aria-label=&quot;input&quot; placeholder=&quot;SSN&quot; matInput mask=&quot;000-00-0000&quot; formControlName=&quot;ssn&quot; 
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>        [validation]=&quot;false&quot;/&gt;
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    &lt;mat-icon matSuffix&gt;security&lt;/mat-icon&gt;
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        &lt;mat-error *ngIf=&quot;docForm.controls.ssn.hasError(&#39;ssnDuplicate&#39;)&quot;&gt;SSN already exist&lt;/mat-error&gt;
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>        &lt;mat-error *ngIf=&quot;docForm.controls.ssn.errors?.minlength&quot;&gt;{{ ssn_error_msg }}&lt;/mat-error&gt;
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>&lt;/mat-form-field&gt;
 </code></pre></div>
 
 
