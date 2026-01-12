@@ -43,6 +43,8 @@
       
     
     
+      <link rel="stylesheet" href="../../customWord.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -62,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#steps-for-templatedrivenform" class="md-skip">
+        <a href="#note-single-formcontrol-vunte-then-we-use-like-ths-formcontrolorderserachcontrol" class="md-skip">
           Skip to content
         </a>
       
@@ -134,6 +136,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -785,6 +789,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#note-single-formcontrol-vunte-then-we-use-like-ths-formcontrolorderserachcontrol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: single formcontrol vunte then we use like ths [formControl]="orderSerachControl"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Note: single formcontrol vunte then we use like ths [formControl]=&#34;orderSerachControl&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patch-for-this-single-fc" class="md-nav__link">
+    <span class="md-ellipsis">
+      patch for this single FC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#steps-for-templatedrivenform" class="md-nav__link">
     <span class="md-ellipsis">
       Steps For TemplateDrivenForm(#)
@@ -806,6 +834,15 @@
   <a href="#templatedriven-form-using-mat-from-field" class="md-nav__link">
     <span class="md-ellipsis">
       TemplateDriven Form using mat-from-field
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#popup-with-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      popup with ref
     </span>
   </a>
   
@@ -1816,6 +1853,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/sidenav/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SideNav
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2657,6 +2717,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#note-single-formcontrol-vunte-then-we-use-like-ths-formcontrolorderserachcontrol" class="md-nav__link">
+    <span class="md-ellipsis">
+      Note: single formcontrol vunte then we use like ths [formControl]="orderSerachControl"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Note: single formcontrol vunte then we use like ths [formControl]=&#34;orderSerachControl&#34;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#patch-for-this-single-fc" class="md-nav__link">
+    <span class="md-ellipsis">
+      patch for this single FC
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#steps-for-templatedrivenform" class="md-nav__link">
     <span class="md-ellipsis">
       Steps For TemplateDrivenForm(#)
@@ -2683,6 +2767,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#popup-with-ref" class="md-nav__link">
+    <span class="md-ellipsis">
+      popup with ref
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2703,135 +2796,214 @@
 
   <h1>TemplateDrivenForms</h1>
 
+<h3 id="note-single-formcontrol-vunte-then-we-use-like-ths-formcontrolorderserachcontrol">Note: single formcontrol vunte then we use like ths [formControl]="orderSerachControl"</h3>
+<h5 id="patch-for-this-single-fc">patch for this single FC</h5>
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    ==formField=== bindLabel=&quot;name&quot; &amp; bindValue=&quot;docTypeId&quot;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> &lt;strong&gt; Template Category&lt;/strong&gt;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    &lt;div class=&quot;mat-form-field-block&quot;&gt;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      &lt;ng-select class=&quot;ng-select-custom&quot; [items]=&quot;chartTemplateCategories&quot; bindLabel=&quot;name&quot;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>         bindValue=&quot;docTypeId&quot; placeholder=&quot;Select Template Category&quot; appearance=&quot;outline&quot;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        [formControl]=&quot;scanFolderControl&quot; [clearable]=&quot;true&quot;&gt;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      &lt;/ng-select&gt;  
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    &lt;/div&gt;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  ===ts.file=====
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>fnameFormControl: string = &#39;&#39;;//  if u want to make patch then single kabbati we use like this
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    getChartTemplateCategories() {  //getMethod()
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    this.getChartTemplateCategoriesObs().pipe(takeUntil(this.onDestroy$)).subscribe({
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>      next: (res) =&gt; {
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>         this.chartTemplateCategories = res?.body;
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>         if (this.editData) {     // so here if edit click cheste then ha data ni editdata lo store chestunamn 
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                                  so edit aite then patchformdata method call avtundi
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>          this.patchFormData(this.editData);
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>         }
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>        }, error: (err) =&gt; {
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>      }
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  patchFormData(data):void{
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>   this.fnameFormControl.patchValue(
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    data?.firstName?.toLowerCase();
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>  );
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>  //so paina vundi dropDown so dorp down ni manam backednd ki manam bindValue=&quot;docTypeId&quot; and 
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>  view ki bindLabel=&quot;name&quot; so differen kabati we have to find the value to patch
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>    const match = this.chartTemplateCategories?.find(
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    x =&gt; x.name?.toLowerCase() === data?.templateType?.toLowerCase()
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>  );
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>  this.scanFolderControl.patchValue(
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>    match?.docTypeId ?? null  //here match?.docTypeId so it will get patch now bz manam BE ki 
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>                              doctypeId send chestunam so patch kuda doctypeid ne patchCeyali
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>  );
+</code></pre></div>
 <h3 id="steps-for-templatedrivenform">Steps For TemplateDrivenForm(#)</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>step:1 import formsmodule that is enough validators also u can write directly in html only
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>       import {  FormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>step:2 declare formcontrols 
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>step:3 in html file use #symbol to ur form &amp; use (ngsubmit)=sumbit()
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>Note**: in template driven form use cheste manam ngForm use chestam ga so ts file lo manaki e form ki 
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        sambandinchina code anedi vundadu so viewchild use chesi e form ni manam html lo ki tiskuntam 
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        ex: @viewchild(&#39;myForm&#39;) myFromVariable:ngForm
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        Then we use this where we want ex: to reset form this.myFromVariable.reset()
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>step:1 import formsmodule that is enough validators also u can write directly in html only
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>       import {  FormsModule } from &#39;@angular/forms&#39;;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>step:2 declare formcontrols 
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>step:3 in html file use #symbol to ur form &amp; use (ngsubmit)=sumbit()
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Note**: in template driven form use cheste manam ngForm use chestam ga so ts file lo manaki e form ki 
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        sambandinchina code anedi vundadu so viewchild use chesi e form ni manam html lo ki tiskuntam 
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        ex: @viewchild(&#39;myForm&#39;) myFromVariable:ngForm
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        Then we use this where we want ex: to reset form this.myFromVariable.reset()
 </code></pre></div>
-<p><div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>import { CommonModule } from &#39;@angular/common&#39;;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import { Component } from &#39;@angular/core&#39;;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>import {  FormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>@Component({
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  selector: &#39;app-dummy&#39;,
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  imports: [CommonModule,MatFormFieldModule,MatInputModule,FormsModule],
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  templateUrl: &#39;./dummy.html&#39;,
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  styleUrl: &#39;./dummy.css&#39;
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>})
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>export class Dummy {
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>  fname: string = &#39;&#39;;
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  lname: string = &#39;&#39;;
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  submitForm(formValue: any) {
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    if (formValue.fname &amp;&amp; formValue.lname) {
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>      console.log(&#39;Form Submitted with:&#39;, formValue);
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    } else {
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>      console.log(&#39;Form is incomplete&#39;);
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    }
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>  }
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>}
+<p><div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>import { CommonModule } from &#39;@angular/common&#39;;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import { Component } from &#39;@angular/core&#39;;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>import {  FormsModule } from &#39;@angular/forms&#39;;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>@Component({
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  selector: &#39;app-dummy&#39;,
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  imports: [CommonModule,MatFormFieldModule,MatInputModule,FormsModule],
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  templateUrl: &#39;./dummy.html&#39;,
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  styleUrl: &#39;./dummy.css&#39;
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>})
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>export class Dummy {
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>  fname: string = &#39;&#39;;
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  lname: string = &#39;&#39;;
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  submitForm(formValue: any) {
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    if (formValue.fname &amp;&amp; formValue.lname) {
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>      console.log(&#39;Form Submitted with:&#39;, formValue);
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    } else {
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>      console.log(&#39;Form is incomplete&#39;);
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    }
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>  }
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>}
 </code></pre></div>
-<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;form #myForm=&quot;ngForm&quot; (ngSubmit)=&quot;submitForm(myForm.value)&quot;&gt;
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>       &lt;!-- firstName --&gt;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>      &lt;mat-label&gt;First Name&lt;/mat-label&gt;
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>      &lt;input matInput name=&quot;fname&quot; [(ngModel)]=&quot;fname&quot; required #fnameModel=&quot;ngModel&quot; /&gt;
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    &lt;mat-error *ngIf=&quot;fnameModel.invalid &amp;&amp; fnameModel.touched&quot;&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>      First Name is required
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    &lt;/mat-error&gt;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  &lt;/mat-form-field&gt;
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>         &lt;!-- lastName --&gt;
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>      &lt;mat-label&gt;Last Name&lt;/mat-label&gt;
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>      &lt;input matInput name=&quot;lname&quot; [(ngModel)]=&quot;lname&quot; required #lnameModel=&quot;ngModel&quot; /&gt;
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    &lt;mat-error *ngIf=&quot;lnameModel.invalid &amp;&amp; lnameModel.touched&quot;&gt;
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>      Last Name is required
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    &lt;/mat-error&gt;
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  &lt;/mat-form-field&gt;
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  &lt;button mat-raised-button type=&quot;submit&quot; [disabled]=&quot;myForm.invalid&quot;&gt;Submit&lt;/button&gt;
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>&lt;/form&gt;
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>&lt;form #myForm=&quot;ngForm&quot; (ngSubmit)=&quot;submitForm(myForm.value)&quot;&gt;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>       &lt;!-- firstName --&gt;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>      &lt;mat-label&gt;First Name&lt;/mat-label&gt;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>      &lt;input matInput name=&quot;fname&quot; [(ngModel)]=&quot;fname&quot; required #fnameModel=&quot;ngModel&quot; /&gt;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>    &lt;mat-error *ngIf=&quot;fnameModel.invalid &amp;&amp; fnameModel.touched&quot;&gt;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>      First Name is required
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    &lt;/mat-error&gt;
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  &lt;/mat-form-field&gt;
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>         &lt;!-- lastName --&gt;
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>      &lt;mat-label&gt;Last Name&lt;/mat-label&gt;
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>      &lt;input matInput name=&quot;lname&quot; [(ngModel)]=&quot;lname&quot; required #lnameModel=&quot;ngModel&quot; /&gt;
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    &lt;mat-error *ngIf=&quot;lnameModel.invalid &amp;&amp; lnameModel.touched&quot;&gt;
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>      Last Name is required
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    &lt;/mat-error&gt;
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>  &lt;/mat-form-field&gt;
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>  &lt;button mat-raised-button type=&quot;submit&quot; [disabled]=&quot;myForm.invalid&quot;&gt;Submit&lt;/button&gt;
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>&lt;/form&gt;
 </code></pre></div></p>
 <h3 id="example-2-same-example-withsimple-html-inut">Example: 2 same example withSimple Html inut</h3>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import { FormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>export class ContactComponent {
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  firstName: string = &#39;&#39;;
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>  lastName: string = &#39;&#39;;
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>  submit(form: any) {
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    console.log(form.value, &#39;form data&#39;);
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>  }
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>}
-</code></pre></div>
-<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;form #regForm=&quot;ngForm&quot; (ngSubmit)=&quot;submit(regForm)&quot;&gt;
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>import { FormsModule } from &#39;@angular/forms&#39;;
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  &lt;input type=&quot;text&quot; name=&quot;firstNameFc&quot; [(ngModel)]=&quot;firstName&quot; 
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    placeholder=&quot;First Name&quot; &gt;
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>  &lt;input type=&quot;text&quot; name=&quot;lastNameFc&quot; [(ngModel)]=&quot;lastName&quot; 
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    placeholder=&quot;Last Name&quot; &gt;
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>&lt;/form&gt;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>export class ContactComponent {
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  firstName: string = &#39;&#39;;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>  lastName: string = &#39;&#39;;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>  submit(form: any) {
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>    console.log(form.value, &#39;form data&#39;);
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  }
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>}
+</code></pre></div>
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;form #regForm=&quot;ngForm&quot; (ngSubmit)=&quot;submit(regForm)&quot;&gt;
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  &lt;input type=&quot;text&quot; name=&quot;firstNameFc&quot; [(ngModel)]=&quot;firstName&quot; 
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    placeholder=&quot;First Name&quot; &gt;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>  &lt;input type=&quot;text&quot; name=&quot;lastNameFc&quot; [(ngModel)]=&quot;lastName&quot; 
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    placeholder=&quot;Last Name&quot; &gt;
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  &lt;button type=&quot;submit&quot;&gt;Submit&lt;/button&gt;
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>&lt;/form&gt;
 </code></pre></div>
 <h3 id="templatedriven-form-using-mat-from-field">TemplateDriven Form using mat-from-field</h3>
-<p><div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>import { CommonModule } from &#39;@angular/common&#39;;
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>import { Component, Input} from &#39;@angular/core&#39;;
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>import { FormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>import { MatSelectModule } from &#39;@angular/material/select&#39;;
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>import { PhoneModel } from &#39;../parent/parent&#39;;
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>@Component({
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  selector: &#39;app-child&#39;,
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>  imports: [FormsModule,MatFormFieldModule,MatInputModule,MatSelectModule,CommonModule],
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  templateUrl: &#39;./child.html&#39;
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>})
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>export class Child{
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>  @Input() passToChild: PhoneModel[] = [];
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>  firstNameFc:string
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>  lastNameFc:string
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>  submitPatient(form){
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>    debugger
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    console.log(form)
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>   }
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>}
-</code></pre></div>
-<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&lt;form #phoneForm=&quot;ngForm&quot; (ngSubmit)=&quot;submitPatient(phoneForm.value)&quot;&gt;
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  &lt;mat-form-field appearance=&quot;outline&quot;&gt;
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    &lt;mat-label&gt;FirstName&lt;/mat-label&gt;
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>    &lt;input type=&quot;text&quot; matInput  [(ngModel)]=&quot;firstNameFc&quot; name=&quot;fname&quot; #firstName=&quot;ngModel&quot; required&gt;
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    &lt;!-- &lt;mat-select [(ngModel)]=&quot;firstNameFc&quot; name=&quot;fname&quot; #firstName=&quot;ngModel&quot; required&gt;
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>      &lt;mat-option *ngFor=&quot;let item of passToChild&quot; [value]=&quot;item.phoneName&quot;&gt;
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>        {{item.phoneName}}
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>      &lt;/mat-option&gt;
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>    &lt;/mat-select&gt; --&gt;
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>    &lt;!-- Validation error for first name --&gt;
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    &lt;mat-error *ngIf=&quot;firstName.invalid &amp;&amp; (firstName.dirty || firstName.touched)&quot;&gt;
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>      First name is required.
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>    &lt;/mat-error&gt;
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>  &lt;/mat-form-field&gt;
+<p><div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>import { CommonModule } from &#39;@angular/common&#39;;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>import { Component, Input} from &#39;@angular/core&#39;;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>import { FormsModule } from &#39;@angular/forms&#39;;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>import { MatSelectModule } from &#39;@angular/material/select&#39;;
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>import { PhoneModel } from &#39;../parent/parent&#39;;
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>@Component({
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  selector: &#39;app-child&#39;,
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>  imports: [FormsModule,MatFormFieldModule,MatInputModule,MatSelectModule,CommonModule],
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  templateUrl: &#39;./child.html&#39;
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>})
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>export class Child{
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>  @Input() passToChild: PhoneModel[] = [];
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>  firstNameFc:string
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>  lastNameFc:string
 <a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>  &lt;!-- Submit button (disabled if form is invalid) --&gt;
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>  &lt;button type=&quot;submit&quot; [disabled]=&quot;phoneForm.invalid&quot;&gt;Submit&lt;/button&gt;
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>&lt;/form&gt;
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>  submitPatient(form){
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>    debugger
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    console.log(form)
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>   }
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>}
+</code></pre></div>
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;form #phoneForm=&quot;ngForm&quot; (ngSubmit)=&quot;submitPatient(phoneForm.value)&quot;&gt;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  &lt;mat-form-field appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    &lt;mat-label&gt;FirstName&lt;/mat-label&gt;
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    &lt;input type=&quot;text&quot; matInput  [(ngModel)]=&quot;firstNameFc&quot; name=&quot;fname&quot; #firstName=&quot;ngModel&quot; required&gt;
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    &lt;!-- &lt;mat-select [(ngModel)]=&quot;firstNameFc&quot; name=&quot;fname&quot; #firstName=&quot;ngModel&quot; required&gt;
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>      &lt;mat-option *ngFor=&quot;let item of passToChild&quot; [value]=&quot;item.phoneName&quot;&gt;
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>        {{item.phoneName}}
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>      &lt;/mat-option&gt;
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>    &lt;/mat-select&gt; --&gt;
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>    &lt;!-- Validation error for first name --&gt;
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    &lt;mat-error *ngIf=&quot;firstName.invalid &amp;&amp; (firstName.dirty || firstName.touched)&quot;&gt;
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>      First name is required.
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    &lt;/mat-error&gt;
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>  &lt;/mat-form-field&gt;
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>  &lt;!-- Submit button (disabled if form is invalid) --&gt;
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>  &lt;button type=&quot;submit&quot; [disabled]=&quot;phoneForm.invalid&quot;&gt;Submit&lt;/button&gt;
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>&lt;/form&gt;
 </code></pre></div></p>
+<h3 id="popup-with-ref">popup with ref</h3>
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>step-1: import {ViewChild} from &#39;@angular/core&#39;;
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>        import { MatDialog, MatDialogRef } from &#39;@angular/material/dialog&#39;;
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>step-2: constructor(private dialog: MatDialog){}
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>        @ViewChild(&#39;moveRef&#39;)moveRef:TemplateRef&lt;any&gt;; 
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>        moveRefs=inject(MatDialogRef&lt;any&gt;);
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        movedropDown(){
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>          this.moveRefs = this.dialog.open(this.moveRef, {
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>          width: &#39;100vh&#39;,
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>          height: &#39;auto&#39; 
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>          });
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>        }
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>      closePopup(){
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>      this.moveRefs.close()
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>        }  
+</code></pre></div>
+<div class="highlight"><span class="filename">html</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>&lt;ng-template #moveRef&gt;
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>  &lt;div class=&quot;modalHeader&quot;&gt;
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    &lt;div class=&quot;modalHeader clearfix&quot;&gt;
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>      &lt;div class=&quot;modal-about&quot;&gt;
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>       &lt;div class=&quot;font-weight-bold &quot;&gt;
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>        &lt;span class=&quot;mx-4&quot;&gt;Patient ID: &lt;strong&gt;{{ patientId }}&lt;/strong&gt;&lt;/span&gt; 
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>        &lt;span&gt;Patient Name: &lt;strong&gt;{{ patientName }}&lt;/strong&gt;&lt;/span&gt;
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>        &lt;/div&gt;
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>      &lt;/div&gt;
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    &lt;/div&gt;
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    &lt;button mat-icon-button (click)=&quot;closePopup()&quot; aria-label=&quot;Close dialog&quot;&gt;
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>      &lt;mat-icon&gt;close&lt;/mat-icon&gt;
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>    &lt;/button&gt;
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>  &lt;/div&gt;
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>&lt;/ng-template&gt;
+</code></pre></div>
 
 
 
@@ -2887,10 +3059,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../customWord.js"></script>
       
     
   </body>

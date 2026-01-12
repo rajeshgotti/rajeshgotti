@@ -43,6 +43,8 @@
       
     
     
+      <link rel="stylesheet" href="../../customWord.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -134,6 +136,8 @@
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -1748,6 +1752,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/sidenav/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SideNav
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2377,6 +2404,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example:2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-searchfiled-somewhere-and-enterfiled-is-somewhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      if SearchFiled somewhere and enterfiled is somewhere
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2647,6 +2692,24 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example:2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#if-searchfiled-somewhere-and-enterfiled-is-somewhere" class="md-nav__link">
+    <span class="md-ellipsis">
+      if SearchFiled somewhere and enterfiled is somewhere
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2668,33 +2731,89 @@
   <h1>NormalSearch</h1>
 
 <h3 id="normal-search">Normal Search</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    --Add-physician.component.ts--
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>import { MatSelectSearchComponent } from &#39;@shared/components/mat-select-search/mat-select-search.component&#39;;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>import { FilterPipe } from &#39;@shared/pipes/filter.pipe&#39;;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>imports:[MatSelectSearchComponent,FilterPipe]
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>       searchWord = {    //this part is correct or not once conform
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      jobtitle: &#39;&#39;,
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    // departmentCode: &#39;&#39;,
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    // diagnosisConfirmation: &#39;&#39;
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  };
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   onCloseEvent(select){
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  select.close()
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>}
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a> ==html===
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>&lt;mat-form-field class=&#39;example-full-width&#39; appearance=&#39;outline&#39;&gt;
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    &lt;mat-label&gt;Departments&lt;/mat-label&gt;
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    &lt;mat-select  formControlName=&quot;departmentCodeFC&quot;  placeholder=&quot;Department&quot;  #deptRef&gt;
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>       &lt;app-mat-select-search (searchChange)=&quot;searchWord[&#39;departmentCodeFC&#39;] = $event&quot; 
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>         (closeEvent)=&quot;onCloseEvent(deptRef)&quot;&gt;
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        &lt;/app-mat-select-search&gt; 
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>        &lt;mat-option *ngFor=&quot;let dept of departments | filter: searchWord[&#39;departmentCodeFC&#39;] 
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        : [&#39;departmentName&#39;]&quot; [value]=&quot;dept.departmentCode&quot;&gt;
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                {{dept.departmentName}}
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        &lt;/mat-option&gt;
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    &lt;/mat-select&gt;
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>&lt;/mat-form-field&gt;       
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>step-1 : import filterPipe and matselectComponent 
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>         import { FilterPipe } from &#39;@shared/pipes/filter.pipe&#39;;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>         import { MatSelectSearchComponent } from &#39;@shared/components
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                   /mat-select-search/mat-select-search.component&#39;;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>step-2: in imports import this 
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        imports:[MatChipsModule,MatSelectSearchComponent]
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>     behaviourGuideFc:new FormControl(null); //formControl
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>       searchWord = {
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>        behaviour: &#39;&#39;,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>        grade: &#39;&#39;,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        diagnosisConfirmation: &#39;&#39;
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>       };
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>     =======html=====
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>       &lt;div class=&quot;mat-form-field-block&quot;&gt;
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                &lt;mat-label&gt;Behaviour Guide&lt;/mat-label&gt;
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>                &lt;mat-select formControlName=&quot;behaviourGuideFC&quot; appearance=&quot;outline&quot; #behaviourGuideref
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>                    [disableOptionCentering]=&quot;true&quot;&gt;
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>                    &lt;app-mat-select-search (searchChange)=&quot;searchWord[&#39;behaviourGuideFC&#39;] = $event&quot; 
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>                       (closeEvent)=&quot;onCloseEvent(behaviourGuideref)&quot;&gt;
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>                    &lt;/app-mat-select-search&gt; 
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                &lt;mat-option *ngFor=&quot;let item of behaviourData | filter: searchWord[&#39;behaviourGuideFC&#39;]  : 
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>                    [&#39;cancerBehavior&#39;]&quot; [value]=&quot;item&quot;&gt;{{item.cancerBehavior}} 
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>                &lt;/mat-option&gt;
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>                &lt;/mat-select&gt;
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>            &lt;/mat-form-field&gt;
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        &lt;/div&gt;
+</code></pre></div>
+<h3 id="example2">Example:2</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    --Add-physician.component.ts--
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import { MatSelectSearchComponent } from &#39;@shared/components/mat-select-search/mat-select-search.component&#39;;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>import { FilterPipe } from &#39;@shared/pipes/filter.pipe&#39;;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>imports:[MatSelectSearchComponent,FilterPipe]
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>       searchWord = {    //this part is correct or not once conform
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      jobtitle: &#39;&#39;,
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    // departmentCode: &#39;&#39;,
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    // diagnosisConfirmation: &#39;&#39;
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  };
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>   onCloseEvent(select){
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  select.close()
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>}
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a> ==html===
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>&lt;mat-form-field class=&#39;example-full-width&#39; appearance=&#39;outline&#39;&gt;
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    &lt;mat-label&gt;Departments&lt;/mat-label&gt;
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    &lt;mat-select  formControlName=&quot;departmentCodeFC&quot;  placeholder=&quot;Department&quot;  #deptRef&gt;
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>       &lt;app-mat-select-search (searchChange)=&quot;searchWord[&#39;departmentCodeFC&#39;] = $event&quot; 
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>         (closeEvent)=&quot;onCloseEvent(deptRef)&quot;&gt;
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        &lt;/app-mat-select-search&gt; 
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        &lt;mat-option *ngFor=&quot;let dept of departments | filter: searchWord[&#39;departmentCodeFC&#39;] 
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>        : [&#39;departmentName&#39;]&quot; [value]=&quot;dept.departmentCode&quot;&gt;
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>                {{dept.departmentName}}
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>        &lt;/mat-option&gt;
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>    &lt;/mat-select&gt;
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>&lt;/mat-form-field&gt;       
+</code></pre></div>
+<h3 id="if-searchfiled-somewhere-and-enterfiled-is-somewhere">if SearchFiled somewhere and enterfiled is somewhere</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> &lt;div class=&quot;sticky-search&quot;&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        &lt;mat-label&gt;Search...&lt;/mat-label&gt;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        &lt;input matInput placeholder=&quot;Search Template Name&quot; [(ngModel)]=&quot;searchformWord&quot; /&gt;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    &lt;/mat-form-field&gt;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a> &lt;/div&gt;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>    &lt;div class=&quot;chip-scroll&quot;&gt;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>        &lt;mat-chip-listbox [(ngModel)]=&quot;move&quot; aria-label=&quot;Move Template&quot;&gt;
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>           &lt;mat-chip-option
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>                *ngFor=&quot;let item of chartTemplateCategories | filter: searchformWord : [&#39;name&#39;] &quot;
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>                [value]=&quot;item.docTypeId&quot; (selectionChange)=&quot;templateMove(item)&quot;&gt;
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>                {{ item.name }}
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>            &lt;/mat-chip-option&gt;
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        &lt;/mat-chip-listbox&gt;
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    &lt;/div&gt;
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    searchformWord=&#39;&#39;
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  searchFormContent(event){
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    if(typeof(event)===&#39;string&#39;)
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>      this.searchformWord = event;
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>  }
 </code></pre></div>
 
 
@@ -2751,10 +2870,12 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../customWord.js"></script>
       
     
   </body>
