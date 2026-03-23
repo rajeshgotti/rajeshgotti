@@ -1804,6 +1804,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../popup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PopUp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../date/" class="md-nav__link">
         
   
@@ -2841,78 +2864,122 @@
 <a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>    &lt;/mat-form-field&gt;
 <a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>&lt;/form&gt;
 <a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>&lt;/div&gt;
+</code></pre></div>
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>  &lt;div class=&quot;mat-form-field-block&quot;&gt;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>        &lt;mat-form-field appearance=&quot;outline&quot; class=&quot;example-full-width&quot;&gt;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        &lt;mat-label&gt;Level Of Care&lt;/mat-label&gt;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>         &lt;mat-select  formControlName=&quot;levelOfCare&quot; (selectionChange)=&quot;onChangeLevelofcare($event)&quot;&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>          &lt;mat-option *ngFor=&quot;let item of levelOfCareList&quot; [value]=&quot;item.mnemonic&quot; placeholder=&quot;Level Of Care&quot;&gt;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>                {{item.levelOfCare}}
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>            &lt;/mat-option&gt;
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        &lt;/mat-select&gt;                                     
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>        &lt;/mat-form-field&gt;
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    &lt;/div&gt;
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    ===ts.file===
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    levelOfCareValue:string;
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>        onChangeLevelofcare(event:MatSelectChange):void{
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>          this.levelOfCareValue=event?.value
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>        }
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>      levelOfCareList: any[]=[];   // here dont use any see below code
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>   getLevelOfCare(patientTypeMnemonic:string=&#39;IN&#39;,): void {
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    this._erPatientService.getLevelOfCareByPatientTypeMnemonic(patientTypeMnemonic).
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>     pipe(takeUntil(this.onDestroy$)).subscribe({
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>       next:(res)=&gt;{
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>      this.levelOfCareList=res?.body
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>      // console.log(this.levelOfCareList,&#39;leveelof care &#39;)
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>      }
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    })
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>  }
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>      =======dont use any create interface==
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    export interface LevelOfCare {   // so here res?.body lo enni keys vunte avi anni add ceyali 
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>      levelOfCareId: number;
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>      levelOfCare: string;
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>      mnemonic: string;
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>      levelOfCareCode: string;
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>    }
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>  levelOfCareList: LevelOfCare[]=[];
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>getLevelOfCare(patientTypeMnemonic:string=&#39;IN&#39;,): void {
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>  this._erPatientService.getLevelOfCareByPatientTypeMnemonic(patientTypeMnemonic).
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>  pipe(takeUntil(this.onDestroy$)).subscribe({
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>    next:(res)=&gt;{
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>      this.levelOfCareList=res?.body
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>      // console.log(this.levelOfCareList,&#39;leveelof care &#39;)
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>    }
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>  })
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>}
 </code></pre></div></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>-----------mat-select-----
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>step:1  
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>       interface Food {  //create interface for typeSafe
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>       id:number;
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>       fooName: string;
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>       }
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>step:2 import MatSelectModule and MatSelectChange  here noNeed to import MatSelectChange in imports:[]
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  export class AggridComponent implements OnInit{
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a> import { MatSelectChange, MatSelectModule } from &quot;@angular/material/select&quot;;
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  imports: [MatFormFieldModule,MatInputModule,MatSelectModule]
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  //favoriteFoodFc = new FormControl(&#39;&#39;, Validators.required);
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>          (or)
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>  favoriteFoodFc = new FormControl&lt;number | null&gt;(null, Validators.required);
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>  myFoodData:Food[]=[];//variable:typ=[]
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  ngOnInit(): void {
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  this.foodData(); //method
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>}
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>foodData():void{
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>this.myFoodData=[
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>  {id:0, fooName: &#39;Steak&#39;},
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>  {id: 1, fooName: &#39;Pizza&#39;},
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>  {id:2, fooName: &#39;Tacos&#39;},
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>];
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>}
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>onFoodChange(event: MatSelectChange) {
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  console.log(&#39;Selected food:&#39;, event.value);
-<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>}       
-<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>--html---
-<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>note:here in myFoodData allData is present that we stored in item and we use this item like item.id or item.name etc..
-<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>   &lt;mat-form-field&gt;
-<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>      &lt;mat-label&gt;Favorite food&lt;/mat-label&gt;
-<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>        &lt;mat-select [formControl]=&quot;favoriteFoodFc&quot; (selectionChange)=&quot;onFoodChange($event)&quot;&gt;
-<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>          @for (item of myFoodData; track item) {
-<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>                &lt;mat-option [value]=&quot;item.id&quot;&gt;{{ item?.fooName }} - {{ item?.id }}&lt;/mat-option&gt;
-<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>             }
-<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>        &lt;/mat-select&gt;
-<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>             @if (favoriteFoodFc.hasError(&#39;required&#39;)) {
-<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>         &lt;mat-error&gt;Please choose a favorite food&lt;/mat-error&gt;
-<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>          }
-<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>       &lt;mat-hint&gt;You can pick up your favorite car here&lt;/mat-hint&gt;
-<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>    &lt;/mat-form-field&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>-----------mat-select-----
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>step:1  
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>       interface Food {  //create interface for typeSafe
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>       id:number;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>       fooName: string;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>       }
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>step:2 import MatSelectModule and MatSelectChange  here noNeed to import MatSelectChange in imports:[]
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  export class AggridComponent implements OnInit{
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a> import { MatSelectChange, MatSelectModule } from &quot;@angular/material/select&quot;;
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  imports: [MatFormFieldModule,MatInputModule,MatSelectModule]
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  //favoriteFoodFc = new FormControl(&#39;&#39;, Validators.required);
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>          (or)
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>  favoriteFoodFc = new FormControl&lt;number | null&gt;(null, Validators.required);
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>  myFoodData:Food[]=[];//variable:typ=[]
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>  ngOnInit(): void {
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  this.foodData(); //method
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>}
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>foodData():void{
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>this.myFoodData=[
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>  {id:0, fooName: &#39;Steak&#39;},
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>  {id: 1, fooName: &#39;Pizza&#39;},
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>  {id:2, fooName: &#39;Tacos&#39;},
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>];
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>}
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>onFoodChange(event: MatSelectChange) {
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>  console.log(&#39;Selected food:&#39;, event.value);
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>}       
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>--html---
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>note:here in myFoodData allData is present that we stored in item and we use this item like item.id or item.name etc..
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>   &lt;mat-form-field&gt;
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>      &lt;mat-label&gt;Favorite food&lt;/mat-label&gt;
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>        &lt;mat-select [formControl]=&quot;favoriteFoodFc&quot; (selectionChange)=&quot;onFoodChange($event)&quot;&gt;
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>          @for (item of myFoodData; track item) {
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>                &lt;mat-option [value]=&quot;item.id&quot;&gt;{{ item?.fooName }} - {{ item?.id }}&lt;/mat-option&gt;
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>             }
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>        &lt;/mat-select&gt;
+<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>             @if (favoriteFoodFc.hasError(&#39;required&#39;)) {
+<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>         &lt;mat-error&gt;Please choose a favorite food&lt;/mat-error&gt;
+<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>          }
+<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>       &lt;mat-hint&gt;You can pick up your favorite car here&lt;/mat-hint&gt;
+<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a>    &lt;/mat-form-field&gt;
 </code></pre></div>
 <h3 id="nativeselect-withoutloop">NativeSelect withOutLoop</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>--native select only use for &lt;select&gt; not for &lt;mat-select&gt;
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&lt;mat-form-field&gt;
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  &lt;mat-label&gt;Cars&lt;/mat-label&gt;
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>  &lt;select matNativeControl required&gt;
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>    &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>    &lt;option value=&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>    &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  &lt;/select&gt;
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>&lt;/mat-form-field&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>--native select only use for &lt;select&gt; not for &lt;mat-select&gt;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&lt;mat-form-field&gt;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>  &lt;mat-label&gt;Cars&lt;/mat-label&gt;
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  &lt;select matNativeControl required&gt;
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>    &lt;option value=&quot;volvo&quot;&gt;Volvo&lt;/option&gt;
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    &lt;option value=&quot;saab&quot;&gt;Saab&lt;/option&gt;
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>    &lt;option value=&quot;mercedes&quot;&gt;Mercedes&lt;/option&gt;
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    &lt;option value=&quot;audi&quot;&gt;Audi&lt;/option&gt;
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  &lt;/select&gt;
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>&lt;/mat-form-field&gt;
 </code></pre></div>
 <h3 id="nativeselect-withloop">nativeSelect WithLoop</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>--with loop---
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>&lt;mat-form-field&gt;
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    &lt;mat-label&gt;Favorite car&lt;/mat-label&gt;
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    &lt;select matNativeControl [(ngModel)]=&quot;selectedCar&quot; name=&quot;car&quot;&gt;
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      &lt;option value=&quot;&quot; selected&gt;&lt;/option&gt;
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>      @for (car of cars; track car) {
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>        &lt;option [value]=&quot;car.value&quot;&gt;{{car.viewValue}}&lt;/option&gt;
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>      }
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    &lt;/select&gt;
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  &lt;/mat-form-field&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>--with loop---
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>&lt;mat-form-field&gt;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    &lt;mat-label&gt;Favorite car&lt;/mat-label&gt;
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    &lt;select matNativeControl [(ngModel)]=&quot;selectedCar&quot; name=&quot;car&quot;&gt;
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      &lt;option value=&quot;&quot; selected&gt;&lt;/option&gt;
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>      @for (car of cars; track car) {
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>        &lt;option [value]=&quot;car.value&quot;&gt;{{car.viewValue}}&lt;/option&gt;
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>      }
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>    &lt;/select&gt;
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>  &lt;/mat-form-field&gt;
 </code></pre></div>
 
 

@@ -1822,6 +1822,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../material/popup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PopUp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../material/date/" class="md-nav__link">
         
   
@@ -2789,10 +2812,13 @@
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  }
 </code></pre></div>
 <h3 id="ngondestroy">ngondestroy</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>  ngOnDestroy(): void {
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    this.onDestroy$.next(false);
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    this.onDestroy$.unsubscribe();
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  }
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>step:1 import { Subject } from &#39;rxjs&#39;;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>   onDestroy$: Subject&lt;boolean&gt; = new Subject&lt;boolean&gt;(); // this is main to add  this 
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    ngOnDestroy(): void {
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    this.onDestroy$.next(false);
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    this.onDestroy$.unsubscribe();
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  }
 </code></pre></div>
 <h3 id="service-with-rxjs">Service with rxjs</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>this._radiologyService.getLabResultImage(4, 5).pipe(takeUntil(this.onDestroy$)).subscribe({ next: (res) =&gt; {
