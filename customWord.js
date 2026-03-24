@@ -1,30 +1,33 @@
 document.addEventListener("mouseup", () => {
-  const selected = window.getSelection().toString().trim();
+  const selection = window.getSelection();
+  const text = selection.toString().trim();
 
-  // ignore short / empty selections
-  if (!selected || selected.length < 2) return;
+  if (!text || text.length < 2) return;
 
-  // remove previous highlights
-  document.querySelectorAll(".custom-highlight").forEach(el => {
-    el.replaceWith(document.createTextNode(el.innerText));
+  const container = document.querySelector("main") || document.body;
+
+  // ✅ Remove old highlights
+  container.querySelectorAll(".custom-highlight").forEach(el => {
+    el.replaceWith(document.createTextNode(el.textContent));
   });
 
-  const regex = new RegExp(selected.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "gi");
+  // Escape special characters
+  const escaped = text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const regex = new RegExp(escaped, "gi");
 
-  const walker = document.createTreeWalker(
-    document.querySelector("main") || document.body,
-    NodeFilter.SHOW_TEXT
-  );
+  // ✅ SIMPLE & WORKING APPROACH
+  const elements = container.querySelectorAll("p, li, span, div, td, th");
 
-  let node;
-  while ((node = walker.nextNode())) {
-    if (!node.nodeValue.match(regex)) continue;
+  elements.forEach(el => {
+    if (el.children.length > 0) return; // skip complex nodes
 
-    const wrapper = document.createElement("span");
-    wrapper.innerHTML = node.nodeValue.replace(
+    const content = el.innerHTML;
+
+    if (!regex.test(content)) return;
+
+    el.innerHTML = content.replace(
       regex,
-      m => `<span class="custom-highlight">${m}</span>`
+      `<span class="custom-highlight">$&</span>`
     );
-    node.parentNode.replaceChild(wrapper, node);
-  }
+  });
 });
