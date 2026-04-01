@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#button-colors-falcon" class="md-skip">
+        <a href="#cols-col-desing-for-card" class="md-skip">
           Skip to content
         </a>
       
@@ -2636,6 +2636,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cols-col-desing-for-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      cols col desing for card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#button-colors-falcon" class="md-nav__link">
     <span class="md-ellipsis">
       Button colors Falcon
@@ -2750,6 +2759,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#cols-col-desing-for-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      cols col desing for card
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#button-colors-falcon" class="md-nav__link">
     <span class="md-ellipsis">
       Button colors Falcon
@@ -2841,182 +2859,244 @@
 
   <h1>css</h1>
 
+<h3 id="cols-col-desing-for-card">cols col desing for card</h3>
+<details>
+  <summary>CrudNotes</summary>
+  <img src="/rajeshgotti/images/cols.png" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+
+<div class="highlight"><span class="filename">code</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&lt;div class=&quot;card&quot;&gt; &lt;div class=&quot;header inner_header pb-0 header-manual&quot;&gt; &lt;div class=&quot;col-10&quot;&gt; &lt;div class=&quot;d-flex align-items-center&quot;&gt; &lt;h2&gt;hellow History&lt;/h2&gt; &lt;/div&gt; &lt;/div&gt; &lt;div class=&quot;float-right col-2&quot;&gt; &lt;app-audit-log [type]=&quot;&#39;MenstrualHistory&#39;&quot;&gt;&lt;/app-audit-log&gt; &lt;/div&gt; &lt;/div&gt; &lt;/div&gt;
+</code></pre></div>
+<details>
+  <summary>CrudNotes</summary>
+  <img src="/rajeshgotti/images/col2.png" alt="Output image" style="max-width: 100%; height: auto;" />
+</details>
+
+<p>```title="code"
+ 
+<div class="card">
+  <div class="header inner_header pb-0 header-manual">
+    <div class="col-10">
+      <div class="d-flex align-items-center">
+        <h2>hellow History</h2>
+      </div>
+    </div>
+    <div class="float-right col-2">
+      <app-audit-log [type]="'MenstrualHistory'"></app-audit-log>
+    </div>
+  </div>
+</div>
+</p>
+<div class="card"><!-- card start -->
+    <div class="header inner_header pb-0 header-manual"> <!-- heading start -->
+    <div class="col-10">
+      <div class="d-flex align-items-center">
+        <h2>Social History</h2>
+      </div>
+    </div>
+    <div class="float-right col-2">
+      <app-audit-log [type]="'MenstrualHistory'"></app-audit-log>
+    </div>
+  </div><!-- heading end -->
+<div class="body">  <!-- body start -->
+  <div class="row">
+    <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+      <div class="mat-form-field-block">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Dose</mat-label>
+          <input type="text" matInput placeholder="Dose" formControlName="dosageQ">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="col-12 col-xl-2 col-lg-2 col-md-2 col-sm-3">
+      <div class="mat-form-field-block">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Dose</mat-label>
+          <input type="text" matInput placeholder="Dose" formControlName="dosageQ">
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+</div><!-- body end -->
+</div>
+<p>```</p>
 <h3 id="button-colors-falcon">Button colors Falcon</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> &lt;button mat-raised-button color=&quot;warn&quot; (click)=&quot;onCloseData()&quot;&gt;Cancel&lt;/button&gt;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a> &lt;button mat-raised-button color=&quot;accent&quot; (click)=&quot;resetForm()&quot;&gt;Clear&lt;/button&gt;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> &lt;button mat-raised-button color=&quot;primary&quot; (click)=&quot;addEmployer(&#39;Add&#39;)&quot;&gt;Save and Add submit&lt;/button&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> &lt;button mat-raised-button color=&quot;warn&quot; (click)=&quot;onCloseData()&quot;&gt;Cancel&lt;/button&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a> &lt;button mat-raised-button color=&quot;accent&quot; (click)=&quot;resetForm()&quot;&gt;Clear&lt;/button&gt;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a> &lt;button mat-raised-button color=&quot;primary&quot; (click)=&quot;addEmployer(&#39;Add&#39;)&quot;&gt;Save and Add submit&lt;/button&gt;
 </code></pre></div>
 <h3 id="to-move-2-buttons-one-leftside-and-one-rightside">to move 2 buttons one LeftSide and one RightSide</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;div class=&quot;just&quot;&gt; // main div we apply styles to this just 
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    &lt;div&gt; // 1st div
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        &lt;button&gt;b&lt;/button&gt; 
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        &lt;button&gt;b&lt;/button&gt; 
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    &lt;/div&gt; 
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    &lt;div&gt; // 2nd div
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>        &lt;button&gt;b&lt;/button&gt; 
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        &lt;button&gt;b&lt;/button&gt; 
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &lt;/div&gt; 
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a> &lt;/div&gt;
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  ===css===
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  .just{
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>      d-flex;
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>     justify-content: space-between;
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    }
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>          (or)
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a> // okavela direct ga inline lo ne rayali ante then use like this
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a> &lt;div class=&quot;d-flex justify-content-between&quot;&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>&lt;div class=&quot;just&quot;&gt; // main div we apply styles to this just 
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    &lt;div&gt; // 1st div
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        &lt;button&gt;b&lt;/button&gt; 
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        &lt;button&gt;b&lt;/button&gt; 
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>    &lt;/div&gt; 
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    &lt;div&gt; // 2nd div
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>        &lt;button&gt;b&lt;/button&gt; 
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        &lt;button&gt;b&lt;/button&gt; 
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    &lt;/div&gt; 
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a> &lt;/div&gt;
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  ===css===
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  .just{
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>      d-flex;
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>     justify-content: space-between;
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    }
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>          (or)
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a> // okavela direct ga inline lo ne rayali ante then use like this
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a> &lt;div class=&quot;d-flex justify-content-between&quot;&gt;
 </code></pre></div>
 <h3 id="2nd-ex-2-buttons-leftside-ke-ravali-ante-ex-clear-save-button">2nd ex:=&gt; 2 buttons leftSide ke ravali ante ex: clear &amp; save button</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>note: text-right is used to move buttons right side 
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;div class=&quot;col-12 text-right&quot;&gt;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    button&gt;clear&lt;/button&gt; 
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    &lt;button&gt;save&lt;/button&gt; 
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a> &lt;/div&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>note: text-right is used to move buttons right side 
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>&lt;div class=&quot;col-12 text-right&quot;&gt;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    button&gt;clear&lt;/button&gt; 
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    &lt;button&gt;save&lt;/button&gt; 
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a> &lt;/div&gt;
 </code></pre></div>
 <h3 id="button-disabled-we-use">button  [disabled] we use ||</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>disable ane button 2 conditions ni satisfy avvali ante 
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  &lt;button type=&quot;button&quot; mat-raised-button color=&quot;primary&quot; (click)=&quot;saveIsexpired()&quot;       
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>     [disabled]=&quot;!isexpiredform.value.isExpired || !isexpiredform.valid&quot;&gt;Save
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  &lt;/button&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>disable ane button 2 conditions ni satisfy avvali ante 
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  &lt;button type=&quot;button&quot; mat-raised-button color=&quot;primary&quot; (click)=&quot;saveIsexpired()&quot;       
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>     [disabled]=&quot;!isexpiredform.value.isExpired || !isexpiredform.valid&quot;&gt;Save
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  &lt;/button&gt;
 </code></pre></div>
 <h3 id="how-to-disablebutton-disable-button">how to disableButton disable button</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> ===syntax: [disabled]=!formName&quot; ===
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>&lt;button class=&quot;btn btn-primary&quot; (click)=&quot;Savelogin()&quot; 
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>  [disabled]=&quot;!loginForm.valid&quot;&gt;Login&lt;/button&gt; 
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>NOTE: //so formvalid avtene button enable avtundi 
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>      ex:!loginForm.valid ante loginform not valid vunte
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>          button disable lo vuntundi valid avte enableAvtundi
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a> ===syntax: [disabled]=!formName&quot; ===
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&lt;button class=&quot;btn btn-primary&quot; (click)=&quot;Savelogin()&quot; 
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  [disabled]=&quot;!loginForm.valid&quot;&gt;Login&lt;/button&gt; 
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>NOTE: //so formvalid avtene button enable avtundi 
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>      ex:!loginForm.valid ante loginform not valid vunte
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>          button disable lo vuntundi valid avte enableAvtundi
 </code></pre></div>
 <h3 id="margin">Margin</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;div class=&quot;my-3 mx-2&quot;&gt;
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  &lt;!-- This div has margin top &amp; bottom = 1rem, left &amp; right = 0.5rem --&gt;
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>&lt;/div&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&lt;div class=&quot;my-3 mx-2&quot;&gt;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  &lt;!-- This div has margin top &amp; bottom = 1rem, left &amp; right = 0.5rem --&gt;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>&lt;/div&gt;
 </code></pre></div>
 <h3 id="move-button-rightside-completly">MOVE button RightSide Completly</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a> &lt;button class=&quot;ms-auto d-block&quot;&gt;Save&lt;/button&gt; 
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a> note:ms :margin starting 
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>     =&gt;from bootstarap 5 m = margin 
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      s = start (which means left side in left-to-right languages) 
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>     auto = automatic margin — it tells the browser to automatically take up available space
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a> &lt;button class=&quot;ms-auto d-block&quot;&gt;Save&lt;/button&gt; 
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> note:ms :margin starting 
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>     =&gt;from bootstarap 5 m = margin 
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      s = start (which means left side in left-to-right languages) 
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>     auto = automatic margin — it tells the browser to automatically take up available space
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>| Syntax                         
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a> ------------------------------ 
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> `margin: 10px;`          
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>         : All sides = `10px`
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a> `margin: 10px 20px;`                       
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>         : T/b=10px,L&amp;R=`20px`
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a> `margin: 10px 20px 30px;`      
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>         : T:10px, L/R:20px, b:30px
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a> `margin: 10px 20px 30px 40px;` 
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>         : T=10px,R:20px,B:30px,L:40px
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>padding: 10px 15px 20px 25px;
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>padding: TOP RIGHT BOTTOM LEFT;
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>| Syntax                          | Meaning                                                      |
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>| ------------------------------- | ------------------------------------------------------------ |
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>| `padding: 10px;`                | All sides = `10px` (top, right, bottom, left)                |
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>| `padding: 10px 20px;`           | Top &amp; bottom = `10px`, left &amp; right = `20px`                 |
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>| `padding: 10px 20px 30px;`      | Top = `10px`, left &amp; right = `20px`, bottom = `30px`         |
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>| `padding: 10px 20px 30px 40px;` | Top = `10px`, right = `20px`, bottom = `30px`, left = `40px` |
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>| Syntax                         
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a> ------------------------------ 
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a> `margin: 10px;`          
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>         : All sides = `10px`
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a> `margin: 10px 20px;`                       
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>         : T/b=10px,L&amp;R=`20px`
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a> `margin: 10px 20px 30px;`      
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>         : T:10px, L/R:20px, b:30px
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a> `margin: 10px 20px 30px 40px;` 
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>         : T=10px,R:20px,B:30px,L:40px
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>padding: 10px 15px 20px 25px;
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>padding: TOP RIGHT BOTTOM LEFT;
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>| Syntax                          | Meaning                                                      |
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>| ------------------------------- | ------------------------------------------------------------ |
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>| `padding: 10px;`                | All sides = `10px` (top, right, bottom, left)                |
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>| `padding: 10px 20px;`           | Top &amp; bottom = `10px`, left &amp; right = `20px`                 |
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>| `padding: 10px 20px 30px;`      | Top = `10px`, left &amp; right = `20px`, bottom = `30px`         |
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>| `padding: 10px 20px 30px 40px;` | Top = `10px`, right = `20px`, bottom = `30px`, left = `40px` |
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>===margin===
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>✅ Margin size scale (rem and px equivalents):
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Num  rem      px 
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>0    0rem     0px
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>1    0.25rem  4px
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>2    0.5rem   8px
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>3    1rem     16px
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>4    1.5rem   24px
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>5    3rem     48px
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>===margin===
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>✅ Margin size scale (rem and px equivalents):
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>Num  rem      px 
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>0    0rem     0px
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>1    0.25rem  4px
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>2    0.5rem   8px
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>3    1rem     16px
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>4    1.5rem   24px
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>5    3rem     48px
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>| Bootstrap | Side(s) affected               | Explanation                |
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>| ----------| ------------------------------ | -------------------------- |
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>|  m-2      | margin-all sides (16px) 
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>| `mt-3`    | Margin **top**                 | Margin top = 1rem          |
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>| `mb-3`    | Margin **bottom**              | Margin bottom = 1rem       |
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>| `ms-3`    | Margin **start** (left in LTR) | Margin start (left) = 1rem |
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>| `me-3`    | Margin **end** (right in LTR)  | Margin end (right) = 1rem  |
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>| `mx-3`    | Margin **left and right**      | Horizontal margin = 1rem   |
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>| `my-3`    | Margin **top and bottom**      | Vertical margin = 1rem     |
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>| Bootstrap | Side(s) affected               | Explanation                |
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>| ----------| ------------------------------ | -------------------------- |
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>|  m-2      | margin-all sides (16px) 
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>| `mt-3`    | Margin **top**                 | Margin top = 1rem          |
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>| `mb-3`    | Margin **bottom**              | Margin bottom = 1rem       |
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>| `ms-3`    | Margin **start** (left in LTR) | Margin start (left) = 1rem |
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>| `me-3`    | Margin **end** (right in LTR)  | Margin end (right) = 1rem  |
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>| `mx-3`    | Margin **left and right**      | Horizontal margin = 1rem   |
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>| `my-3`    | Margin **top and bottom**      | Vertical margin = 1rem     |
 </code></pre></div>
 <h3 id="padding">Padding</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>===padding===
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>&lt;div class=&quot;py-3 px-2&quot;&gt;
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>  &lt;!-- This div has padding top &amp; bottom = 1rem, left &amp; right = 0.5rem --&gt;
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>&lt;/div&gt;
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>| Bootstrap| Side(s) affected                | Explanation                 |
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>| ---------| ------------------------------- | --------------------------- |
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>|  p-2     | padding-all sides (16px)
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>| `pt-3`   | Padding **top**                 | Padding top = 1rem          |
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>| `pb-3`   | Padding **bottom**              | Padding bottom = 1rem       |
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>| `ps-3`   | Padding **start** (left in LTR) | Padding start (left) = 1rem |
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>| `pe-3`   | Padding **end** (right in LTR)  | Padding end (right) = 1rem  |
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>| `px-3`   | Padding **left and right**      | Horizontal padding = 1rem   |
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>| `py-3`   | Padding **top and bottom**      | Vertical padding = 1rem     |
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>===padding===
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>&lt;div class=&quot;py-3 px-2&quot;&gt;
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>  &lt;!-- This div has padding top &amp; bottom = 1rem, left &amp; right = 0.5rem --&gt;
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>&lt;/div&gt;
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>| Bootstrap| Side(s) affected                | Explanation                 |
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>| ---------| ------------------------------- | --------------------------- |
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>|  p-2     | padding-all sides (16px)
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>| `pt-3`   | Padding **top**                 | Padding top = 1rem          |
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>| `pb-3`   | Padding **bottom**              | Padding bottom = 1rem       |
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>| `ps-3`   | Padding **start** (left in LTR) | Padding start (left) = 1rem |
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>| `pe-3`   | Padding **end** (right in LTR)  | Padding end (right) = 1rem  |
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>| `px-3`   | Padding **left and right**      | Horizontal padding = 1rem   |
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>| `py-3`   | Padding **top and bottom**      | Vertical padding = 1rem     |
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>====table desing===
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>&lt;div class=&quot;row&quot;&gt;
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>&lt;div class=&quot;col-12&quot;&gt;
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>  &lt;table class=&quot;table table-bordered table-striped&quot;&gt;
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>    &lt;thead&gt;
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>      &lt;tr&gt;
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>        &lt;th&gt;Lab Name&lt;/th&gt;
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>        &lt;th&gt;Test Result&lt;/th&gt;
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>        &lt;th&gt;Range&lt;/th&gt;
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>        &lt;th&gt;Result Date&lt;/th&gt;
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>      &lt;/tr&gt;
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>    &lt;/thead&gt;
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>    &lt;tbody&gt;
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>      @for (data of rowData; track data) {
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>      &lt;!-- &lt;tr *ngFor=&quot;let data of rowData&quot;&gt; --&gt; like this also we can loop using tr tag
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>      &lt;tr&gt;
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>        &lt;td&gt;{{ data.universalServiceText }}&lt;/td&gt;
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>        &lt;td&gt;{{ data.observationValue }} {{ data.units }}&lt;/td&gt;
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>        &lt;td&gt;{{ data.referencesRangelow }} - {{ data.referencesRangehigh }}&lt;/td&gt;
-<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>        &lt;td&gt;{{ data.observationDateTime | date:&#39;MM/dd/yyyy HH:mm&#39; }}&lt;/td&gt;
-<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>      &lt;/tr&gt;
-<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>      }
-<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>    &lt;/tbody&gt;
-<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>  &lt;/table&gt;
-<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a> &lt;/div&gt;
-<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>&lt;/div&gt;      
-<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>&lt;/div&gt; 
-<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>
-<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>=========okavela manaki item lo value verd di vastundi inkoti cupiyali ante component name:app-dashboard-utilities==
-<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>
-<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>   &lt;mat-autocomplete [displayWith]=&quot;displayFn&quot; autoActiveFirstOption #auto=&quot;matAutocomplete&quot; (optionSelected)=&quot;onChangeProblem($event)&quot;&gt;
-<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>    &lt;mat-option *ngFor=&quot;let item of problems&quot; [value]=&quot;item&quot;&gt;
-<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>        {{item[bindLabel]}}  // here manam [bindLabel ani use chesam so manaki res?.body lo records 
-<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>                              vastadi ha recoreds lo m ceypiyali ante danni e bindlabel lo pedam
-<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>    &lt;/mat-option&gt;
-<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>  &lt;/mat-autocomplete&gt;         
-<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>
-<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>  ====ts.file+===
-<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>  getDeceases(event) {
-<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>    if (this.ccForm.value?.diagnosis.length &gt; 2) {
-<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>      this.problems= [];
-<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>     if (this.ccForm.value.codeType == &#39;IC&#39;) {
-<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>         this.bindLabel = &quot;longDesc&quot;  //  e result lo manam longDesc di cupistunam and down
-<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>                             lo manaki veredi cupiyali so akkada manam bind label &quot;term&quot; ani icham
-<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>       this.erDashboardService.getICDData(this.ccForm.value?.diagnosis, this.ccForm.value?.isStrict).
-<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>       pipe(takeUntil(this.onDestroy$),debounceTime(500)).subscribe(res =&gt; {
-<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>         this.problems = res.body;
-<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>       })
-<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>     } else if (this.ccForm.value?.codeType == &#39;SM&#39;) {
-<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a>      this.bindLabel = &quot;term&quot;   // bindlabel=&quot;term&quot; so here res?.body lo vacinda anni recoreds lo vuna 
-<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a>                                  term ni html dropdown lo cupistunam
-<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a>       this.codesService.getSnomedcodesV1(this.ccForm.value?.diagnosis).pipe(takeUntil(this.onDestroy$)).subscribe(res =&gt; {
-<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a>         this.problems = res.body;
-<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a>       })
-<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a>     } 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>====table desing===
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>&lt;div class=&quot;row&quot;&gt;
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>&lt;div class=&quot;col-12&quot;&gt;
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>  &lt;table class=&quot;table table-bordered table-striped&quot;&gt;
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>    &lt;thead&gt;
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>      &lt;tr&gt;
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>        &lt;th&gt;Lab Name&lt;/th&gt;
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>        &lt;th&gt;Test Result&lt;/th&gt;
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>        &lt;th&gt;Range&lt;/th&gt;
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>        &lt;th&gt;Result Date&lt;/th&gt;
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>      &lt;/tr&gt;
+<a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a>    &lt;/thead&gt;
+<a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a>    &lt;tbody&gt;
+<a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a>      @for (data of rowData; track data) {
+<a id="__codelineno-12-15" name="__codelineno-12-15" href="#__codelineno-12-15"></a>      &lt;!-- &lt;tr *ngFor=&quot;let data of rowData&quot;&gt; --&gt; like this also we can loop using tr tag
+<a id="__codelineno-12-16" name="__codelineno-12-16" href="#__codelineno-12-16"></a>      &lt;tr&gt;
+<a id="__codelineno-12-17" name="__codelineno-12-17" href="#__codelineno-12-17"></a>        &lt;td&gt;{{ data.universalServiceText }}&lt;/td&gt;
+<a id="__codelineno-12-18" name="__codelineno-12-18" href="#__codelineno-12-18"></a>        &lt;td&gt;{{ data.observationValue }} {{ data.units }}&lt;/td&gt;
+<a id="__codelineno-12-19" name="__codelineno-12-19" href="#__codelineno-12-19"></a>        &lt;td&gt;{{ data.referencesRangelow }} - {{ data.referencesRangehigh }}&lt;/td&gt;
+<a id="__codelineno-12-20" name="__codelineno-12-20" href="#__codelineno-12-20"></a>        &lt;td&gt;{{ data.observationDateTime | date:&#39;MM/dd/yyyy HH:mm&#39; }}&lt;/td&gt;
+<a id="__codelineno-12-21" name="__codelineno-12-21" href="#__codelineno-12-21"></a>      &lt;/tr&gt;
+<a id="__codelineno-12-22" name="__codelineno-12-22" href="#__codelineno-12-22"></a>      }
+<a id="__codelineno-12-23" name="__codelineno-12-23" href="#__codelineno-12-23"></a>    &lt;/tbody&gt;
+<a id="__codelineno-12-24" name="__codelineno-12-24" href="#__codelineno-12-24"></a>  &lt;/table&gt;
+<a id="__codelineno-12-25" name="__codelineno-12-25" href="#__codelineno-12-25"></a> &lt;/div&gt;
+<a id="__codelineno-12-26" name="__codelineno-12-26" href="#__codelineno-12-26"></a>&lt;/div&gt;      
+<a id="__codelineno-12-27" name="__codelineno-12-27" href="#__codelineno-12-27"></a>&lt;/div&gt; 
+<a id="__codelineno-12-28" name="__codelineno-12-28" href="#__codelineno-12-28"></a>
+<a id="__codelineno-12-29" name="__codelineno-12-29" href="#__codelineno-12-29"></a>=========okavela manaki item lo value verd di vastundi inkoti cupiyali ante component name:app-dashboard-utilities==
+<a id="__codelineno-12-30" name="__codelineno-12-30" href="#__codelineno-12-30"></a>
+<a id="__codelineno-12-31" name="__codelineno-12-31" href="#__codelineno-12-31"></a>   &lt;mat-autocomplete [displayWith]=&quot;displayFn&quot; autoActiveFirstOption #auto=&quot;matAutocomplete&quot; (optionSelected)=&quot;onChangeProblem($event)&quot;&gt;
+<a id="__codelineno-12-32" name="__codelineno-12-32" href="#__codelineno-12-32"></a>    &lt;mat-option *ngFor=&quot;let item of problems&quot; [value]=&quot;item&quot;&gt;
+<a id="__codelineno-12-33" name="__codelineno-12-33" href="#__codelineno-12-33"></a>        {{item[bindLabel]}}  // here manam [bindLabel ani use chesam so manaki res?.body lo records 
+<a id="__codelineno-12-34" name="__codelineno-12-34" href="#__codelineno-12-34"></a>                              vastadi ha recoreds lo m ceypiyali ante danni e bindlabel lo pedam
+<a id="__codelineno-12-35" name="__codelineno-12-35" href="#__codelineno-12-35"></a>    &lt;/mat-option&gt;
+<a id="__codelineno-12-36" name="__codelineno-12-36" href="#__codelineno-12-36"></a>  &lt;/mat-autocomplete&gt;         
+<a id="__codelineno-12-37" name="__codelineno-12-37" href="#__codelineno-12-37"></a>
+<a id="__codelineno-12-38" name="__codelineno-12-38" href="#__codelineno-12-38"></a>  ====ts.file+===
+<a id="__codelineno-12-39" name="__codelineno-12-39" href="#__codelineno-12-39"></a>  getDeceases(event) {
+<a id="__codelineno-12-40" name="__codelineno-12-40" href="#__codelineno-12-40"></a>    if (this.ccForm.value?.diagnosis.length &gt; 2) {
+<a id="__codelineno-12-41" name="__codelineno-12-41" href="#__codelineno-12-41"></a>      this.problems= [];
+<a id="__codelineno-12-42" name="__codelineno-12-42" href="#__codelineno-12-42"></a>     if (this.ccForm.value.codeType == &#39;IC&#39;) {
+<a id="__codelineno-12-43" name="__codelineno-12-43" href="#__codelineno-12-43"></a>         this.bindLabel = &quot;longDesc&quot;  //  e result lo manam longDesc di cupistunam and down
+<a id="__codelineno-12-44" name="__codelineno-12-44" href="#__codelineno-12-44"></a>                             lo manaki veredi cupiyali so akkada manam bind label &quot;term&quot; ani icham
+<a id="__codelineno-12-45" name="__codelineno-12-45" href="#__codelineno-12-45"></a>       this.erDashboardService.getICDData(this.ccForm.value?.diagnosis, this.ccForm.value?.isStrict).
+<a id="__codelineno-12-46" name="__codelineno-12-46" href="#__codelineno-12-46"></a>       pipe(takeUntil(this.onDestroy$),debounceTime(500)).subscribe(res =&gt; {
+<a id="__codelineno-12-47" name="__codelineno-12-47" href="#__codelineno-12-47"></a>         this.problems = res.body;
+<a id="__codelineno-12-48" name="__codelineno-12-48" href="#__codelineno-12-48"></a>       })
+<a id="__codelineno-12-49" name="__codelineno-12-49" href="#__codelineno-12-49"></a>     } else if (this.ccForm.value?.codeType == &#39;SM&#39;) {
+<a id="__codelineno-12-50" name="__codelineno-12-50" href="#__codelineno-12-50"></a>      this.bindLabel = &quot;term&quot;   // bindlabel=&quot;term&quot; so here res?.body lo vacinda anni recoreds lo vuna 
+<a id="__codelineno-12-51" name="__codelineno-12-51" href="#__codelineno-12-51"></a>                                  term ni html dropdown lo cupistunam
+<a id="__codelineno-12-52" name="__codelineno-12-52" href="#__codelineno-12-52"></a>       this.codesService.getSnomedcodesV1(this.ccForm.value?.diagnosis).pipe(takeUntil(this.onDestroy$)).subscribe(res =&gt; {
+<a id="__codelineno-12-53" name="__codelineno-12-53" href="#__codelineno-12-53"></a>         this.problems = res.body;
+<a id="__codelineno-12-54" name="__codelineno-12-54" href="#__codelineno-12-54"></a>       })
+<a id="__codelineno-12-55" name="__codelineno-12-55" href="#__codelineno-12-55"></a>     } 
 </code></pre></div>
+<!-- car end -->
 
 
 
