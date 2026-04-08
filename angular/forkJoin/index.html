@@ -63,6 +63,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#short-example-of-fork-join" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -906,6 +911,19 @@
       
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    ForkJoin
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -917,6 +935,50 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#short-example-of-fork-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      ==short example of fork join===
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      fork join
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-example-of-fork-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      ==realtime example of fork join===
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2638,6 +2700,41 @@
   
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#short-example-of-fork-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      ==short example of fork join===
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fork-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      fork join
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#realtime-example-of-fork-join" class="md-nav__link">
+    <span class="md-ellipsis">
+      ==realtime example of fork join===
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2656,38 +2753,93 @@
 
   <h1>ForkJoin</h1>
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>// 🧩 FORK JOIN Example
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>fork joint ---
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>let services = [this.postVisitObs(addvisit)];
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>if (this.addvisitform.value.isExpired == true) {
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  services.push(this.postvisitIsexpired(isExpireddata));
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>}
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>forkJoin([
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  // You can also write like this:
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  // this.postVisitObs(addvisit),
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  // this.postvisitIsexpired(isExpireddata)
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  ...services
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>])
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>.pipe(takeUntil(this.onDestroy$))
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>.subscribe(res =&gt; {
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>  this.isUpdateVisit = false;
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>  this.isSubmitted = false;
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>  if (res[0].body.value == existVisitErrMsg) {
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    Swal.fire(res[0].body.value);
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>  } else {
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>    this.snakbar.open(&#39;Patient Information Saved Successfully&#39;, &#39;OK&#39;, {
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>      duration: 2000,
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    });
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>  }
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>});
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>// 🧼 ngOnDestroy lifecycle hook
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>ngOnDestroy(): void {
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>  this.onDestroy$.next(false);
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>  this.onDestroy$.unsubscribe();
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>}
+<h3 id="short-example-of-fork-join">==short example of fork join===</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>     s-1: forkJoin({})
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   s-2: forkJoin({
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>       vl:get(forms),// vairable 1
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>       v2:getemp(id).pipe(takeUntil(this.onDestroy$))
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      }).subscribe({
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      next:(res)=&gt;{
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>       if(res?.vl.status ===200 &amp;&amp; res?.v2.status ==200){
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>       this.snackbar.open(&quot;success&quot;)
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      }
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    },err:(err)=&gt;{}
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  })
+</code></pre></div>
+<h3 id="fork-join">fork join</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> this.patientService.getPageAction(this.userId).pipe(takeUntil(this.onDestroy$)).subscribe(res =&gt; {
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>      this.pageActions = res.body;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      // console.log(&quot;page Action data&quot;, this.pageActions);
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    });
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    this.historyService.addObstetricalHistory(forms).pipe(takeUntil(this.onDestroy$)).subscribe(res=&gt;{
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      if(res.status==200)
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      {
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        this.snackbar.open(&#39;Obstetrical History Added Successfully&#39;,&#39;Ok&#39;,{duration:2000})
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>         this.submitted=false;
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>       this.getObstetricalHis();
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>     }
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>      else{
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>        Swal.fire({  
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>          icon: &#39;error&#39;,  
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>          title: &#39;Oops...&#39;,  
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>          text: &#39;Something went wrong!&#39;  
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        })  
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>      }
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    },
+</code></pre></div>
+<h3 id="realtime-example-of-fork-join">==realtime example of fork join===</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    import { forkJoin } from &#39;rxjs&#39;;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>      forkJoin({
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>       historySer:this.historyService.addObstetricalHistory(forms),
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>       obsservice:this.patientService.getPageAction(this.userId).pipe(takeUntil(this.onDestroy$))
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>       }).subscribe({
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>      next:(res)=&gt;{
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>       if(res.historySer.status === 200 &amp;&amp; res.obsservice.status ===200){
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>           this.snackbar.open(&#39;Obstetrical History Added Successfully&#39;,&#39;Ok&#39;,{duration:2000})
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>       }
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>      },error:(err)=&gt;{
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>          Swal.fire({  
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>          icon: &#39;error&#39;,  
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>          title: &#39;Oops...&#39;,  
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>          text: &#39;Something went wrong!&#39;  
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        })  
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    }
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  })
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>// 🧩 FORK JOIN Example
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>fork joint ---
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>let services = [this.postVisitObs(addvisit)];
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>if (this.addvisitform.value.isExpired == true) {
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>  services.push(this.postvisitIsexpired(isExpireddata));
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>}
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>forkJoin([
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>  // You can also write like this:
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>  // this.postVisitObs(addvisit),
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>  // this.postvisitIsexpired(isExpireddata)
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>  ...services
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>])
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>.pipe(takeUntil(this.onDestroy$))
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>.subscribe(res =&gt; {
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>  this.isUpdateVisit = false;
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>  this.isSubmitted = false;
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>  if (res[0].body.value == existVisitErrMsg) {
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    Swal.fire(res[0].body.value);
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>  } else {
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    this.snakbar.open(&#39;Patient Information Saved Successfully&#39;, &#39;OK&#39;, {
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>      duration: 2000,
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    });
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>  }
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>});
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>// 🧼 ngOnDestroy lifecycle hook
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>ngOnDestroy(): void {
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>  this.onDestroy$.next(false);
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>  this.onDestroy$.unsubscribe();
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>}
 </code></pre></div>
 
 
