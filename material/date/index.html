@@ -1835,6 +1835,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#to-use-date-range-if-want-previous-dates-only-then-use-maxtodaydate" class="md-nav__link">
+    <span class="md-ellipsis">
+      to use date range == if want previous dates only then use [max]="todayDate"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-use-date-range-if-want-allow-future-dates-only-then-use-minstartdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      to use date range == if want allow future dates only then use [min]="startDate"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-range-to-use-date-range-if-want-only-future-dates-then-use-minstartdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      date range to use date range == if want only future dates then use [min]="startDate"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#realtime-ex" class="md-nav__link">
     <span class="md-ellipsis">
       RealTime ex:
@@ -2743,6 +2770,33 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#to-use-date-range-if-want-previous-dates-only-then-use-maxtodaydate" class="md-nav__link">
+    <span class="md-ellipsis">
+      to use date range == if want previous dates only then use [max]="todayDate"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#to-use-date-range-if-want-allow-future-dates-only-then-use-minstartdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      to use date range == if want allow future dates only then use [min]="startDate"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#date-range-to-use-date-range-if-want-only-future-dates-then-use-minstartdate" class="md-nav__link">
+    <span class="md-ellipsis">
+      date range to use date range == if want only future dates then use [min]="startDate"
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#realtime-ex" class="md-nav__link">
     <span class="md-ellipsis">
       RealTime ex:
@@ -2809,46 +2863,94 @@
 <a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    }
 </code></pre></div>
+<h3 id="to-use-date-range-if-want-previous-dates-only-then-use-maxtodaydate">to use date range == if want previous dates only then use [max]="todayDate"</h3>
+<h3 id="to-use-date-range-if-want-allow-future-dates-only-then-use-minstartdate">to use date range == if want allow future dates only then use [min]="startDate"</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>===ts.file===
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>  startDate = new Date();
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  todayDate = new Date();
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>       &lt;div class=&quot;col-12 col-lg-3 col-xl-3 col-md-3 col-sm-6&quot;&gt;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        &lt;div class=&quot;mat-form-field-block&quot;&gt;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>            &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>                &lt;mat-label&gt;Approved From&lt;/mat-label&gt;
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>                &lt;input matInput [matDatepicker]=&quot;picker&quot; appPaitents formControlName=&quot;approvedFrom&quot;
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>                    placeholder=&quot;MM/DD/YYYY&quot; size=10 minLength=&quot;10&quot; appMaskDate
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>                    (dateChange)=&quot;onFromDateChange($event)&quot;
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>                    (dateInput)=&quot;onFromDateChange($event)&quot;  [max]=&quot;todayDate&quot; /&gt;
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>                &lt;mat-datepicker-toggle matSuffix [for]=&quot;picker&quot;&gt;&lt;/mat-datepicker-toggle&gt;
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>                &lt;mat-datepicker #picker&gt;&lt;/mat-datepicker&gt;
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>                &lt;mat-error 
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>                *ngIf=&quot;authorizationForm.get(&#39;approvedFrom&#39;)?.hasError(&#39;required&#39;) &amp;&amp;
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>                    authorizationForm.get(&#39;approvedFrom&#39;)?.touched&quot;&gt;
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>                    Approved From Data is Required
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>                &lt;/mat-error&gt;
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>                &lt;mat-error title=&quot;Approved From date must be on or before Approved To date&quot; 
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>                *ngIf=&quot;authorizationForm.get(&#39;approvedFrom&#39;)?.hasError(&#39;dateRangeInvalid&#39;)&quot;&gt;
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>                    Approved From date must be on or before Approved To date
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>                &lt;/mat-error&gt;
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>            &lt;/mat-form-field&gt;
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        &lt;/div&gt;
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    &lt;/div&gt;
+</code></pre></div>
+<h3 id="date-range-to-use-date-range-if-want-only-future-dates-then-use-minstartdate">date range to use date range == if want only future dates then use [min]="startDate"</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a> &lt;!-- Approved To --&gt;
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    &lt;div class=&quot;col-12 col-lg-3 col-xl-3 col-md-3 col-sm-6&quot;&gt;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>        &lt;div class=&quot;mat-form-field-block&quot;&gt;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>            &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>                &lt;mat-label&gt;Approved To&lt;/mat-label&gt;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>                &lt;input matInput [matDatepicker]=&quot;approvedDate&quot; formControlName=&quot;approvedTo&quot;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>                    placeholder=&quot;MM/DD/YYYY&quot; size=10 minLength=&quot;10&quot; appMaskDate
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>                    (dateChange)=&quot;onToDateChange($event)&quot;
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>                    (dateInput)=&quot;onToDateChange($event)&quot; [min]=&quot;startDate&quot;/&gt;
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>                &lt;mat-datepicker-toggle matSuffix [for]=&quot;approvedDate&quot;&gt;&lt;/mat-datepicker-toggle&gt;
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>                &lt;mat-datepicker #approvedDate&gt;&lt;/mat-datepicker&gt;
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>                    &lt;mat-error *ngIf=&quot;authorizationForm.get(&#39;approvedTo&#39;)?.hasError(&#39;required&#39;) &amp;&amp;
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>                    authorizationForm.get(&#39;approvedTo&#39;)?.touched&quot;&gt;
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>                    Approved To Data is Required
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>                &lt;/mat-error&gt;
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>            &lt;/mat-form-field&gt;
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>        &lt;/div&gt;
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    &lt;/div&gt;
+</code></pre></div>
 <h3 id="realtime-ex">RealTime ex:</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>s-1:    expirationDate: string; //model class
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>s-2: import { MatDatepicker, MatDatepickerInput, MatDatepickerToggle } from &#39;@angular/material/datepicker&#39;;
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>      import { OwlDateTimeModule } from &#39;@danielmoncada/angular-datetime-picker&#39;;
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        import { MaskDateDirective } from &#39;@shared/directives/date-mask.directive&#39;;
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        import { CommonModule, DatePipe, NgIf } from &#39;@angular/common&#39;;
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>        imports: [MaskDateDirective,MatDatepickerInput,MatDatepickerToggle,MatDatepicker,OwlDateTimeModule]
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>s-3:  constructor( private dataPipe:DatePipe){}
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>      ngOnInit(): void {
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>      this.authorizationForm=new FormGroup({
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>        approvedTo:new FormControl(null),// formControlName
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>           })
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>       }
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>s-4: authorizationSave():void{  //save
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>         let authObj=new authorizationModel(); //creating obj for modelClass
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>         authObj.expirationDate =this.dataPipe.transform(this.authorizationForm.get(&#39;approvedTo&#39;)?.
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>                      value,&#39;MM/dd/yyyy&#39;) ?? null;
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>                     }
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>s-5:   onEdit(data){ //edit
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>      approvedTo:new Date(data?.expirationDate) ?? null
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>         }
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>   ====html====
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>   &lt;div class=&quot;col-12 col-lg-3 col-xl-3 col-md-3 col-sm-6&quot;&gt;
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        &lt;div class=&quot;mat-form-field-block&quot;&gt;
-<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>            &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
-<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>                &lt;mat-label&gt;Approved To&lt;/mat-label&gt;
-<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>                &lt;input matInput [matDatepicker]=&quot;approvedDate&quot; formControlName=&quot;approvedTo&quot;
-<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>                    placeholder=&quot;MM/DD/YYYY&quot; size=10 minLength=&quot;10&quot; appMaskDate
-<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>                    (dateChange)=&quot;onToDateChange($event)&quot; /&gt;
-<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>                &lt;mat-datepicker-toggle matSuffix [for]=&quot;approvedDate&quot;&gt;&lt;/mat-datepicker-toggle&gt;
-<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>                &lt;mat-datepicker #approvedDate&gt;&lt;/mat-datepicker&gt;
-<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>            &lt;/mat-form-field&gt;
-<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
-<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>        &lt;/div&gt;
-<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>    &lt;/div&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>s-1:    expirationDate: string; //model class
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>s-2: import { MatDatepicker, MatDatepickerInput, MatDatepickerToggle } from &#39;@angular/material/datepicker&#39;;
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>      import { OwlDateTimeModule } from &#39;@danielmoncada/angular-datetime-picker&#39;;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>        import { MaskDateDirective } from &#39;@shared/directives/date-mask.directive&#39;;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>        import { CommonModule, DatePipe, NgIf } from &#39;@angular/common&#39;;
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>        imports: [MaskDateDirective,MatDatepickerInput,MatDatepickerToggle,MatDatepicker,OwlDateTimeModule]
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>s-3:  constructor( private dataPipe:DatePipe){}
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>      ngOnInit(): void {
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>      this.authorizationForm=new FormGroup({
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>        approvedTo:new FormControl(null),// formControlName
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>           })
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>       }
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>s-4: authorizationSave():void{  //save
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>         let authObj=new authorizationModel(); //creating obj for modelClass
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>         authObj.expirationDate =this.dataPipe.transform(this.authorizationForm.get(&#39;approvedTo&#39;)?.
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>                      value,&#39;MM/dd/yyyy&#39;) ?? null;
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>                     }
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>s-5:   onEdit(data){ //edit
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>      approvedTo:new Date(data?.expirationDate) ?? null
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>         }
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>   ====html====
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>   &lt;div class=&quot;col-12 col-lg-3 col-xl-3 col-md-3 col-sm-6&quot;&gt;
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>        &lt;div class=&quot;mat-form-field-block&quot;&gt;
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>            &lt;mat-form-field class=&quot;example-full-width&quot; appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>                &lt;mat-label&gt;Approved To&lt;/mat-label&gt;
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>                &lt;input matInput [matDatepicker]=&quot;approvedDate&quot; formControlName=&quot;approvedTo&quot;
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>                    placeholder=&quot;MM/DD/YYYY&quot; size=10 minLength=&quot;10&quot; appMaskDate
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>                    (dateChange)=&quot;onToDateChange($event)&quot; /&gt;
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>                &lt;mat-datepicker-toggle matSuffix [for]=&quot;approvedDate&quot;&gt;&lt;/mat-datepicker-toggle&gt;
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>                &lt;mat-datepicker #approvedDate&gt;&lt;/mat-datepicker&gt;
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>            &lt;/mat-form-field&gt;
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>        &lt;/div&gt;
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>    &lt;/div&gt;
 </code></pre></div>
 
 
