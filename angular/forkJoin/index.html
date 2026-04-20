@@ -372,7 +372,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="../../Crud/crud/" class="md-tabs__link">
+        <a href="../../Crud/falconCrud/" class="md-tabs__link">
           
   
   
@@ -680,6 +680,29 @@
   
   <span class="md-ellipsis">
     ViewChild
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipe
     
   </span>
   
@@ -2150,6 +2173,29 @@
   
   
     <li class="md-nav__item">
+      <a href="../../Crud/falconCrud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RealTimeCrud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../Crud/crud/" class="md-nav__link">
         
   
@@ -2755,16 +2801,17 @@
 
 <h3 id="short-example-of-fork-join">==short example of fork join===</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>     s-1: forkJoin({})
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   s-2: forkJoin({
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>       vl:get(forms),// vairable 1
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>       v2:getemp(id).pipe(takeUntil(this.onDestroy$))
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      }).subscribe({
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      next:(res)=&gt;{
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>       if(res?.vl.status ===200 &amp;&amp; res?.v2.status ==200){
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>       this.snackbar.open(&quot;success&quot;)
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>      }
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    },err:(err)=&gt;{}
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>  })
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>   s-2: forkJoin ({}).subscribe({........})
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>   s-2: forkJoin({
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>       vl:get(forms),// vairable 1
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>       v2:getemp(id).pipe(takeUntil(this.onDestroy$))
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      }).subscribe({
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      next:(res)=&gt;{
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>       if(res?.vl.status ===200 &amp;&amp; res?.v2.status ==200){
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>       this.snackbar.open(&quot;success&quot;)
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      }
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    },err:(err)=&gt;{}
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  })
 </code></pre></div>
 <h3 id="fork-join">fork join</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> this.patientService.getPageAction(this.userId).pipe(takeUntil(this.onDestroy$)).subscribe(res =&gt; {
