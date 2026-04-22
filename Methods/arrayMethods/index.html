@@ -738,6 +738,52 @@
   
   
     <li class="md-nav__item">
+      <a href="../../angular/Directive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Directive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/customDirective/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomDirective
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../angular/reactiveForm/" class="md-nav__link">
         
   
@@ -1654,6 +1700,42 @@
   <a href="#13-splice-the-splice-method-modifies-an-array-adds-removes-or-replaces-elements" class="md-nav__link">
     <span class="md-ellipsis">
       13: splice() : The splice() method modifies an array (adds, removes or replaces elements).
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14sort-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.sort sort()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Number Sorting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔤 String Sorting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Summary
     </span>
   </a>
   
@@ -3189,6 +3271,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#14sort-sort" class="md-nav__link">
+    <span class="md-ellipsis">
+      14.sort sort()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔢 Number Sorting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#string-sorting" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔤 String Sorting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Summary
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3298,6 +3416,7 @@
 <a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>12. some() : Return Boolean value  
 <a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>13. Array splice() : The splice() method modifies an array 
 <a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    (adds, removes or replaces elements). 
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>14&gt; Sort();    
 </code></pre></div>
 <h3 id="1javascript-array-concat">1.JavaScript Array concat()</h3>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>The concat() method returns a new array by merging two or more values/arrays.
@@ -4680,6 +4799,70 @@ If you need the <strong>value</strong>, use <code>find()</code> instead.</p>
 <a id="__codelineno-82-3" name="__codelineno-82-3" href="#__codelineno-82-3"></a><span class="kd">const</span><span class="w"> </span><span class="nx">filled</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Array</span><span class="p">.</span><span class="kr">from</span><span class="p">({</span><span class="w"> </span><span class="nx">length</span><span class="o">:</span><span class="w"> </span><span class="nx">size</span><span class="w"> </span><span class="p">},</span><span class="w"> </span><span class="p">(</span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">i</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
 <a id="__codelineno-82-4" name="__codelineno-82-4" href="#__codelineno-82-4"></a><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">filled</span><span class="p">);</span><span class="w"> </span><span class="c1">// [1, 2, 3, 4, 5]</span>
 </code></pre></div>
+</details>
+<h3 id="14sort-sort">14.sort sort()</h3>
+<details class="note">
+<summary>📊 Sorting Examples (Numbers &amp; Strings)</summary>
+<h2 id="number-sorting">🔢 Number Sorting</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-83-1" name="__codelineno-83-1" href="#__codelineno-83-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">runs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-83-2" name="__codelineno-83-2" href="#__codelineno-83-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span><span class="w"> </span><span class="nx">runs</span><span class="o">:</span><span class="w"> </span><span class="kt">10</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-83-3" name="__codelineno-83-3" href="#__codelineno-83-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span><span class="w"> </span><span class="nx">runs</span><span class="o">:</span><span class="w"> </span><span class="kt">20</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-83-4" name="__codelineno-83-4" href="#__codelineno-83-4"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">3</span><span class="p">,</span><span class="w"> </span><span class="nx">runs</span><span class="o">:</span><span class="w"> </span><span class="kt">30</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-83-5" name="__codelineno-83-5" href="#__codelineno-83-5"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">4</span><span class="p">,</span><span class="w"> </span><span class="nx">runs</span><span class="o">:</span><span class="w"> </span><span class="kt">40</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-83-6" name="__codelineno-83-6" href="#__codelineno-83-6"></a><span class="p">];</span>
+<a id="__codelineno-83-7" name="__codelineno-83-7" href="#__codelineno-83-7"></a>
+<a id="__codelineno-83-8" name="__codelineno-83-8" href="#__codelineno-83-8"></a><span class="kd">let</span><span class="w"> </span><span class="nx">sortedRuns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<a id="__codelineno-83-9" name="__codelineno-83-9" href="#__codelineno-83-9"></a>
+<a id="__codelineno-83-10" name="__codelineno-83-10" href="#__codelineno-83-10"></a><span class="c1">// Ascending (small → big)</span>
+<a id="__codelineno-83-11" name="__codelineno-83-11" href="#__codelineno-83-11"></a><span class="nx">sortedRuns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">runs</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">runs</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">runs</span><span class="p">);</span>
+<a id="__codelineno-83-12" name="__codelineno-83-12" href="#__codelineno-83-12"></a>
+<a id="__codelineno-83-13" name="__codelineno-83-13" href="#__codelineno-83-13"></a><span class="c1">// Output:</span>
+<a id="__codelineno-83-14" name="__codelineno-83-14" href="#__codelineno-83-14"></a><span class="c1">// [ { id: 1, runs: 10 }, </span>
+<a id="__codelineno-83-15" name="__codelineno-83-15" href="#__codelineno-83-15"></a><span class="c1">//   { id: 2, runs: 20 }, </span>
+<a id="__codelineno-83-16" name="__codelineno-83-16" href="#__codelineno-83-16"></a><span class="c1">//   { id: 3, runs: 30 }, </span>
+<a id="__codelineno-83-17" name="__codelineno-83-17" href="#__codelineno-83-17"></a><span class="c1">//   { id: 4, runs: 40 } ]</span>
+<a id="__codelineno-83-18" name="__codelineno-83-18" href="#__codelineno-83-18"></a>
+<a id="__codelineno-83-19" name="__codelineno-83-19" href="#__codelineno-83-19"></a><span class="c1">// Descending (big → small)</span>
+<a id="__codelineno-83-20" name="__codelineno-83-20" href="#__codelineno-83-20"></a><span class="nx">sortedRuns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">runs</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">runs</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">runs</span><span class="p">);</span>
+<a id="__codelineno-83-21" name="__codelineno-83-21" href="#__codelineno-83-21"></a>
+<a id="__codelineno-83-22" name="__codelineno-83-22" href="#__codelineno-83-22"></a><span class="c1">// Output:</span>
+<a id="__codelineno-83-23" name="__codelineno-83-23" href="#__codelineno-83-23"></a><span class="c1">// [ { id: 4, runs: 40 },</span>
+<a id="__codelineno-83-24" name="__codelineno-83-24" href="#__codelineno-83-24"></a><span class="c1">//   { id: 3, runs: 30 }, </span>
+<a id="__codelineno-83-25" name="__codelineno-83-25" href="#__codelineno-83-25"></a><span class="c1">//   { id: 2, runs: 20 }, </span>
+<a id="__codelineno-83-26" name="__codelineno-83-26" href="#__codelineno-83-26"></a><span class="c1">//   { id: 1, runs: 10 } ]</span>
+</code></pre></div>
+<h2 id="string-sorting">🔤 String Sorting</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-84-1" name="__codelineno-84-1" href="#__codelineno-84-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">runs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-84-2" name="__codelineno-84-2" href="#__codelineno-84-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">1</span><span class="p">,</span><span class="w"> </span><span class="nx">runs</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-84-3" name="__codelineno-84-3" href="#__codelineno-84-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">2</span><span class="p">,</span><span class="w"> </span><span class="nx">runs</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;b&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-84-4" name="__codelineno-84-4" href="#__codelineno-84-4"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">3</span><span class="p">,</span><span class="w"> </span><span class="nx">runs</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;c&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-84-5" name="__codelineno-84-5" href="#__codelineno-84-5"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="kt">4</span><span class="p">,</span><span class="w"> </span><span class="nx">runs</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;d&quot;</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-84-6" name="__codelineno-84-6" href="#__codelineno-84-6"></a><span class="p">];</span>
+<a id="__codelineno-84-7" name="__codelineno-84-7" href="#__codelineno-84-7"></a>
+<a id="__codelineno-84-8" name="__codelineno-84-8" href="#__codelineno-84-8"></a><span class="c1">// Ascending (A → Z)</span>
+<a id="__codelineno-84-9" name="__codelineno-84-9" href="#__codelineno-84-9"></a><span class="nx">sortedRuns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">runs</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">a</span><span class="p">.</span><span class="nx">runs</span><span class="p">.</span><span class="nx">localeCompare</span><span class="p">(</span><span class="nx">b</span><span class="p">.</span><span class="nx">runs</span><span class="p">));</span>
+<a id="__codelineno-84-10" name="__codelineno-84-10" href="#__codelineno-84-10"></a>
+<a id="__codelineno-84-11" name="__codelineno-84-11" href="#__codelineno-84-11"></a><span class="c1">// Output:</span>
+<a id="__codelineno-84-12" name="__codelineno-84-12" href="#__codelineno-84-12"></a><span class="c1">// [ { id: 1, runs: &#39;a&#39; }, </span>
+<a id="__codelineno-84-13" name="__codelineno-84-13" href="#__codelineno-84-13"></a><span class="c1">// { id: 2, runs: &#39;b&#39; }, </span>
+<a id="__codelineno-84-14" name="__codelineno-84-14" href="#__codelineno-84-14"></a><span class="c1">// { id: 3, runs: &#39;c&#39; }, </span>
+<a id="__codelineno-84-15" name="__codelineno-84-15" href="#__codelineno-84-15"></a><span class="c1">// { id: 4, runs: &#39;d&#39; } ]</span>
+<a id="__codelineno-84-16" name="__codelineno-84-16" href="#__codelineno-84-16"></a>
+<a id="__codelineno-84-17" name="__codelineno-84-17" href="#__codelineno-84-17"></a><span class="c1">// Descending (Z → A)</span>
+<a id="__codelineno-84-18" name="__codelineno-84-18" href="#__codelineno-84-18"></a><span class="nx">sortedRuns</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">runs</span><span class="p">.</span><span class="nx">sort</span><span class="p">((</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">runs</span><span class="p">.</span><span class="nx">localeCompare</span><span class="p">(</span><span class="nx">a</span><span class="p">.</span><span class="nx">runs</span><span class="p">));</span>
+<a id="__codelineno-84-19" name="__codelineno-84-19" href="#__codelineno-84-19"></a>
+<a id="__codelineno-84-20" name="__codelineno-84-20" href="#__codelineno-84-20"></a><span class="c1">// Output:</span>
+<a id="__codelineno-84-21" name="__codelineno-84-21" href="#__codelineno-84-21"></a><span class="c1">// [ { id: 4, runs: &#39;d&#39; },</span>
+<a id="__codelineno-84-22" name="__codelineno-84-22" href="#__codelineno-84-22"></a><span class="c1">//   { id: 3, runs: &#39;c&#39; }, </span>
+<a id="__codelineno-84-23" name="__codelineno-84-23" href="#__codelineno-84-23"></a><span class="c1">//   { id: 2, runs: &#39;b&#39; },</span>
+<a id="__codelineno-84-24" name="__codelineno-84-24" href="#__codelineno-84-24"></a><span class="c1">//   { id: 1, runs: &#39;a&#39; } ]</span>
+</code></pre></div>
+<h2 id="summary">✅ Summary</h2>
+<ul>
+<li>Numbers → use <code>a - b</code> / <code>b - a</code></li>
+<li>Strings → use <code>localeCompare()</code></li>
+<li><code>sort()</code> modifies original array</li>
+</ul>
 </details>
 
 
