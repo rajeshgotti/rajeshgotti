@@ -1840,18 +1840,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#this-is-taken-form-angularmaterial" class="md-nav__link">
+  <a href="#sample-example" class="md-nav__link">
     <span class="md-ellipsis">
-      This is taken form angularMaterial
+      Sample Example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-example" class="md-nav__link">
+  <a href="#this-is-taken-form-angularmaterial" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Example
+      This is taken form angularMaterial
     </span>
   </a>
   
@@ -2842,6 +2842,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Css/Others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Others
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2885,18 +2908,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#this-is-taken-form-angularmaterial" class="md-nav__link">
+  <a href="#sample-example" class="md-nav__link">
     <span class="md-ellipsis">
-      This is taken form angularMaterial
+      Sample Example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-example" class="md-nav__link">
+  <a href="#this-is-taken-form-angularmaterial" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample Example
+      This is taken form angularMaterial
     </span>
   </a>
   
@@ -2977,371 +3000,403 @@
   <h1>MatDialog</h1>
 
 <h3 id="realtime-example-is-at-the-end">RealTime Example is at the end</h3>
-<h3 id="this-is-taken-form-angularmaterial">This is taken form angularMaterial</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import { MatDialog, MatDialogRef } from &#39;@angular/material/dialog&#39;;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>step:1 
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      let dialogRef = dialog.open(UserProfileComponent, {
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      height: &#39;400px&#39;,
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      width: &#39;600px&#39;,
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      });
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>step:2 
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>     import {Component, Inject} from &#39;@angular/core&#39;;
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>     import {MAT_DIALOG_DATA} from &#39;../dialog&#39;;
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>    @Component({
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>    selector: &#39;your-dialog&#39;,
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    template: &#39;passed in {{ data.name }}&#39;,
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>    })
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>    export class YourDialog {
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>    constructor(@Inject(MAT_DIALOG_DATA) public data: {name: string}) { }
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    }      
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>   ----html--
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>   &lt;ng-template let-data&gt;
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    Hello, {{data.name}}
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>   &lt;/ng-template&gt;
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>step:3 
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    dialogRef.afterClosed().subscribe(result =&gt; {
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>    console.log(`Dialog result: ${result}`); // Pizza!
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    });
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    dialogRef.close(&#39;Pizza!&#39;);   
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>   @Component({/* ... */})
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>   export class YourDialog {
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>   constructor(public dialogRef: MatDialogRef&lt;YourDialog&gt;) { }
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>   closeDialog() {
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>    this.dialogRef.close(&#39;Pizza!&#39;);
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>  }
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>}  
-</code></pre></div>
 <h3 id="sample-example">Sample Example</h3>
-<p><div class="highlight"><span class="filename">parent.html</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>     &lt;div&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>       &lt;button (click)=&quot;dialogBtn()&quot;&gt;matDialog&lt;/button&gt;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      &lt;/div&gt;
+<p><div class="highlight"><span class="filename">parent.html</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>     &lt;div&gt;
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>       &lt;button (click)=&quot;dialogBtn()&quot;&gt;matDialog&lt;/button&gt;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>      &lt;/div&gt;
 </code></pre></div>
-<div class="highlight"><span class="filename">parent.ts</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Note: import matDialog and dont use this in imports:[]
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>import { MatDialog, MatDialogRef } from &#39;@angular/material/dialog&#39;;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>constructor(public _dialog: MatDialog,){} // in constructor import matDialog
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  patientId=101;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  patientName=&quot;ram&quot;
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  dialogBtn(){  //button if u click on this then dialogBOX will open
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>   const dialog=this._dialog.open(ChildComponent,{
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    height:&#39;60vh&#39;,
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    width:&#39;50vh&#39;,
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    data:{
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>     patientId:this.patientId,
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>     patname:this.patientName
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    }
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>   });
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  //here we are receiving data form child [c-p] @Output so ha emit aina data ni manam subscribe cheskoni
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    use cheskovali dialog.componentInstance.sendDataToParent.subscribe((res)=&gt;{
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    console.log(res)
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>   })
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>      (or)
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>  // dialog.afterClosed().subscribe((result) =&gt; {
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>   console.log(&#39;Received from dialog:&#39;, result); // ✅ matDialogFc value
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>   });
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>  }   
+<div class="highlight"><span class="filename">parent.ts</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Note: import matDialog and dont use this in imports:[]
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>import { MatDialog, MatDialogRef } from &#39;@angular/material/dialog&#39;;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>constructor(public _dialog: MatDialog,){} // in constructor import matDialog
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  patientId=101;
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  patientName=&quot;ram&quot;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  dialogBtn(){  //button if u click on this then dialogBOX will open
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>   const dialog=this._dialog.open(ChildComponent,{
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    height:&#39;60vh&#39;,
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    width:&#39;50vh&#39;,
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>    data:{
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>     patientId:this.patientId,
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>     patname:this.patientName
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    }
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>   });
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a> //here we are receiving data form parent [p-c] @Output so ha emit aina data ni manam subscribe cheskoni 
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>  use cheskovali ex:see down code note
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>  dialog.componentInstance.emitedData.subscribe((res)=&gt;{
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    console.log(res) // e res lo emit aina data vastundi
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>   })
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>   ex:  dialogref.componentInstance.refDocObj.pipe(takeUntil(this.onDestroy$)).subscribe(result =&gt; {
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>       this.refDocDialogObject = result;
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>      (or)
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  // dialog.afterClosed().subscribe((result) =&gt; {
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>   console.log(&#39;Received from dialog:&#39;, result); // ✅ matDialogFc value
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>   });
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>  }
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>  note: dialog.open(ParentComponent,{  // here comp - comp realtion create aindi so we can use 
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>  @Output in parent and can send data to this child
 </code></pre></div></p>
-<div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Note:MatDialogRef anedi dialogBox ni close ceyadaniki and close(data) closeMethod() lo data ni send 
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>     ceyadaniki use chestam
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>     ex:this.dialogRef.close(data) so here close() ane method lo data ni send chestunam danni 
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        use cheskovali ante then we use afterClosed()
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>     ex:dialog.afterClosed().subscribe((res) =&gt; { console.log(res)})
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>S-1: import { MAT_DIALOG_DATA, MatDialogRef } from &#39;@angular/material/dialog&#39;;  
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>S-2: @Output() sendDataToParent=new EventEmitter(); //OutPut TO send data from [P-C]
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>       constructor(
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>S-3:    public dialogRef: MatDialogRef&lt;Child&gt;, //here childComponent yoka reference motam e dialogRef lo vuntundi
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>S-4:    @Inject(MAT_DIALOG_DATA) public data:any) {
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>         console.log(&#39;Dialog data:&#39;, this.data); 
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        }
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>S-5:   SaveBtnChild(){
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        this.sendDataToParent.emit(this.myForm.get(&#39;matDialogFc&#39;)?.value)
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>       }
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>         (or)
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>// SaveBtnChild() {
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>//   const value = this.myForm.get(&#39;matDialogFc&#39;)?.value;
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>//   this.dialogRef.close(value); // ✅ sends the input value to the parent
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>//   console.log(value,&#39;value&#39;)
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>// }
+<div class="highlight"><span class="filename">Parent.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>@Output() refDocObj=new EventEmitter()
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    saveForm(){
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>     let obj=new Demo();
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>      --
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>      --
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>     this.refDocObj.emit(refDocForm); // from here manam form motam ni emit chestuanm child ki so we use 
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>           @Output so we will use dialogref.componentInstance.refDocObj.pipe(takeUntil(this.onDest in childcomp
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>     this.form.resetForm();
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>     this.dialogRef.close();
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    }
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  ==note:2 so service ni manam ekkadina call cheskovachu 
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>  ex: parent lo aite this.refDocObj.emit(refDocForm) 
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>        this.homeService.savePhysicianPersonalDetails(result).pipe(takeUntil(this.onDestroy$)).subscribe(res=&gt;{
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>        this.snackbar.open(&#39;Referral source details saved Successfully&#39;, &#39;Ok&#39;, {
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>          duration: 2000,
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        });
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>        this.geRefDoctor();
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>       (or)
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>        dialogref.componentInstance.refDocObj.pipe(takeUntil(this.onDestroy$)).subscribe(result =&gt; {
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>       this.refDocDialogObject = result;
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>       this.homeService.savePhysicianPersonalDetails(result).pipe(takeUntil(this.onDestroy$)).subscribe(res=&gt;{
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>        this.snackbar.open(&#39;Referral source details saved Successfully&#39;, &#39;Ok&#39;, {
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>          duration: 2000,
+</code></pre></div>
+<h3 id="this-is-taken-form-angularmaterial">This is taken form angularMaterial</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>import { MatDialog, MatDialogRef } from &#39;@angular/material/dialog&#39;;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>step:1 
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>      let dialogRef = dialog.open(UserProfileComponent, {
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>      height: &#39;400px&#39;,
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>      width: &#39;600px&#39;,
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>      });
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>step:2 
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>     import {Component, Inject} from &#39;@angular/core&#39;;
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>     import {MAT_DIALOG_DATA} from &#39;../dialog&#39;;
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    @Component({
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    selector: &#39;your-dialog&#39;,
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    template: &#39;passed in {{ data.name }}&#39;,
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>    })
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    export class YourDialog {
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    constructor(@Inject(MAT_DIALOG_DATA) public data: {name: string}) { }
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    }      
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>   ----html--
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>   &lt;ng-template let-data&gt;
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>    Hello, {{data.name}}
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>   &lt;/ng-template&gt;
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>step:3 
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    dialogRef.afterClosed().subscribe(result =&gt; {
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>    console.log(`Dialog result: ${result}`); // Pizza!
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>    });
 <a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>---html--
-<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>  &lt;button (click)=&quot;SaveBtnChild()&quot; &gt;save&lt;/button&gt;
-<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
-<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>    &lt;h1&gt;{{data.patientId}}&lt;/h1&gt;
-<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>    &lt;h1&gt;{{data.patname}}&lt;/h1&gt;
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    dialogRef.close(&#39;Pizza!&#39;);   
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>   @Component({/* ... */})
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>   export class YourDialog {
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>   constructor(public dialogRef: MatDialogRef&lt;YourDialog&gt;) { }
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>   closeDialog() {
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    this.dialogRef.close(&#39;Pizza!&#39;);
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  }
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>}  
+</code></pre></div>
+<div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Note:MatDialogRef anedi dialogBox ni close ceyadaniki and close(data) closeMethod() lo data ni send 
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>     ceyadaniki use chestam
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>     ex:this.dialogRef.close(data) so here close() ane method lo data ni send chestunam danni 
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>        use cheskovali ante then we use afterClosed()
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>     ex:dialog.afterClosed().subscribe((res) =&gt; { console.log(res)})
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>S-1: import { MAT_DIALOG_DATA, MatDialogRef } from &#39;@angular/material/dialog&#39;;  
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>S-2: @Output() sendDataToParent=new EventEmitter(); //OutPut TO send data from [P-C]
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>       constructor(
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>S-3:    public dialogRef: MatDialogRef&lt;Child&gt;, //here childComponent yoka reference motam e dialogRef lo vuntundi
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>S-4:    @Inject(MAT_DIALOG_DATA) public data:any) {
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>         console.log(&#39;Dialog data:&#39;, this.data); 
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        }
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>S-5:   SaveBtnChild(){
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>        this.sendDataToParent.emit(this.myForm.get(&#39;matDialogFc&#39;)?.value)
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>       }
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>         (or)
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>// SaveBtnChild() {
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>//   const value = this.myForm.get(&#39;matDialogFc&#39;)?.value;
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>//   this.dialogRef.close(value); // ✅ sends the input value to the parent
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>//   console.log(value,&#39;value&#39;)
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>// }
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>---html--
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>  &lt;button (click)=&quot;SaveBtnChild()&quot; &gt;save&lt;/button&gt;
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>    &lt;h1&gt;{{data.patientId}}&lt;/h1&gt;
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    &lt;h1&gt;{{data.patname}}&lt;/h1&gt;
 </code></pre></div>
 <h3 id="realtime-example-without-output">RealTime Example without @OutPut</h3>
-<div class="highlight"><span class="filename">parent.html</span><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&lt;button (click)=&quot;dialogBtn()&quot;&gt;DialogButton&lt;/button&gt; 
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>-----Parent.ts----
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>import { FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>import { MatDialog } from &#39;@angular/material/dialog&#39;;
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>import { Child } from &#39;../child/child&#39;;
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>@Component({
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>  selector: &#39;app-parentd-home&#39;,
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>  imports: [ReactiveFormsModule,MatFormFieldModule,MatInputModule],
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  templateUrl: &#39;./parentd-home.html&#39;,
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  styles: `,
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>})
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>export class ParentdHome implements OnInit {
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>  patientForm: FormGroup;
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>constructor(public _dialog: MatDialog,){}
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  patientId:number=101
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>  patientName:string=&#39;Ram&#39;
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>  ngOnInit(): void {
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>  }
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>  dialogBtn(){
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>    this._dialog.open(Child,{
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>      height:&#39;60vh&#39;,
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>      width:&#39;50vh&#39;,
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>      data:{
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>        patientid:this.patientId,
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>        patientName:this.patientName
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>      }
-<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>    })
-<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>  }
-<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>}
+<div class="highlight"><span class="filename">parent.html</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>&lt;button (click)=&quot;dialogBtn()&quot;&gt;DialogButton&lt;/button&gt; 
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>-----Parent.ts----
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>import { FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>import { MatDialog } from &#39;@angular/material/dialog&#39;;
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>import { Child } from &#39;../child/child&#39;;
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>@Component({
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>  selector: &#39;app-parentd-home&#39;,
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  imports: [ReactiveFormsModule,MatFormFieldModule,MatInputModule],
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>  templateUrl: &#39;./parentd-home.html&#39;,
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  styles: `,
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>})
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>export class ParentdHome implements OnInit {
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>  patientForm: FormGroup;
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>constructor(public _dialog: MatDialog,){}
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  patientId:number=101
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>  patientName:string=&#39;Ram&#39;
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>  ngOnInit(): void {
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>  }
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>  dialogBtn(){
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>    this._dialog.open(Child,{
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>      height:&#39;60vh&#39;,
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>      width:&#39;50vh&#39;,
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>      data:{
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>        patientid:this.patientId,
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>        patientName:this.patientName
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>      }
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>    })
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>  }
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>}
 </code></pre></div>
 <h3 id="example">EXAMPLE</h3>
-<p><div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>import { CommonModule } from &#39;@angular/common&#39;;
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>import { Component, EventEmitter, Inject, OnInit} from &#39;@angular/core&#39;;
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>import { MAT_DIALOG_DATA, MatDialogRef } from &#39;@angular/material/dialog&#39;;
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>import { FormControl, FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>@Component({
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>  selector: &#39;app-child&#39;,
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>  imports: [CommonModule,MatFormFieldModule,MatInputModule,ReactiveFormsModule],
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>  templateUrl: &#39;./child.html&#39;,
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>  styleUrl: &#39;./child.css&#39;
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>})
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>  export class Child implements OnInit {
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>  childForm:FormGroup
-<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>  constructor(
-<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    @Inject(MAT_DIALOG_DATA) public parentData:any) {
-<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    console.log(&#39;Dialog data:&#39;, this.parentData); 
-<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>  }
-<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>  ngOnInit(): void {
-<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>    this.childForm=new FormGroup({
-<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>      firstNameFc:new FormControl(&#39;&#39;)
-<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>    })
-<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>  }
-<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>  saveChild(){
-<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>    console.log(this.childForm?.get(&#39;firstNameFc&#39;)?.value)
-<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>  }
-<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>
-<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>}
+<p><div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>import { CommonModule } from &#39;@angular/common&#39;;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>import { Component, EventEmitter, Inject, OnInit} from &#39;@angular/core&#39;;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>import { MAT_DIALOG_DATA, MatDialogRef } from &#39;@angular/material/dialog&#39;;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>import { FormControl, FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>@Component({
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>  selector: &#39;app-child&#39;,
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>  imports: [CommonModule,MatFormFieldModule,MatInputModule,ReactiveFormsModule],
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>  templateUrl: &#39;./child.html&#39;,
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  styleUrl: &#39;./child.css&#39;
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>})
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>  export class Child implements OnInit {
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>  childForm:FormGroup
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>  constructor(
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>    @Inject(MAT_DIALOG_DATA) public parentData:any) {
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>    console.log(&#39;Dialog data:&#39;, this.parentData); 
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>  }
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>  ngOnInit(): void {
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>    this.childForm=new FormGroup({
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>      firstNameFc:new FormControl(&#39;&#39;)
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>    })
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>  }
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>  saveChild(){
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>    console.log(this.childForm?.get(&#39;firstNameFc&#39;)?.value)
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>  }
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>}
 </code></pre></div>
-<div class="highlight"><span class="filename">parent.html</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>&lt;form [formGroup]=&quot;childForm&quot;&gt;
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  &lt;mat-form-field appearance=&quot;outline&quot;&gt;
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    &lt;mat-label&gt;FirstName&lt;/mat-label&gt;
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    &lt;input type=&quot;text&quot; matInput formControlName=&quot;firstNameFc&quot;&gt;
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>  &lt;/mat-form-field&gt;
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>  &lt;div&gt;
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    &lt;button (click)=&quot;saveChild()&quot;&gt;SaveChild&lt;/button&gt;
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>  &lt;/div&gt;
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>&lt;/form&gt;
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>&lt;div&gt;
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>   &lt;!-- data from parent --&gt;
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>  &lt;h1&gt;{{parentData?.patientid}}&lt;/h1&gt;
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>  &lt;h1&gt;{{parentData?.patientName}}&lt;/h1&gt;
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>&lt;/div&gt;
+<div class="highlight"><span class="filename">parent.html</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;form [formGroup]=&quot;childForm&quot;&gt;
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  &lt;mat-form-field appearance=&quot;outline&quot;&gt;
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    &lt;mat-label&gt;FirstName&lt;/mat-label&gt;
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    &lt;input type=&quot;text&quot; matInput formControlName=&quot;firstNameFc&quot;&gt;
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>  &lt;/mat-form-field&gt;
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>  &lt;div&gt;
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>    &lt;button (click)=&quot;saveChild()&quot;&gt;SaveChild&lt;/button&gt;
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>  &lt;/div&gt;
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>&lt;/form&gt;
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>&lt;div&gt;
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>   &lt;!-- data from parent --&gt;
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>  &lt;h1&gt;{{parentData?.patientid}}&lt;/h1&gt;
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>  &lt;h1&gt;{{parentData?.patientName}}&lt;/h1&gt;
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>&lt;/div&gt;
 </code></pre></div></p>
 <h3 id="sending-data-from-child-to-parent-using-output-only-tsfiles-html-files-are-same">sending data from child to parent using @Output() only tsFiles html files are same</h3>
 <h3 id="note-points">Note Points:</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>while send data to parent we need to do this
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>so @output vaddu ankunte e diloref.close() lo data ni pass cheskovachu and use cheskodani
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> afterClosed() ani use chesi chekuntam
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a> //create reference of ur component 
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>------child.ts------
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>1. constructor( public dialogRef: MatDialogRef&lt;Child&gt;, //here childComponent yoka reference motam 
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>   e dialogRef lo vuntundi mostly manam e dialoRef ni dialogBox ni close ceyadaniki leda 
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>   close()method lo data ni send ceyadaniki use chestam
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>2. saveChild() {
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>   const value = this.childForm?.get(&#39;firstNameFc&#39;)?.value
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>   this.dialogRef.close(value); // ✅ sends the input value to the parent
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>   console.log(value,&#39;value&#39;)
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>---parent.ts-----
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a> dialogBtn() {
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>    const dialogObj = this._dialog.open(Child, {
-<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>      height: &#39;60vh&#39;,
-<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>      width: &#39;50vh&#39;,
-<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>      data: {
-<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a>        patientid: this.patientId,
-<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>        patientName: this.patientName
-<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>      }
-<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>    });
-<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>
-<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a>    dialogObj.afterClosed().subscribe((result) =&gt; {
-<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a>      console.log(&#39;Received from dialog:&#39;, result);
-<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a>    });
-<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a>  } 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>while send data to parent we need to do this
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>so @output vaddu ankunte e diloref.close() lo data ni pass cheskovachu and use cheskodani
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a> afterClosed() ani use chesi chekuntam
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a> //create reference of ur component 
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>------child.ts------
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>1. constructor( public dialogRef: MatDialogRef&lt;Child&gt;, //here childComponent yoka reference motam 
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>   e dialogRef lo vuntundi mostly manam e dialoRef ni dialogBox ni close ceyadaniki leda 
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>   close()method lo data ni send ceyadaniki use chestam
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>2. saveChild() {
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>   const value = this.childForm?.get(&#39;firstNameFc&#39;)?.value
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>   this.dialogRef.close(value); // ✅ sends the input value to the parent
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>   console.log(value,&#39;value&#39;)
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>---parent.ts-----
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a> dialogBtn() {
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>    const dialogObj = this._dialog.open(Child, {
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>      height: &#39;60vh&#39;,
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>      width: &#39;50vh&#39;,
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>      data: {
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>        patientid: this.patientId,
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>        patientName: this.patientName
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>      }
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>    });
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>    dialogObj.afterClosed().subscribe((result) =&gt; {
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>      console.log(&#39;Received from dialog:&#39;, result);
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>    });
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>  } 
 </code></pre></div>
 <h3 id="example_1">EXAMPLE</h3>
-<p><div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>Note: import MAT_DIALOG_DATA but use this in imports:[]
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>import { Component, effect, EventEmitter, Inject, OnInit ,Output} from &#39;@angular/core&#39;;
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>import { DataFromParent } from &#39;../parent/parent&#39;;
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>import { MAT_DIALOG_DATA, MatDialogRef } from &#39;@angular/material/dialog&#39;;
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>import { FormControl, FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>@Component({
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>  selector: &#39;app-child&#39;,
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>  imports: [MatFormFieldModule,MatInputModule,ReactiveFormsModule],
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>  templateUrl: &#39;./child.html&#39;,
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>  styleUrl: &#39;./child.css&#39;
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a>})
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>export class Child implements OnInit {
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>S-1:  @Output() sendDataToParent=new EventEmitter();
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a>      childForm:FormGroup
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>      constructor(
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>S-2:  public dialogRef: MatDialogRef&lt;Child&gt;, //here childComponent yoka reference motam e dialogRef lo vuntundi
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a>S-3:   @Inject(MAT_DIALOG_DATA) public parentData:any) {
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a>      console.log(&#39;Dialog data:&#39;, this.parentData); 
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a>      }
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a>  ngOnInit(): void {
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a>    this.childForm=new FormGroup({
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>      firstNameFc:new FormControl(&#39;&#39;)
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a>    })
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>  }
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>  saveChild(){
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a>    // console.log(this.childForm?.get(&#39;firstNameFc&#39;)?.value)
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>   this.sendDataToParent.emit(this.childForm);//here we are emitting data to Parent
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a>  }
-<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>        (or)
-<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a>// save() {
-<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>//   const value = this.myForm.get(&#39;matDialogFc&#39;)?.value;
-<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a>//   this.dialogRef.close(value); // ✅ sends the input value to the parent
-<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a>//   console.log(value,&#39;value&#39;)
-<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a>// }
-<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>}
-</code></pre></div>
-<div class="highlight"><span class="filename">parent.tsfile</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>import { ReactiveFormsModule } from &#39;@angular/forms&#39;;
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>import { MatDialog, MatDialogRef } from &#39;@angular/material/dialog&#39;;
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>import { Child } from &#39;../child/child&#39;;
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>@Component({
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>  selector: &#39;app-parentd-home&#39;,
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>  imports: [ReactiveFormsModule,MatFormFieldModule,MatInputModule],
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>  templateUrl: &#39;./parentd-home.html&#39;,
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>  styles: `,
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>})
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>export class ParentdHome implements OnInit {
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>  patientForm: FormGroup;
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>constructor(public _dialog: MatDialog,){}
+<p><div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>Note: import MAT_DIALOG_DATA but use this in imports:[]
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>import { Component, effect, EventEmitter, Inject, OnInit ,Output} from &#39;@angular/core&#39;;
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>import { DataFromParent } from &#39;../parent/parent&#39;;
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>import { MAT_DIALOG_DATA, MatDialogRef } from &#39;@angular/material/dialog&#39;;
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>import { FormControl, FormGroup, ReactiveFormsModule } from &#39;@angular/forms&#39;;
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>@Component({
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>  selector: &#39;app-child&#39;,
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>  imports: [MatFormFieldModule,MatInputModule,ReactiveFormsModule],
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>  templateUrl: &#39;./child.html&#39;,
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>  styleUrl: &#39;./child.css&#39;
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>})
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>export class Child implements OnInit {
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>S-1:  @Output() sendDataToParent=new EventEmitter();
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>      childForm:FormGroup
 <a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>
-<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>  patientId:number=101
-<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>  patientName:string=&#39;Ram&#39;
-<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
-<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>
-<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>  ngOnInit(): void {
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>      constructor(
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>S-2:  public dialogRef: MatDialogRef&lt;Child&gt;, //here childComponent yoka reference motam e dialogRef lo vuntundi
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>S-3:   @Inject(MAT_DIALOG_DATA) public parentData:any) {
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>      console.log(&#39;Dialog data:&#39;, this.parentData); 
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>      }
 <a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>
-<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>  }
-<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>  dialogBtn(){
-<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>   const dialogObj= this._dialog.open(Child,{
-<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>      height:&#39;60vh&#39;,
-<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>      width:&#39;50vh&#39;,
-<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>      data:{
-<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>        patientid:this.patientId,
-<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>        patientName:this.patientName
-<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>      }
-<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>    })
-<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>//parentData we are using here 
-<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>    dialogObj.componentInstance.sendDataToParent.subscribe((res)=&gt;{
-<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>      console.log(res,&#39;subscribedData&#39;)
-<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>    })
-<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>    }
-<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>      (or)
-<a id="__codelineno-9-40" name="__codelineno-9-40" href="#__codelineno-9-40"></a>  // dialog.afterClosed().subscribe((result) =&gt; {
-<a id="__codelineno-9-41" name="__codelineno-9-41" href="#__codelineno-9-41"></a>  //     console.log(&#39;Received from dialog:&#39;, result); // ✅ matDialogFc value
-<a id="__codelineno-9-42" name="__codelineno-9-42" href="#__codelineno-9-42"></a>  // });
-<a id="__codelineno-9-43" name="__codelineno-9-43" href="#__codelineno-9-43"></a>
-<a id="__codelineno-9-44" name="__codelineno-9-44" href="#__codelineno-9-44"></a>}
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>  ngOnInit(): void {
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>    this.childForm=new FormGroup({
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a>      firstNameFc:new FormControl(&#39;&#39;)
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a>    })
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a>  }
+<a id="__codelineno-9-29" name="__codelineno-9-29" href="#__codelineno-9-29"></a>  saveChild(){
+<a id="__codelineno-9-30" name="__codelineno-9-30" href="#__codelineno-9-30"></a>    // console.log(this.childForm?.get(&#39;firstNameFc&#39;)?.value)
+<a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>   this.sendDataToParent.emit(this.childForm);//here we are emitting data to Parent
+<a id="__codelineno-9-32" name="__codelineno-9-32" href="#__codelineno-9-32"></a>  }
+<a id="__codelineno-9-33" name="__codelineno-9-33" href="#__codelineno-9-33"></a>        (or)
+<a id="__codelineno-9-34" name="__codelineno-9-34" href="#__codelineno-9-34"></a>// save() {
+<a id="__codelineno-9-35" name="__codelineno-9-35" href="#__codelineno-9-35"></a>//   const value = this.myForm.get(&#39;matDialogFc&#39;)?.value;
+<a id="__codelineno-9-36" name="__codelineno-9-36" href="#__codelineno-9-36"></a>//   this.dialogRef.close(value); // ✅ sends the input value to the parent
+<a id="__codelineno-9-37" name="__codelineno-9-37" href="#__codelineno-9-37"></a>//   console.log(value,&#39;value&#39;)
+<a id="__codelineno-9-38" name="__codelineno-9-38" href="#__codelineno-9-38"></a>// }
+<a id="__codelineno-9-39" name="__codelineno-9-39" href="#__codelineno-9-39"></a>}
+</code></pre></div>
+<div class="highlight"><span class="filename">parent.tsfile</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>import { Component, OnInit } from &#39;@angular/core&#39;;
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>import { ReactiveFormsModule } from &#39;@angular/forms&#39;;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>import { MatFormFieldModule } from &#39;@angular/material/form-field&#39;;
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>import { MatInputModule } from &#39;@angular/material/input&#39;;
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>import { MatDialog, MatDialogRef } from &#39;@angular/material/dialog&#39;;
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>import { Child } from &#39;../child/child&#39;;
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>@Component({
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>  selector: &#39;app-parentd-home&#39;,
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  imports: [ReactiveFormsModule,MatFormFieldModule,MatInputModule],
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>  templateUrl: &#39;./parentd-home.html&#39;,
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>  styles: `,
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>})
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>export class ParentdHome implements OnInit {
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>  patientForm: FormGroup;
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>constructor(public _dialog: MatDialog,){}
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>  patientId:number=101
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>  patientName:string=&#39;Ram&#39;
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>  ngOnInit(): void {
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>  }
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>  dialogBtn(){
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>   const dialogObj= this._dialog.open(Child,{
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>      height:&#39;60vh&#39;,
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>      width:&#39;50vh&#39;,
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>      data:{
+<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>        patientid:this.patientId,
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>        patientName:this.patientName
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>      }
+<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>    })
+<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>//parentData we are using here 
+<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>    dialogObj.componentInstance.sendDataToParent.subscribe((res)=&gt;{
+<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>      console.log(res,&#39;subscribedData&#39;)
+<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>    })
+<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>    }
+<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a>      (or)
+<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a>  // dialog.afterClosed().subscribe((result) =&gt; {
+<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>  //     console.log(&#39;Received from dialog:&#39;, result); // ✅ matDialogFc value
+<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a>  // });
+<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>
+<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a>}
 </code></pre></div></p>
 <h3 id="realtime-example">Realtime example</h3>
-<div class="highlight"><span class="filename">emplate-chats.html</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>   &lt;button mat-raised-button color=&quot;primary&quot; class=&quot;action-btn&quot; (click)=&quot;openDocumentDialog()&quot;&gt;
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>      &lt;span class=&quot;btn-text&quot;&gt;Add Document&lt;/span&gt;
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>    &lt;/button&gt;
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>  ==template-chats.ts==
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>  constructor(private dialog: MatDialog){}
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a> openDocumentDialog(): void {
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>  let patientData: {patientId: number; visitId: number;patientName: string;};
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>   if (!this.patientDataFromPatientScan?.patientId) {
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>    patientData = {
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>      patientId: this.patientId,
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>      visitId: this.visitId,
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>      patientName: this.patientName
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>    };
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>    } //End of if condition
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>    const dialogRef= this.dialog.open(UploadScanPatientDocumentsComponent, {
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    width: &#39;45%&#39;,
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>    height: &#39;70%&#39;, //(or) &#39;auto&#39; can also use
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>    data: {
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>      data: this.patientData,  // so e patientData lo m send ceyali ankunte dialogBox ki adi send ceyachu
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>      editData: this.editData, // so okavela edit click chesinapudu ha edit record like index i data ni e 
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>                                vidam ga send chestam
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>      DataFromWorklist:true  
-<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>    }
-<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>  });
-<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>   dialogRef.afterClosed().subscribe(result =&gt; {  //dilog close aina tarvata get CALL chestunam
-<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>      if (result === true) {
-<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>        this.getPatientCharts();
-<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>      }
-<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>    });
-<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>  }
-<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>
-<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>   ==== (or) // if u want to send 0 in dialog===
-<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>
-<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>   addNewFileToNewPatient():void{
-<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>    const patientData= {patientId: 0, visitId: 0,patientName: &#39;&#39;};
-<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a>    const dialogRef= this.dialog.open(UploadScanPatientDocumentsComponent, {
-<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a>      hasBackdrop: false,
-<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>      width: &#39;45%&#39;,
-<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a>      height: &#39;75%&#39;,
-<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>      disableClose: true,
-<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a>      data: {
-<a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a>        data: patientData,
-<a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a>        DataFromWorklist:true  
-<a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a>      }
-<a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a>    });
-<a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a>  }
-<a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a>
-<a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a> //close button -- upload-scan-patient-documents.html --
-<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a> constructor(private dialogRef: MatDialogRef&lt;UploadScanPatientDocumentsComponent&gt;)
-<a id="__codelineno-10-53" name="__codelineno-10-53" href="#__codelineno-10-53"></a>
-<a id="__codelineno-10-54" name="__codelineno-10-54" href="#__codelineno-10-54"></a>&lt;button class=&#39;close&#39; mat-icon-button (click)=&#39;closeDialog()&#39; data-mat-icon-type=&#39;font&#39; 
-<a id="__codelineno-10-55" name="__codelineno-10-55" href="#__codelineno-10-55"></a>    aria-label=&#39;Close dialog&#39; &gt;
-<a id="__codelineno-10-56" name="__codelineno-10-56" href="#__codelineno-10-56"></a>      &lt;i class=&#39;material-icons&#39;&gt;close&lt;/i&gt;
-<a id="__codelineno-10-57" name="__codelineno-10-57" href="#__codelineno-10-57"></a> &lt;/button&gt; 
-<a id="__codelineno-10-58" name="__codelineno-10-58" href="#__codelineno-10-58"></a>  ==ts.file ==
-<a id="__codelineno-10-59" name="__codelineno-10-59" href="#__codelineno-10-59"></a>  //close method
-<a id="__codelineno-10-60" name="__codelineno-10-60" href="#__codelineno-10-60"></a> closeDialog():void{
-<a id="__codelineno-10-61" name="__codelineno-10-61" href="#__codelineno-10-61"></a>  this.dialogRef.close();
-<a id="__codelineno-10-62" name="__codelineno-10-62" href="#__codelineno-10-62"></a> }
+<div class="highlight"><span class="filename">emplate-chats.html</span><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>   &lt;button mat-raised-button color=&quot;primary&quot; class=&quot;action-btn&quot; (click)=&quot;openDocumentDialog()&quot;&gt;
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>      &lt;span class=&quot;btn-text&quot;&gt;Add Document&lt;/span&gt;
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>    &lt;/button&gt;
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>  ==template-chats.ts==
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>  constructor(private dialog: MatDialog){}
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a> openDocumentDialog(): void {
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>  let patientData: {patientId: number; visitId: number;patientName: string;};
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>   if (!this.patientDataFromPatientScan?.patientId) {
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>    patientData = {
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>      patientId: this.patientId,
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>      visitId: this.visitId,
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a>      patientName: this.patientName
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a>    };
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a>    } //End of if condition
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a>    const dialogRef= this.dialog.open(UploadScanPatientDocumentsComponent, {
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a>    width: &#39;45%&#39;,
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a>    height: &#39;70%&#39;, //(or) &#39;auto&#39; can also use
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a>    data: {
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a>      data: this.patientData,  // so e patientData lo m send ceyali ankunte dialogBox ki adi send ceyachu
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a>      editData: this.editData, // so okavela edit click chesinapudu ha edit record like index i data ni e 
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a>                                vidam ga send chestam
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a>      DataFromWorklist:true  
+<a id="__codelineno-11-26" name="__codelineno-11-26" href="#__codelineno-11-26"></a>    }
+<a id="__codelineno-11-27" name="__codelineno-11-27" href="#__codelineno-11-27"></a>  });
+<a id="__codelineno-11-28" name="__codelineno-11-28" href="#__codelineno-11-28"></a>   dialogRef.afterClosed().subscribe(result =&gt; {  //dilog close aina tarvata get CALL chestunam
+<a id="__codelineno-11-29" name="__codelineno-11-29" href="#__codelineno-11-29"></a>      if (result === true) {
+<a id="__codelineno-11-30" name="__codelineno-11-30" href="#__codelineno-11-30"></a>        this.getPatientCharts();
+<a id="__codelineno-11-31" name="__codelineno-11-31" href="#__codelineno-11-31"></a>      }
+<a id="__codelineno-11-32" name="__codelineno-11-32" href="#__codelineno-11-32"></a>    });
+<a id="__codelineno-11-33" name="__codelineno-11-33" href="#__codelineno-11-33"></a>  }
+<a id="__codelineno-11-34" name="__codelineno-11-34" href="#__codelineno-11-34"></a>
+<a id="__codelineno-11-35" name="__codelineno-11-35" href="#__codelineno-11-35"></a>   ==== (or) // if u want to send 0 in dialog===
+<a id="__codelineno-11-36" name="__codelineno-11-36" href="#__codelineno-11-36"></a>
+<a id="__codelineno-11-37" name="__codelineno-11-37" href="#__codelineno-11-37"></a>   addNewFileToNewPatient():void{
+<a id="__codelineno-11-38" name="__codelineno-11-38" href="#__codelineno-11-38"></a>    const patientData= {patientId: 0, visitId: 0,patientName: &#39;&#39;};
+<a id="__codelineno-11-39" name="__codelineno-11-39" href="#__codelineno-11-39"></a>    const dialogRef= this.dialog.open(UploadScanPatientDocumentsComponent, {
+<a id="__codelineno-11-40" name="__codelineno-11-40" href="#__codelineno-11-40"></a>      hasBackdrop: false,
+<a id="__codelineno-11-41" name="__codelineno-11-41" href="#__codelineno-11-41"></a>      width: &#39;45%&#39;,
+<a id="__codelineno-11-42" name="__codelineno-11-42" href="#__codelineno-11-42"></a>      height: &#39;75%&#39;,
+<a id="__codelineno-11-43" name="__codelineno-11-43" href="#__codelineno-11-43"></a>      disableClose: true,
+<a id="__codelineno-11-44" name="__codelineno-11-44" href="#__codelineno-11-44"></a>      data: {
+<a id="__codelineno-11-45" name="__codelineno-11-45" href="#__codelineno-11-45"></a>        data: patientData,
+<a id="__codelineno-11-46" name="__codelineno-11-46" href="#__codelineno-11-46"></a>        DataFromWorklist:true  
+<a id="__codelineno-11-47" name="__codelineno-11-47" href="#__codelineno-11-47"></a>      }
+<a id="__codelineno-11-48" name="__codelineno-11-48" href="#__codelineno-11-48"></a>    });
+<a id="__codelineno-11-49" name="__codelineno-11-49" href="#__codelineno-11-49"></a>  }
+<a id="__codelineno-11-50" name="__codelineno-11-50" href="#__codelineno-11-50"></a>
+<a id="__codelineno-11-51" name="__codelineno-11-51" href="#__codelineno-11-51"></a> //close button -- upload-scan-patient-documents.html --
+<a id="__codelineno-11-52" name="__codelineno-11-52" href="#__codelineno-11-52"></a> constructor(private dialogRef: MatDialogRef&lt;UploadScanPatientDocumentsComponent&gt;)
+<a id="__codelineno-11-53" name="__codelineno-11-53" href="#__codelineno-11-53"></a>
+<a id="__codelineno-11-54" name="__codelineno-11-54" href="#__codelineno-11-54"></a>&lt;button class=&#39;close&#39; mat-icon-button (click)=&#39;closeDialog()&#39; data-mat-icon-type=&#39;font&#39; 
+<a id="__codelineno-11-55" name="__codelineno-11-55" href="#__codelineno-11-55"></a>    aria-label=&#39;Close dialog&#39; &gt;
+<a id="__codelineno-11-56" name="__codelineno-11-56" href="#__codelineno-11-56"></a>      &lt;i class=&#39;material-icons&#39;&gt;close&lt;/i&gt;
+<a id="__codelineno-11-57" name="__codelineno-11-57" href="#__codelineno-11-57"></a> &lt;/button&gt; 
+<a id="__codelineno-11-58" name="__codelineno-11-58" href="#__codelineno-11-58"></a>  ==ts.file ==
+<a id="__codelineno-11-59" name="__codelineno-11-59" href="#__codelineno-11-59"></a>  //close method
+<a id="__codelineno-11-60" name="__codelineno-11-60" href="#__codelineno-11-60"></a> closeDialog():void{
+<a id="__codelineno-11-61" name="__codelineno-11-61" href="#__codelineno-11-61"></a>  this.dialogRef.close();
+<a id="__codelineno-11-62" name="__codelineno-11-62" href="#__codelineno-11-62"></a> }
 </code></pre></div>
 
 
