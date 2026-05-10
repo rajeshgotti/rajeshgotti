@@ -1,0 +1,4467 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mysql/">
+      
+      
+        <link rel="next" href="../Crud/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>crudExpanTelugu - Rajesh Angular Document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../customWord.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-create-database-and-table" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rajesh Angular Document" class="md-header__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rajesh Angular Document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              crudExpanTelugu
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../angular/viewEncapsulation/" class="md-tabs__link">
+          
+  
+  
+  Angular
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../clickEvent/clickEvent/" class="md-tabs__link">
+          
+  
+  
+  ClickEvent
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Ag-grid/ag-grid/" class="md-tabs__link">
+          
+  
+  
+  AG- GRID
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Methods/arrayMethods/" class="md-tabs__link">
+          
+  
+  
+  Methods
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dropDowns/AllSelect/" class="md-tabs__link">
+          
+  
+  
+  DropDowns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../material/matSelect/" class="md-tabs__link">
+          
+  
+  
+  Material
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Only-images/onlyimages/" class="md-tabs__link">
+          
+  
+  
+  ONLY IMAGES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../files/file/" class="md-tabs__link">
+          
+  
+  
+  PDF Files
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../creatingAngular/createangular/" class="md-tabs__link">
+          
+  
+  
+  CreateNewProject
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Crud/falconCrud/" class="md-tabs__link">
+          
+  
+  
+  Crud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mk_docs/mkdocs/" class="md-tabs__link">
+          
+  
+  
+  mk_docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tasks/tasks/" class="md-tabs__link">
+          
+  
+  
+  Tasks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../mysql2/" class="md-tabs__link">
+          
+  
+  
+  DotNet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Css/css/" class="md-tabs__link">
+          
+  
+  
+  Css
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rajesh Angular Document" class="md-nav__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Rajesh Angular Document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Angular
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Angular
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewEncapsulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encapsulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/binding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OutPut
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewchild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ViewChild
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/custompipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomPipe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/Directive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Directive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/customDirective/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomDirective
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/reactiveForm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReactiveForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/templateDrivenform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TemplateDrivenForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/formarray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FormArray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/customValidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomValidator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/componentStructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ComponentStructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/behaviour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BehaviourSubject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/forkJoin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ForkJoin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/localStorage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LocalStorage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/lifeCycleHooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LifeCycleHooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/ngrxStore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NGRX(Store)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ClickEvent
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ClickEvent
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/clickEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ClickEvent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/matdilog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatDialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/swal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SwalFire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/shortcutkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ShortCutKeys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AG- GRID
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            AG- GRID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/ag-grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AG-Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/cellrender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CellRender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/searchFilter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SearchFilter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Methods
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Methods
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/arrayMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ArrayMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/stringMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    StringMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/objectMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ObjectMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DropDowns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            DropDowns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/AllSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    selectAll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/matSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    matSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/ngselect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ngSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/matAutoSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    matAutoSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Material
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Material
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/autoComplete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatAutoComplete
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matFormField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatFormField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matexpansion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatExpansionalPanel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matdialog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatDialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/popup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PopUp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/date/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Date
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/sidenav/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SideNav
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ONLY IMAGES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            ONLY IMAGES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Only-images/onlyimages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PDF Files
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            PDF Files
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CreateNewProject
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            CreateNewProject
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creatingAngular/createangular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NewProject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Crud
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Crud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/falconCrud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RealTimeCrud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/crud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CrudJsonServer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/crudWithValidation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CrudWithReactiveValidation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/TemplateDriven/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TemplateDrivenFormValidation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/validations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    mk_docs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            mk_docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mk_docs/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mk_Docs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mk_docs/consoletab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConsoleTab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tasks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/SSN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/conditionInHtml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConditionInHtml
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/NoramSearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NormalSearch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/SelectAll/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SelectAll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    DotNet
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            DotNet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sql
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    storeProcedure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    crudExpanTelugu
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    crudExpanTelugu
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-create-database-and-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      how to create database and table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-open-ssms" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 1: Open SSMS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-new-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 2: Create New Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Step 2: Create New Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-new-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 3: Create New Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-add-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 4: Add Columns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-set-primary-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 5: Set Primary Key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-enable-identity-auto-increment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 6: Enable Identity (Auto Increment)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 What is Identity?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-save-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 7: Save Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-enter-table-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 8: Enter Table Name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Final Result
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Final Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Final Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-of-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      creation of project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exapmple" class="md-nav__link">
+    <span class="md-ellipsis">
+      exapmple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-model-class-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 1: Model Class Create చేయడం
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 దీని ఉపయోగం ఏమిటి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-dbcontext-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 2: DbContext Create చేయడం
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 DbContext అంటే ఏమిటి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbset" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 DbSet అంటే ఏమిటి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-connection-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 3: Connection String ఇవ్వడం
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 దీని ఉపయోగం
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-programcs-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 4: Program.cs Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#line" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 ఈ line ఉపయోగం ఏమిటి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Step-by-Step Explanation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Step-by-Step Explanation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-builderservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ builder.Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-adddbcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ AddDbContext()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dependency-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Dependency Injection ఎలా పని చేస్తుంది?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ options =&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-usesqlserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ UseSqlServer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-getconnectionstringdefaultconnection" class="md-nav__link">
+    <span class="md-ellipsis">
+      6️⃣ GetConnectionString("DefaultConnection")
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-get-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 5: GET API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internally" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Internally ఏమవుతుంది?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-post-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 6: POST API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internally_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Internally ఏమవుతుంది?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-update-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 7: UPDATE API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-delete-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 8: DELETE API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Extra Spaces ఎందుకు వస్తున్నాయి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correct-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Correct Fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-architecture-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Full Architecture Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Final Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Crud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FullStackCrud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FullStackCrud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Css
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Css
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Css/css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    css
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Css/Others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Others
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-create-database-and-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      how to create database and table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-open-ssms" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 1: Open SSMS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-new-database" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 2: Create New Database
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚀 Step 2: Create New Database">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-create-new-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 3: Create New Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-add-columns" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 4: Add Columns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-set-primary-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 5: Set Primary Key
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-enable-identity-auto-increment" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 6: Enable Identity (Auto Increment)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-identity" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 What is Identity?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-save-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 7: Save Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-enter-table-name" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Step 8: Enter Table Name
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-result" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Final Result
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Final Flow
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="✅ Final Flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creation-of-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      creation of project
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exapmple" class="md-nav__link">
+    <span class="md-ellipsis">
+      exapmple
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-model-class-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 1: Model Class Create చేయడం
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 దీని ఉపయోగం ఏమిటి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-dbcontext-create" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 2: DbContext Create చేయడం
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 DbContext అంటే ఏమిటి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbset" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 DbSet అంటే ఏమిటి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-connection-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 3: Connection String ఇవ్వడం
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 దీని ఉపయోగం
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-programcs-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 4: Program.cs Configuration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#line" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 ఈ line ఉపయోగం ఏమిటి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-by-step-explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Step-by-Step Explanation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📌 Step-by-Step Explanation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-builderservices" class="md-nav__link">
+    <span class="md-ellipsis">
+      1️⃣ builder.Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-adddbcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      2️⃣ AddDbContext()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dependency-injection" class="md-nav__link">
+    <span class="md-ellipsis">
+      3️⃣ Dependency Injection ఎలా పని చేస్తుంది?
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      4️⃣ options =&gt;
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-usesqlserver" class="md-nav__link">
+    <span class="md-ellipsis">
+      5️⃣ UseSqlServer()
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-getconnectionstringdefaultconnection" class="md-nav__link">
+    <span class="md-ellipsis">
+      6️⃣ GetConnectionString("DefaultConnection")
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-get-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 5: GET API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internally" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Internally ఏమవుతుంది?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-post-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 6: POST API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#internally_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📌 Internally ఏమవుతుంది?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-update-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 7: UPDATE API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-delete-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 STEP 8: DELETE API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extra-spaces" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Extra Spaces ఎందుకు వస్తున్నాయి?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#correct-fix" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Correct Fix
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#full-architecture-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      🚀 Full Architecture Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      ✅ Final Summary
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+  <h1>crudExpanTelugu</h1>
+
+<h2 id="how-to-create-database-and-table">how to create database and table</h2>
+<details class="note">
+<summary>Create Database &amp; Table in SQL Server (SSMS)</summary>
+<h2 id="step-1-open-ssms">🚀 Step 1: Open SSMS</h2>
+<p>👉 Open <strong>SQL Server Management Studio (SSMS)</strong></p>
+<hr />
+<h2 id="step-2-create-new-database">🚀 Step 2: Create New Database</h2>
+<ul>
+<li>Right-click on <strong>Databases</strong></li>
+<li>Select <strong>New Database</strong></li>
+</ul>
+<h3 id="example">Example</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>studentDb
+</code></pre></div>
+<ul>
+<li>Click <strong>OK</strong></li>
+</ul>
+<hr />
+<h2 id="step-3-create-new-table">🚀 Step 3: Create New Table</h2>
+<ul>
+<li>Expand the database:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>studentDb
+</code></pre></div>
+<ul>
+<li>Right-click on <strong>Tables</strong></li>
+<li>Select <strong>New → Table</strong></li>
+</ul>
+<hr />
+<h2 id="step-4-add-columns">🚀 Step 4: Add Columns</h2>
+<table>
+<thead>
+<tr>
+<th>Column Name</th>
+<th>Data Type</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>studentId</td>
+<td>int</td>
+</tr>
+<tr>
+<td>studentName</td>
+<td>nvarchar(10)</td>
+</tr>
+<tr>
+<td>email</td>
+<td>nvarchar(40)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="step-5-set-primary-key">🚀 Step 5: Set Primary Key</h2>
+<ul>
+<li>Right-click on:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>studentId
+</code></pre></div>
+<ul>
+<li>Select:</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Set Primary Key
+</code></pre></div>
+<hr />
+<h2 id="step-6-enable-identity-auto-increment">🚀 Step 6: Enable Identity (Auto Increment)</h2>
+<p>👉 Select <code>studentId</code> row</p>
+<p>👉 At the bottom:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Column Properties
+</code></pre></div>
+<p>👉 Expand:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>Identity Specification
+</code></pre></div>
+<p>👉 Double-click:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>(Is Identity)
+</code></pre></div>
+<p>👉 Change:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>No → Yes
+</code></pre></div>
+<hr />
+<h2 id="what-is-identity">📌 What is Identity?</h2>
+<p>👉 Automatically generates IDs</p>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>1
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>2
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>3
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>4
+</code></pre></div>
+<p>👉 No need to manually insert IDs.</p>
+<hr />
+<h2 id="step-7-save-table">🚀 Step 7: Save Table</h2>
+<p>👉 Click the <strong>Save button</strong></p>
+<p>📍 Located:
+- Top toolbar
+- Left side of <strong>New Query</strong> button</p>
+<hr />
+<h2 id="step-8-enter-table-name">🚀 Step 8: Enter Table Name</h2>
+<p>Example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>studentTable
+</code></pre></div>
+<p>👉 Click <strong>OK</strong></p>
+<hr />
+<h2 id="final-result">✅ Final Result</h2>
+<p>Database:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>studentDb
+</code></pre></div>
+<p>Table:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>studentTable
+</code></pre></div>
+<p>Columns:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>studentId
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>studentName
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>email
+</code></pre></div>
+<hr />
+<h2 id="final-flow">✅ Final Flow</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>SSMS
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>  ↓
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Create Database
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>  ↓
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>Create Table
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>  ↓
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>Add Columns
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>  ↓
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>Set Primary Key
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>  ↓
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>Enable Identity
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>  ↓
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>Save Table
+</code></pre></div>
+</details>
+<h4 id="creation-of-project">creation of project</h4>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>🚀 STEP 1: == appsettings.json==
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  &quot;ConnectionStrings&quot;: {
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    &quot;DefaultConnection&quot;: &quot;Server=DESKTOP-1O6861N\\SQLEXPRESS;
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>     Database=StudentMasterDb;Trusted_Connection=True;
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>     MultipleActiveResultSets=true;TrustServerCertificate=True&quot;
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>  },
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>  use:ఏ SQL Server కి connect అవ్వాలో చెప్తుంది
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>  ex:Database=StudentMasterDb , StudentMasterDb database కి connect అవ్వాలి
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>     MultipleActiveResultSets=true
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>  👉 ఒకే connection లో multiple queries run చేయడానికి.
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>  Suppose:
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    ఒక query run అవుతోంది
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>    అదే సమయంలో ఇంకో query కూడా run చేయాలి
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>    అప్పుడు ఇది help చేస్తుంది.
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>  🚀 STEP 2   ==program.ts ==
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>builder.Services.AddDbContext&lt;StudentDbContext&gt;(options =&gt; options.UseSqlServer(builder.
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>Configuration.GetConnectionString(&quot;DefaultConnection&quot;)));
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>📌 ఈ line ఉపయోగం ఏమిటి?
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>ఈ line ASP.NET Core application కి చెప్తుంది:
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>✅ SQL Server database use చేయాలి
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a>✅ StudentDbContext object create చేయాలి
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a>✅ Dependency Injection enable చేయాలి
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a>AddDbContext&lt;StudentDbContext&gt;()
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a>👉 ASP.NET Core కి చెప్తుంది:
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a>
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a>StudentDbContext object అవసరమైతే automatically create చేసి ఇవ్వు
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a>ఎందుకు అవసరం?
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a>మీ controller లో:
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a>
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>public StudentController(
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a>    StudentDbContext studentDbContext)
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a>{
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a>    _studentDbContext = studentDbContext;
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a>}
+<a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a>
+<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a>👉 మీరు object create చేయలేదు.కానీ ASP.NET Core automatically create చేసి పంపుతుంది.
+<a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a>
+<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>ఎందుకు?
+<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a>
+<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a>👇 ఈ line వల్ల:
+<a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a>
+<a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a>builder.Services.AddDbContext&lt;StudentDbContext&gt;()
+<a id="__codelineno-14-48" name="__codelineno-14-48" href="#__codelineno-14-48"></a>🚀 STEP 3:====studentmodel.cs==
+<a id="__codelineno-14-49" name="__codelineno-14-49" href="#__codelineno-14-49"></a>using System.ComponentModel.DataAnnotations;
+<a id="__codelineno-14-50" name="__codelineno-14-50" href="#__codelineno-14-50"></a>using System.ComponentModel.DataAnnotations.Schema;
+<a id="__codelineno-14-51" name="__codelineno-14-51" href="#__codelineno-14-51"></a>
+<a id="__codelineno-14-52" name="__codelineno-14-52" href="#__codelineno-14-52"></a>namespace Tutorials.Models
+<a id="__codelineno-14-53" name="__codelineno-14-53" href="#__codelineno-14-53"></a>{
+<a id="__codelineno-14-54" name="__codelineno-14-54" href="#__codelineno-14-54"></a>    [Table(&quot;studentTable&quot;)]
+<a id="__codelineno-14-55" name="__codelineno-14-55" href="#__codelineno-14-55"></a>    public class StudentModel
+<a id="__codelineno-14-56" name="__codelineno-14-56" href="#__codelineno-14-56"></a>    {
+<a id="__codelineno-14-57" name="__codelineno-14-57" href="#__codelineno-14-57"></a>        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+<a id="__codelineno-14-58" name="__codelineno-14-58" href="#__codelineno-14-58"></a>        public int studentId { get; set; }
+<a id="__codelineno-14-59" name="__codelineno-14-59" href="#__codelineno-14-59"></a>        public string studentName { get; set; } =string.Empty;
+<a id="__codelineno-14-60" name="__codelineno-14-60" href="#__codelineno-14-60"></a>        public string email { get; set; } = string.Empty;
+<a id="__codelineno-14-61" name="__codelineno-14-61" href="#__codelineno-14-61"></a>        public string phone { get; set; } = string.Empty;
+<a id="__codelineno-14-62" name="__codelineno-14-62" href="#__codelineno-14-62"></a>
+<a id="__codelineno-14-63" name="__codelineno-14-63" href="#__codelineno-14-63"></a>    }
+<a id="__codelineno-14-64" name="__codelineno-14-64" href="#__codelineno-14-64"></a>}
+<a id="__codelineno-14-65" name="__codelineno-14-65" href="#__codelineno-14-65"></a>
+<a id="__codelineno-14-66" name="__codelineno-14-66" href="#__codelineno-14-66"></a>🚀 STEP 4 ==dbcontext.cs==
+<a id="__codelineno-14-67" name="__codelineno-14-67" href="#__codelineno-14-67"></a>using Microsoft.EntityFrameworkCore;
+<a id="__codelineno-14-68" name="__codelineno-14-68" href="#__codelineno-14-68"></a>using Tutorials.Models;
+<a id="__codelineno-14-69" name="__codelineno-14-69" href="#__codelineno-14-69"></a>
+<a id="__codelineno-14-70" name="__codelineno-14-70" href="#__codelineno-14-70"></a>namespace Tutorials.Data
+<a id="__codelineno-14-71" name="__codelineno-14-71" href="#__codelineno-14-71"></a>{
+<a id="__codelineno-14-72" name="__codelineno-14-72" href="#__codelineno-14-72"></a>    public class StudentDbContext : DbContext
+<a id="__codelineno-14-73" name="__codelineno-14-73" href="#__codelineno-14-73"></a>    {
+<a id="__codelineno-14-74" name="__codelineno-14-74" href="#__codelineno-14-74"></a>        public StudentDbContext(DbContextOptions&lt;StudentDbContext&gt; options)
+<a id="__codelineno-14-75" name="__codelineno-14-75" href="#__codelineno-14-75"></a>            : base(options)
+<a id="__codelineno-14-76" name="__codelineno-14-76" href="#__codelineno-14-76"></a>        {
+<a id="__codelineno-14-77" name="__codelineno-14-77" href="#__codelineno-14-77"></a>        }
+<a id="__codelineno-14-78" name="__codelineno-14-78" href="#__codelineno-14-78"></a>
+<a id="__codelineno-14-79" name="__codelineno-14-79" href="#__codelineno-14-79"></a>        public DbSet&lt;StudentModel&gt; StudentModels { get; set; }
+<a id="__codelineno-14-80" name="__codelineno-14-80" href="#__codelineno-14-80"></a>    }
+<a id="__codelineno-14-81" name="__codelineno-14-81" href="#__codelineno-14-81"></a>
+<a id="__codelineno-14-82" name="__codelineno-14-82" href="#__codelineno-14-82"></a>    Note: ## 📌public StudentDbContext(Db..){} ఈ constructor ఉపయోగం ఏమిటి?
+<a id="__codelineno-14-83" name="__codelineno-14-83" href="#__codelineno-14-83"></a>    👉 Database connection settings ని `DbContext` కి పంపడానికి use చేస్తారు.
+<a id="__codelineno-14-84" name="__codelineno-14-84" href="#__codelineno-14-84"></a>       DbContextOptions&lt;StudentDbContext&gt; options
+<a id="__codelineno-14-85" name="__codelineno-14-85" href="#__codelineno-14-85"></a>     👉 ఇందులో database configuration settings ఉంటాయి.
+<a id="__codelineno-14-86" name="__codelineno-14-86" href="#__codelineno-14-86"></a>
+<a id="__codelineno-14-87" name="__codelineno-14-87" href="#__codelineno-14-87"></a>    Example:
+<a id="__codelineno-14-88" name="__codelineno-14-88" href="#__codelineno-14-88"></a>    - Connection String
+<a id="__codelineno-14-89" name="__codelineno-14-89" href="#__codelineno-14-89"></a>    - SQL Server Provider
+<a id="__codelineno-14-90" name="__codelineno-14-90" href="#__codelineno-14-90"></a>    - Database Settings
+<a id="__codelineno-14-91" name="__codelineno-14-91" href="#__codelineno-14-91"></a>
+<a id="__codelineno-14-92" name="__codelineno-14-92" href="#__codelineno-14-92"></a>    ఇవన్నీ ఇందులో ఉంటాయి.
+<a id="__codelineno-14-93" name="__codelineno-14-93" href="#__codelineno-14-93"></a>    ## 📌 ఈ values ఎక్కడి నుండి వస్తాయి? `Program.cs` నుండి వస్తాయి.
+<a id="__codelineno-14-94" name="__codelineno-14-94" href="#__codelineno-14-94"></a>
+<a id="__codelineno-14-95" name="__codelineno-14-95" href="#__codelineno-14-95"></a>     =&gt; : base(options)
+<a id="__codelineno-14-96" name="__codelineno-14-96" href="#__codelineno-14-96"></a>        👉 Parent class అయిన `DbContext` కి options పంపుతుంది.
+<a id="__codelineno-14-97" name="__codelineno-14-97" href="#__codelineno-14-97"></a>
+<a id="__codelineno-14-98" name="__codelineno-14-98" href="#__codelineno-14-98"></a>    ## 📌 ఎందుకు అవసరం?
+<a id="__codelineno-14-99" name="__codelineno-14-99" href="#__codelineno-14-99"></a>     `DbContext` కి తెలియాలి:
+<a id="__codelineno-14-100" name="__codelineno-14-100" href="#__codelineno-14-100"></a>
+<a id="__codelineno-14-101" name="__codelineno-14-101" href="#__codelineno-14-101"></a>    - ఏ SQL Server?
+<a id="__codelineno-14-102" name="__codelineno-14-102" href="#__codelineno-14-102"></a>    - ఏ Database?
+<a id="__codelineno-14-103" name="__codelineno-14-103" href="#__codelineno-14-103"></a>    - ఏ Connection String?
+<a id="__codelineno-14-104" name="__codelineno-14-104" href="#__codelineno-14-104"></a>
+<a id="__codelineno-14-105" name="__codelineno-14-105" href="#__codelineno-14-105"></a>    అవన్నీ `options` ద్వారా వస్తాయి.
+<a id="__codelineno-14-106" name="__codelineno-14-106" href="#__codelineno-14-106"></a>     ## 📌 Internally ఏమవుతుంది?
+<a id="__codelineno-14-107" name="__codelineno-14-107" href="#__codelineno-14-107"></a>
+<a id="__codelineno-14-108" name="__codelineno-14-108" href="#__codelineno-14-108"></a>    `base(options)` run అయినప్పుడు:
+<a id="__codelineno-14-109" name="__codelineno-14-109" href="#__codelineno-14-109"></a>
+<a id="__codelineno-14-110" name="__codelineno-14-110" href="#__codelineno-14-110"></a>    - SQL Server provider load అవుతుంది
+<a id="__codelineno-14-111" name="__codelineno-14-111" href="#__codelineno-14-111"></a>    - Connection String use అవుతుంది
+<a id="__codelineno-14-112" name="__codelineno-14-112" href="#__codelineno-14-112"></a>    - Database connection create అవుతుంది
+<a id="__codelineno-14-113" name="__codelineno-14-113" href="#__codelineno-14-113"></a>
+<a id="__codelineno-14-114" name="__codelineno-14-114" href="#__codelineno-14-114"></a>    ---
+<a id="__codelineno-14-115" name="__codelineno-14-115" href="#__codelineno-14-115"></a>
+<a id="__codelineno-14-116" name="__codelineno-14-116" href="#__codelineno-14-116"></a>    ## 📌 ఇది లేకపోతే?
+<a id="__codelineno-14-117" name="__codelineno-14-117" href="#__codelineno-14-117"></a>
+<a id="__codelineno-14-118" name="__codelineno-14-118" href="#__codelineno-14-118"></a>    ```csharp
+<a id="__codelineno-14-119" name="__codelineno-14-119" href="#__codelineno-14-119"></a>    public StudentDbContext()
+<a id="__codelineno-14-120" name="__codelineno-14-120" href="#__codelineno-14-120"></a>    {
+<a id="__codelineno-14-121" name="__codelineno-14-121" href="#__codelineno-14-121"></a>    }
+<a id="__codelineno-14-122" name="__codelineno-14-122" href="#__codelineno-14-122"></a>    ```
+<a id="__codelineno-14-123" name="__codelineno-14-123" href="#__codelineno-14-123"></a>
+<a id="__codelineno-14-124" name="__codelineno-14-124" href="#__codelineno-14-124"></a>    ఇలా పెడితే EF Core కి database details తెలియవు.Error వస్తుంది:
+<a id="__codelineno-14-125" name="__codelineno-14-125" href="#__codelineno-14-125"></a>
+<a id="__codelineno-14-126" name="__codelineno-14-126" href="#__codelineno-14-126"></a>    ```text
+<a id="__codelineno-14-127" name="__codelineno-14-127" href="#__codelineno-14-127"></a>       No database provider has been configured
+<a id="__codelineno-14-128" name="__codelineno-14-128" href="#__codelineno-14-128"></a>    ```
+<a id="__codelineno-14-129" name="__codelineno-14-129" href="#__codelineno-14-129"></a>    ---
+<a id="__codelineno-14-130" name="__codelineno-14-130" href="#__codelineno-14-130"></a>    ## 📌 Simple Meaning
+<a id="__codelineno-14-131" name="__codelineno-14-131" href="#__codelineno-14-131"></a>
+<a id="__codelineno-14-132" name="__codelineno-14-132" href="#__codelineno-14-132"></a>    ```text
+<a id="__codelineno-14-133" name="__codelineno-14-133" href="#__codelineno-14-133"></a>    Program.cs నుండి వచ్చిన database settings ని
+<a id="__codelineno-14-134" name="__codelineno-14-134" href="#__codelineno-14-134"></a>    parent DbContext కి పంపే constructor  
+<a id="__codelineno-14-135" name="__codelineno-14-135" href="#__codelineno-14-135"></a>
+<a id="__codelineno-14-136" name="__codelineno-14-136" href="#__codelineno-14-136"></a>   public DbSet&lt;StudentModel&gt; StudentModels { get; set; }
+<a id="__codelineno-14-137" name="__codelineno-14-137" href="#__codelineno-14-137"></a>    ## 📌 ఈ line ఉపయోగం ఏమిటి?
+<a id="__codelineno-14-138" name="__codelineno-14-138" href="#__codelineno-14-138"></a>   StudentModel` అనే class database లో ఒక table అని EF Core కి చెప్పడం. 
+<a id="__codelineno-14-139" name="__codelineno-14-139" href="#__codelineno-14-139"></a>    ## 📌 Simple Meaning
+<a id="__codelineno-14-140" name="__codelineno-14-140" href="#__codelineno-14-140"></a>
+<a id="__codelineno-14-141" name="__codelineno-14-141" href="#__codelineno-14-141"></a>    ```text
+<a id="__codelineno-14-142" name="__codelineno-14-142" href="#__codelineno-14-142"></a>    StudentModels = Database Table
+<a id="__codelineno-14-143" name="__codelineno-14-143" href="#__codelineno-14-143"></a>    ```
+<a id="__codelineno-14-144" name="__codelineno-14-144" href="#__codelineno-14-144"></a>    ## 📌 ఎందుకు అవసరం?
+<a id="__codelineno-14-145" name="__codelineno-14-145" href="#__codelineno-14-145"></a>
+<a id="__codelineno-14-146" name="__codelineno-14-146" href="#__codelineno-14-146"></a>    ఇది లేకపోతే EF Core కి table గురించి తెలియదు.
+<a id="__codelineno-14-147" name="__codelineno-14-147" href="#__codelineno-14-147"></a>    అప్పుడు ఇవి పని చేయవు:
+<a id="__codelineno-14-148" name="__codelineno-14-148" href="#__codelineno-14-148"></a>
+<a id="__codelineno-14-149" name="__codelineno-14-149" href="#__codelineno-14-149"></a>    ```csharp
+<a id="__codelineno-14-150" name="__codelineno-14-150" href="#__codelineno-14-150"></a>    _studentDbContext.StudentModels.ToList();
+<a id="__codelineno-14-151" name="__codelineno-14-151" href="#__codelineno-14-151"></a>    _studentDbContext.StudentModels.Add(student);
+<a id="__codelineno-14-152" name="__codelineno-14-152" href="#__codelineno-14-152"></a>    _studentDbContext.StudentModels.Remove(obj);
+<a id="__codelineno-14-153" name="__codelineno-14-153" href="#__codelineno-14-153"></a>    ```
+<a id="__codelineno-14-154" name="__codelineno-14-154" href="#__codelineno-14-154"></a>    ## 📌 Internally ఏమవుతుంది?
+<a id="__codelineno-14-155" name="__codelineno-14-155" href="#__codelineno-14-155"></a>
+<a id="__codelineno-14-156" name="__codelineno-14-156" href="#__codelineno-14-156"></a>    ### 1️⃣ Fetch Data
+<a id="__codelineno-14-157" name="__codelineno-14-157" href="#__codelineno-14-157"></a>    ```csharp
+<a id="__codelineno-14-158" name="__codelineno-14-158" href="#__codelineno-14-158"></a>    _studentDbContext.StudentModels.ToList();
+<a id="__codelineno-14-159" name="__codelineno-14-159" href="#__codelineno-14-159"></a>    👉 SQL గా మారుతుంది:
+<a id="__codelineno-14-160" name="__codelineno-14-160" href="#__codelineno-14-160"></a>    ```sql
+<a id="__codelineno-14-161" name="__codelineno-14-161" href="#__codelineno-14-161"></a>    SELECT * FROM studentTable
+<a id="__codelineno-14-162" name="__codelineno-14-162" href="#__codelineno-14-162"></a>    ```
+<a id="__codelineno-14-163" name="__codelineno-14-163" href="#__codelineno-14-163"></a>
+<a id="__codelineno-14-164" name="__codelineno-14-164" href="#__codelineno-14-164"></a>    ### 2️⃣ Insert Data
+<a id="__codelineno-14-165" name="__codelineno-14-165" href="#__codelineno-14-165"></a>      _studentDbContext.StudentModels.Add(student);
+<a id="__codelineno-14-166" name="__codelineno-14-166" href="#__codelineno-14-166"></a>    👉 SQL గా మారుతుంది:
+<a id="__codelineno-14-167" name="__codelineno-14-167" href="#__codelineno-14-167"></a>    ```sql
+<a id="__codelineno-14-168" name="__codelineno-14-168" href="#__codelineno-14-168"></a>    INSERT INTO studentTable
+<a id="__codelineno-14-169" name="__codelineno-14-169" href="#__codelineno-14-169"></a>    ```
+<a id="__codelineno-14-170" name="__codelineno-14-170" href="#__codelineno-14-170"></a>    ### 3️⃣ Delete Data
+<a id="__codelineno-14-171" name="__codelineno-14-171" href="#__codelineno-14-171"></a>
+<a id="__codelineno-14-172" name="__codelineno-14-172" href="#__codelineno-14-172"></a>    ```csharp
+<a id="__codelineno-14-173" name="__codelineno-14-173" href="#__codelineno-14-173"></a>    _studentDbContext.StudentModels.Remove(obj);
+<a id="__codelineno-14-174" name="__codelineno-14-174" href="#__codelineno-14-174"></a>     👉 SQL గా మారుతుంది:
+<a id="__codelineno-14-175" name="__codelineno-14-175" href="#__codelineno-14-175"></a>
+<a id="__codelineno-14-176" name="__codelineno-14-176" href="#__codelineno-14-176"></a>    ```sql
+<a id="__codelineno-14-177" name="__codelineno-14-177" href="#__codelineno-14-177"></a>    DELETE FROM studentTable
+<a id="__codelineno-14-178" name="__codelineno-14-178" href="#__codelineno-14-178"></a>    ```
+<a id="__codelineno-14-179" name="__codelineno-14-179" href="#__codelineno-14-179"></a>
+<a id="__codelineno-14-180" name="__codelineno-14-180" href="#__codelineno-14-180"></a>}
+<a id="__codelineno-14-181" name="__codelineno-14-181" href="#__codelineno-14-181"></a>
+<a id="__codelineno-14-182" name="__codelineno-14-182" href="#__codelineno-14-182"></a>
+<a id="__codelineno-14-183" name="__codelineno-14-183" href="#__codelineno-14-183"></a>🚀 STEP 5:==studentcontroler==
+<a id="__codelineno-14-184" name="__codelineno-14-184" href="#__codelineno-14-184"></a>using Microsoft.AspNetCore.Http;
+<a id="__codelineno-14-185" name="__codelineno-14-185" href="#__codelineno-14-185"></a>using Microsoft.AspNetCore.Mvc;
+<a id="__codelineno-14-186" name="__codelineno-14-186" href="#__codelineno-14-186"></a>using Tutorials.Data;
+<a id="__codelineno-14-187" name="__codelineno-14-187" href="#__codelineno-14-187"></a>using Tutorials.Models;
+<a id="__codelineno-14-188" name="__codelineno-14-188" href="#__codelineno-14-188"></a>
+<a id="__codelineno-14-189" name="__codelineno-14-189" href="#__codelineno-14-189"></a>namespace Tutorials.Controllers
+<a id="__codelineno-14-190" name="__codelineno-14-190" href="#__codelineno-14-190"></a>{
+<a id="__codelineno-14-191" name="__codelineno-14-191" href="#__codelineno-14-191"></a>    [Route(&quot;api/[controller]&quot;)]
+<a id="__codelineno-14-192" name="__codelineno-14-192" href="#__codelineno-14-192"></a>    [ApiController]
+<a id="__codelineno-14-193" name="__codelineno-14-193" href="#__codelineno-14-193"></a>    public class StudentController : ControllerBase
+<a id="__codelineno-14-194" name="__codelineno-14-194" href="#__codelineno-14-194"></a>    {
+<a id="__codelineno-14-195" name="__codelineno-14-195" href="#__codelineno-14-195"></a>        //creating the obj for dbcontext class
+<a id="__codelineno-14-196" name="__codelineno-14-196" href="#__codelineno-14-196"></a>        private readonly StudentDbContext _studentDbContext;
+<a id="__codelineno-14-197" name="__codelineno-14-197" href="#__codelineno-14-197"></a>
+<a id="__codelineno-14-198" name="__codelineno-14-198" href="#__codelineno-14-198"></a>        //initialzing the values and this is called dependency inj
+<a id="__codelineno-14-199" name="__codelineno-14-199" href="#__codelineno-14-199"></a>        public StudentController( StudentDbContext studentDbContext)
+<a id="__codelineno-14-200" name="__codelineno-14-200" href="#__codelineno-14-200"></a>        {
+<a id="__codelineno-14-201" name="__codelineno-14-201" href="#__codelineno-14-201"></a>            this._studentDbContext = studentDbContext;
+<a id="__codelineno-14-202" name="__codelineno-14-202" href="#__codelineno-14-202"></a>        }
+<a id="__codelineno-14-203" name="__codelineno-14-203" href="#__codelineno-14-203"></a>    note: above one is called dependency injection so studenDbContext loki motam records vastai
+<a id="__codelineno-14-204" name="__codelineno-14-204" href="#__codelineno-14-204"></a>
+<a id="__codelineno-14-205" name="__codelineno-14-205" href="#__codelineno-14-205"></a>        [HttpGet]
+<a id="__codelineno-14-206" name="__codelineno-14-206" href="#__codelineno-14-206"></a>        [Route(&quot;GetAllStudents&quot;)]
+<a id="__codelineno-14-207" name="__codelineno-14-207" href="#__codelineno-14-207"></a>        public List&lt;StudentModel&gt; GetStudents() { 
+<a id="__codelineno-14-208" name="__codelineno-14-208" href="#__codelineno-14-208"></a>
+<a id="__codelineno-14-209" name="__codelineno-14-209" href="#__codelineno-14-209"></a>         var list =_studentDbContext.StudentModels.ToList();
+<a id="__codelineno-14-210" name="__codelineno-14-210" href="#__codelineno-14-210"></a>            // this is like select * from table
+<a id="__codelineno-14-211" name="__codelineno-14-211" href="#__codelineno-14-211"></a>            return list;
+<a id="__codelineno-14-212" name="__codelineno-14-212" href="#__codelineno-14-212"></a>      }
+<a id="__codelineno-14-213" name="__codelineno-14-213" href="#__codelineno-14-213"></a>        [HttpPost]
+<a id="__codelineno-14-214" name="__codelineno-14-214" href="#__codelineno-14-214"></a>        public StudentModel createNewStudent(StudentModel student) { 
+<a id="__codelineno-14-215" name="__codelineno-14-215" href="#__codelineno-14-215"></a>            _studentDbContext.StudentModels.Add(student);
+<a id="__codelineno-14-216" name="__codelineno-14-216" href="#__codelineno-14-216"></a>            _studentDbContext.SaveChanges();
+<a id="__codelineno-14-217" name="__codelineno-14-217" href="#__codelineno-14-217"></a>                return student;
+<a id="__codelineno-14-218" name="__codelineno-14-218" href="#__codelineno-14-218"></a>
+<a id="__codelineno-14-219" name="__codelineno-14-219" href="#__codelineno-14-219"></a>q) what is the use of _studentDbContext.SaveChanges();
+<a id="__codelineno-14-220" name="__codelineno-14-220" href="#__codelineno-14-220"></a>Note:_studentDbContext.StudentModels.Add(student);
+<a id="__codelineno-14-221" name="__codelineno-14-221" href="#__codelineno-14-221"></a>👉 Data memory లో add అవుతుంది.
+<a id="__codelineno-14-222" name="__codelineno-14-222" href="#__codelineno-14-222"></a>
+<a id="__codelineno-14-223" name="__codelineno-14-223" href="#__codelineno-14-223"></a>కానీ ఇంకా database లో save కాలేదు. then we use
+<a id="__codelineno-14-224" name="__codelineno-14-224" href="#__codelineno-14-224"></a>_studentDbContext.SaveChanges();
+<a id="__codelineno-14-225" name="__codelineno-14-225" href="#__codelineno-14-225"></a>
+<a id="__codelineno-14-226" name="__codelineno-14-226" href="#__codelineno-14-226"></a>👉 ఇప్పుడు EF Core SQL query execute చేస్తుంది:
+<a id="__codelineno-14-227" name="__codelineno-14-227" href="#__codelineno-14-227"></a>
+<a id="__codelineno-14-228" name="__codelineno-14-228" href="#__codelineno-14-228"></a>INSERT INTO studentTable
+<a id="__codelineno-14-229" name="__codelineno-14-229" href="#__codelineno-14-229"></a>
+<a id="__codelineno-14-230" name="__codelineno-14-230" href="#__codelineno-14-230"></a>అప్పుడు మాత్రమే database లో row create అవుతుంది.
+<a id="__codelineno-14-231" name="__codelineno-14-231" href="#__codelineno-14-231"></a>        }
+<a id="__codelineno-14-232" name="__codelineno-14-232" href="#__codelineno-14-232"></a>        // PUT: api/Student/UpdateStudent?studId=1
+<a id="__codelineno-14-233" name="__codelineno-14-233" href="#__codelineno-14-233"></a>        [HttpPut]
+<a id="__codelineno-14-234" name="__codelineno-14-234" href="#__codelineno-14-234"></a>        [Route(&quot;UpdateStudent&quot;)]
+<a id="__codelineno-14-235" name="__codelineno-14-235" href="#__codelineno-14-235"></a>        public StudentModel UpdateStudent(int studId, StudentModel studentobj) //studentobj anedi dependecy 
+<a id="__codelineno-14-236" name="__codelineno-14-236" href="#__codelineno-14-236"></a>                                                    injection so here mana records motam vastadi
+<a id="__codelineno-14-237" name="__codelineno-14-237" href="#__codelineno-14-237"></a>        {
+<a id="__codelineno-14-238" name="__codelineno-14-238" href="#__codelineno-14-238"></a>            var obj = _studentDbContext.StudentModels.SingleOrDefault(x =&gt; x.studentId == studId); 
+<a id="__codelineno-14-239" name="__codelineno-14-239" href="#__codelineno-14-239"></a>                                 //this singleOrDef..method anedi is like find() method in angular
+<a id="__codelineno-14-240" name="__codelineno-14-240" href="#__codelineno-14-240"></a>            //here obj lo match aina record motam vastundi danni patch chestam
+<a id="__codelineno-14-241" name="__codelineno-14-241" href="#__codelineno-14-241"></a>            if (obj != null)
+<a id="__codelineno-14-242" name="__codelineno-14-242" href="#__codelineno-14-242"></a>            {
+<a id="__codelineno-14-243" name="__codelineno-14-243" href="#__codelineno-14-243"></a>                obj.studentName = studentobj.studentName;
+<a id="__codelineno-14-244" name="__codelineno-14-244" href="#__codelineno-14-244"></a>                obj.email = studentobj.email;
+<a id="__codelineno-14-245" name="__codelineno-14-245" href="#__codelineno-14-245"></a>                obj.phone = studentobj.phone;
+<a id="__codelineno-14-246" name="__codelineno-14-246" href="#__codelineno-14-246"></a>
+<a id="__codelineno-14-247" name="__codelineno-14-247" href="#__codelineno-14-247"></a>                _studentDbContext.SaveChanges();
+<a id="__codelineno-14-248" name="__codelineno-14-248" href="#__codelineno-14-248"></a>
+<a id="__codelineno-14-249" name="__codelineno-14-249" href="#__codelineno-14-249"></a>            }
+<a id="__codelineno-14-250" name="__codelineno-14-250" href="#__codelineno-14-250"></a>
+<a id="__codelineno-14-251" name="__codelineno-14-251" href="#__codelineno-14-251"></a>            return obj;
+<a id="__codelineno-14-252" name="__codelineno-14-252" href="#__codelineno-14-252"></a>        }
+<a id="__codelineno-14-253" name="__codelineno-14-253" href="#__codelineno-14-253"></a>
+<a id="__codelineno-14-254" name="__codelineno-14-254" href="#__codelineno-14-254"></a>        // DELETE: api/Student/DeleteStudent?studId=1
+<a id="__codelineno-14-255" name="__codelineno-14-255" href="#__codelineno-14-255"></a>        [HttpDelete]
+<a id="__codelineno-14-256" name="__codelineno-14-256" href="#__codelineno-14-256"></a>        [Route(&quot;DeleteStudent&quot;)]
+<a id="__codelineno-14-257" name="__codelineno-14-257" href="#__codelineno-14-257"></a>        public bool DeleteStudent(int studId)
+<a id="__codelineno-14-258" name="__codelineno-14-258" href="#__codelineno-14-258"></a>        {
+<a id="__codelineno-14-259" name="__codelineno-14-259" href="#__codelineno-14-259"></a>            var obj = _studentDbContext.StudentModels
+<a id="__codelineno-14-260" name="__codelineno-14-260" href="#__codelineno-14-260"></a>                .SingleOrDefault(x =&gt; x.studentId == studId);
+<a id="__codelineno-14-261" name="__codelineno-14-261" href="#__codelineno-14-261"></a>
+<a id="__codelineno-14-262" name="__codelineno-14-262" href="#__codelineno-14-262"></a>            if (obj != null)
+<a id="__codelineno-14-263" name="__codelineno-14-263" href="#__codelineno-14-263"></a>            {
+<a id="__codelineno-14-264" name="__codelineno-14-264" href="#__codelineno-14-264"></a>                _studentDbContext.StudentModels.Remove(obj);
+<a id="__codelineno-14-265" name="__codelineno-14-265" href="#__codelineno-14-265"></a>                _studentDbContext.SaveChanges();
+<a id="__codelineno-14-266" name="__codelineno-14-266" href="#__codelineno-14-266"></a>
+<a id="__codelineno-14-267" name="__codelineno-14-267" href="#__codelineno-14-267"></a>                return true;
+<a id="__codelineno-14-268" name="__codelineno-14-268" href="#__codelineno-14-268"></a>            }
+<a id="__codelineno-14-269" name="__codelineno-14-269" href="#__codelineno-14-269"></a>
+<a id="__codelineno-14-270" name="__codelineno-14-270" href="#__codelineno-14-270"></a>            return false;
+<a id="__codelineno-14-271" name="__codelineno-14-271" href="#__codelineno-14-271"></a>        }
+<a id="__codelineno-14-272" name="__codelineno-14-272" href="#__codelineno-14-272"></a>    }
+<a id="__codelineno-14-273" name="__codelineno-14-273" href="#__codelineno-14-273"></a>}
+</code></pre></div>
+<h3 id="exapmple">exapmple</h3>
+<details class="note" open="open">
+<summary>ASP.NET Core Web API + Entity Framework Core (తెలుగు Explanation)</summary>
+<h2 id="step-1-model-class-create">🚀 STEP 1: Model Class Create చేయడం</h2>
+<p>📄 File: <code>Models/StudentModel.cs</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="na">[Table(&quot;studentTable&quot;)]</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">StudentModel</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">{</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="na">[Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">studentId</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">studentName</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">phone</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="_1">📌 దీని ఉపయోగం ఏమిటి?</h2>
+<p>👉 ఇది database table structure ని represent చేస్తుంది.</p>
+<p>Example:</p>
+<table>
+<thead>
+<tr>
+<th>studentId</th>
+<th>studentName</th>
+<th>email</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Ravi</td>
+<td>ravi@gmail.com</td>
+</tr>
+</tbody>
+</table>
+<p>👉 Table లో ఒక row ని represent చేసేది <code>StudentModel</code></p>
+<hr />
+<h2 id="step-2-dbcontext-create">🚀 STEP 2: DbContext Create చేయడం</h2>
+<p>📄 File: <code>Data/StudentDbContext.cs</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.EntityFrameworkCore</span><span class="p">;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">Tutorials.Models</span><span class="p">;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Tutorials.Data</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">{</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">StudentDbContext</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DbContext</span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">StudentDbContext</span><span class="p">(</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">            </span><span class="n">DbContextOptions</span><span class="o">&lt;</span><span class="n">StudentDbContext</span><span class="o">&gt;</span><span class="w"> </span><span class="n">options</span><span class="p">)</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="k">base</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">DbSet</span><span class="o">&lt;</span><span class="n">StudentModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">StudentModels</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-16-16" name="__codelineno-16-16" href="#__codelineno-16-16"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="dbcontext">📌 DbContext అంటే ఏమిటి?</h2>
+<p>👉 <code>DbContext</code> అనేది:</p>
+<ul>
+<li>Application</li>
+<li>SQL Server Database</li>
+</ul>
+<p>మధ్య bridge లాగా పని చేస్తుంది.</p>
+<hr />
+<h2 id="dbset">📌 DbSet అంటే ఏమిటి?</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">public</span><span class="w"> </span><span class="n">DbSet</span><span class="o">&lt;</span><span class="n">StudentModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">StudentModels</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+</code></pre></div>
+<p>👉 దీని అర్థం:</p>
+<p><code>"StudentModel అనే class database లో ఒక table"</code></p>
+<p>అని EF Core కి చెప్పడం.</p>
+<hr />
+<h2 id="example_1">📌 Example</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="n">_studentDbContext</span><span class="p">.</span><span class="n">StudentModels</span><span class="p">.</span><span class="n">ToList</span><span class="p">();</span>
+</code></pre></div>
+<p>👉 Internally ఇది SQL గా మారుతుంది:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">studentTable</span>
+</code></pre></div>
+<hr />
+<h2 id="step-3-connection-string">🚀 STEP 3: Connection String ఇవ్వడం</h2>
+<p>📄 File: <code>appsettings.json</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">{</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="nt">&quot;DefaultConnection&quot;</span><span class="p">:</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">    </span><span class="s2">&quot;Server=DESKTOP-1O6861N\\SQLEXPRESS;</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="s2">     Database=StudentMasterDb;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="s2">     Trusted_Connection=True&quot;</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="_2">📌 దీని ఉపయోగం</h2>
+<p>👉 Application కి చెప్తుంది:</p>
+<ul>
+<li>ఏ SQL Server?</li>
+<li>ఏ Database?</li>
+<li>ఎలా connect అవ్వాలి?</li>
+</ul>
+<hr />
+<h2 id="step-4-programcs-configuration">🚀 STEP 4: Program.cs Configuration</h2>
+<p>📄 File: <code>Program.cs</code></p>
+<hr />
+<h2 id="line">📌 ఈ line ఉపయోగం ఏమిటి?</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="o">&lt;</span><span class="n">StudentDbContext</span><span class="o">&gt;</span><span class="p">(</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="w">    </span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">UseSqlServer</span><span class="p">(</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Configuration</span><span class="p">.</span><span class="n">GetConnectionString</span><span class="p">(</span><span class="s">&quot;DefaultConnection&quot;</span><span class="p">)));</span>
+</code></pre></div>
+<p>👉 ఈ line చాలా important.</p>
+<p>ఇది ASP.NET Core application కి:</p>
+<ul>
+<li>SQL Server database ని ఉపయోగించాలి</li>
+<li>StudentDbContext ని dependency injection ద్వారా create చేయాలి</li>
+</ul>
+<p>అని చెప్తుంది.</p>
+<hr />
+<h2 id="step-by-step-explanation">📌 Step-by-Step Explanation</h2>
+<h3 id="1-builderservices">1️⃣ builder.Services</h3>
+<p>👉 ఇది application services collection.</p>
+<p>ఇక్కడ మనం:</p>
+<ul>
+<li>Database services</li>
+<li>Authentication</li>
+<li>Controllers</li>
+<li>Swagger</li>
+</ul>
+<p>లాంటివి register చేస్తాం.</p>
+<hr />
+<h3 id="2-adddbcontext">2️⃣ AddDbContext<StudentDbContext>()</h3>
+<p>👉 ఇది:</p>
+<p><code>StudentDbContext</code></p>
+<p>అనే class ని application కి register చేస్తుంది.</p>
+<p>అంటే:</p>
+<p><code>"ఎవరైనా StudentDbContext అడిగితే object create చేసి ఇవ్వు"</code></p>
+<p>అని ASP.NET Core కి చెప్పడం.</p>
+<hr />
+<h3 id="3-dependency-injection">3️⃣ Dependency Injection ఎలా పని చేస్తుంది?</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">public</span><span class="w"> </span><span class="nf">StudentController</span><span class="p">(</span><span class="n">StudentDbContext</span><span class="w"> </span><span class="n">studentDbContext</span><span class="p">)</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="p">{</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="n">_studentDbContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">studentDbContext</span><span class="p">;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="p">}</span>
+</code></pre></div>
+<p>👉 మీరు object create చేయలేదు.</p>
+<p>కానీ ASP.NET Core automatically create చేసి పంపుతుంది.</p>
+<p>ఎందుకు?</p>
+<p>ఈ line వల్ల:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="o">&lt;</span><span class="n">StudentDbContext</span><span class="o">&gt;</span><span class="p">()</span>
+</code></pre></div>
+<hr />
+<h3 id="4-options">4️⃣ options =&gt;</h3>
+<p>👉 ఇది lambda expression.</p>
+<p>అంటే:</p>
+<p><code>options</code></p>
+<p>లో database configuration settings ఉంటాయి.</p>
+<hr />
+<h3 id="5-usesqlserver">5️⃣ UseSqlServer()</h3>
+<p>👉 ఇది EF Core కి:</p>
+<p><code>"మన database SQL Server"</code></p>
+<p>అని చెప్తుంది.</p>
+<p>ఇంకా:</p>
+<ul>
+<li>MySQL</li>
+<li>PostgreSQL</li>
+<li>SQLite</li>
+</ul>
+<p>కూడా use చేయవచ్చు.</p>
+<hr />
+<h3 id="6-getconnectionstringdefaultconnection">6️⃣ GetConnectionString("DefaultConnection")</h3>
+<p>👉 ఇది <code>appsettings.json</code> నుండి connection string తీసుకుంటుంది.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="w">  </span><span class="nt">&quot;DefaultConnection&quot;</span><span class="p">:</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="w">  </span><span class="s2">&quot;Server=DESKTOP-1O6861N\\SQLEXPRESS;</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="s2">   Database=StudentMasterDb;</span>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="s2">   Trusted_Connection=True;&quot;</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="p">}</span>
+</code></pre></div>
+<p>👉 ఇక్కడ:</p>
+<p><code>DefaultConnection</code></p>
+<p>అనే name ఉంది.</p>
+<p>అదే name code లో use చేస్తున్నారు.</p>
+<hr />
+<h2 id="step-5-get-api">🚀 STEP 5: GET API</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="na">[HttpGet]</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a><span class="k">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">StudentModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetStudents</span><span class="p">()</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="p">{</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4" href="#__codelineno-25-4"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">_studentDbContext</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5" href="#__codelineno-25-5"></a><span class="w">        </span><span class="p">.</span><span class="n">StudentModels</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6" href="#__codelineno-25-6"></a><span class="w">        </span><span class="p">.</span><span class="n">ToList</span><span class="p">();</span>
+<a id="__codelineno-25-7" name="__codelineno-25-7" href="#__codelineno-25-7"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="internally">📌 Internally ఏమవుతుంది?</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a>Swagger Request
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>     ↓
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a>Controller Method
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a>     ↓
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a>EF Core
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a>     ↓
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a>SELECT * FROM studentTable
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a>     ↓
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a>Data JSON రూపంలో వస్తుంది
+</code></pre></div>
+<hr />
+<h2 id="step-6-post-api">🚀 STEP 6: POST API</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="na">[HttpPost]</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="k">public</span><span class="w"> </span><span class="n">StudentModel</span><span class="w"> </span><span class="nf">CreateNewStudent</span><span class="p">(</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="w">    </span><span class="n">StudentModel</span><span class="w"> </span><span class="n">student</span><span class="p">)</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a><span class="p">{</span>
+<a id="__codelineno-27-5" name="__codelineno-27-5" href="#__codelineno-27-5"></a><span class="w">    </span><span class="n">_studentDbContext</span><span class="p">.</span><span class="n">StudentModels</span><span class="p">.</span><span class="n">Add</span><span class="p">(</span><span class="n">student</span><span class="p">);</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6" href="#__codelineno-27-6"></a>
+<a id="__codelineno-27-7" name="__codelineno-27-7" href="#__codelineno-27-7"></a><span class="w">    </span><span class="n">_studentDbContext</span><span class="p">.</span><span class="n">SaveChanges</span><span class="p">();</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8" href="#__codelineno-27-8"></a>
+<a id="__codelineno-27-9" name="__codelineno-27-9" href="#__codelineno-27-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">student</span><span class="p">;</span>
+<a id="__codelineno-27-10" name="__codelineno-27-10" href="#__codelineno-27-10"></a><span class="p">}</span>
+</code></pre></div>
+<hr />
+<h2 id="internally_1">📌 Internally ఏమవుతుంది?</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">studentTable</span>
+</code></pre></div>
+<p>👉 New row database లో save అవుతుంది.</p>
+<hr />
+<h2 id="step-7-update-api">🚀 STEP 7: UPDATE API</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="kt">var</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_studentDbContext</span><span class="p">.</span><span class="n">StudentModels</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">    </span><span class="p">.</span><span class="n">SingleOrDefault</span><span class="p">(</span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">        </span><span class="n">x</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">x</span><span class="p">.</span><span class="n">studentId</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">studId</span><span class="p">);</span>
+</code></pre></div>
+<p>👉 Existing row fetch చేస్తుంది.</p>
+<p>తర్వాత:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">obj</span><span class="p">.</span><span class="n">studentName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">studentobj</span><span class="p">.</span><span class="n">studentName</span><span class="p">;</span>
+</code></pre></div>
+<p>👉 values update అవుతాయి.</p>
+<p>తర్వాత:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="n">_studentDbContext</span><span class="p">.</span><span class="n">SaveChanges</span><span class="p">();</span>
+</code></pre></div>
+<p>👉 SQL UPDATE query execute అవుతుంది.</p>
+<hr />
+<h2 id="step-8-delete-api">🚀 STEP 8: DELETE API</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">_studentDbContext</span><span class="p">.</span><span class="n">StudentModels</span><span class="p">.</span><span class="n">Remove</span><span class="p">(</span><span class="n">obj</span><span class="p">);</span>
+</code></pre></div>
+<p>👉 Internally ఇది:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">studentTable</span>
+</code></pre></div>
+<p>execute చేస్తుంది.</p>
+<hr />
+<h2 id="extra-spaces">🚀 Extra Spaces ఎందుకు వస్తున్నాయి?</h2>
+<p>Swagger లో ఇలా కనిపిస్తే:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nt">&quot;studentName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ravi     &quot;</span>
+</code></pre></div>
+<p>👉 కారణం:</p>
+<p>Database column type:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nb">CHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+<p><code>CHAR</code> fixed length కావడం వల్ల spaces add చేస్తుంది.</p>
+<hr />
+<h2 id="correct-fix">✅ Correct Fix</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">studentTable</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">studentName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">);</span>
+</code></pre></div>
+<p>లేదా:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="n">NVARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+</code></pre></div>
+<p>use చేయండి.</p>
+<hr />
+<h2 id="full-architecture-flow">🚀 Full Architecture Flow</h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>Swagger
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>   ↓
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>Controller
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>   ↓
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>DbContext
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>   ↓
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>Entity Framework Core
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>   ↓
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>SQL Server
+<a id="__codelineno-38-10" name="__codelineno-38-10" href="#__codelineno-38-10"></a>   ↓
+<a id="__codelineno-38-11" name="__codelineno-38-11" href="#__codelineno-38-11"></a>Database Table
+</code></pre></div>
+<hr />
+<h2 id="final-summary">✅ Final Summary</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Model</td>
+<td>Table structure</td>
+</tr>
+<tr>
+<td>DbContext</td>
+<td>Database manager</td>
+</tr>
+<tr>
+<td>DbSet</td>
+<td>Table access</td>
+</tr>
+<tr>
+<td>Controller</td>
+<td>API logic</td>
+</tr>
+<tr>
+<td>EF Core</td>
+<td>Converts C# to SQL</td>
+</tr>
+<tr>
+<td>SaveChanges()</td>
+<td>Executes SQL</td>
+</tr>
+<tr>
+<td>Dependency Injection</td>
+<td>Automatic object creation</td>
+</tr>
+</tbody>
+</table>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../customWord.js"></script>
+      
+    
+  </body>
+</html>
