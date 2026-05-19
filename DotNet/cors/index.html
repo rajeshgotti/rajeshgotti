@@ -2949,21 +2949,20 @@
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>var app = builder.Build();
 <a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>// Configure the HTTP request pipeline.
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>if (app.Environment.IsDevelopment())
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>{
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    app.UseSwagger();
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    app.UseSwaggerUI();
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>}
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>app.UseHttpsRedirection();
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>// 3.ADD THIS LINE this should be above authorization
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>app.UseCors(&quot;AllowAngularClient&quot;);
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>app.UseAuthorization();
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>app.MapControllers();
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>app.Run();
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>if (app.Environment.IsDevelopment())
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>{
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    app.UseSwagger();
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    app.UseSwaggerUI();
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>}
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>app.UseHttpsRedirection();
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>app.UseCors(&quot;AllowAngularClient&quot;);// 3.ADD THIS LINE this should be above authorization
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>app.UseAuthorization();
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>app.MapControllers();
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>app.Run();
 </code></pre></div>
 
 
