@@ -1,0 +1,4008 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../validations/">
+      
+      
+        <link rel="next" href="../../mk_docs/mkdocs/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>falconServices - Rajesh Angular Document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../customWord.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#save-registration" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rajesh Angular Document" class="md-header__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rajesh Angular Document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              falconServices
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../angular/viewEncapsulation/" class="md-tabs__link">
+          
+  
+  
+  Angular
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../clickEvent/clickEvent/" class="md-tabs__link">
+          
+  
+  
+  ClickEvent
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Ag-grid/ag-grid/" class="md-tabs__link">
+          
+  
+  
+  AG- GRID
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Methods/arrayMethods/" class="md-tabs__link">
+          
+  
+  
+  Methods
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dropDowns/AllSelect/" class="md-tabs__link">
+          
+  
+  
+  DropDowns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../material/matSelect/" class="md-tabs__link">
+          
+  
+  
+  Material
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Only-images/onlyimages/" class="md-tabs__link">
+          
+  
+  
+  ONLY IMAGES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../files/file/" class="md-tabs__link">
+          
+  
+  
+  PDF Files
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../creatingAngular/createangular/" class="md-tabs__link">
+          
+  
+  
+  CreateNewProject
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../falconCrud/" class="md-tabs__link">
+          
+  
+  
+  Crud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mk_docs/mkdocs/" class="md-tabs__link">
+          
+  
+  
+  mk_docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tasks/tasks/" class="md-tabs__link">
+          
+  
+  
+  Tasks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../DotNet/mysql2/" class="md-tabs__link">
+          
+  
+  
+  DotNet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Css/css/" class="md-tabs__link">
+          
+  
+  
+  Css
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rajesh Angular Document" class="md-nav__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Rajesh Angular Document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Angular
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Angular
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewEncapsulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encapsulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/binding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OutPut
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewchild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ViewChild
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/custompipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomPipe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/Directive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Directive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/customDirective/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomDirective
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/reactiveForm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReactiveForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/templateDrivenform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TemplateDrivenForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/formarray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FormArray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/customValidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomValidator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/componentStructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ComponentStructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/behaviour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BehaviourSubject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/forkJoin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ForkJoin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/localStorage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LocalStorage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/lifeCycleHooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LifeCycleHooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/ngrxStore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NGRX(Store)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ClickEvent
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ClickEvent
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/clickEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ClickEvent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/matdilog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatDialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/swal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SwalFire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/shortcutkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ShortCutKeys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AG- GRID
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            AG- GRID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/ag-grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AG-Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/cellrender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CellRender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/searchFilter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SearchFilter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Methods
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Methods
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/arrayMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ArrayMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/stringMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    StringMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/objectMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ObjectMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DropDowns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            DropDowns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/AllSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    selectAll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/matSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    matSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/ngselect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ngSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/matAutoSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    matAutoSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/debounceTime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    debounceTime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Material
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Material
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/autoComplete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatAutoComplete
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matFormField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatFormField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matexpansion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatExpansionalPanel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matdialog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatDialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/popup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PopUp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/date/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Date
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/sidenav/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SideNav
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ONLY IMAGES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            ONLY IMAGES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Only-images/onlyimages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PDF Files
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            PDF Files
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CreateNewProject
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            CreateNewProject
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creatingAngular/createangular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NewProject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Crud
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Crud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../falconCrud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RealTimeCrud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CrudJsonServer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crudWithValidation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CrudWithReactiveValidation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TemplateDriven/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TemplateDrivenFormValidation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../validations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    falconServices
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    falconServices
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#save-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      save Registration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registration-dropdowns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration DropDowns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visit-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      visit save
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    mk_docs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            mk_docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mk_docs/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mk_Docs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mk_docs/consoletab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConsoleTab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tasks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/SSN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/conditionInHtml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConditionInHtml
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/NoramSearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NormalSearch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/SelectAll/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SelectAll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DotNet
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            DotNet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DotNet/mysql2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sql
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DotNet/mysql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    storeProcedure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DotNet/crudExplantionTelugu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    crudExpanTelugu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DotNet/cors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    corsError
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DotNet/Crud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../DotNet/FullStackCrud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FullStackCrud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Css
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Css
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Css/css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    css
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Css/Others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Others
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#save-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      save Registration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#registration-dropdowns" class="md-nav__link">
+    <span class="md-ellipsis">
+      Registration DropDowns
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visit-save" class="md-nav__link">
+    <span class="md-ellipsis">
+      visit save
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+  <h1>falconServices</h1>
+
+<h3 id="save-registration">save Registration</h3>
+<details class="note">
+<summary>Patient Registration Save JSON Design</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;patientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">&quot;prefix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mr&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">&quot;firstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">&quot;middleName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">&quot;lastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">&quot;suffix&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jr&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">&quot;dob&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-05-14T00:00:00&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">&quot;age&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">25</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">&quot;gender&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">&quot;genderIdentity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Male&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">&quot;phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9876543210&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">  </span><span class="nt">&quot;maritalStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Single&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;johnsmith@gmail.com&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">  </span><span class="nt">&quot;primarycare&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dr.Robert&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">  </span><span class="nt">&quot;patientNameToUse&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Smith&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nt">&quot;race&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Asian&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="nt">&quot;ethnicity&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Indian&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">  </span><span class="nt">&quot;region&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;South&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">  </span><span class="nt">&quot;preferLanguage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;English&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">  </span><span class="nt">&quot;employeeName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ABC Company&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">  </span><span class="nt">&quot;employePhone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;9876543211&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">  </span><span class="nt">&quot;address1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Street 1&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">  </span><span class="nt">&quot;address2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Near Main Road&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">  </span><span class="nt">&quot;city&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Hyderabad&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="nt">&quot;state&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Telangana&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">  </span><span class="nt">&quot;country&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;India&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">  </span><span class="nt">&quot;zip&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;500001&quot;</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">}</span>
+</code></pre></div>
+</details>
+<h3 id="registration-dropdowns">Registration DropDowns</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>==gender==
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>[
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    {
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        &quot;genderIdentifyId&quot;: 1,
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        &quot;snomedctCode&quot;: &quot;446151000124109&quot;,
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>        &quot;description&quot;: &quot;Male&quot;
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    },
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    {
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>        &quot;genderIdentifyId&quot;: 2,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>        &quot;snomedctCode&quot;: &quot;446141000124107&quot;,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>        &quot;description&quot;: &quot;Female&quot;
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    }
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>]
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>===sex==
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>[
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    {
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>        &quot;administrativeSexId&quot;: 1,
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>        &quot;conceptCode&quot;: &quot;A&quot;,
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>        &quot;conceptName&quot;: &quot;Ambiguous&quot;,
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>        &quot;preferredConceptName&quot;: null,
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        &quot;codeSystemOID&quot;: null,
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>        &quot;hl7Code&quot;: null
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>    },
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>    {
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>        &quot;administrativeSexId&quot;: 2,
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>        &quot;conceptCode&quot;: &quot;F&quot;,
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>        &quot;conceptName&quot;: &quot;Female&quot;,
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>        &quot;preferredConceptName&quot;: null,
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>        &quot;codeSystemOID&quot;: null,
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>        &quot;hl7Code&quot;: null
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>    },
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>    {
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>        &quot;administrativeSexId&quot;: 3,
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>        &quot;conceptCode&quot;: &quot;M&quot;,
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>        &quot;conceptName&quot;: &quot;Male&quot;,
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>        &quot;preferredConceptName&quot;: null,
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>        &quot;codeSystemOID&quot;: null,
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>        &quot;hl7Code&quot;: null
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>    }
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>]
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>===ethnicity==
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>[
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>    {
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>        &quot;religionId&quot;: 1,
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>        &quot;conceptCode&quot;: &quot;AGN&quot;,
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>        &quot;conceptName&quot;: &quot;Agnostic&quot;,
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>        &quot;preferredConceptName&quot;: null,
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>        &quot;codeSystemOID&quot;: null,
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>        &quot;hl7Code&quot;: null
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>    }
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>]
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>==maritalstatus==
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>[
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>    {
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>        &quot;maritalStatusId&quot;: 3,
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>        &quot;conceptCode&quot;: &quot;D&quot;,
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>        &quot;conceptName&quot;: &quot;Divorced&quot;,
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>        &quot;preferredConceptName&quot;: &quot;Divorced&quot;,
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.2&quot;,
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>        &quot;hl7Code&quot;: &quot;HL70002&quot;
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>    },
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>    {
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>        &quot;maritalStatusId&quot;: 8,
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>        &quot;conceptCode&quot;: &quot;M&quot;,
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>        &quot;conceptName&quot;: &quot;Married&quot;,
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>        &quot;preferredConceptName&quot;: &quot;Married&quot;,
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.2&quot;,
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>        &quot;hl7Code&quot;: &quot;HL70002&quot;
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>    },
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>    {
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>        &quot;maritalStatusId&quot;: 11,
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>        &quot;conceptCode&quot;: &quot;A&quot;,
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>        &quot;conceptName&quot;: &quot;Separated&quot;,
+<a id="__codelineno-1-74" name="__codelineno-1-74" href="#__codelineno-1-74"></a>        &quot;preferredConceptName&quot;: &quot;Separated&quot;,
+<a id="__codelineno-1-75" name="__codelineno-1-75" href="#__codelineno-1-75"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.2&quot;,
+<a id="__codelineno-1-76" name="__codelineno-1-76" href="#__codelineno-1-76"></a>        &quot;hl7Code&quot;: &quot;HL70002&quot;
+<a id="__codelineno-1-77" name="__codelineno-1-77" href="#__codelineno-1-77"></a>    },
+<a id="__codelineno-1-78" name="__codelineno-1-78" href="#__codelineno-1-78"></a>    {
+<a id="__codelineno-1-79" name="__codelineno-1-79" href="#__codelineno-1-79"></a>        &quot;maritalStatusId&quot;: 12,
+<a id="__codelineno-1-80" name="__codelineno-1-80" href="#__codelineno-1-80"></a>        &quot;conceptCode&quot;: &quot;S&quot;,
+<a id="__codelineno-1-81" name="__codelineno-1-81" href="#__codelineno-1-81"></a>        &quot;conceptName&quot;: &quot;Single&quot;,
+<a id="__codelineno-1-82" name="__codelineno-1-82" href="#__codelineno-1-82"></a>        &quot;preferredConceptName&quot;: &quot;Single&quot;,
+<a id="__codelineno-1-83" name="__codelineno-1-83" href="#__codelineno-1-83"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.2&quot;,
+<a id="__codelineno-1-84" name="__codelineno-1-84" href="#__codelineno-1-84"></a>        &quot;hl7Code&quot;: &quot;HL70002&quot;
+<a id="__codelineno-1-85" name="__codelineno-1-85" href="#__codelineno-1-85"></a>    },
+<a id="__codelineno-1-86" name="__codelineno-1-86" href="#__codelineno-1-86"></a>    {
+<a id="__codelineno-1-87" name="__codelineno-1-87" href="#__codelineno-1-87"></a>        &quot;maritalStatusId&quot;: 13,
+<a id="__codelineno-1-88" name="__codelineno-1-88" href="#__codelineno-1-88"></a>        &quot;conceptCode&quot;: &quot;U&quot;,
+<a id="__codelineno-1-89" name="__codelineno-1-89" href="#__codelineno-1-89"></a>        &quot;conceptName&quot;: &quot;Unknown&quot;,
+<a id="__codelineno-1-90" name="__codelineno-1-90" href="#__codelineno-1-90"></a>        &quot;preferredConceptName&quot;: &quot;Unknown&quot;,
+<a id="__codelineno-1-91" name="__codelineno-1-91" href="#__codelineno-1-91"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.2&quot;,
+<a id="__codelineno-1-92" name="__codelineno-1-92" href="#__codelineno-1-92"></a>        &quot;hl7Code&quot;: &quot;HL70002&quot;
+<a id="__codelineno-1-93" name="__codelineno-1-93" href="#__codelineno-1-93"></a>    },
+<a id="__codelineno-1-94" name="__codelineno-1-94" href="#__codelineno-1-94"></a>    {
+<a id="__codelineno-1-95" name="__codelineno-1-95" href="#__codelineno-1-95"></a>        &quot;maritalStatusId&quot;: 16,
+<a id="__codelineno-1-96" name="__codelineno-1-96" href="#__codelineno-1-96"></a>        &quot;conceptCode&quot;: &quot;W&quot;,
+<a id="__codelineno-1-97" name="__codelineno-1-97" href="#__codelineno-1-97"></a>        &quot;conceptName&quot;: &quot;Widowed&quot;,
+<a id="__codelineno-1-98" name="__codelineno-1-98" href="#__codelineno-1-98"></a>        &quot;preferredConceptName&quot;: &quot;Widowed&quot;,
+<a id="__codelineno-1-99" name="__codelineno-1-99" href="#__codelineno-1-99"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.2&quot;,
+<a id="__codelineno-1-100" name="__codelineno-1-100" href="#__codelineno-1-100"></a>        &quot;hl7Code&quot;: &quot;HL70002&quot;
+<a id="__codelineno-1-101" name="__codelineno-1-101" href="#__codelineno-1-101"></a>    }
+<a id="__codelineno-1-102" name="__codelineno-1-102" href="#__codelineno-1-102"></a>]
+<a id="__codelineno-1-103" name="__codelineno-1-103" href="#__codelineno-1-103"></a>==language=
+<a id="__codelineno-1-104" name="__codelineno-1-104" href="#__codelineno-1-104"></a>[
+<a id="__codelineno-1-105" name="__codelineno-1-105" href="#__codelineno-1-105"></a>    {
+<a id="__codelineno-1-106" name="__codelineno-1-106" href="#__codelineno-1-106"></a>        &quot;oidId&quot;: 1066,
+<a id="__codelineno-1-107" name="__codelineno-1-107" href="#__codelineno-1-107"></a>        &quot;oidCode&quot;: &quot;ar&quot;,
+<a id="__codelineno-1-108" name="__codelineno-1-108" href="#__codelineno-1-108"></a>        &quot;oidCodeSet&quot;: &quot;2.16.840.1.113883.6.121&quot;,
+<a id="__codelineno-1-109" name="__codelineno-1-109" href="#__codelineno-1-109"></a>        &quot;shortDescription&quot;: &quot;Arabic&quot;
+<a id="__codelineno-1-110" name="__codelineno-1-110" href="#__codelineno-1-110"></a>    },
+<a id="__codelineno-1-111" name="__codelineno-1-111" href="#__codelineno-1-111"></a>    {
+<a id="__codelineno-1-112" name="__codelineno-1-112" href="#__codelineno-1-112"></a>        &quot;oidId&quot;: 1242,
+<a id="__codelineno-1-113" name="__codelineno-1-113" href="#__codelineno-1-113"></a>        &quot;oidCode&quot;: &quot;zh&quot;,
+<a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a>        &quot;oidCodeSet&quot;: &quot;2.16.840.1.113883.6.121&quot;,
+<a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a>        &quot;shortDescription&quot;: &quot;Chinese&quot;
+<a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a>    },
+<a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a>    {
+<a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a>        &quot;oidId&quot;: 1096,
+<a id="__codelineno-1-119" name="__codelineno-1-119" href="#__codelineno-1-119"></a>        &quot;oidCode&quot;: &quot;en&quot;,
+<a id="__codelineno-1-120" name="__codelineno-1-120" href="#__codelineno-1-120"></a>        &quot;oidCodeSet&quot;: &quot;2.16.840.1.113883.6.121&quot;,
+<a id="__codelineno-1-121" name="__codelineno-1-121" href="#__codelineno-1-121"></a>        &quot;shortDescription&quot;: &quot;English&quot;
+<a id="__codelineno-1-122" name="__codelineno-1-122" href="#__codelineno-1-122"></a>    },
+<a id="__codelineno-1-123" name="__codelineno-1-123" href="#__codelineno-1-123"></a>    {
+<a id="__codelineno-1-124" name="__codelineno-1-124" href="#__codelineno-1-124"></a>        &quot;oidId&quot;: 1106,
+<a id="__codelineno-1-125" name="__codelineno-1-125" href="#__codelineno-1-125"></a>        &quot;oidCode&quot;: &quot;fr&quot;,
+<a id="__codelineno-1-126" name="__codelineno-1-126" href="#__codelineno-1-126"></a>        &quot;oidCodeSet&quot;: &quot;2.16.840.1.113883.6.121&quot;,
+<a id="__codelineno-1-127" name="__codelineno-1-127" href="#__codelineno-1-127"></a>        &quot;shortDescription&quot;: &quot;French&quot;
+<a id="__codelineno-1-128" name="__codelineno-1-128" href="#__codelineno-1-128"></a>    },
+<a id="__codelineno-1-129" name="__codelineno-1-129" href="#__codelineno-1-129"></a>    {
+<a id="__codelineno-1-130" name="__codelineno-1-130" href="#__codelineno-1-130"></a>        &quot;oidId&quot;: 14618,
+<a id="__codelineno-1-131" name="__codelineno-1-131" href="#__codelineno-1-131"></a>        &quot;oidCode&quot;: &quot;o&quot;,
+<a id="__codelineno-1-132" name="__codelineno-1-132" href="#__codelineno-1-132"></a>        &quot;oidCodeSet&quot;: null,
+<a id="__codelineno-1-133" name="__codelineno-1-133" href="#__codelineno-1-133"></a>        &quot;shortDescription&quot;: &quot;OTHER&quot;
+<a id="__codelineno-1-134" name="__codelineno-1-134" href="#__codelineno-1-134"></a>    },
+<a id="__codelineno-1-135" name="__codelineno-1-135" href="#__codelineno-1-135"></a>    {
+<a id="__codelineno-1-136" name="__codelineno-1-136" href="#__codelineno-1-136"></a>        &quot;oidId&quot;: 1098,
+<a id="__codelineno-1-137" name="__codelineno-1-137" href="#__codelineno-1-137"></a>        &quot;oidCode&quot;: &quot;es&quot;,
+<a id="__codelineno-1-138" name="__codelineno-1-138" href="#__codelineno-1-138"></a>        &quot;oidCodeSet&quot;: &quot;2.16.840.1.113883.6.121&quot;,
+<a id="__codelineno-1-139" name="__codelineno-1-139" href="#__codelineno-1-139"></a>        &quot;shortDescription&quot;: &quot;Spanish; Castilian&quot;
+<a id="__codelineno-1-140" name="__codelineno-1-140" href="#__codelineno-1-140"></a>    },
+<a id="__codelineno-1-141" name="__codelineno-1-141" href="#__codelineno-1-141"></a>    {
+<a id="__codelineno-1-142" name="__codelineno-1-142" href="#__codelineno-1-142"></a>        &quot;oidId&quot;: 1234,
+<a id="__codelineno-1-143" name="__codelineno-1-143" href="#__codelineno-1-143"></a>        &quot;oidCode&quot;: &quot;vi&quot;,
+<a id="__codelineno-1-144" name="__codelineno-1-144" href="#__codelineno-1-144"></a>        &quot;oidCodeSet&quot;: &quot;2.16.840.1.113883.6.121&quot;,
+<a id="__codelineno-1-145" name="__codelineno-1-145" href="#__codelineno-1-145"></a>        &quot;shortDescription&quot;: &quot;Vietnamese&quot;
+<a id="__codelineno-1-146" name="__codelineno-1-146" href="#__codelineno-1-146"></a>    }
+<a id="__codelineno-1-147" name="__codelineno-1-147" href="#__codelineno-1-147"></a>]
+<a id="__codelineno-1-148" name="__codelineno-1-148" href="#__codelineno-1-148"></a>==race==
+<a id="__codelineno-1-149" name="__codelineno-1-149" href="#__codelineno-1-149"></a>[
+<a id="__codelineno-1-150" name="__codelineno-1-150" href="#__codelineno-1-150"></a>    {
+<a id="__codelineno-1-151" name="__codelineno-1-151" href="#__codelineno-1-151"></a>        &quot;conceptCode&quot;: &quot;1002-5&quot;,
+<a id="__codelineno-1-152" name="__codelineno-1-152" href="#__codelineno-1-152"></a>        &quot;conceptName&quot;: &quot;American Indian or Alaska Native&quot;,
+<a id="__codelineno-1-153" name="__codelineno-1-153" href="#__codelineno-1-153"></a>        &quot;preferredConceptName&quot;: &quot;American Indian or Alaska Native&quot;,
+<a id="__codelineno-1-154" name="__codelineno-1-154" href="#__codelineno-1-154"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.5&quot;,
+<a id="__codelineno-1-155" name="__codelineno-1-155" href="#__codelineno-1-155"></a>        &quot;hl7Code&quot;: &quot;HL70005&quot;
+<a id="__codelineno-1-156" name="__codelineno-1-156" href="#__codelineno-1-156"></a>    },
+<a id="__codelineno-1-157" name="__codelineno-1-157" href="#__codelineno-1-157"></a>    {
+<a id="__codelineno-1-158" name="__codelineno-1-158" href="#__codelineno-1-158"></a>        &quot;conceptCode&quot;: &quot;2028-9&quot;,
+<a id="__codelineno-1-159" name="__codelineno-1-159" href="#__codelineno-1-159"></a>        &quot;conceptName&quot;: &quot;Asian&quot;,
+<a id="__codelineno-1-160" name="__codelineno-1-160" href="#__codelineno-1-160"></a>        &quot;preferredConceptName&quot;: &quot;Asian&quot;,
+<a id="__codelineno-1-161" name="__codelineno-1-161" href="#__codelineno-1-161"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.5&quot;,
+<a id="__codelineno-1-162" name="__codelineno-1-162" href="#__codelineno-1-162"></a>        &quot;hl7Code&quot;: &quot;HL70005&quot;
+<a id="__codelineno-1-163" name="__codelineno-1-163" href="#__codelineno-1-163"></a>    },
+<a id="__codelineno-1-164" name="__codelineno-1-164" href="#__codelineno-1-164"></a>    {
+<a id="__codelineno-1-165" name="__codelineno-1-165" href="#__codelineno-1-165"></a>        &quot;conceptCode&quot;: &quot;2054-5&quot;,
+<a id="__codelineno-1-166" name="__codelineno-1-166" href="#__codelineno-1-166"></a>        &quot;conceptName&quot;: &quot;Black or African American&quot;,
+<a id="__codelineno-1-167" name="__codelineno-1-167" href="#__codelineno-1-167"></a>        &quot;preferredConceptName&quot;: &quot;Black or African American&quot;,
+<a id="__codelineno-1-168" name="__codelineno-1-168" href="#__codelineno-1-168"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.5&quot;,
+<a id="__codelineno-1-169" name="__codelineno-1-169" href="#__codelineno-1-169"></a>        &quot;hl7Code&quot;: &quot;HL70005&quot;
+<a id="__codelineno-1-170" name="__codelineno-1-170" href="#__codelineno-1-170"></a>    },
+<a id="__codelineno-1-171" name="__codelineno-1-171" href="#__codelineno-1-171"></a>    {
+<a id="__codelineno-1-172" name="__codelineno-1-172" href="#__codelineno-1-172"></a>        &quot;conceptCode&quot;: &quot;2076-8&quot;,
+<a id="__codelineno-1-173" name="__codelineno-1-173" href="#__codelineno-1-173"></a>        &quot;conceptName&quot;: &quot;Native Hawaiian or Other Pacific Islander&quot;,
+<a id="__codelineno-1-174" name="__codelineno-1-174" href="#__codelineno-1-174"></a>        &quot;preferredConceptName&quot;: &quot;Native Hawaiian or Other Pacific Islander&quot;,
+<a id="__codelineno-1-175" name="__codelineno-1-175" href="#__codelineno-1-175"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.5&quot;,
+<a id="__codelineno-1-176" name="__codelineno-1-176" href="#__codelineno-1-176"></a>        &quot;hl7Code&quot;: &quot;HL70005&quot;
+<a id="__codelineno-1-177" name="__codelineno-1-177" href="#__codelineno-1-177"></a>    },
+<a id="__codelineno-1-178" name="__codelineno-1-178" href="#__codelineno-1-178"></a>    {
+<a id="__codelineno-1-179" name="__codelineno-1-179" href="#__codelineno-1-179"></a>        &quot;conceptCode&quot;: &quot;2131-1&quot;,
+<a id="__codelineno-1-180" name="__codelineno-1-180" href="#__codelineno-1-180"></a>        &quot;conceptName&quot;: &quot;Other Race&quot;,
+<a id="__codelineno-1-181" name="__codelineno-1-181" href="#__codelineno-1-181"></a>        &quot;preferredConceptName&quot;: &quot;Other Race&quot;,
+<a id="__codelineno-1-182" name="__codelineno-1-182" href="#__codelineno-1-182"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.5&quot;,
+<a id="__codelineno-1-183" name="__codelineno-1-183" href="#__codelineno-1-183"></a>        &quot;hl7Code&quot;: &quot;HL70005&quot;
+<a id="__codelineno-1-184" name="__codelineno-1-184" href="#__codelineno-1-184"></a>    },
+<a id="__codelineno-1-185" name="__codelineno-1-185" href="#__codelineno-1-185"></a>    {
+<a id="__codelineno-1-186" name="__codelineno-1-186" href="#__codelineno-1-186"></a>        &quot;conceptCode&quot;: &quot;2106-3&quot;,
+<a id="__codelineno-1-187" name="__codelineno-1-187" href="#__codelineno-1-187"></a>        &quot;conceptName&quot;: &quot;White&quot;,
+<a id="__codelineno-1-188" name="__codelineno-1-188" href="#__codelineno-1-188"></a>        &quot;preferredConceptName&quot;: &quot;White&quot;,
+<a id="__codelineno-1-189" name="__codelineno-1-189" href="#__codelineno-1-189"></a>        &quot;codeSystemOID&quot;: &quot;2.16.840.1.113883.12.5&quot;,
+<a id="__codelineno-1-190" name="__codelineno-1-190" href="#__codelineno-1-190"></a>        &quot;hl7Code&quot;: &quot;HL70005&quot;
+<a id="__codelineno-1-191" name="__codelineno-1-191" href="#__codelineno-1-191"></a>    },
+<a id="__codelineno-1-192" name="__codelineno-1-192" href="#__codelineno-1-192"></a>    {
+<a id="__codelineno-1-193" name="__codelineno-1-193" href="#__codelineno-1-193"></a>        &quot;conceptCode&quot;: &quot;UNK&quot;,
+<a id="__codelineno-1-194" name="__codelineno-1-194" href="#__codelineno-1-194"></a>        &quot;conceptName&quot;: &quot;UnKnown&quot;,
+<a id="__codelineno-1-195" name="__codelineno-1-195" href="#__codelineno-1-195"></a>        &quot;preferredConceptName&quot;: &quot;UnKnown&quot;,
+<a id="__codelineno-1-196" name="__codelineno-1-196" href="#__codelineno-1-196"></a>        &quot;codeSystemOID&quot;: null,
+<a id="__codelineno-1-197" name="__codelineno-1-197" href="#__codelineno-1-197"></a>        &quot;hl7Code&quot;: &quot;&quot;
+<a id="__codelineno-1-198" name="__codelineno-1-198" href="#__codelineno-1-198"></a>    }
+<a id="__codelineno-1-199" name="__codelineno-1-199" href="#__codelineno-1-199"></a>]
+</code></pre></div>
+<h3 id="visit-save">visit save</h3>
+<details class="note">
+<summary>Visit Save JSON</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;patientId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2774</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;trndiagnosis&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">&quot;codeType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;SM&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">&quot;diagnosis&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fever with chills&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">&quot;icdcode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;274640006&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">      </span><span class="nt">&quot;diagnosisType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Finding&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="nt">&quot;VerificationStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;confirmed&quot;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="nt">&quot;pointOfCare&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test of care&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">  </span><span class="nt">&quot;accidentType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;01&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">  </span><span class="nt">&quot;occurrencePlace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Home&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">  </span><span class="nt">&quot;encounterStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;arrived&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="nt">&quot;actPriority&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;UR&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">  </span><span class="nt">&quot;spArrangements&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;add-bed&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">  </span><span class="nt">&quot;MOCEnterdDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-05-19T05:44:04.779Z&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">  </span><span class="nt">&quot;admissionTypeId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">  </span><span class="nt">&quot;admittingDoctorId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5344</span><span class="p">,</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">  </span><span class="nt">&quot;registrationType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;REG&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">  </span><span class="nt">&quot;referringDoctorId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">  </span><span class="nt">&quot;referralReason&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;test resom refferal&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">  </span><span class="nt">&quot;attendingDoctorId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5346</span><span class="p">,</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">  </span><span class="nt">&quot;note&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ADT Orders Order [Discharge To Home] placed for this patient on May 19, 2026 10:47 AM&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="w">  </span><span class="nt">&quot;notesId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">20519</span><span class="p">,</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a><span class="w">  </span><span class="nt">&quot;admissionMnemonic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ER&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="w">  </span><span class="nt">&quot;arrivedBymnemonic&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HE&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="w">  </span><span class="nt">&quot;servicingFacility&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ERM&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a><span class="w">  </span><span class="nt">&quot;arrivedBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;HE&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="w">  </span><span class="nt">&quot;icdCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">274640006</span><span class="p">,</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a><span class="w">  </span><span class="nt">&quot;IsolationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="w">  </span><span class="nt">&quot;isPrisoner&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="w">  </span><span class="nt">&quot;recurringEventId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="w">  </span><span class="nt">&quot;isThief&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="w">  </span><span class="nt">&quot;patientStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;E&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a><span class="w">  </span><span class="nt">&quot;visitTypeId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="w">  </span><span class="nt">&quot;occurrenceId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a><span class="w">  </span><span class="nt">&quot;occurrenceDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;09/09/2025 16:05&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a><span class="w">  </span><span class="nt">&quot;admitDateTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-05-19 10:39&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a><span class="w">  </span><span class="nt">&quot;arrivalDate&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-05-19&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a><span class="w">  </span><span class="nt">&quot;arrivalTime&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;10:39&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a><span class="w">  </span><span class="nt">&quot;active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a><span class="w">  </span><span class="nt">&quot;enteredBy&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">636</span><span class="p">,</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a><span class="w">  </span><span class="nt">&quot;locationId&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a><span class="w">  </span><span class="nt">&quot;patientType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ER&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a><span class="w">  </span><span class="nt">&quot;ambulatoryStatus&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;E&quot;</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a><span class="p">}</span>
+</code></pre></div>
+</details>
+<p>### visit dropDowns</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>==admitType=
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>[
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    {
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        &quot;fhirValuesetID&quot;: 0,
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>        &quot;code&quot;: &quot;UR&quot;,
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        &quot;display&quot;: &quot;URGENT&quot;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>    },
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>    {
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        &quot;fhirValuesetID&quot;: 0,
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>        &quot;code&quot;: &quot;C&quot;,
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>        &quot;display&quot;: &quot;ELECTIVE&quot;
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    },
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    {
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>        &quot;fhirValuesetID&quot;: 0,
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>        &quot;code&quot;: &quot;ER&quot;,
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>        &quot;display&quot;: &quot;EMERGENT&quot;
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>    },
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>    {
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        &quot;fhirValuesetID&quot;: 0,
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>        &quot;code&quot;: &quot;NB&quot;,
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>        &quot;display&quot;: &quot;NEWBORN&quot;
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>    },
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>    {
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        &quot;fhirValuesetID&quot;: 0,
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>        &quot;code&quot;: &quot;TU&quot;,
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>        &quot;display&quot;: &quot;TRAUMA&quot;
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>    },
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>    {
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>        &quot;fhirValuesetID&quot;: 0,
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>        &quot;code&quot;: &quot;NA&quot;,
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        &quot;display&quot;: &quot;Information not Available&quot;
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>    }
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>]
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>==serviceType==
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>[
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>    {
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>        &quot;serviceID&quot;: 27,
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>        &quot;mnemonic&quot;: &quot;CLCAR&quot;,
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>        &quot;name&quot;: &quot;Cardiology&quot;,
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>        &quot;patientType&quot;: &quot;OP&quot;,
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>        &quot;dateEntered&quot;: &quot;2026-04-06T00:00:00&quot;
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>    },
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>    {
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>        &quot;serviceID&quot;: 1,
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>        &quot;mnemonic&quot;: &quot;CP&quot;,
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>        &quot;name&quot;: &quot;CARDIOPULMONARY&quot;,
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>        &quot;patientType&quot;: &quot;OP&quot;,
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-51" name="__codelineno-3-51" href="#__codelineno-3-51"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-52" name="__codelineno-3-52" href="#__codelineno-3-52"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-53" name="__codelineno-3-53" href="#__codelineno-3-53"></a>    },
+<a id="__codelineno-3-54" name="__codelineno-3-54" href="#__codelineno-3-54"></a>    {
+<a id="__codelineno-3-55" name="__codelineno-3-55" href="#__codelineno-3-55"></a>        &quot;serviceID&quot;: 2,
+<a id="__codelineno-3-56" name="__codelineno-3-56" href="#__codelineno-3-56"></a>        &quot;mnemonic&quot;: &quot;CTH&quot;,
+<a id="__codelineno-3-57" name="__codelineno-3-57" href="#__codelineno-3-57"></a>        &quot;name&quot;: &quot;Cath Lab&quot;,
+<a id="__codelineno-3-58" name="__codelineno-3-58" href="#__codelineno-3-58"></a>        &quot;patientType&quot;: &quot;SDC&quot;,
+<a id="__codelineno-3-59" name="__codelineno-3-59" href="#__codelineno-3-59"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-60" name="__codelineno-3-60" href="#__codelineno-3-60"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-61" name="__codelineno-3-61" href="#__codelineno-3-61"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-62" name="__codelineno-3-62" href="#__codelineno-3-62"></a>    },
+<a id="__codelineno-3-63" name="__codelineno-3-63" href="#__codelineno-3-63"></a>    {
+<a id="__codelineno-3-64" name="__codelineno-3-64" href="#__codelineno-3-64"></a>        &quot;serviceID&quot;: 24,
+<a id="__codelineno-3-65" name="__codelineno-3-65" href="#__codelineno-3-65"></a>        &quot;mnemonic&quot;: &quot;ELITE&quot;,
+<a id="__codelineno-3-66" name="__codelineno-3-66" href="#__codelineno-3-66"></a>        &quot;name&quot;: &quot;Elite Imaging&quot;,
+<a id="__codelineno-3-67" name="__codelineno-3-67" href="#__codelineno-3-67"></a>        &quot;patientType&quot;: &quot;OP&quot;,
+<a id="__codelineno-3-68" name="__codelineno-3-68" href="#__codelineno-3-68"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-69" name="__codelineno-3-69" href="#__codelineno-3-69"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-70" name="__codelineno-3-70" href="#__codelineno-3-70"></a>        &quot;dateEntered&quot;: &quot;2026-03-09T00:00:00&quot;
+<a id="__codelineno-3-71" name="__codelineno-3-71" href="#__codelineno-3-71"></a>    },
+<a id="__codelineno-3-72" name="__codelineno-3-72" href="#__codelineno-3-72"></a>    {
+<a id="__codelineno-3-73" name="__codelineno-3-73" href="#__codelineno-3-73"></a>        &quot;serviceID&quot;: 4,
+<a id="__codelineno-3-74" name="__codelineno-3-74" href="#__codelineno-3-74"></a>        &quot;mnemonic&quot;: &quot;ERM&quot;,
+<a id="__codelineno-3-75" name="__codelineno-3-75" href="#__codelineno-3-75"></a>        &quot;name&quot;: &quot;Emergency Room&quot;,
+<a id="__codelineno-3-76" name="__codelineno-3-76" href="#__codelineno-3-76"></a>        &quot;patientType&quot;: &quot;ER&quot;,
+<a id="__codelineno-3-77" name="__codelineno-3-77" href="#__codelineno-3-77"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-78" name="__codelineno-3-78" href="#__codelineno-3-78"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-79" name="__codelineno-3-79" href="#__codelineno-3-79"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-80" name="__codelineno-3-80" href="#__codelineno-3-80"></a>    },
+<a id="__codelineno-3-81" name="__codelineno-3-81" href="#__codelineno-3-81"></a>    {
+<a id="__codelineno-3-82" name="__codelineno-3-82" href="#__codelineno-3-82"></a>        &quot;serviceID&quot;: 3,
+<a id="__codelineno-3-83" name="__codelineno-3-83" href="#__codelineno-3-83"></a>        &quot;mnemonic&quot;: &quot;EHS&quot;,
+<a id="__codelineno-3-84" name="__codelineno-3-84" href="#__codelineno-3-84"></a>        &quot;name&quot;: &quot;Employee Health&quot;,
+<a id="__codelineno-3-85" name="__codelineno-3-85" href="#__codelineno-3-85"></a>        &quot;patientType&quot;: null,
+<a id="__codelineno-3-86" name="__codelineno-3-86" href="#__codelineno-3-86"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-87" name="__codelineno-3-87" href="#__codelineno-3-87"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-88" name="__codelineno-3-88" href="#__codelineno-3-88"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-89" name="__codelineno-3-89" href="#__codelineno-3-89"></a>    },
+<a id="__codelineno-3-90" name="__codelineno-3-90" href="#__codelineno-3-90"></a>    {
+<a id="__codelineno-3-91" name="__codelineno-3-91" href="#__codelineno-3-91"></a>        &quot;serviceID&quot;: 25,
+<a id="__codelineno-3-92" name="__codelineno-3-92" href="#__codelineno-3-92"></a>        &quot;mnemonic&quot;: &quot;GILAB&quot;,
+<a id="__codelineno-3-93" name="__codelineno-3-93" href="#__codelineno-3-93"></a>        &quot;name&quot;: &quot;GI LAB/Endoscopy&quot;,
+<a id="__codelineno-3-94" name="__codelineno-3-94" href="#__codelineno-3-94"></a>        &quot;patientType&quot;: &quot;SDC&quot;,
+<a id="__codelineno-3-95" name="__codelineno-3-95" href="#__codelineno-3-95"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-96" name="__codelineno-3-96" href="#__codelineno-3-96"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-97" name="__codelineno-3-97" href="#__codelineno-3-97"></a>        &quot;dateEntered&quot;: &quot;2026-04-06T00:00:00&quot;
+<a id="__codelineno-3-98" name="__codelineno-3-98" href="#__codelineno-3-98"></a>    },
+<a id="__codelineno-3-99" name="__codelineno-3-99" href="#__codelineno-3-99"></a>    {
+<a id="__codelineno-3-100" name="__codelineno-3-100" href="#__codelineno-3-100"></a>        &quot;serviceID&quot;: 6,
+<a id="__codelineno-3-101" name="__codelineno-3-101" href="#__codelineno-3-101"></a>        &quot;mnemonic&quot;: &quot;ICU&quot;,
+<a id="__codelineno-3-102" name="__codelineno-3-102" href="#__codelineno-3-102"></a>        &quot;name&quot;: &quot;Intensive Care&quot;,
+<a id="__codelineno-3-103" name="__codelineno-3-103" href="#__codelineno-3-103"></a>        &quot;patientType&quot;: &quot;IN&quot;,
+<a id="__codelineno-3-104" name="__codelineno-3-104" href="#__codelineno-3-104"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-105" name="__codelineno-3-105" href="#__codelineno-3-105"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-106" name="__codelineno-3-106" href="#__codelineno-3-106"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-107" name="__codelineno-3-107" href="#__codelineno-3-107"></a>    },
+<a id="__codelineno-3-108" name="__codelineno-3-108" href="#__codelineno-3-108"></a>    {
+<a id="__codelineno-3-109" name="__codelineno-3-109" href="#__codelineno-3-109"></a>        &quot;serviceID&quot;: 5,
+<a id="__codelineno-3-110" name="__codelineno-3-110" href="#__codelineno-3-110"></a>        &quot;mnemonic&quot;: &quot;IC3&quot;,
+<a id="__codelineno-3-111" name="__codelineno-3-111" href="#__codelineno-3-111"></a>        &quot;name&quot;: &quot;Intensive Care Level III&quot;,
+<a id="__codelineno-3-112" name="__codelineno-3-112" href="#__codelineno-3-112"></a>        &quot;patientType&quot;: null,
+<a id="__codelineno-3-113" name="__codelineno-3-113" href="#__codelineno-3-113"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-114" name="__codelineno-3-114" href="#__codelineno-3-114"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-115" name="__codelineno-3-115" href="#__codelineno-3-115"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-116" name="__codelineno-3-116" href="#__codelineno-3-116"></a>    },
+<a id="__codelineno-3-117" name="__codelineno-3-117" href="#__codelineno-3-117"></a>    {
+<a id="__codelineno-3-118" name="__codelineno-3-118" href="#__codelineno-3-118"></a>        &quot;serviceID&quot;: 8,
+<a id="__codelineno-3-119" name="__codelineno-3-119" href="#__codelineno-3-119"></a>        &quot;mnemonic&quot;: &quot;IR&quot;,
+<a id="__codelineno-3-120" name="__codelineno-3-120" href="#__codelineno-3-120"></a>        &quot;name&quot;: &quot;Interventional Radilology&quot;,
+<a id="__codelineno-3-121" name="__codelineno-3-121" href="#__codelineno-3-121"></a>        &quot;patientType&quot;: &quot;SDC&quot;,
+<a id="__codelineno-3-122" name="__codelineno-3-122" href="#__codelineno-3-122"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-123" name="__codelineno-3-123" href="#__codelineno-3-123"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-124" name="__codelineno-3-124" href="#__codelineno-3-124"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-125" name="__codelineno-3-125" href="#__codelineno-3-125"></a>    },
+<a id="__codelineno-3-126" name="__codelineno-3-126" href="#__codelineno-3-126"></a>    {
+<a id="__codelineno-3-127" name="__codelineno-3-127" href="#__codelineno-3-127"></a>        &quot;serviceID&quot;: 9,
+<a id="__codelineno-3-128" name="__codelineno-3-128" href="#__codelineno-3-128"></a>        &quot;mnemonic&quot;: &quot;IRA&quot;,
+<a id="__codelineno-3-129" name="__codelineno-3-129" href="#__codelineno-3-129"></a>        &quot;name&quot;: &quot;IR ADDISON&quot;,
+<a id="__codelineno-3-130" name="__codelineno-3-130" href="#__codelineno-3-130"></a>        &quot;patientType&quot;: &quot;OP&quot;,
+<a id="__codelineno-3-131" name="__codelineno-3-131" href="#__codelineno-3-131"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-132" name="__codelineno-3-132" href="#__codelineno-3-132"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-133" name="__codelineno-3-133" href="#__codelineno-3-133"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-134" name="__codelineno-3-134" href="#__codelineno-3-134"></a>    },
+<a id="__codelineno-3-135" name="__codelineno-3-135" href="#__codelineno-3-135"></a>    {
+<a id="__codelineno-3-136" name="__codelineno-3-136" href="#__codelineno-3-136"></a>        &quot;serviceID&quot;: 10,
+<a id="__codelineno-3-137" name="__codelineno-3-137" href="#__codelineno-3-137"></a>        &quot;mnemonic&quot;: &quot;IRF&quot;,
+<a id="__codelineno-3-138" name="__codelineno-3-138" href="#__codelineno-3-138"></a>        &quot;name&quot;: &quot;IR FT WORTH&quot;,
+<a id="__codelineno-3-139" name="__codelineno-3-139" href="#__codelineno-3-139"></a>        &quot;patientType&quot;: &quot;OP&quot;,
+<a id="__codelineno-3-140" name="__codelineno-3-140" href="#__codelineno-3-140"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-141" name="__codelineno-3-141" href="#__codelineno-3-141"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-142" name="__codelineno-3-142" href="#__codelineno-3-142"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-143" name="__codelineno-3-143" href="#__codelineno-3-143"></a>    },
+<a id="__codelineno-3-144" name="__codelineno-3-144" href="#__codelineno-3-144"></a>    {
+<a id="__codelineno-3-145" name="__codelineno-3-145" href="#__codelineno-3-145"></a>        &quot;serviceID&quot;: 11,
+<a id="__codelineno-3-146" name="__codelineno-3-146" href="#__codelineno-3-146"></a>        &quot;mnemonic&quot;: &quot;LAB&quot;,
+<a id="__codelineno-3-147" name="__codelineno-3-147" href="#__codelineno-3-147"></a>        &quot;name&quot;: &quot;Laboratory&quot;,
+<a id="__codelineno-3-148" name="__codelineno-3-148" href="#__codelineno-3-148"></a>        &quot;patientType&quot;: &quot;OP,REF&quot;,
+<a id="__codelineno-3-149" name="__codelineno-3-149" href="#__codelineno-3-149"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-150" name="__codelineno-3-150" href="#__codelineno-3-150"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-151" name="__codelineno-3-151" href="#__codelineno-3-151"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-152" name="__codelineno-3-152" href="#__codelineno-3-152"></a>    },
+<a id="__codelineno-3-153" name="__codelineno-3-153" href="#__codelineno-3-153"></a>    {
+<a id="__codelineno-3-154" name="__codelineno-3-154" href="#__codelineno-3-154"></a>        &quot;serviceID&quot;: 13,
+<a id="__codelineno-3-155" name="__codelineno-3-155" href="#__codelineno-3-155"></a>        &quot;mnemonic&quot;: &quot;MDS&quot;,
+<a id="__codelineno-3-156" name="__codelineno-3-156" href="#__codelineno-3-156"></a>        &quot;name&quot;: &quot;Med Surg&quot;,
+<a id="__codelineno-3-157" name="__codelineno-3-157" href="#__codelineno-3-157"></a>        &quot;patientType&quot;: &quot;IN&quot;,
+<a id="__codelineno-3-158" name="__codelineno-3-158" href="#__codelineno-3-158"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-159" name="__codelineno-3-159" href="#__codelineno-3-159"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-160" name="__codelineno-3-160" href="#__codelineno-3-160"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-161" name="__codelineno-3-161" href="#__codelineno-3-161"></a>    },
+<a id="__codelineno-3-162" name="__codelineno-3-162" href="#__codelineno-3-162"></a>    {
+<a id="__codelineno-3-163" name="__codelineno-3-163" href="#__codelineno-3-163"></a>        &quot;serviceID&quot;: 12,
+<a id="__codelineno-3-164" name="__codelineno-3-164" href="#__codelineno-3-164"></a>        &quot;mnemonic&quot;: &quot;MBS&quot;,
+<a id="__codelineno-3-165" name="__codelineno-3-165" href="#__codelineno-3-165"></a>        &quot;name&quot;: &quot;Modified Barium Swallow&quot;,
+<a id="__codelineno-3-166" name="__codelineno-3-166" href="#__codelineno-3-166"></a>        &quot;patientType&quot;: null,
+<a id="__codelineno-3-167" name="__codelineno-3-167" href="#__codelineno-3-167"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-168" name="__codelineno-3-168" href="#__codelineno-3-168"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-169" name="__codelineno-3-169" href="#__codelineno-3-169"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-170" name="__codelineno-3-170" href="#__codelineno-3-170"></a>    },
+<a id="__codelineno-3-171" name="__codelineno-3-171" href="#__codelineno-3-171"></a>    {
+<a id="__codelineno-3-172" name="__codelineno-3-172" href="#__codelineno-3-172"></a>        &quot;serviceID&quot;: 14,
+<a id="__codelineno-3-173" name="__codelineno-3-173" href="#__codelineno-3-173"></a>        &quot;mnemonic&quot;: &quot;OBS&quot;,
+<a id="__codelineno-3-174" name="__codelineno-3-174" href="#__codelineno-3-174"></a>        &quot;name&quot;: &quot;Observation&quot;,
+<a id="__codelineno-3-175" name="__codelineno-3-175" href="#__codelineno-3-175"></a>        &quot;patientType&quot;: &quot;INO&quot;,
+<a id="__codelineno-3-176" name="__codelineno-3-176" href="#__codelineno-3-176"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-177" name="__codelineno-3-177" href="#__codelineno-3-177"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-178" name="__codelineno-3-178" href="#__codelineno-3-178"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-179" name="__codelineno-3-179" href="#__codelineno-3-179"></a>    },
+<a id="__codelineno-3-180" name="__codelineno-3-180" href="#__codelineno-3-180"></a>    {
+<a id="__codelineno-3-181" name="__codelineno-3-181" href="#__codelineno-3-181"></a>        &quot;serviceID&quot;: 15,
+<a id="__codelineno-3-182" name="__codelineno-3-182" href="#__codelineno-3-182"></a>        &quot;mnemonic&quot;: &quot;PCU&quot;,
+<a id="__codelineno-3-183" name="__codelineno-3-183" href="#__codelineno-3-183"></a>        &quot;name&quot;: &quot;PCU/STEPDOWN&quot;,
+<a id="__codelineno-3-184" name="__codelineno-3-184" href="#__codelineno-3-184"></a>        &quot;patientType&quot;: &quot;IN&quot;,
+<a id="__codelineno-3-185" name="__codelineno-3-185" href="#__codelineno-3-185"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-186" name="__codelineno-3-186" href="#__codelineno-3-186"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-187" name="__codelineno-3-187" href="#__codelineno-3-187"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-188" name="__codelineno-3-188" href="#__codelineno-3-188"></a>    },
+<a id="__codelineno-3-189" name="__codelineno-3-189" href="#__codelineno-3-189"></a>    {
+<a id="__codelineno-3-190" name="__codelineno-3-190" href="#__codelineno-3-190"></a>        &quot;serviceID&quot;: 7,
+<a id="__codelineno-3-191" name="__codelineno-3-191" href="#__codelineno-3-191"></a>        &quot;mnemonic&quot;: &quot;RAD&quot;,
+<a id="__codelineno-3-192" name="__codelineno-3-192" href="#__codelineno-3-192"></a>        &quot;name&quot;: &quot;RADIOLOGY (CT/MRI/NM/US)&quot;,
+<a id="__codelineno-3-193" name="__codelineno-3-193" href="#__codelineno-3-193"></a>        &quot;patientType&quot;: &quot;OP&quot;,
+<a id="__codelineno-3-194" name="__codelineno-3-194" href="#__codelineno-3-194"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-195" name="__codelineno-3-195" href="#__codelineno-3-195"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-196" name="__codelineno-3-196" href="#__codelineno-3-196"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-197" name="__codelineno-3-197" href="#__codelineno-3-197"></a>    },
+<a id="__codelineno-3-198" name="__codelineno-3-198" href="#__codelineno-3-198"></a>    {
+<a id="__codelineno-3-199" name="__codelineno-3-199" href="#__codelineno-3-199"></a>        &quot;serviceID&quot;: 16,
+<a id="__codelineno-3-200" name="__codelineno-3-200" href="#__codelineno-3-200"></a>        &quot;mnemonic&quot;: &quot;REF&quot;,
+<a id="__codelineno-3-201" name="__codelineno-3-201" href="#__codelineno-3-201"></a>        &quot;name&quot;: &quot;REFERENCE LAB&quot;,
+<a id="__codelineno-3-202" name="__codelineno-3-202" href="#__codelineno-3-202"></a>        &quot;patientType&quot;: null,
+<a id="__codelineno-3-203" name="__codelineno-3-203" href="#__codelineno-3-203"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-204" name="__codelineno-3-204" href="#__codelineno-3-204"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-205" name="__codelineno-3-205" href="#__codelineno-3-205"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-206" name="__codelineno-3-206" href="#__codelineno-3-206"></a>    },
+<a id="__codelineno-3-207" name="__codelineno-3-207" href="#__codelineno-3-207"></a>    {
+<a id="__codelineno-3-208" name="__codelineno-3-208" href="#__codelineno-3-208"></a>        &quot;serviceID&quot;: 17,
+<a id="__codelineno-3-209" name="__codelineno-3-209" href="#__codelineno-3-209"></a>        &quot;mnemonic&quot;: &quot;RH&quot;,
+<a id="__codelineno-3-210" name="__codelineno-3-210" href="#__codelineno-3-210"></a>        &quot;name&quot;: &quot;REHAB HOME&quot;,
+<a id="__codelineno-3-211" name="__codelineno-3-211" href="#__codelineno-3-211"></a>        &quot;patientType&quot;: &quot;SOP&quot;,
+<a id="__codelineno-3-212" name="__codelineno-3-212" href="#__codelineno-3-212"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-213" name="__codelineno-3-213" href="#__codelineno-3-213"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-214" name="__codelineno-3-214" href="#__codelineno-3-214"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-215" name="__codelineno-3-215" href="#__codelineno-3-215"></a>    },
+<a id="__codelineno-3-216" name="__codelineno-3-216" href="#__codelineno-3-216"></a>    {
+<a id="__codelineno-3-217" name="__codelineno-3-217" href="#__codelineno-3-217"></a>        &quot;serviceID&quot;: 18,
+<a id="__codelineno-3-218" name="__codelineno-3-218" href="#__codelineno-3-218"></a>        &quot;mnemonic&quot;: &quot;RHB&quot;,
+<a id="__codelineno-3-219" name="__codelineno-3-219" href="#__codelineno-3-219"></a>        &quot;name&quot;: &quot;Rehabilitation (ST/PT/OT)&quot;,
+<a id="__codelineno-3-220" name="__codelineno-3-220" href="#__codelineno-3-220"></a>        &quot;patientType&quot;: &quot;SOP&quot;,
+<a id="__codelineno-3-221" name="__codelineno-3-221" href="#__codelineno-3-221"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-222" name="__codelineno-3-222" href="#__codelineno-3-222"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-223" name="__codelineno-3-223" href="#__codelineno-3-223"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-224" name="__codelineno-3-224" href="#__codelineno-3-224"></a>    },
+<a id="__codelineno-3-225" name="__codelineno-3-225" href="#__codelineno-3-225"></a>    {
+<a id="__codelineno-3-226" name="__codelineno-3-226" href="#__codelineno-3-226"></a>        &quot;serviceID&quot;: 26,
+<a id="__codelineno-3-227" name="__codelineno-3-227" href="#__codelineno-3-227"></a>        &quot;mnemonic&quot;: &quot;RES&quot;,
+<a id="__codelineno-3-228" name="__codelineno-3-228" href="#__codelineno-3-228"></a>        &quot;name&quot;: &quot;Respiratory&quot;,
+<a id="__codelineno-3-229" name="__codelineno-3-229" href="#__codelineno-3-229"></a>        &quot;patientType&quot;: &quot;OP&quot;,
+<a id="__codelineno-3-230" name="__codelineno-3-230" href="#__codelineno-3-230"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-231" name="__codelineno-3-231" href="#__codelineno-3-231"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-232" name="__codelineno-3-232" href="#__codelineno-3-232"></a>        &quot;dateEntered&quot;: &quot;2026-04-06T00:00:00&quot;
+<a id="__codelineno-3-233" name="__codelineno-3-233" href="#__codelineno-3-233"></a>    },
+<a id="__codelineno-3-234" name="__codelineno-3-234" href="#__codelineno-3-234"></a>    {
+<a id="__codelineno-3-235" name="__codelineno-3-235" href="#__codelineno-3-235"></a>        &quot;serviceID&quot;: 19,
+<a id="__codelineno-3-236" name="__codelineno-3-236" href="#__codelineno-3-236"></a>        &quot;mnemonic&quot;: &quot;DS&quot;,
+<a id="__codelineno-3-237" name="__codelineno-3-237" href="#__codelineno-3-237"></a>        &quot;name&quot;: &quot;Same Day Surgery&quot;,
+<a id="__codelineno-3-238" name="__codelineno-3-238" href="#__codelineno-3-238"></a>        &quot;patientType&quot;: &quot;SDC&quot;,
+<a id="__codelineno-3-239" name="__codelineno-3-239" href="#__codelineno-3-239"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-240" name="__codelineno-3-240" href="#__codelineno-3-240"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-241" name="__codelineno-3-241" href="#__codelineno-3-241"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-242" name="__codelineno-3-242" href="#__codelineno-3-242"></a>    },
+<a id="__codelineno-3-243" name="__codelineno-3-243" href="#__codelineno-3-243"></a>    {
+<a id="__codelineno-3-244" name="__codelineno-3-244" href="#__codelineno-3-244"></a>        &quot;serviceID&quot;: 20,
+<a id="__codelineno-3-245" name="__codelineno-3-245" href="#__codelineno-3-245"></a>        &quot;mnemonic&quot;: &quot;TEL&quot;,
+<a id="__codelineno-3-246" name="__codelineno-3-246" href="#__codelineno-3-246"></a>        &quot;name&quot;: &quot;Telemetry Monitoring&quot;,
+<a id="__codelineno-3-247" name="__codelineno-3-247" href="#__codelineno-3-247"></a>        &quot;patientType&quot;: &quot;IN&quot;,
+<a id="__codelineno-3-248" name="__codelineno-3-248" href="#__codelineno-3-248"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-249" name="__codelineno-3-249" href="#__codelineno-3-249"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-250" name="__codelineno-3-250" href="#__codelineno-3-250"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-251" name="__codelineno-3-251" href="#__codelineno-3-251"></a>    },
+<a id="__codelineno-3-252" name="__codelineno-3-252" href="#__codelineno-3-252"></a>    {
+<a id="__codelineno-3-253" name="__codelineno-3-253" href="#__codelineno-3-253"></a>        &quot;serviceID&quot;: 21,
+<a id="__codelineno-3-254" name="__codelineno-3-254" href="#__codelineno-3-254"></a>        &quot;mnemonic&quot;: &quot;VX&quot;,
+<a id="__codelineno-3-255" name="__codelineno-3-255" href="#__codelineno-3-255"></a>        &quot;name&quot;: &quot;VACCINE DRIVE&quot;,
+<a id="__codelineno-3-256" name="__codelineno-3-256" href="#__codelineno-3-256"></a>        &quot;patientType&quot;: null,
+<a id="__codelineno-3-257" name="__codelineno-3-257" href="#__codelineno-3-257"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-258" name="__codelineno-3-258" href="#__codelineno-3-258"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-259" name="__codelineno-3-259" href="#__codelineno-3-259"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-260" name="__codelineno-3-260" href="#__codelineno-3-260"></a>    },
+<a id="__codelineno-3-261" name="__codelineno-3-261" href="#__codelineno-3-261"></a>    {
+<a id="__codelineno-3-262" name="__codelineno-3-262" href="#__codelineno-3-262"></a>        &quot;serviceID&quot;: 23,
+<a id="__codelineno-3-263" name="__codelineno-3-263" href="#__codelineno-3-263"></a>        &quot;mnemonic&quot;: &quot;WIC&quot;,
+<a id="__codelineno-3-264" name="__codelineno-3-264" href="#__codelineno-3-264"></a>        &quot;name&quot;: &quot;WOMEN&#39;S IMAGING CENTER&quot;,
+<a id="__codelineno-3-265" name="__codelineno-3-265" href="#__codelineno-3-265"></a>        &quot;patientType&quot;: &quot;OP&quot;,
+<a id="__codelineno-3-266" name="__codelineno-3-266" href="#__codelineno-3-266"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-267" name="__codelineno-3-267" href="#__codelineno-3-267"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-268" name="__codelineno-3-268" href="#__codelineno-3-268"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-269" name="__codelineno-3-269" href="#__codelineno-3-269"></a>    },
+<a id="__codelineno-3-270" name="__codelineno-3-270" href="#__codelineno-3-270"></a>    {
+<a id="__codelineno-3-271" name="__codelineno-3-271" href="#__codelineno-3-271"></a>        &quot;serviceID&quot;: 22,
+<a id="__codelineno-3-272" name="__codelineno-3-272" href="#__codelineno-3-272"></a>        &quot;mnemonic&quot;: &quot;WOUND&quot;,
+<a id="__codelineno-3-273" name="__codelineno-3-273" href="#__codelineno-3-273"></a>        &quot;name&quot;: &quot;Wound Care&quot;,
+<a id="__codelineno-3-274" name="__codelineno-3-274" href="#__codelineno-3-274"></a>        &quot;patientType&quot;: &quot;OP&quot;,
+<a id="__codelineno-3-275" name="__codelineno-3-275" href="#__codelineno-3-275"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-276" name="__codelineno-3-276" href="#__codelineno-3-276"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-277" name="__codelineno-3-277" href="#__codelineno-3-277"></a>        &quot;dateEntered&quot;: &quot;2025-12-19T00:00:00&quot;
+<a id="__codelineno-3-278" name="__codelineno-3-278" href="#__codelineno-3-278"></a>    }
+<a id="__codelineno-3-279" name="__codelineno-3-279" href="#__codelineno-3-279"></a>]
+<a id="__codelineno-3-280" name="__codelineno-3-280" href="#__codelineno-3-280"></a>==patientType==
+<a id="__codelineno-3-281" name="__codelineno-3-281" href="#__codelineno-3-281"></a>[
+<a id="__codelineno-3-282" name="__codelineno-3-282" href="#__codelineno-3-282"></a>    {
+<a id="__codelineno-3-283" name="__codelineno-3-283" href="#__codelineno-3-283"></a>        &quot;patientStatusID&quot;: 1,
+<a id="__codelineno-3-284" name="__codelineno-3-284" href="#__codelineno-3-284"></a>        &quot;mnemonic&quot;: &quot;E&quot;,
+<a id="__codelineno-3-285" name="__codelineno-3-285" href="#__codelineno-3-285"></a>        &quot;name&quot;: &quot;Emergency&quot;,
+<a id="__codelineno-3-286" name="__codelineno-3-286" href="#__codelineno-3-286"></a>        &quot;patientType&quot;: &quot;E&quot;,
+<a id="__codelineno-3-287" name="__codelineno-3-287" href="#__codelineno-3-287"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-288" name="__codelineno-3-288" href="#__codelineno-3-288"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-289" name="__codelineno-3-289" href="#__codelineno-3-289"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-290" name="__codelineno-3-290" href="#__codelineno-3-290"></a>    },
+<a id="__codelineno-3-291" name="__codelineno-3-291" href="#__codelineno-3-291"></a>    {
+<a id="__codelineno-3-292" name="__codelineno-3-292" href="#__codelineno-3-292"></a>        &quot;patientStatusID&quot;: 2,
+<a id="__codelineno-3-293" name="__codelineno-3-293" href="#__codelineno-3-293"></a>        &quot;mnemonic&quot;: &quot;I&quot;,
+<a id="__codelineno-3-294" name="__codelineno-3-294" href="#__codelineno-3-294"></a>        &quot;name&quot;: &quot;Inpatient&quot;,
+<a id="__codelineno-3-295" name="__codelineno-3-295" href="#__codelineno-3-295"></a>        &quot;patientType&quot;: &quot;I&quot;,
+<a id="__codelineno-3-296" name="__codelineno-3-296" href="#__codelineno-3-296"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-297" name="__codelineno-3-297" href="#__codelineno-3-297"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-298" name="__codelineno-3-298" href="#__codelineno-3-298"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-299" name="__codelineno-3-299" href="#__codelineno-3-299"></a>    },
+<a id="__codelineno-3-300" name="__codelineno-3-300" href="#__codelineno-3-300"></a>    {
+<a id="__codelineno-3-301" name="__codelineno-3-301" href="#__codelineno-3-301"></a>        &quot;patientStatusID&quot;: 3,
+<a id="__codelineno-3-302" name="__codelineno-3-302" href="#__codelineno-3-302"></a>        &quot;mnemonic&quot;: &quot;O&quot;,
+<a id="__codelineno-3-303" name="__codelineno-3-303" href="#__codelineno-3-303"></a>        &quot;name&quot;: &quot;Outpatient&quot;,
+<a id="__codelineno-3-304" name="__codelineno-3-304" href="#__codelineno-3-304"></a>        &quot;patientType&quot;: &quot;O&quot;,
+<a id="__codelineno-3-305" name="__codelineno-3-305" href="#__codelineno-3-305"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-306" name="__codelineno-3-306" href="#__codelineno-3-306"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-307" name="__codelineno-3-307" href="#__codelineno-3-307"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-308" name="__codelineno-3-308" href="#__codelineno-3-308"></a>    },
+<a id="__codelineno-3-309" name="__codelineno-3-309" href="#__codelineno-3-309"></a>    {
+<a id="__codelineno-3-310" name="__codelineno-3-310" href="#__codelineno-3-310"></a>        &quot;patientStatusID&quot;: 4,
+<a id="__codelineno-3-311" name="__codelineno-3-311" href="#__codelineno-3-311"></a>        &quot;mnemonic&quot;: &quot;N&quot;,
+<a id="__codelineno-3-312" name="__codelineno-3-312" href="#__codelineno-3-312"></a>        &quot;name&quot;: &quot;Not Applicable&quot;,
+<a id="__codelineno-3-313" name="__codelineno-3-313" href="#__codelineno-3-313"></a>        &quot;patientType&quot;: &quot;N&quot;,
+<a id="__codelineno-3-314" name="__codelineno-3-314" href="#__codelineno-3-314"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-315" name="__codelineno-3-315" href="#__codelineno-3-315"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-316" name="__codelineno-3-316" href="#__codelineno-3-316"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-317" name="__codelineno-3-317" href="#__codelineno-3-317"></a>    },
+<a id="__codelineno-3-318" name="__codelineno-3-318" href="#__codelineno-3-318"></a>    {
+<a id="__codelineno-3-319" name="__codelineno-3-319" href="#__codelineno-3-319"></a>        &quot;patientStatusID&quot;: 5,
+<a id="__codelineno-3-320" name="__codelineno-3-320" href="#__codelineno-3-320"></a>        &quot;mnemonic&quot;: &quot;B&quot;,
+<a id="__codelineno-3-321" name="__codelineno-3-321" href="#__codelineno-3-321"></a>        &quot;name&quot;: &quot;Obstetrics&quot;,
+<a id="__codelineno-3-322" name="__codelineno-3-322" href="#__codelineno-3-322"></a>        &quot;patientType&quot;: &quot;B&quot;,
+<a id="__codelineno-3-323" name="__codelineno-3-323" href="#__codelineno-3-323"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-324" name="__codelineno-3-324" href="#__codelineno-3-324"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-325" name="__codelineno-3-325" href="#__codelineno-3-325"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-326" name="__codelineno-3-326" href="#__codelineno-3-326"></a>    },
+<a id="__codelineno-3-327" name="__codelineno-3-327" href="#__codelineno-3-327"></a>    {
+<a id="__codelineno-3-328" name="__codelineno-3-328" href="#__codelineno-3-328"></a>        &quot;patientStatusID&quot;: 6,
+<a id="__codelineno-3-329" name="__codelineno-3-329" href="#__codelineno-3-329"></a>        &quot;mnemonic&quot;: &quot;C&quot;,
+<a id="__codelineno-3-330" name="__codelineno-3-330" href="#__codelineno-3-330"></a>        &quot;name&quot;: &quot;Commercial Account&quot;,
+<a id="__codelineno-3-331" name="__codelineno-3-331" href="#__codelineno-3-331"></a>        &quot;patientType&quot;: &quot;C&quot;,
+<a id="__codelineno-3-332" name="__codelineno-3-332" href="#__codelineno-3-332"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-333" name="__codelineno-3-333" href="#__codelineno-3-333"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-334" name="__codelineno-3-334" href="#__codelineno-3-334"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-335" name="__codelineno-3-335" href="#__codelineno-3-335"></a>    },
+<a id="__codelineno-3-336" name="__codelineno-3-336" href="#__codelineno-3-336"></a>    {
+<a id="__codelineno-3-337" name="__codelineno-3-337" href="#__codelineno-3-337"></a>        &quot;patientStatusID&quot;: 7,
+<a id="__codelineno-3-338" name="__codelineno-3-338" href="#__codelineno-3-338"></a>        &quot;mnemonic&quot;: &quot;P&quot;,
+<a id="__codelineno-3-339" name="__codelineno-3-339" href="#__codelineno-3-339"></a>        &quot;name&quot;: &quot;Preadmit&quot;,
+<a id="__codelineno-3-340" name="__codelineno-3-340" href="#__codelineno-3-340"></a>        &quot;patientType&quot;: &quot;P&quot;,
+<a id="__codelineno-3-341" name="__codelineno-3-341" href="#__codelineno-3-341"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-342" name="__codelineno-3-342" href="#__codelineno-3-342"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-343" name="__codelineno-3-343" href="#__codelineno-3-343"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-344" name="__codelineno-3-344" href="#__codelineno-3-344"></a>    },
+<a id="__codelineno-3-345" name="__codelineno-3-345" href="#__codelineno-3-345"></a>    {
+<a id="__codelineno-3-346" name="__codelineno-3-346" href="#__codelineno-3-346"></a>        &quot;patientStatusID&quot;: 8,
+<a id="__codelineno-3-347" name="__codelineno-3-347" href="#__codelineno-3-347"></a>        &quot;mnemonic&quot;: &quot;R&quot;,
+<a id="__codelineno-3-348" name="__codelineno-3-348" href="#__codelineno-3-348"></a>        &quot;name&quot;: &quot;Recurring patient&quot;,
+<a id="__codelineno-3-349" name="__codelineno-3-349" href="#__codelineno-3-349"></a>        &quot;patientType&quot;: &quot;R&quot;,
+<a id="__codelineno-3-350" name="__codelineno-3-350" href="#__codelineno-3-350"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-351" name="__codelineno-3-351" href="#__codelineno-3-351"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-352" name="__codelineno-3-352" href="#__codelineno-3-352"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-353" name="__codelineno-3-353" href="#__codelineno-3-353"></a>    },
+<a id="__codelineno-3-354" name="__codelineno-3-354" href="#__codelineno-3-354"></a>    {
+<a id="__codelineno-3-355" name="__codelineno-3-355" href="#__codelineno-3-355"></a>        &quot;patientStatusID&quot;: 9,
+<a id="__codelineno-3-356" name="__codelineno-3-356" href="#__codelineno-3-356"></a>        &quot;mnemonic&quot;: &quot;U&quot;,
+<a id="__codelineno-3-357" name="__codelineno-3-357" href="#__codelineno-3-357"></a>        &quot;name&quot;: &quot;Unknown&quot;,
+<a id="__codelineno-3-358" name="__codelineno-3-358" href="#__codelineno-3-358"></a>        &quot;patientType&quot;: &quot;U&quot;,
+<a id="__codelineno-3-359" name="__codelineno-3-359" href="#__codelineno-3-359"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-360" name="__codelineno-3-360" href="#__codelineno-3-360"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-361" name="__codelineno-3-361" href="#__codelineno-3-361"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-362" name="__codelineno-3-362" href="#__codelineno-3-362"></a>    }
+<a id="__codelineno-3-363" name="__codelineno-3-363" href="#__codelineno-3-363"></a>]
+<a id="__codelineno-3-364" name="__codelineno-3-364" href="#__codelineno-3-364"></a>==arrived by==
+<a id="__codelineno-3-365" name="__codelineno-3-365" href="#__codelineno-3-365"></a>[
+<a id="__codelineno-3-366" name="__codelineno-3-366" href="#__codelineno-3-366"></a>    {
+<a id="__codelineno-3-367" name="__codelineno-3-367" href="#__codelineno-3-367"></a>        &quot;arrivedById&quot;: 7,
+<a id="__codelineno-3-368" name="__codelineno-3-368" href="#__codelineno-3-368"></a>        &quot;mnemonic&quot;: &quot;PV&quot;,
+<a id="__codelineno-3-369" name="__codelineno-3-369" href="#__codelineno-3-369"></a>        &quot;name&quot;: &quot;Private Vehicle &quot;,
+<a id="__codelineno-3-370" name="__codelineno-3-370" href="#__codelineno-3-370"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-371" name="__codelineno-3-371" href="#__codelineno-3-371"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-372" name="__codelineno-3-372" href="#__codelineno-3-372"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-373" name="__codelineno-3-373" href="#__codelineno-3-373"></a>    },
+<a id="__codelineno-3-374" name="__codelineno-3-374" href="#__codelineno-3-374"></a>    {
+<a id="__codelineno-3-375" name="__codelineno-3-375" href="#__codelineno-3-375"></a>        &quot;arrivedById&quot;: 8,
+<a id="__codelineno-3-376" name="__codelineno-3-376" href="#__codelineno-3-376"></a>        &quot;mnemonic&quot;: &quot;AM&quot;,
+<a id="__codelineno-3-377" name="__codelineno-3-377" href="#__codelineno-3-377"></a>        &quot;name&quot;: &quot;Ambulance&quot;,
+<a id="__codelineno-3-378" name="__codelineno-3-378" href="#__codelineno-3-378"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-379" name="__codelineno-3-379" href="#__codelineno-3-379"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-380" name="__codelineno-3-380" href="#__codelineno-3-380"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-381" name="__codelineno-3-381" href="#__codelineno-3-381"></a>    },
+<a id="__codelineno-3-382" name="__codelineno-3-382" href="#__codelineno-3-382"></a>    {
+<a id="__codelineno-3-383" name="__codelineno-3-383" href="#__codelineno-3-383"></a>        &quot;arrivedById&quot;: 9,
+<a id="__codelineno-3-384" name="__codelineno-3-384" href="#__codelineno-3-384"></a>        &quot;mnemonic&quot;: &quot;HE&quot;,
+<a id="__codelineno-3-385" name="__codelineno-3-385" href="#__codelineno-3-385"></a>        &quot;name&quot;: &quot;Helicopter&quot;,
+<a id="__codelineno-3-386" name="__codelineno-3-386" href="#__codelineno-3-386"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-387" name="__codelineno-3-387" href="#__codelineno-3-387"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-388" name="__codelineno-3-388" href="#__codelineno-3-388"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-389" name="__codelineno-3-389" href="#__codelineno-3-389"></a>    },
+<a id="__codelineno-3-390" name="__codelineno-3-390" href="#__codelineno-3-390"></a>    {
+<a id="__codelineno-3-391" name="__codelineno-3-391" href="#__codelineno-3-391"></a>        &quot;arrivedById&quot;: 10,
+<a id="__codelineno-3-392" name="__codelineno-3-392" href="#__codelineno-3-392"></a>        &quot;mnemonic&quot;: &quot;PC&quot;,
+<a id="__codelineno-3-393" name="__codelineno-3-393" href="#__codelineno-3-393"></a>        &quot;name&quot;: &quot;Police Custody&quot;,
+<a id="__codelineno-3-394" name="__codelineno-3-394" href="#__codelineno-3-394"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-395" name="__codelineno-3-395" href="#__codelineno-3-395"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-396" name="__codelineno-3-396" href="#__codelineno-3-396"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-397" name="__codelineno-3-397" href="#__codelineno-3-397"></a>    },
+<a id="__codelineno-3-398" name="__codelineno-3-398" href="#__codelineno-3-398"></a>    {
+<a id="__codelineno-3-399" name="__codelineno-3-399" href="#__codelineno-3-399"></a>        &quot;arrivedById&quot;: 11,
+<a id="__codelineno-3-400" name="__codelineno-3-400" href="#__codelineno-3-400"></a>        &quot;mnemonic&quot;: &quot;OT&quot;,
+<a id="__codelineno-3-401" name="__codelineno-3-401" href="#__codelineno-3-401"></a>        &quot;name&quot;: &quot;Other&quot;,
+<a id="__codelineno-3-402" name="__codelineno-3-402" href="#__codelineno-3-402"></a>        &quot;active&quot;: true,
+<a id="__codelineno-3-403" name="__codelineno-3-403" href="#__codelineno-3-403"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-404" name="__codelineno-3-404" href="#__codelineno-3-404"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-405" name="__codelineno-3-405" href="#__codelineno-3-405"></a>    }
+<a id="__codelineno-3-406" name="__codelineno-3-406" href="#__codelineno-3-406"></a>]
+<a id="__codelineno-3-407" name="__codelineno-3-407" href="#__codelineno-3-407"></a>==code type==
+<a id="__codelineno-3-408" name="__codelineno-3-408" href="#__codelineno-3-408"></a>[
+<a id="__codelineno-3-409" name="__codelineno-3-409" href="#__codelineno-3-409"></a>    {
+<a id="__codelineno-3-410" name="__codelineno-3-410" href="#__codelineno-3-410"></a>        &quot;codeTypeID&quot;: 6,
+<a id="__codelineno-3-411" name="__codelineno-3-411" href="#__codelineno-3-411"></a>        &quot;codeType&quot;: &quot;ICD Code&quot;,
+<a id="__codelineno-3-412" name="__codelineno-3-412" href="#__codelineno-3-412"></a>        &quot;mnemonic&quot;: &quot;IC&quot;,
+<a id="__codelineno-3-413" name="__codelineno-3-413" href="#__codelineno-3-413"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-414" name="__codelineno-3-414" href="#__codelineno-3-414"></a>    },
+<a id="__codelineno-3-415" name="__codelineno-3-415" href="#__codelineno-3-415"></a>    {
+<a id="__codelineno-3-416" name="__codelineno-3-416" href="#__codelineno-3-416"></a>        &quot;codeTypeID&quot;: 7,
+<a id="__codelineno-3-417" name="__codelineno-3-417" href="#__codelineno-3-417"></a>        &quot;codeType&quot;: &quot;SnomedCT&quot;,
+<a id="__codelineno-3-418" name="__codelineno-3-418" href="#__codelineno-3-418"></a>        &quot;mnemonic&quot;: &quot;SM&quot;,
+<a id="__codelineno-3-419" name="__codelineno-3-419" href="#__codelineno-3-419"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-420" name="__codelineno-3-420" href="#__codelineno-3-420"></a>    },
+<a id="__codelineno-3-421" name="__codelineno-3-421" href="#__codelineno-3-421"></a>    {
+<a id="__codelineno-3-422" name="__codelineno-3-422" href="#__codelineno-3-422"></a>        &quot;codeTypeID&quot;: 8,
+<a id="__codelineno-3-423" name="__codelineno-3-423" href="#__codelineno-3-423"></a>        &quot;codeType&quot;: &quot;CPT Codes&quot;,
+<a id="__codelineno-3-424" name="__codelineno-3-424" href="#__codelineno-3-424"></a>        &quot;mnemonic&quot;: &quot;CP&quot;,
+<a id="__codelineno-3-425" name="__codelineno-3-425" href="#__codelineno-3-425"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-426" name="__codelineno-3-426" href="#__codelineno-3-426"></a>    },
+<a id="__codelineno-3-427" name="__codelineno-3-427" href="#__codelineno-3-427"></a>    {
+<a id="__codelineno-3-428" name="__codelineno-3-428" href="#__codelineno-3-428"></a>        &quot;codeTypeID&quot;: 9,
+<a id="__codelineno-3-429" name="__codelineno-3-429" href="#__codelineno-3-429"></a>        &quot;codeType&quot;: &quot;Loinc&quot;,
+<a id="__codelineno-3-430" name="__codelineno-3-430" href="#__codelineno-3-430"></a>        &quot;mnemonic&quot;: &quot;LO&quot;,
+<a id="__codelineno-3-431" name="__codelineno-3-431" href="#__codelineno-3-431"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-432" name="__codelineno-3-432" href="#__codelineno-3-432"></a>    },
+<a id="__codelineno-3-433" name="__codelineno-3-433" href="#__codelineno-3-433"></a>    {
+<a id="__codelineno-3-434" name="__codelineno-3-434" href="#__codelineno-3-434"></a>        &quot;codeTypeID&quot;: 10,
+<a id="__codelineno-3-435" name="__codelineno-3-435" href="#__codelineno-3-435"></a>        &quot;codeType&quot;: &quot;None&quot;,
+<a id="__codelineno-3-436" name="__codelineno-3-436" href="#__codelineno-3-436"></a>        &quot;mnemonic&quot;: &quot;NO&quot;,
+<a id="__codelineno-3-437" name="__codelineno-3-437" href="#__codelineno-3-437"></a>        &quot;dateEntered&quot;: null
+<a id="__codelineno-3-438" name="__codelineno-3-438" href="#__codelineno-3-438"></a>    }
+<a id="__codelineno-3-439" name="__codelineno-3-439" href="#__codelineno-3-439"></a>]
+<a id="__codelineno-3-440" name="__codelineno-3-440" href="#__codelineno-3-440"></a>===CCI==
+<a id="__codelineno-3-441" name="__codelineno-3-441" href="#__codelineno-3-441"></a>[
+<a id="__codelineno-3-442" name="__codelineno-3-442" href="#__codelineno-3-442"></a>    {
+<a id="__codelineno-3-443" name="__codelineno-3-443" href="#__codelineno-3-443"></a>        &quot;cciId&quot;: 1,
+<a id="__codelineno-3-444" name="__codelineno-3-444" href="#__codelineno-3-444"></a>        &quot;name&quot;: &quot;Antibiotic Resistant Organism&quot;,
+<a id="__codelineno-3-445" name="__codelineno-3-445" href="#__codelineno-3-445"></a>        &quot;shortName&quot;: &quot;ARO&quot;,
+<a id="__codelineno-3-446" name="__codelineno-3-446" href="#__codelineno-3-446"></a>        &quot;description&quot;: &quot;(Antibiotic Resistant Organism) – for clients with proven antibiotic resistant bacteria (e.g. VRE, MRSA). &quot;,
+<a id="__codelineno-3-447" name="__codelineno-3-447" href="#__codelineno-3-447"></a>        &quot;flagColor&quot;: &quot;#FF92B250&quot;,
+<a id="__codelineno-3-448" name="__codelineno-3-448" href="#__codelineno-3-448"></a>        &quot;flagNote&quot;: &quot;CONTACT PRECAUTIONS&quot;,
+<a id="__codelineno-3-449" name="__codelineno-3-449" href="#__codelineno-3-449"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-450" name="__codelineno-3-450" href="#__codelineno-3-450"></a>        &quot;enteredDate&quot;: &quot;2013-11-18T00:00:00&quot;,
+<a id="__codelineno-3-451" name="__codelineno-3-451" href="#__codelineno-3-451"></a>        &quot;status&quot;: false
+<a id="__codelineno-3-452" name="__codelineno-3-452" href="#__codelineno-3-452"></a>    },
+<a id="__codelineno-3-453" name="__codelineno-3-453" href="#__codelineno-3-453"></a>    {
+<a id="__codelineno-3-454" name="__codelineno-3-454" href="#__codelineno-3-454"></a>        &quot;cciId&quot;: 2,
+<a id="__codelineno-3-455" name="__codelineno-3-455" href="#__codelineno-3-455"></a>        &quot;name&quot;: &quot;Aggressive/Violent Behavior&quot;,
+<a id="__codelineno-3-456" name="__codelineno-3-456" href="#__codelineno-3-456"></a>        &quot;shortName&quot;: &quot;AVB&quot;,
+<a id="__codelineno-3-457" name="__codelineno-3-457" href="#__codelineno-3-457"></a>        &quot;description&quot;: &quot;(Aggressive/Violent Behavior) – for clients who exhibit behaviour which threatens or potentially threatens the physical and/or emotional well being of self or others.&quot;,
+<a id="__codelineno-3-458" name="__codelineno-3-458" href="#__codelineno-3-458"></a>        &quot;flagColor&quot;: &quot;#FF9ACCFF&quot;,
+<a id="__codelineno-3-459" name="__codelineno-3-459" href="#__codelineno-3-459"></a>        &quot;flagNote&quot;: &quot;PRECAUTIONS&quot;,
+<a id="__codelineno-3-460" name="__codelineno-3-460" href="#__codelineno-3-460"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-461" name="__codelineno-3-461" href="#__codelineno-3-461"></a>        &quot;enteredDate&quot;: &quot;2013-11-18T00:00:00&quot;,
+<a id="__codelineno-3-462" name="__codelineno-3-462" href="#__codelineno-3-462"></a>        &quot;status&quot;: false
+<a id="__codelineno-3-463" name="__codelineno-3-463" href="#__codelineno-3-463"></a>    },
+<a id="__codelineno-3-464" name="__codelineno-3-464" href="#__codelineno-3-464"></a>    {
+<a id="__codelineno-3-465" name="__codelineno-3-465" href="#__codelineno-3-465"></a>        &quot;cciId&quot;: 3,
+<a id="__codelineno-3-466" name="__codelineno-3-466" href="#__codelineno-3-466"></a>        &quot;name&quot;: &quot;(Do Not Acknowledge&quot;,
+<a id="__codelineno-3-467" name="__codelineno-3-467" href="#__codelineno-3-467"></a>        &quot;shortName&quot;: &quot;DNA&quot;,
+<a id="__codelineno-3-468" name="__codelineno-3-468" href="#__codelineno-3-468"></a>        &quot;description&quot;: &quot;(Do Not Acknowledge) – for clients who request that their attendance at the facility not be acknowledged (FOIPPA), clients who present themselves as at risk from a third party with or without an existing restraining order and for clients who are an inmate in the correctional system.&quot;,
+<a id="__codelineno-3-469" name="__codelineno-3-469" href="#__codelineno-3-469"></a>        &quot;flagColor&quot;: &quot;#FF4F81BD&quot;,
+<a id="__codelineno-3-470" name="__codelineno-3-470" href="#__codelineno-3-470"></a>        &quot;flagNote&quot;: &quot;#a1d294&quot;,
+<a id="__codelineno-3-471" name="__codelineno-3-471" href="#__codelineno-3-471"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-472" name="__codelineno-3-472" href="#__codelineno-3-472"></a>        &quot;enteredDate&quot;: &quot;2013-11-18T00:00:00&quot;,
+<a id="__codelineno-3-473" name="__codelineno-3-473" href="#__codelineno-3-473"></a>        &quot;status&quot;: true
+<a id="__codelineno-3-474" name="__codelineno-3-474" href="#__codelineno-3-474"></a>    },
+<a id="__codelineno-3-475" name="__codelineno-3-475" href="#__codelineno-3-475"></a>    {
+<a id="__codelineno-3-476" name="__codelineno-3-476" href="#__codelineno-3-476"></a>        &quot;cciId&quot;: 4,
+<a id="__codelineno-3-477" name="__codelineno-3-477" href="#__codelineno-3-477"></a>        &quot;name&quot;: &quot;CASE&quot;,
+<a id="__codelineno-3-478" name="__codelineno-3-478" href="#__codelineno-3-478"></a>        &quot;shortName&quot;: &quot;CASE&quot;,
+<a id="__codelineno-3-479" name="__codelineno-3-479" href="#__codelineno-3-479"></a>        &quot;description&quot;: &quot;Specific protocol/case management is established for the client&quot;,
+<a id="__codelineno-3-480" name="__codelineno-3-480" href="#__codelineno-3-480"></a>        &quot;flagColor&quot;: &quot;#FF7F7F7F&quot;,
+<a id="__codelineno-3-481" name="__codelineno-3-481" href="#__codelineno-3-481"></a>        &quot;flagNote&quot;: &quot;Black&quot;,
+<a id="__codelineno-3-482" name="__codelineno-3-482" href="#__codelineno-3-482"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-483" name="__codelineno-3-483" href="#__codelineno-3-483"></a>        &quot;enteredDate&quot;: &quot;2013-11-18T00:00:00&quot;,
+<a id="__codelineno-3-484" name="__codelineno-3-484" href="#__codelineno-3-484"></a>        &quot;status&quot;: true
+<a id="__codelineno-3-485" name="__codelineno-3-485" href="#__codelineno-3-485"></a>    },
+<a id="__codelineno-3-486" name="__codelineno-3-486" href="#__codelineno-3-486"></a>    {
+<a id="__codelineno-3-487" name="__codelineno-3-487" href="#__codelineno-3-487"></a>        &quot;cciId&quot;: 5,
+<a id="__codelineno-3-488" name="__codelineno-3-488" href="#__codelineno-3-488"></a>        &quot;name&quot;: &quot;LATX&quot;,
+<a id="__codelineno-3-489" name="__codelineno-3-489" href="#__codelineno-3-489"></a>        &quot;shortName&quot;: &quot;LATX&quot;,
+<a id="__codelineno-3-490" name="__codelineno-3-490" href="#__codelineno-3-490"></a>        &quot;description&quot;: &quot;Clients with an identified sensitivity/allergy to latex. &quot;,
+<a id="__codelineno-3-491" name="__codelineno-3-491" href="#__codelineno-3-491"></a>        &quot;flagColor&quot;: null,
+<a id="__codelineno-3-492" name="__codelineno-3-492" href="#__codelineno-3-492"></a>        &quot;flagNote&quot;: null,
+<a id="__codelineno-3-493" name="__codelineno-3-493" href="#__codelineno-3-493"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-494" name="__codelineno-3-494" href="#__codelineno-3-494"></a>        &quot;enteredDate&quot;: &quot;2013-11-18T00:00:00&quot;,
+<a id="__codelineno-3-495" name="__codelineno-3-495" href="#__codelineno-3-495"></a>        &quot;status&quot;: null
+<a id="__codelineno-3-496" name="__codelineno-3-496" href="#__codelineno-3-496"></a>    },
+<a id="__codelineno-3-497" name="__codelineno-3-497" href="#__codelineno-3-497"></a>    {
+<a id="__codelineno-3-498" name="__codelineno-3-498" href="#__codelineno-3-498"></a>        &quot;cciId&quot;: 6,
+<a id="__codelineno-3-499" name="__codelineno-3-499" href="#__codelineno-3-499"></a>        &quot;name&quot;: &quot;MAT&quot;,
+<a id="__codelineno-3-500" name="__codelineno-3-500" href="#__codelineno-3-500"></a>        &quot;shortName&quot;: &quot;MAT&quot;,
+<a id="__codelineno-3-501" name="__codelineno-3-501" href="#__codelineno-3-501"></a>        &quot;description&quot;: &quot;Maternity clients who present a risk to their newborn. &quot;,
+<a id="__codelineno-3-502" name="__codelineno-3-502" href="#__codelineno-3-502"></a>        &quot;flagColor&quot;: null,
+<a id="__codelineno-3-503" name="__codelineno-3-503" href="#__codelineno-3-503"></a>        &quot;flagNote&quot;: null,
+<a id="__codelineno-3-504" name="__codelineno-3-504" href="#__codelineno-3-504"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-505" name="__codelineno-3-505" href="#__codelineno-3-505"></a>        &quot;enteredDate&quot;: &quot;2013-11-18T00:00:00&quot;,
+<a id="__codelineno-3-506" name="__codelineno-3-506" href="#__codelineno-3-506"></a>        &quot;status&quot;: null
+<a id="__codelineno-3-507" name="__codelineno-3-507" href="#__codelineno-3-507"></a>    },
+<a id="__codelineno-3-508" name="__codelineno-3-508" href="#__codelineno-3-508"></a>    {
+<a id="__codelineno-3-509" name="__codelineno-3-509" href="#__codelineno-3-509"></a>        &quot;cciId&quot;: 7,
+<a id="__codelineno-3-510" name="__codelineno-3-510" href="#__codelineno-3-510"></a>        &quot;name&quot;: &quot;PMMV&quot;,
+<a id="__codelineno-3-511" name="__codelineno-3-511" href="#__codelineno-3-511"></a>        &quot;shortName&quot;: &quot;PMMV&quot;,
+<a id="__codelineno-3-512" name="__codelineno-3-512" href="#__codelineno-3-512"></a>        &quot;description&quot;: &quot;Patient has a minute volume pacemaker. Special care needs to be taken when placing on a monitor. &quot;,
+<a id="__codelineno-3-513" name="__codelineno-3-513" href="#__codelineno-3-513"></a>        &quot;flagColor&quot;: null,
+<a id="__codelineno-3-514" name="__codelineno-3-514" href="#__codelineno-3-514"></a>        &quot;flagNote&quot;: null,
+<a id="__codelineno-3-515" name="__codelineno-3-515" href="#__codelineno-3-515"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-516" name="__codelineno-3-516" href="#__codelineno-3-516"></a>        &quot;enteredDate&quot;: &quot;2013-11-18T00:00:00&quot;,
+<a id="__codelineno-3-517" name="__codelineno-3-517" href="#__codelineno-3-517"></a>        &quot;status&quot;: null
+<a id="__codelineno-3-518" name="__codelineno-3-518" href="#__codelineno-3-518"></a>    }
+<a id="__codelineno-3-519" name="__codelineno-3-519" href="#__codelineno-3-519"></a>]
+<a id="__codelineno-3-520" name="__codelineno-3-520" href="#__codelineno-3-520"></a>==ISOLATION==
+<a id="__codelineno-3-521" name="__codelineno-3-521" href="#__codelineno-3-521"></a>[
+<a id="__codelineno-3-522" name="__codelineno-3-522" href="#__codelineno-3-522"></a>    {
+<a id="__codelineno-3-523" name="__codelineno-3-523" href="#__codelineno-3-523"></a>        &quot;isolationId&quot;: 1,
+<a id="__codelineno-3-524" name="__codelineno-3-524" href="#__codelineno-3-524"></a>        &quot;isolationName&quot;: &quot;COVID-19&quot;,
+<a id="__codelineno-3-525" name="__codelineno-3-525" href="#__codelineno-3-525"></a>        &quot;mnemonic&quot;: &quot;C19&quot;,
+<a id="__codelineno-3-526" name="__codelineno-3-526" href="#__codelineno-3-526"></a>        &quot;description&quot;: &quot;COVID-19 &quot;
+<a id="__codelineno-3-527" name="__codelineno-3-527" href="#__codelineno-3-527"></a>    },
+<a id="__codelineno-3-528" name="__codelineno-3-528" href="#__codelineno-3-528"></a>    {
+<a id="__codelineno-3-529" name="__codelineno-3-529" href="#__codelineno-3-529"></a>        &quot;isolationId&quot;: 2,
+<a id="__codelineno-3-530" name="__codelineno-3-530" href="#__codelineno-3-530"></a>        &quot;isolationName&quot;: &quot;The flu (influenza)&quot;,
+<a id="__codelineno-3-531" name="__codelineno-3-531" href="#__codelineno-3-531"></a>        &quot;mnemonic&quot;: &quot;infu&quot;,
+<a id="__codelineno-3-532" name="__codelineno-3-532" href="#__codelineno-3-532"></a>        &quot;description&quot;: &quot;The flu (influenza)&quot;
+<a id="__codelineno-3-533" name="__codelineno-3-533" href="#__codelineno-3-533"></a>    },
+<a id="__codelineno-3-534" name="__codelineno-3-534" href="#__codelineno-3-534"></a>    {
+<a id="__codelineno-3-535" name="__codelineno-3-535" href="#__codelineno-3-535"></a>        &quot;isolationId&quot;: 3,
+<a id="__codelineno-3-536" name="__codelineno-3-536" href="#__codelineno-3-536"></a>        &quot;isolationName&quot;: &quot;Infectious Disease&quot;,
+<a id="__codelineno-3-537" name="__codelineno-3-537" href="#__codelineno-3-537"></a>        &quot;mnemonic&quot;: &quot;infd&quot;,
+<a id="__codelineno-3-538" name="__codelineno-3-538" href="#__codelineno-3-538"></a>        &quot;description&quot;: &quot;Infectious Disease&quot;
+<a id="__codelineno-3-539" name="__codelineno-3-539" href="#__codelineno-3-539"></a>    }
+<a id="__codelineno-3-540" name="__codelineno-3-540" href="#__codelineno-3-540"></a>]
+<a id="__codelineno-3-541" name="__codelineno-3-541" href="#__codelineno-3-541"></a>==ACCIDENT PLACE===
+<a id="__codelineno-3-542" name="__codelineno-3-542" href="#__codelineno-3-542"></a>[
+<a id="__codelineno-3-543" name="__codelineno-3-543" href="#__codelineno-3-543"></a>    {
+<a id="__codelineno-3-544" name="__codelineno-3-544" href="#__codelineno-3-544"></a>        &quot;accPlaceID&quot;: 1,
+<a id="__codelineno-3-545" name="__codelineno-3-545" href="#__codelineno-3-545"></a>        &quot;accidentPlace&quot;: &quot;Home&quot;,
+<a id="__codelineno-3-546" name="__codelineno-3-546" href="#__codelineno-3-546"></a>        &quot;mnemonic&quot;: &quot;HM&quot;,
+<a id="__codelineno-3-547" name="__codelineno-3-547" href="#__codelineno-3-547"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-548" name="__codelineno-3-548" href="#__codelineno-3-548"></a>        &quot;enteredDate&quot;: null
+<a id="__codelineno-3-549" name="__codelineno-3-549" href="#__codelineno-3-549"></a>    },
+<a id="__codelineno-3-550" name="__codelineno-3-550" href="#__codelineno-3-550"></a>    {
+<a id="__codelineno-3-551" name="__codelineno-3-551" href="#__codelineno-3-551"></a>        &quot;accPlaceID&quot;: 2,
+<a id="__codelineno-3-552" name="__codelineno-3-552" href="#__codelineno-3-552"></a>        &quot;accidentPlace&quot;: &quot;Work&quot;,
+<a id="__codelineno-3-553" name="__codelineno-3-553" href="#__codelineno-3-553"></a>        &quot;mnemonic&quot;: &quot;WK&quot;,
+<a id="__codelineno-3-554" name="__codelineno-3-554" href="#__codelineno-3-554"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-555" name="__codelineno-3-555" href="#__codelineno-3-555"></a>        &quot;enteredDate&quot;: null
+<a id="__codelineno-3-556" name="__codelineno-3-556" href="#__codelineno-3-556"></a>    },
+<a id="__codelineno-3-557" name="__codelineno-3-557" href="#__codelineno-3-557"></a>    {
+<a id="__codelineno-3-558" name="__codelineno-3-558" href="#__codelineno-3-558"></a>        &quot;accPlaceID&quot;: 3,
+<a id="__codelineno-3-559" name="__codelineno-3-559" href="#__codelineno-3-559"></a>        &quot;accidentPlace&quot;: &quot;Other&quot;,
+<a id="__codelineno-3-560" name="__codelineno-3-560" href="#__codelineno-3-560"></a>        &quot;mnemonic&quot;: &quot;OT&quot;,
+<a id="__codelineno-3-561" name="__codelineno-3-561" href="#__codelineno-3-561"></a>        &quot;enteredBy&quot;: 1,
+<a id="__codelineno-3-562" name="__codelineno-3-562" href="#__codelineno-3-562"></a>        &quot;enteredDate&quot;: null
+<a id="__codelineno-3-563" name="__codelineno-3-563" href="#__codelineno-3-563"></a>    }
+<a id="__codelineno-3-564" name="__codelineno-3-564" href="#__codelineno-3-564"></a>]
+<a id="__codelineno-3-565" name="__codelineno-3-565" href="#__codelineno-3-565"></a>==ACCIDENT OCCARANCE==
+<a id="__codelineno-3-566" name="__codelineno-3-566" href="#__codelineno-3-566"></a>[
+<a id="__codelineno-3-567" name="__codelineno-3-567" href="#__codelineno-3-567"></a>  {
+<a id="__codelineno-3-568" name="__codelineno-3-568" href="#__codelineno-3-568"></a>    &quot;aoId&quot;: 1,
+<a id="__codelineno-3-569" name="__codelineno-3-569" href="#__codelineno-3-569"></a>    &quot;occurrence&quot;: &quot;Auto Accident&quot;,
+<a id="__codelineno-3-570" name="__codelineno-3-570" href="#__codelineno-3-570"></a>    &quot;mnemonic&quot;: &quot;01&quot;
+<a id="__codelineno-3-571" name="__codelineno-3-571" href="#__codelineno-3-571"></a>  },
+<a id="__codelineno-3-572" name="__codelineno-3-572" href="#__codelineno-3-572"></a>  {
+<a id="__codelineno-3-573" name="__codelineno-3-573" href="#__codelineno-3-573"></a>    &quot;aoId&quot;: 2,
+<a id="__codelineno-3-574" name="__codelineno-3-574" href="#__codelineno-3-574"></a>    &quot;occurrence&quot;: &quot;Auto Accident - No Fault Insurance&quot;,
+<a id="__codelineno-3-575" name="__codelineno-3-575" href="#__codelineno-3-575"></a>    &quot;mnemonic&quot;: &quot;02&quot;
+<a id="__codelineno-3-576" name="__codelineno-3-576" href="#__codelineno-3-576"></a>  },
+<a id="__codelineno-3-577" name="__codelineno-3-577" href="#__codelineno-3-577"></a>  {
+<a id="__codelineno-3-578" name="__codelineno-3-578" href="#__codelineno-3-578"></a>    &quot;aoId&quot;: 3,
+<a id="__codelineno-3-579" name="__codelineno-3-579" href="#__codelineno-3-579"></a>    &quot;occurrence&quot;: &quot;Accident - Tort Liability&quot;,
+<a id="__codelineno-3-580" name="__codelineno-3-580" href="#__codelineno-3-580"></a>    &quot;mnemonic&quot;: &quot;03&quot;
+<a id="__codelineno-3-581" name="__codelineno-3-581" href="#__codelineno-3-581"></a>  },
+<a id="__codelineno-3-582" name="__codelineno-3-582" href="#__codelineno-3-582"></a>  {
+<a id="__codelineno-3-583" name="__codelineno-3-583" href="#__codelineno-3-583"></a>    &quot;aoId&quot;: 4,
+<a id="__codelineno-3-584" name="__codelineno-3-584" href="#__codelineno-3-584"></a>    &quot;occurrence&quot;: &quot;Accident - Employment Related&quot;,
+<a id="__codelineno-3-585" name="__codelineno-3-585" href="#__codelineno-3-585"></a>    &quot;mnemonic&quot;: &quot;04&quot;
+<a id="__codelineno-3-586" name="__codelineno-3-586" href="#__codelineno-3-586"></a>  },
+<a id="__codelineno-3-587" name="__codelineno-3-587" href="#__codelineno-3-587"></a>  {
+<a id="__codelineno-3-588" name="__codelineno-3-588" href="#__codelineno-3-588"></a>    &quot;aoId&quot;: 5,
+<a id="__codelineno-3-589" name="__codelineno-3-589" href="#__codelineno-3-589"></a>    &quot;occurrence&quot;: &quot;Other Accident&quot;,
+<a id="__codelineno-3-590" name="__codelineno-3-590" href="#__codelineno-3-590"></a>    &quot;mnemonic&quot;: &quot;05&quot;
+<a id="__codelineno-3-591" name="__codelineno-3-591" href="#__codelineno-3-591"></a>  },
+<a id="__codelineno-3-592" name="__codelineno-3-592" href="#__codelineno-3-592"></a>  {
+<a id="__codelineno-3-593" name="__codelineno-3-593" href="#__codelineno-3-593"></a>    &quot;aoId&quot;: 6,
+<a id="__codelineno-3-594" name="__codelineno-3-594" href="#__codelineno-3-594"></a>    &quot;occurrence&quot;: &quot;Crime Victim&quot;,
+<a id="__codelineno-3-595" name="__codelineno-3-595" href="#__codelineno-3-595"></a>    &quot;mnemonic&quot;: &quot;06&quot;
+<a id="__codelineno-3-596" name="__codelineno-3-596" href="#__codelineno-3-596"></a>  },
+<a id="__codelineno-3-597" name="__codelineno-3-597" href="#__codelineno-3-597"></a>  {
+<a id="__codelineno-3-598" name="__codelineno-3-598" href="#__codelineno-3-598"></a>    &quot;aoId&quot;: 7,
+<a id="__codelineno-3-599" name="__codelineno-3-599" href="#__codelineno-3-599"></a>    &quot;occurrence&quot;: &quot;Start of Infertility Treatment&quot;,
+<a id="__codelineno-3-600" name="__codelineno-3-600" href="#__codelineno-3-600"></a>    &quot;mnemonic&quot;: &quot;09&quot;
+<a id="__codelineno-3-601" name="__codelineno-3-601" href="#__codelineno-3-601"></a>  },
+<a id="__codelineno-3-602" name="__codelineno-3-602" href="#__codelineno-3-602"></a>  {
+<a id="__codelineno-3-603" name="__codelineno-3-603" href="#__codelineno-3-603"></a>    &quot;aoId&quot;: 8,
+<a id="__codelineno-3-604" name="__codelineno-3-604" href="#__codelineno-3-604"></a>    &quot;occurrence&quot;: &quot;Illness - Onset of Symptoms&quot;,
+<a id="__codelineno-3-605" name="__codelineno-3-605" href="#__codelineno-3-605"></a>    &quot;mnemonic&quot;: &quot;11&quot;
+<a id="__codelineno-3-606" name="__codelineno-3-606" href="#__codelineno-3-606"></a>  },
+<a id="__codelineno-3-607" name="__codelineno-3-607" href="#__codelineno-3-607"></a>  {
+<a id="__codelineno-3-608" name="__codelineno-3-608" href="#__codelineno-3-608"></a>    &quot;aoId&quot;: 9,
+<a id="__codelineno-3-609" name="__codelineno-3-609" href="#__codelineno-3-609"></a>    &quot;occurrence&quot;: &quot;Date of Onset For Chronically Dependant&quot;,
+<a id="__codelineno-3-610" name="__codelineno-3-610" href="#__codelineno-3-610"></a>    &quot;mnemonic&quot;: &quot;12&quot;
+<a id="__codelineno-3-611" name="__codelineno-3-611" href="#__codelineno-3-611"></a>  },
+<a id="__codelineno-3-612" name="__codelineno-3-612" href="#__codelineno-3-612"></a>  {
+<a id="__codelineno-3-613" name="__codelineno-3-613" href="#__codelineno-3-613"></a>    &quot;aoId&quot;: 10,
+<a id="__codelineno-3-614" name="__codelineno-3-614" href="#__codelineno-3-614"></a>    &quot;occurrence&quot;: &quot;Date of Last Therapy&quot;,
+<a id="__codelineno-3-615" name="__codelineno-3-615" href="#__codelineno-3-615"></a>    &quot;mnemonic&quot;: &quot;16&quot;
+<a id="__codelineno-3-616" name="__codelineno-3-616" href="#__codelineno-3-616"></a>  }
+<a id="__codelineno-3-617" name="__codelineno-3-617" href="#__codelineno-3-617"></a>]
+<a id="__codelineno-3-618" name="__codelineno-3-618" href="#__codelineno-3-618"></a>==special arrangements=
+<a id="__codelineno-3-619" name="__codelineno-3-619" href="#__codelineno-3-619"></a>[
+<a id="__codelineno-3-620" name="__codelineno-3-620" href="#__codelineno-3-620"></a>    {
+<a id="__codelineno-3-621" name="__codelineno-3-621" href="#__codelineno-3-621"></a>        &quot;fhirValuesetID&quot;: 2834,
+<a id="__codelineno-3-622" name="__codelineno-3-622" href="#__codelineno-3-622"></a>        &quot;code&quot;: &quot;add-bed&quot;,
+<a id="__codelineno-3-623" name="__codelineno-3-623" href="#__codelineno-3-623"></a>        &quot;display&quot;: &quot;Additional bedding&quot;
+<a id="__codelineno-3-624" name="__codelineno-3-624" href="#__codelineno-3-624"></a>    },
+<a id="__codelineno-3-625" name="__codelineno-3-625" href="#__codelineno-3-625"></a>    {
+<a id="__codelineno-3-626" name="__codelineno-3-626" href="#__codelineno-3-626"></a>        &quot;fhirValuesetID&quot;: 2836,
+<a id="__codelineno-3-627" name="__codelineno-3-627" href="#__codelineno-3-627"></a>        &quot;code&quot;: &quot;att&quot;,
+<a id="__codelineno-3-628" name="__codelineno-3-628" href="#__codelineno-3-628"></a>        &quot;display&quot;: &quot;Attendant&quot;
+<a id="__codelineno-3-629" name="__codelineno-3-629" href="#__codelineno-3-629"></a>    },
+<a id="__codelineno-3-630" name="__codelineno-3-630" href="#__codelineno-3-630"></a>    {
+<a id="__codelineno-3-631" name="__codelineno-3-631" href="#__codelineno-3-631"></a>        &quot;fhirValuesetID&quot;: 2837,
+<a id="__codelineno-3-632" name="__codelineno-3-632" href="#__codelineno-3-632"></a>        &quot;code&quot;: &quot;dog&quot;,
+<a id="__codelineno-3-633" name="__codelineno-3-633" href="#__codelineno-3-633"></a>        &quot;display&quot;: &quot;Guide dog&quot;
+<a id="__codelineno-3-634" name="__codelineno-3-634" href="#__codelineno-3-634"></a>    },
+<a id="__codelineno-3-635" name="__codelineno-3-635" href="#__codelineno-3-635"></a>    {
+<a id="__codelineno-3-636" name="__codelineno-3-636" href="#__codelineno-3-636"></a>        &quot;fhirValuesetID&quot;: 2835,
+<a id="__codelineno-3-637" name="__codelineno-3-637" href="#__codelineno-3-637"></a>        &quot;code&quot;: &quot;int&quot;,
+<a id="__codelineno-3-638" name="__codelineno-3-638" href="#__codelineno-3-638"></a>        &quot;display&quot;: &quot;Interpreter&quot;
+<a id="__codelineno-3-639" name="__codelineno-3-639" href="#__codelineno-3-639"></a>    },
+<a id="__codelineno-3-640" name="__codelineno-3-640" href="#__codelineno-3-640"></a>    {
+<a id="__codelineno-3-641" name="__codelineno-3-641" href="#__codelineno-3-641"></a>        &quot;fhirValuesetID&quot;: 2833,
+<a id="__codelineno-3-642" name="__codelineno-3-642" href="#__codelineno-3-642"></a>        &quot;code&quot;: &quot;wheel&quot;,
+<a id="__codelineno-3-643" name="__codelineno-3-643" href="#__codelineno-3-643"></a>        &quot;display&quot;: &quot;Wheelchair&quot;
+<a id="__codelineno-3-644" name="__codelineno-3-644" href="#__codelineno-3-644"></a>    }
+<a id="__codelineno-3-645" name="__codelineno-3-645" href="#__codelineno-3-645"></a>]
+</code></pre></div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../customWord.js"></script>
+      
+    
+  </body>
+</html>
