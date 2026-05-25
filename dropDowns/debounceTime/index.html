@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#steps" class="md-skip">
+        <a href="#using-debounce-distinctuntilchanged-switchmap" class="md-skip">
           Skip to content
         </a>
       
@@ -1687,11 +1687,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-debounce-distinctuntilchanged-switchmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      using debounce distinctUntilChanged switchmap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-debouncetime300" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. debounceTime(300)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-distinctuntilchanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. distinctUntilChanged()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-switchmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. switchMap()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. switchMap()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       steps
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2908,6 +2950,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Css/Explanations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Explanations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2942,11 +3007,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#using-debounce-distinctuntilchanged-switchmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      using debounce distinctUntilChanged switchmap
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-debouncetime300" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. debounceTime(300)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-distinctuntilchanged" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. distinctUntilChanged()
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-switchmap" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. switchMap()
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. switchMap()">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#steps" class="md-nav__link">
     <span class="md-ellipsis">
       steps
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -2970,60 +3077,158 @@
 
   <h1>debounceTime</h1>
 
+<h3 id="using-debounce-distinctuntilchanged-switchmap">using debounce distinctUntilChanged switchmap</h3>
+<details class="note">
+<summary>debouce type</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">ngOnInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">searchControl</span><span class="p">.</span><span class="nx">valueChanges</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nx">debounceTime</span><span class="p">(</span><span class="mf">300</span><span class="p">),</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nx">distinctUntilChanged</span><span class="p">(),</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="nx">switchMap</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="p">=&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">apiService</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">results</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">items</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">results</span><span class="p">;</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="p">}</span>
+</code></pre></div>
+<h2 id="1-debouncetime300">1. debounceTime(300)</h2>
+<p>User typing complete అయ్యే వరకు wait చేస్తుంది.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>h
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>he
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>hel
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>hell
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>hello
+</code></pre></div>
+<p>Without debounceTime():</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>GET /search?h
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>GET /search?he
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>GET /search?hel
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>GET /search?hell
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>GET /search?hello
+</code></pre></div>
+<p>With debounceTime():</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>GET /search?hello
+</code></pre></div>
+<hr />
+<h2 id="2-distinctuntilchanged">2. distinctUntilChanged()</h2>
+<p>Prevents duplicate consecutive values.</p>
+<p>if User hello ani type chesadu accidentally types same value again hello then 2 times api call avtundi this is the problem:</p>
+<p>Without distinctUntilChanged():</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>GET /search?hello
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>GET /search?hello
+</code></pre></div>
+<p>2 identical API calls happen.</p>
+<p>With distinctUntilChanged():</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>GET /search?hello
+</code></pre></div>
+<p>Only one API call.</p>
+<hr />
+<h2 id="3-switchmap">3. switchMap()</h2>
+<p>This is the most important for autocomplete.</p>
+<p>It cancels old API requests when new typing happens.</p>
+<p>Problem without switchMap</p>
+<p>Suppose:</p>
+<p>User types:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>a
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>ab
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>abc
+</code></pre></div>
+<p>API response times:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>a    -&gt; 5 seconds
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>ab   -&gt; 2 seconds
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>abc  -&gt; 1 second
+</code></pre></div>
+<p>Responses come back like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>abc  result arrives first
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>ab   result arrives later
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>a    result arrives last
+</code></pre></div>
+<p>Now UI incorrectly shows old "a" result.</p>
+<p>switchMap() solution</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">switchMap</span><span class="p">(</span><span class="nx">value</span><span class="w"> </span><span class="p">=&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">apiService</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="p">)</span>
+</code></pre></div>
+<p>When new value comes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>previous API call is cancelled
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>only latest request matters
+</code></pre></div>
+<p>So:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>a    cancelled
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>ab   cancelled
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>abc  active
+</code></pre></div>
+<p>Only "abc" result updates UI.</p>
+</details>
 <h3 id="steps">steps</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>step:1 first formControlName tiskoni
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>       daani use chesi oninit() lo  get(&#39;&#39;) tho tiskoni valuechanges lo pettali
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>       bz initial ga call ceyali valuchanges ni oninit lo
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>       then vachina value ni debouce vadi vachina res ni method ki send cheskovali
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>       ex: this.form.get(&#39;fname).valueChanges.....
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>step:1 first formControlName tiskoni
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>       daani use chesi oninit() lo  get(&#39;&#39;) tho tiskoni valuechanges lo pettali
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>       bz initial ga call ceyali valuchanges ni oninit lo
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>       then vachina value ni debouce vadi vachina res ni method ki send cheskovali
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>       ex: this.form.get(&#39;fname).valueChanges.....
 </code></pre></div>
 <details class="note" open="open">
 <summary>debounceTime Example</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">debounceTime</span><span class="p">,</span><span class="w"> </span><span class="nx">takeUntil</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nx">ngOnInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">patientId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">hospitalizationForm</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;icdDescription&#39;</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">valueChanges</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">debounceTime</span><span class="p">(</span><span class="mf">500</span><span class="p">),</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nx">takeUntil</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">onDestroy$</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">res</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">         </span><span class="k">this</span><span class="p">.</span><span class="nx">getProblemSuggestions</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">      </span><span class="p">});</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">}</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="nx">problems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="nx">getProblemSuggestions</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="o">?</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">erdashboard</span><span class="p">.</span><span class="nx">getICDData</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">takeUntil</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">onDestroy$</span><span class="p">))</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">      </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">res</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="nx">problems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">      </span><span class="p">});</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">   </span><span class="p">}</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">debounceTime</span><span class="p">,</span><span class="w"> </span><span class="nx">takeUntil</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="nx">ngOnInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">patientId</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">hospitalizationForm</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;icdDescription&#39;</span><span class="p">)</span><span class="o">?</span><span class="p">.</span><span class="nx">valueChanges</span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">debounceTime</span><span class="p">(</span><span class="mf">500</span><span class="p">),</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="nx">takeUntil</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">onDestroy$</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">res</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">         </span><span class="k">this</span><span class="p">.</span><span class="nx">getProblemSuggestions</span><span class="p">(</span><span class="nx">res</span><span class="p">);</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">      </span><span class="p">});</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="p">}</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="nx">problems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="nx">getProblemSuggestions</span><span class="p">(</span><span class="nx">value</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">value</span><span class="o">?</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">erdashboard</span><span class="p">.</span><span class="nx">getICDData</span><span class="p">(</span><span class="nx">value</span><span class="p">,</span><span class="w"> </span><span class="kc">false</span><span class="p">).</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">takeUntil</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">onDestroy$</span><span class="p">))</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">      </span><span class="p">.</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">res</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">       </span><span class="k">this</span><span class="p">.</span><span class="nx">problems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">      </span><span class="p">});</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">&lt;</span><span class="nt">mat-form-field</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  <span class="na">class</span><span class="o">=</span><span class="s">&quot;example-full-width&quot;</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  <span class="na">appearance</span><span class="o">=</span><span class="s">&quot;outline&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>  <span class="p">&lt;</span><span class="nt">mat-label</span><span class="p">&gt;</span>Hospitalization<span class="p">&lt;/</span><span class="nt">mat-label</span><span class="p">&gt;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">matInput</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Hospitalization&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;comments&quot;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>      <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;icdDescription&quot;</span> <span class="err">[</span><span class="na">matAutocomplete</span><span class="err">]=&quot;</span><span class="na">auto</span><span class="err">&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>  <span class="p">&lt;</span><span class="nt">mat-autocomplete</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="err">#</span><span class="na">auto</span><span class="o">=</span><span class="s">&quot;matAutocomplete&quot;</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    <span class="err">[</span><span class="na">displayWith</span><span class="err">]=&quot;</span><span class="na">displyFn</span><span class="err">&quot;</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    <span class="err">(</span><span class="na">optionSelected</span><span class="err">)=&quot;</span><span class="na">onSelectedProblem</span><span class="err">($</span><span class="na">event</span><span class="err">)&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>    <span class="p">&lt;</span><span class="nt">mat-option</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>      <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let item of problems; trackBy: trackByIndex&quot;</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>      <span class="err">[</span><span class="na">value</span><span class="err">]=&quot;</span><span class="na">item</span><span class="err">&quot;</span> <span class="err">[</span><span class="na">title</span><span class="err">]=&quot;</span><span class="na">item</span><span class="err">.</span><span class="na">procDesc</span> <span class="err">+</span> <span class="err">&#39;</span> <span class="err">(&#39;</span> <span class="err">+</span> <span class="na">item</span><span class="err">[</span><span class="na">codeLabel</span><span class="err">]</span> <span class="err">+</span> <span class="err">&#39;)&#39;&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>        {{ item?.longDesc }}
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>      <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    <span class="p">&lt;/</span><span class="nt">mat-option</span><span class="p">&gt;</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>  <span class="p">&lt;/</span><span class="nt">mat-autocomplete</span><span class="p">&gt;</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>  <span class="p">&lt;</span><span class="nt">mat-error</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;hospitalizationForm.get(&#39;icdDescription&#39;)?.hasError(&#39;required&#39;)&quot;</span><span class="p">&gt;</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>    Hospitalization is required
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>  <span class="p">&lt;/</span><span class="nt">mat-error</span><span class="p">&gt;</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="p">&lt;/</span><span class="nt">mat-form-field</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">mat-form-field</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>  <span class="na">class</span><span class="o">=</span><span class="s">&quot;example-full-width&quot;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>  <span class="na">appearance</span><span class="o">=</span><span class="s">&quot;outline&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>  <span class="p">&lt;</span><span class="nt">mat-label</span><span class="p">&gt;</span>Hospitalization<span class="p">&lt;/</span><span class="nt">mat-label</span><span class="p">&gt;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>  <span class="p">&lt;</span><span class="nt">input</span> <span class="na">matInput</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Hospitalization&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;comments&quot;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>      <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;icdDescription&quot;</span> <span class="err">[</span><span class="na">matAutocomplete</span><span class="err">]=&quot;</span><span class="na">auto</span><span class="err">&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>  <span class="p">&lt;</span><span class="nt">mat-autocomplete</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>    <span class="err">#</span><span class="na">auto</span><span class="o">=</span><span class="s">&quot;matAutocomplete&quot;</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>    <span class="err">[</span><span class="na">displayWith</span><span class="err">]=&quot;</span><span class="na">displyFn</span><span class="err">&quot;</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>    <span class="err">(</span><span class="na">optionSelected</span><span class="err">)=&quot;</span><span class="na">onSelectedProblem</span><span class="err">($</span><span class="na">event</span><span class="err">)&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>    <span class="p">&lt;</span><span class="nt">mat-option</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a>      <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let item of problems; trackBy: trackByIndex&quot;</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>      <span class="err">[</span><span class="na">value</span><span class="err">]=&quot;</span><span class="na">item</span><span class="err">&quot;</span> <span class="err">[</span><span class="na">title</span><span class="err">]=&quot;</span><span class="na">item</span><span class="err">.</span><span class="na">procDesc</span> <span class="err">+</span> <span class="err">&#39;</span> <span class="err">(&#39;</span> <span class="err">+</span> <span class="na">item</span><span class="err">[</span><span class="na">codeLabel</span><span class="err">]</span> <span class="err">+</span> <span class="err">&#39;)&#39;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a>      <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a>        {{ item?.longDesc }}
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>      <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a>    <span class="p">&lt;/</span><span class="nt">mat-option</span><span class="p">&gt;</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a>  <span class="p">&lt;/</span><span class="nt">mat-autocomplete</span><span class="p">&gt;</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>  <span class="p">&lt;</span><span class="nt">mat-error</span>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a>    <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;hospitalizationForm.get(&#39;icdDescription&#39;)?.hasError(&#39;required&#39;)&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a>    Hospitalization is required
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a>  <span class="p">&lt;/</span><span class="nt">mat-error</span><span class="p">&gt;</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="p">&lt;/</span><span class="nt">mat-form-field</span><span class="p">&gt;</span>
 </code></pre></div>
 </details>
 
