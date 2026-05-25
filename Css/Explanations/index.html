@@ -3179,6 +3179,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="✅ Final Simple Meaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onpdf-pdf-onpdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      onPdf() pdf onpdf
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3491,6 +3506,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="✅ Final Simple Meaning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onpdf-pdf-onpdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      onPdf() pdf onpdf
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3779,6 +3809,31 @@
 <a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>combineLatest() ఉపయోగించారు.
 </code></pre></div>
 </details>
+<h3 id="onpdf-pdf-onpdf">onPdf() pdf onpdf</h3>
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>import { saveAs as importedSaveAs } from &#39;file-saver&#39;;
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>import { MatSnackBar } from &#39;@angular/material/snack-bar&#39;;
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>loading:boolean=false; //initial ga false
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>OnPdfData(){
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a> this.loading=true;
+<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a> this.PatientService.patientOrderDetailsPDF(this.OrderDetails?.orderId,this.OrderDetails?.catMnemonic).pipe(takeUntil(this.onDestroy$)).subscribe({
+<a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>   next:(res)=&gt;{
+<a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>    if(res){
+<a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>      let fileName = &#39;CCDA _&#39;+(this.userName)+&#39;_&#39;+(this?.patientId)+&#39;_&#39;+this.selectedVisit;
+<a id="__codelineno-41-12" name="__codelineno-41-12" href="#__codelineno-41-12"></a>      //const fileName: string = this.selectedTemplateName + &#39;_FlowSheet_&#39; + dateWithTime + &#39;.pdf&#39;;
+<a id="__codelineno-41-13" name="__codelineno-41-13" href="#__codelineno-41-13"></a>      importedSaveAs(res.body,fileName); // this line is main to add
+<a id="__codelineno-41-14" name="__codelineno-41-14" href="#__codelineno-41-14"></a>      this._snackbar.open(&#39;PDF downloaded!&#39;,&#39;Ok&#39;,{
+<a id="__codelineno-41-15" name="__codelineno-41-15" href="#__codelineno-41-15"></a>        duration:2000
+<a id="__codelineno-41-16" name="__codelineno-41-16" href="#__codelineno-41-16"></a>      })
+<a id="__codelineno-41-17" name="__codelineno-41-17" href="#__codelineno-41-17"></a>      this.loading=false;          
+<a id="__codelineno-41-18" name="__codelineno-41-18" href="#__codelineno-41-18"></a>    }
+<a id="__codelineno-41-19" name="__codelineno-41-19" href="#__codelineno-41-19"></a>   },error:(err=&gt;{
+<a id="__codelineno-41-20" name="__codelineno-41-20" href="#__codelineno-41-20"></a>    this.loading=false;
+<a id="__codelineno-41-21" name="__codelineno-41-21" href="#__codelineno-41-21"></a>   })
+<a id="__codelineno-41-22" name="__codelineno-41-22" href="#__codelineno-41-22"></a> })
+<a id="__codelineno-41-23" name="__codelineno-41-23" href="#__codelineno-41-23"></a>}
+</code></pre></div>
 
 
 
