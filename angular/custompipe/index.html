@@ -1784,7 +1784,7 @@
   
   
   <span class="md-ellipsis">
-    matAutoSelect
+    matAutoComplete
     
   </span>
   
@@ -3230,69 +3230,69 @@
   <img src="/rajeshgotti/images/customPipe2.jpg"  alt="Output image" style="max-width: 100%; height: auto;" />
 </details>
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>import { Pipe, PipeTransform } from &#39;@angular/core&#39;;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Pipe</span><span class="p">,</span><span class="w"> </span><span class="nx">PipeTransform</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>@Pipe({
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        name: &#39;pipe&#39;, --- name of the pipe 
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        standalone: true
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    })
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">@Pipe</span><span class="p">({</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;pipe&#39;</span><span class="p">,</span><span class="w">  </span><span class="c">&lt;!--</span><span class="o">-</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span><span class="o">--&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">        </span><span class="nx">standalone</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">})</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>export class PipePipe implements PipeTransform {
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">PipePipe</span><span class="w"> </span><span class="k">implements</span><span class="w"> </span><span class="nx">PipeTransform</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  transform(value: any, ...args: any[]): any {
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    return value*100;
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  }
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>(here we need to mention there types if you do not know the type when take any
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>   - the complete data  will come to the value )
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>}
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nx">transform</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">,</span><span class="w"> </span><span class="nx">...args</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="o">*</span><span class="mf">100</span><span class="p">;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">(</span><span class="nx">here</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">mention</span><span class="w"> </span><span class="nx">there</span><span class="w"> </span><span class="nx">types</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">you</span><span class="w"> </span><span class="k">do</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">know</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="kr">type</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">take</span><span class="w"> </span><span class="nx">any</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">   </span><span class="o">-</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">complete</span><span class="w"> </span><span class="nx">data</span><span class="w">  </span><span class="nx">will</span><span class="w"> </span><span class="nx">come</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="p">)</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="p">}</span>
 <a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>where we are using the pipe 
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>--- app.ts ---- 
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>we need to import this pipe in the imports 
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>import:[PipePipe]
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>number:1
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nx">where</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">using</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="o">---</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">ts</span><span class="w"> </span><span class="o">----</span><span class="w"> </span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="nx">we</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">imports</span><span class="w"> </span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="k">import</span><span class="o">:</span><span class="p">[</span><span class="nx">PipePipe</span><span class="p">]</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="kt">number</span><span class="o">:</span><span class="mf">1</span>
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>---- app.html ---- 
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="o">----</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">html</span><span class="w"> </span><span class="o">----</span><span class="w"> </span>
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>{{number | pipe(Name of the pipe )}}
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p">{{</span><span class="kt">number</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="nx">pipe</span><span class="p">(</span><span class="nx">Name</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span><span class="p">)}}</span>
 <a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a># sending multiple parameter to the pipe 
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a> @for(item of array1 ;track item ){
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>  &lt;li&gt;{{item.value  | pipe : item.name : &quot;paramater2&quot;   }}&lt;/li&gt;
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>} 
-<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>@empty{
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>  &lt;li&gt;there is no data &lt;/li&gt;
-<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>} 
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="err">#</span><span class="w"> </span><span class="nx">sending</span><span class="w"> </span><span class="nx">multiple</span><span class="w"> </span><span class="nx">parameter</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w"> </span><span class="kd">@for</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">array1</span><span class="w"> </span><span class="p">;</span><span class="nx">track</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="p">){</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">item</span><span class="p">.</span><span class="nx">value</span><span class="w">  </span><span class="o">|</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">item.name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;paramater2&quot;</span><span class="w">   </span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/li&gt;</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="kd">@empty</span><span class="p">{</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="nx">there</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">no</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">&lt;</span><span class="err">/li&gt;</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="p">}</span><span class="w"> </span>
 <a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>
-<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>pipe
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>  transform(value: any,params:string,params2:string): any {
-<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>    return value + params + params2
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>  }
-<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>-- differnce between purepipe and impurepipes ----
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="nx">pipe</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">  </span><span class="nx">transform</span><span class="p">(</span><span class="nx">value</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">,</span><span class="nx">params</span><span class="o">:</span><span class="kt">string</span><span class="p">,</span><span class="nx">params2</span><span class="o">:</span><span class="kt">string</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">any</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">params</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">params2</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="o">--</span><span class="w"> </span><span class="nx">differnce</span><span class="w"> </span><span class="nx">between</span><span class="w"> </span><span class="nx">purepipe</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">impurepipes</span><span class="w"> </span><span class="o">----</span>
 <a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>
-<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>by default the pipes are impure 
-<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>- for eg if we call the pipe with value of 123 
-<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a>  and we sent the same data 123 when agin the pipe does not call this is called  pure pipe 
-<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>- impure pipes if we semt the save data again and again the pipes calls 
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="nx">by</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pipes</span><span class="w"> </span><span class="nx">are</span><span class="w"> </span><span class="nx">impure</span><span class="w"> </span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="o">-</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nx">eg</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span><span class="kd">with</span><span class="w"> </span><span class="nx">value</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="mf">123</span><span class="w"> </span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">  </span><span class="nx">and</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">sent</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">same</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="mf">123</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">agin</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span><span class="nx">does</span><span class="w"> </span><span class="nx">not</span><span class="w"> </span><span class="nx">call</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">called</span><span class="w">  </span><span class="nx">pure</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="o">-</span><span class="w"> </span><span class="nx">impure</span><span class="w"> </span><span class="nx">pipes</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">semt</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">save</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">again</span><span class="w"> </span><span class="nx">and</span><span class="w"> </span><span class="nx">again</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">pipes</span><span class="w"> </span><span class="nx">calls</span><span class="w"> </span>
 <a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>
-<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>we we want make it inpure
-<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>@Pipe({
-<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>  name: &#39;pipe&#39;,
-<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>  standalone: true,
-<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>  pure:false
-<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>})
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="nx">we</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">want</span><span class="w"> </span><span class="nx">make</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="nx">inpure</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="kd">@Pipe</span><span class="p">({</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">  </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;pipe&#39;</span><span class="p">,</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">  </span><span class="nx">standalone</span><span class="o">:</span><span class="w"> </span><span class="kt">true</span><span class="p">,</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">  </span><span class="nx">pure</span><span class="o">:</span><span class="kt">false</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="p">})</span>
 <a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a>
-<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a>if we what to use that pipe in ts file  we need to inject it in
-<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a>private StrSpaceAbbrPipe= inject(StrSpaceAbbrPipe)
-<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a>we need to import in providers 
-<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a>  providers: [
-<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a>    StrSpaceAbbrPipe
-<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a>  ]
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="k">if</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">what</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">pipe</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">ts</span><span class="w"> </span><span class="nx">file</span><span class="w">  </span><span class="nx">we</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">inject</span><span class="w"> </span><span class="nx">it</span><span class="w"> </span><span class="ow">in</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="k">private</span><span class="w"> </span><span class="nx">StrSpaceAbbrPipe</span><span class="o">=</span><span class="w"> </span><span class="nx">inject</span><span class="p">(</span><span class="nx">StrSpaceAbbrPipe</span><span class="p">)</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="nx">we</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="k">import</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">providers</span><span class="w"> </span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">  </span><span class="nx">providers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">    </span><span class="nx">StrSpaceAbbrPipe</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">  </span><span class="p">]</span>
 <a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a>
-<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a>  if we what to use in the html 
-<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a>    imports: [
-<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a>    StrSpaceAbbrPipe
-<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a>  ],
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">what</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">html</span><span class="w"> </span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="w">    </span><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">    </span><span class="nx">StrSpaceAbbrPipe</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">  </span><span class="p">],</span>
 </code></pre></div>
 <h3 id="datepipe">DatePipe</h3>
 <details class="note" open="open">

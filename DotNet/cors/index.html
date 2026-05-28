@@ -1620,7 +1620,7 @@
   
   
   <span class="md-ellipsis">
-    matAutoSelect
+    matAutoComplete
     
   </span>
   
@@ -2994,44 +2994,44 @@
   <h1>corsError</h1>
 
 <h3 id="cors-error">Cors Error</h3>
-<div class="highlight"><span class="filename">here 3 steps need to adde</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>using Laptop.Data;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>using Microsoft.EntityFrameworkCore;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>var builder = WebApplication.CreateBuilder(args);
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>builder.Services.AddControllers();
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>builder.Services.AddEndpointsApiExplorer();
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>builder.Services.AddSwaggerGen();
+<div class="highlight"><span class="filename">here 3 steps need to adde</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">using</span><span class="w"> </span><span class="nx">Laptop</span><span class="p">.</span><span class="nx">Data</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nx">using</span><span class="w"> </span><span class="nx">Microsoft</span><span class="p">.</span><span class="nx">EntityFrameworkCore</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kd">var</span><span class="w"> </span><span class="nx">builder</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">WebApplication</span><span class="p">.</span><span class="nx">CreateBuilder</span><span class="p">(</span><span class="nx">args</span><span class="p">);</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nx">builder</span><span class="p">.</span><span class="nx">Services</span><span class="p">.</span><span class="nx">AddControllers</span><span class="p">();</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nx">builder</span><span class="p">.</span><span class="nx">Services</span><span class="p">.</span><span class="nx">AddEndpointsApiExplorer</span><span class="p">();</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">builder</span><span class="p">.</span><span class="nx">Services</span><span class="p">.</span><span class="nx">AddSwaggerGen</span><span class="p">();</span>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>// 1.Add dbContext here
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>builder.Services.AddDbContext&lt;LapTopDbContext&gt;(options =&gt;
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    options.UseSqlServer(builder.Configuration.GetConnectionString(&quot;DefaultConnection&quot;)));
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>//2.Add cors policy    
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>builder.Services.AddCors(options =&gt;
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>{
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>    options.AddPolicy(&quot;AllowAngularClient&quot;,
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        policy =&gt;
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        {
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>            policy.WithOrigins(&quot;http://localhost:4200&quot;)
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                  .AllowAnyHeader().AllowAnyMethod();
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>        });
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>});
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">// 1.Add dbContext here</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="nx">builder</span><span class="p">.</span><span class="nx">Services</span><span class="p">.</span><span class="nx">AddDbContext</span><span class="o">&lt;</span><span class="nx">LapTopDbContext</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">options</span><span class="w"> </span><span class="p">=&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nx">options</span><span class="p">.</span><span class="nx">UseSqlServer</span><span class="p">(</span><span class="nx">builder</span><span class="p">.</span><span class="nx">Configuration</span><span class="p">.</span><span class="nx">GetConnectionString</span><span class="p">(</span><span class="s2">&quot;DefaultConnection&quot;</span><span class="p">)));</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1">//2.Add cors policy    </span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nx">builder</span><span class="p">.</span><span class="nx">Services</span><span class="p">.</span><span class="nx">AddCors</span><span class="p">(</span><span class="nx">options</span><span class="w"> </span><span class="p">=&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="p">{</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nx">options</span><span class="p">.</span><span class="nx">AddPolicy</span><span class="p">(</span><span class="s2">&quot;AllowAngularClient&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nx">policy</span><span class="w"> </span><span class="p">=&gt;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">            </span><span class="nx">policy</span><span class="p">.</span><span class="nx">WithOrigins</span><span class="p">(</span><span class="s2">&quot;http://localhost:4200&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">                  </span><span class="p">.</span><span class="nx">AllowAnyHeader</span><span class="p">().</span><span class="nx">AllowAnyMethod</span><span class="p">();</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="p">});</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">});</span>
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>var app = builder.Build();
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="kd">var</span><span class="w"> </span><span class="nx">app</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">builder</span><span class="p">.</span><span class="nx">Build</span><span class="p">();</span>
 <a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>if (app.Environment.IsDevelopment())
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>{
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    app.UseSwagger();
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    app.UseSwaggerUI();
-<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>}
-<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>app.UseHttpsRedirection();
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">Environment</span><span class="p">.</span><span class="nx">IsDevelopment</span><span class="p">())</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="p">{</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">UseSwagger</span><span class="p">();</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">UseSwaggerUI</span><span class="p">();</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="p">}</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="nx">app</span><span class="p">.</span><span class="nx">UseHttpsRedirection</span><span class="p">();</span>
 <a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>
-<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>app.UseCors(&quot;AllowAngularClient&quot;);// 3.ADD THIS LINE this should be above authorization
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="nx">app</span><span class="p">.</span><span class="nx">UseCors</span><span class="p">(</span><span class="s2">&quot;AllowAngularClient&quot;</span><span class="p">);</span><span class="c1">// 3.ADD THIS LINE this should be above authorization</span>
 <a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
-<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>app.UseAuthorization();
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="nx">app</span><span class="p">.</span><span class="nx">UseAuthorization</span><span class="p">();</span>
 <a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>
-<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>app.MapControllers();
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="nx">app</span><span class="p">.</span><span class="nx">MapControllers</span><span class="p">();</span>
 <a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
-<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>app.Run();
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="nx">app</span><span class="p">.</span><span class="nx">Run</span><span class="p">();</span>
 </code></pre></div>
 
 

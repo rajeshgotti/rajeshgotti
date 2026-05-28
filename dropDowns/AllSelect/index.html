@@ -1604,9 +1604,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#realtime-example" class="md-nav__link">
+  <a href="#realtime-example-example2" class="md-nav__link">
     <span class="md-ellipsis">
-      RealTime Example
+      RealTime Example Example:2
     </span>
   </a>
   
@@ -1679,7 +1679,7 @@
   
   
   <span class="md-ellipsis">
-    matAutoSelect
+    matAutoComplete
     
   </span>
   
@@ -2983,9 +2983,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#realtime-example" class="md-nav__link">
+  <a href="#realtime-example-example2" class="md-nav__link">
     <span class="md-ellipsis">
-      RealTime Example
+      RealTime Example Example:2
     </span>
   </a>
   
@@ -3012,50 +3012,49 @@
   <h1>selectAll</h1>
 
 <h3 id="selectallde-select-checkbox">SelectAll/De-select CHECKBOX</h3>
-<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>  &lt;!-- Multi-Select Dropdown --&gt;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        &lt;mat-form-field appearance=&quot;outline&quot; class=&quot;mx-2&quot;&gt;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            &lt;mat-label&gt;Select Skills&lt;/mat-label&gt;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            &lt;mat-select formControlName=&quot;skillsFc&quot; multiple&gt;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                &lt;mat-checkbox (change)=&quot;onSelectall($event)&quot;             &gt;
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">&lt;!-- Multi-Select Dropdown --&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        <span class="p">&lt;</span><span class="nt">mat-form-field</span> <span class="na">appearance</span><span class="o">=</span><span class="s">&quot;outline&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mx-2&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            <span class="p">&lt;</span><span class="nt">mat-label</span><span class="p">&gt;</span>Select Skills<span class="p">&lt;/</span><span class="nt">mat-label</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>            <span class="p">&lt;</span><span class="nt">mat-select</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;skillsFc&quot;</span> <span class="na">multiple</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                <span class="p">&lt;</span><span class="nt">mat-checkbox</span> <span class="err">(</span><span class="na">change</span><span class="err">)=&quot;</span><span class="na">onSelectall</span><span class="err">($</span><span class="na">event</span><span class="err">)&quot;</span>             <span class="p">&gt;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                    All
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                &lt;/mat-checkbox&gt;
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                &lt;mat-option *ngFor=&quot;let skill of skills&quot; [value]=&quot;skill&quot;&gt;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                <span class="p">&lt;/</span><span class="nt">mat-checkbox</span><span class="p">&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                <span class="p">&lt;</span><span class="nt">mat-option</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let skill of skills&quot;</span> <span class="err">[</span><span class="na">value</span><span class="err">]=&quot;</span><span class="na">skill</span><span class="err">&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>                  {{ skill }}
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                &lt;/mat-option&gt;
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            &lt;/mat-select&gt;
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            &lt;mat-error *ngIf=&quot;myForm.get(&#39;skillsFc&#39;)?.hasError(&#39;required&#39;)&quot;&gt;
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                <span class="p">&lt;/</span><span class="nt">mat-option</span><span class="p">&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>            <span class="p">&lt;/</span><span class="nt">mat-select</span><span class="p">&gt;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>            <span class="p">&lt;</span><span class="nt">mat-error</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;myForm.get(&#39;skillsFc&#39;)?.hasError(&#39;required&#39;)&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                At least one skill is required
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            &lt;/mat-error&gt;
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        &lt;/mat-form-field&gt;
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>            <span class="p">&lt;/</span><span class="nt">mat-error</span><span class="p">&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>        <span class="p">&lt;/</span><span class="nt">mat-form-field</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a> onSelectall(event: any) {
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    if (event.checked) {
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      this.myForm.patchValue({ skillsFc: this.skills });
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    } else {
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      this.myForm.patchValue({ skillsFc: [] });
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    }
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  }
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w"> </span><span class="nx">onSelectall</span><span class="p">(</span><span class="nx">event</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">checked</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">myForm</span><span class="p">.</span><span class="nx">patchValue</span><span class="p">({</span><span class="w"> </span><span class="nx">skillsFc</span><span class="o">:</span><span class="w"> </span><span class="kt">this.skills</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">myForm</span><span class="p">.</span><span class="nx">patchValue</span><span class="p">({</span><span class="w"> </span><span class="nx">skillsFc</span><span class="o">:</span><span class="w"> </span><span class="p">[]</span><span class="w"> </span><span class="p">});</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
 </code></pre></div>
-<h3 id="realtime-example">RealTime Example</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>example:2
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a> &lt;div&gt;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>    &lt;mat-checkbox class=&quot;&quot; (change)=&quot;onSelectall($event)&quot;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>      [indeterminate]=&quot;(selectedModules?.length != clinicalData?.length)&amp;&amp;selectedModules?.length != 0&quot;
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>      [checked]=&quot;selectedModules?.length===clinicalData?.length&quot;&gt;
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>      All
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>    &lt;/mat-checkbox&gt;
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  &lt;/div&gt;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a> -- ts-file ---
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>  onSelectall(event){
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>    if(event.checked){
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>     this.selectedModules= this.clinicalData.map(ele=&gt;ele.requestSections);
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>     this.clinicalData.map(ele=&gt;ele.checked=true);
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    }else {
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>      this.selectedModules=[];
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>      this.clinicalData.map(ele=&gt;ele.checked=false);
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    }
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>  }
+<h3 id="realtime-example-example2">RealTime Example Example:2</h3>
+<div class="highlight"><span class="filename">html</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    <span class="p">&lt;</span><span class="nt">mat-checkbox</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;&quot;</span> <span class="err">(</span><span class="na">change</span><span class="err">)=&quot;</span><span class="na">onSelectall</span><span class="err">($</span><span class="na">event</span><span class="err">)&quot;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>      <span class="err">[</span><span class="na">indeterminate</span><span class="err">]=&quot;(</span><span class="na">selectedModules</span><span class="err">?.</span><span class="na">length</span> <span class="err">!=</span> <span class="na">clinicalData</span><span class="err">?.</span><span class="na">length</span><span class="err">)&amp;&amp;</span><span class="na">selectedModules</span><span class="err">?.</span><span class="na">length</span> <span class="err">!=</span> <span class="na">0</span><span class="err">&quot;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>      <span class="err">[</span><span class="na">checked</span><span class="err">]=&quot;</span><span class="na">selectedModules</span><span class="err">?.</span><span class="na">length</span><span class="o">=</span><span class="s">==clinicalData?.length&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>      All
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="p">&lt;/</span><span class="nt">mat-checkbox</span><span class="p">&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a> -- ts-file ---
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  onSelectall(event){
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>    if(event.checked){
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>     this.selectedModules= this.clinicalData.map(ele=&gt;ele.requestSections);
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>     this.clinicalData.map(ele=&gt;ele.checked=true);
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    }else {
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>      this.selectedModules=[];
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>      this.clinicalData.map(ele=&gt;ele.checked=false);
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    }
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>  }
 </code></pre></div>
 
 

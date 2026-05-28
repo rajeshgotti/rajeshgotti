@@ -1800,7 +1800,7 @@
   
   
   <span class="md-ellipsis">
-    matAutoSelect
+    matAutoComplete
     
   </span>
   
@@ -3338,10 +3338,10 @@
 <code>ngOnChanges()</code> runs automatically.</p>
 </details>
 <h3 id="step1-import-childcomp-in-ur-parentcomp">STEP:1 import childComp in ur parentComp</h3>
-<p><div class="highlight"><span class="filename">parent.ts.file</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>import {childComponent} from &#39;./directory&#39;;//import ur childComponent
+<p><div class="highlight"><span class="filename">parent.ts.file</span><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">childComponent</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./directory&#39;</span><span class="p">;</span><span class="c1">//import ur childComponent</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  data1:string=&quot;mango&quot; // varible:type=&quot;yourData&quot;
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>  data2:string=&quot;sweet&quot; 
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">  </span><span class="nx">data1</span><span class="o">:</span><span class="kt">string</span><span class="o">=</span><span class="s2">&quot;mango&quot;</span><span class="w"> </span><span class="c1">// varible:type=&quot;yourData&quot;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nx">data2</span><span class="o">:</span><span class="kt">string</span><span class="o">=</span><span class="s2">&quot;sweet&quot;</span><span class="w"> </span>
 </code></pre></div>
   STEP:2 Your sending data from P-C so in [ parentComponent.html ] file use ur childComponent selector
 <div class="highlight"><span class="filename">parent.html</span><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>  &lt;app-child [d1]=&quot;data1&quot;
@@ -3349,9 +3349,9 @@
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>   &gt;&lt;/app-child&gt;
 </code></pre></div></p>
 <h3 id="step3-now-go-to-your-childcomponent-and-here-your-data-is-present-in-d1-d2">STEP:3 Now go to your childComponent and here your data is present in d1 &amp; d2</h3>
-<div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>import { Component, Input } from &#39;@angular/core&#39;;
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a> @Input() d1:string;
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a> @Input() d2:string;
+<div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Component</span><span class="p">,</span><span class="w"> </span><span class="nx">Input</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w"> </span><span class="kd">@Input</span><span class="p">()</span><span class="w"> </span><span class="nx">d1</span><span class="o">:</span><span class="kt">string</span><span class="p">;</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w"> </span><span class="kd">@Input</span><span class="p">()</span><span class="w"> </span><span class="nx">d2</span><span class="o">:</span><span class="kt">string</span><span class="p">;</span>
 </code></pre></div>
 <h3 id="step4-use-this-d1-d2-in-html-file">STEP:4 use this d1 &amp; d2 in HTML file</h3>
 <div class="highlight"><span class="filename">child.html</span><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>&lt;h1&gt; {{d1}} &lt;/h1&gt;
@@ -3359,64 +3359,64 @@
 </code></pre></div>
 <h2 id="example2">Example:2</h2>
 <h3 id="input-decorator-and-ngonchangesdataany">Input decorator and ngOnChanges(data:any){}</h3>
-<div class="highlight"><span class="filename">parent.ts</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>@input is used to send data from parent to child 
+<div class="highlight"><span class="filename">parent.file</span><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kd">@input</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">used</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">send</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="nx">parent</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>array=[1,2,3,4] ;
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>name_type_code: NameTypeCodes[]; // this is present in the parent component 
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="nx">array</span><span class="o">=</span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">]</span><span class="w"> </span><span class="p">;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="nx">name_type_code</span><span class="o">:</span><span class="w"> </span><span class="kt">NameTypeCodes</span><span class="p">[];</span><span class="w"> </span><span class="c1">// this is present in the parent component </span>
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>formsubmitbutton(){
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>this.array=[...this.array,this.form.value]   
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>  }; //// (here we are pushing the formdata to that array)
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="nx">formsubmitbutton</span><span class="p">(){</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="k">this</span><span class="p">.</span><span class="nx">array</span><span class="o">=</span><span class="p">[...</span><span class="k">this</span><span class="p">.</span><span class="nx">array</span><span class="p">,</span><span class="k">this</span><span class="p">.</span><span class="nx">form</span><span class="p">.</span><span class="nx">value</span><span class="p">]</span><span class="w">   </span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span><span class="p">};</span><span class="w"> </span><span class="c1">//// (here we are pushing the formdata to that array)</span>
 <a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>  parent compnent 
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>    getNameTypeCode() {
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    this.masterDataService.getNameCodes().pipe(takeUntil(this.onDestroy$)).subscribe(res =&gt; {
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a>      this.name_type_code = res.body;
-<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a>      this.nameTypeCodeStatus = true;
-<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a>      ////console.log.log.log(&quot;name type code ==&gt; &quot;, res.body);
-<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a>    })
-<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a>    },
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">  </span><span class="nx">parent</span><span class="w"> </span><span class="nx">compnent</span><span class="w"> </span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="nx">getNameTypeCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">masterDataService</span><span class="p">.</span><span class="nx">getNameCodes</span><span class="p">().</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">takeUntil</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">onDestroy$</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">(</span><span class="nx">res</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">name_type_code</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">nameTypeCodeStatus</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">      </span><span class="c1">////console.log.log.log(&quot;name type code ==&gt; &quot;, res.body);</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">    </span><span class="p">})</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">    </span><span class="p">},</span>
 <a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a>
-<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a>     ----parent html ---
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">     </span><span class="o">----</span><span class="nx">parent</span><span class="w"> </span><span class="nx">html</span><span class="w"> </span><span class="o">---</span>
 <a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a>
-<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a>&lt;app-child 
-<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a>     [array]=&quot;array&quot;
-<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a>     [name_type_code]=&quot;name_type_code&quot; 
-<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a>     &gt;
-<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a>  &lt;/app-child&gt;  // (the selector of the child componenet )
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="o">&lt;</span><span class="nx">app</span><span class="o">-</span><span class="nx">child</span><span class="w"> </span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">     </span><span class="p">[</span><span class="nx">array</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;array&quot;</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">     </span><span class="p">[</span><span class="nx">name_type_code</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;name_type_code&quot;</span><span class="w"> </span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">     </span><span class="o">&gt;</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">  </span><span class="o">&lt;</span><span class="sr">/app-child&gt;  /</span><span class="o">/</span><span class="w"> </span><span class="p">(</span><span class="nx">the</span><span class="w"> </span><span class="nx">selector</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="nx">componenet</span><span class="w"> </span><span class="p">)</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>import {component,Input} from &#39;@angular/core&#39;
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>@Input() name_type_code: NameTypeCodes[]; here the data we will get
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>@Input array:any; // ( here the data comes in that arrayFormat from the parent that data we can use it in any way )
+<div class="highlight"><span class="filename">child.ts</span><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="nx">component</span><span class="p">,</span><span class="nx">Input</span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kd">@Input</span><span class="p">()</span><span class="w"> </span><span class="nx">name_type_code</span><span class="o">:</span><span class="w"> </span><span class="kt">NameTypeCodes</span><span class="p">[];</span><span class="w"> </span><span class="nx">here</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">get</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kd">@Input</span><span class="w"> </span><span class="nx">array</span><span class="o">:</span><span class="kt">any</span><span class="p">;</span><span class="w"> </span><span class="c1">// ( here the data comes in that arrayFormat from the parent that data we can use it in any way )</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>    ---child html ----
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>&lt;p&gt;child works!&lt;/p&gt;
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="o">---</span><span class="nx">child</span><span class="w"> </span><span class="nx">html</span><span class="w"> </span><span class="o">----</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="nx">child</span><span class="w"> </span><span class="nx">works</span><span class="o">!&lt;</span><span class="err">/p&gt;</span>
 <a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>@for(item of array ;track item ){  // (track is used for the performance)
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>     &lt;li&gt;{{item.firstname}}&lt;/li&gt;
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>   }
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>@empty{   // (if the data is not present )
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>  &lt;li&gt;there is no data &lt;/li&gt;
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>}
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="kd">@for</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="p">;</span><span class="nx">track</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="p">){</span><span class="w">  </span><span class="c1">// (track is used for the performance)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">     </span><span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="p">{{</span><span class="nx">item</span><span class="p">.</span><span class="nx">firstname</span><span class="p">}}</span><span class="o">&lt;</span><span class="err">/li&gt;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">   </span><span class="p">}</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="kd">@empty</span><span class="p">{</span><span class="w">   </span><span class="c1">// (if the data is not present )</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="o">&lt;</span><span class="nx">li</span><span class="o">&gt;</span><span class="nx">there</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">no</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="o">&lt;</span><span class="err">/li&gt;</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
 <a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>
 <a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>why we need to use ngOnChanges
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="nx">why</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">use</span><span class="w"> </span><span class="nx">ngOnChanges</span>
 <a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>-&gt; the data is send from parent to child intitally when the component is loaded 
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>    only the initial data will come 
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="o">-&gt;</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">send</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="nx">parent</span><span class="w"> </span><span class="nx">to</span><span class="w"> </span><span class="nx">child</span><span class="w"> </span><span class="nx">intitally</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">component</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">loaded</span><span class="w"> </span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="nx">only</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">initial</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">come</span><span class="w"> </span>
 <a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>-&gt; but when we need the updated data of that array when the form is submitted 
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>   so the updated data is triggered in that ngOnchnages
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="o">-&gt;</span><span class="w"> </span><span class="nx">but</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">we</span><span class="w"> </span><span class="nx">need</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">updated</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">array</span><span class="w"> </span><span class="nx">when</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">form</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">submitted</span><span class="w"> </span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">   </span><span class="nx">so</span><span class="w"> </span><span class="nx">the</span><span class="w"> </span><span class="nx">updated</span><span class="w"> </span><span class="nx">data</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">triggered</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="nx">that</span><span class="w"> </span><span class="nx">ngOnchnages</span>
 <a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>ngOnChanges(changes: SimpleChanges): void {
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>  // Object.keys(changes).forEach(key =&gt; this[key] = changes[key].currentValue);
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="nx">ngOnChanges</span><span class="p">(</span><span class="nx">changes</span><span class="o">:</span><span class="w"> </span><span class="kt">SimpleChanges</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">  </span><span class="c1">// Object.keys(changes).forEach(key =&gt; this[key] = changes[key].currentValue);</span>
 <a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>
-<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>if(changes[&#39;array&#39;]?.currentValue){
-<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>  let obj = changes[&#39;array&#39;]?.currentValue
-<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>  console.log(obj,&#39;datadata&#39;)
+<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a><span class="k">if</span><span class="p">(</span><span class="nx">changes</span><span class="p">[</span><span class="s1">&#39;array&#39;</span><span class="p">]</span><span class="o">?</span><span class="p">.</span><span class="nx">currentValue</span><span class="p">){</span>
+<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a><span class="w">  </span><span class="kd">let</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">changes</span><span class="p">[</span><span class="s1">&#39;array&#39;</span><span class="p">]</span><span class="o">?</span><span class="p">.</span><span class="nx">currentValue</span>
+<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">obj</span><span class="p">,</span><span class="s1">&#39;datadata&#39;</span><span class="p">)</span>
 <a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>
-<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>  }
-<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>}
+<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a><span class="p">}</span>
 </code></pre></div>
 
 

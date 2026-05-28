@@ -1615,7 +1615,7 @@
   
   
   <span class="md-ellipsis">
-    matAutoSelect
+    matAutoComplete
     
   </span>
   
@@ -2932,41 +2932,41 @@
 
   <h1>MatAutoComplete</h1>
 
-<p><div class="highlight"><span class="filename">html.ts</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>s-1:  imports: [ MatAutocompleteModule,MatOption,NgSelectModule,MatInputModule ] 
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>      drugList=[];
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>      druginputChange(event:Event){
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>      const inputValue = (event.target as HTMLInputElement).value; // what u enter in textBox that 
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                                                              u will get into this variable
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      this.historyService.getWsDrugSuggestions(inputValue,&#39;DRUG&#39;,&#39;F&#39;).subscribe({
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        next:(res)=&gt;{
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>          this.drugList=res.body
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>        }
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>      })
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>    }
+<p><div class="highlight"><span class="filename">html.ts</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nx">s</span><span class="o">-</span><span class="nx">1</span><span class="o">:</span><span class="w">  </span><span class="kt">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="nx">MatAutocompleteModule</span><span class="p">,</span><span class="nx">MatOption</span><span class="p">,</span><span class="nx">NgSelectModule</span><span class="p">,</span><span class="nx">MatInputModule</span><span class="w"> </span><span class="p">]</span><span class="w"> </span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">      </span><span class="nx">drugList</span><span class="o">=</span><span class="p">[];</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">      </span><span class="nx">druginputChange</span><span class="p">(</span><span class="nx">event</span><span class="o">:</span><span class="kt">Event</span><span class="p">){</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">inputValue</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="w"> </span><span class="kr">as</span><span class="w"> </span><span class="nx">HTMLInputElement</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span><span class="w"> </span><span class="c1">// what u enter in textBox that </span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">                                                              </span><span class="nx">u</span><span class="w"> </span><span class="nx">will</span><span class="w"> </span><span class="nx">get</span><span class="w"> </span><span class="nx">into</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nx">variable</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">historyService</span><span class="p">.</span><span class="nx">getWsDrugSuggestions</span><span class="p">(</span><span class="nx">inputValue</span><span class="p">,</span><span class="s1">&#39;DRUG&#39;</span><span class="p">,</span><span class="s1">&#39;F&#39;</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">({</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="nx">next</span><span class="o">:</span><span class="p">(</span><span class="nx">res</span><span class="p">)=&gt;{</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">          </span><span class="k">this</span><span class="p">.</span><span class="nx">drugList</span><span class="o">=</span><span class="nx">res</span><span class="p">.</span><span class="nx">body</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">      </span><span class="p">})</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">}</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">drug.html</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>   &lt;div class=&quot;col-6&quot;&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    &lt;mat-form-field&gt;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      &lt;mat-label&gt;test&lt;/mat-label&gt;
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      &lt;input type=&quot;text&quot; matInput formControlName=&quot;drugName&quot;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      (input)=&quot;druginputChange($event)&quot;
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      [matAutocomplete]=&quot;automaticdrug&quot;
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      &gt;
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    &lt;/mat-form-field&gt;
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &lt;mat-autocomplete #automaticdrug&gt;
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      &lt;mat-option class=&quot;custom_line_height_generic&quot; *ngFor=&quot;let drug of drugList&quot; [value]=&quot;drug&quot;&gt;
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            &lt;div class=&quot;drug-info-block&quot;&gt;
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>                    &lt;div&gt;&lt;span class=&quot;label-sky&quot;&gt;Generic Name :&lt;/span&gt; {{ drug.drug }}&lt;/div&gt;
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                    &lt;div style=&quot;display: flex; flex-wrap: wrap; gap: 16px;&quot;&gt;
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                        &lt;div&gt;&lt;span class=&quot;label-red&quot;&gt;Brand Name:&lt;/span&gt; {{ drug.brandname || &#39;NONE&#39;}}&lt;/div&gt;
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                        &lt;div&gt;&lt;span class=&quot;label-sky&quot;&gt;RxNorm:&lt;/span&gt; {{ drug.rxNormCode || &#39;NONE&#39; }}&lt;/div&gt;
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>                        &lt;div&gt;&lt;span class=&quot;label-red&quot;&gt;NDC :&lt;/span&gt; {{ drug.ndc || &#39;NONE&#39; }}&lt;/div&gt;
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>                    &lt;/div&gt;
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            &lt;/div&gt;
+<div class="highlight"><span class="filename">drug.html</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-6&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    <span class="p">&lt;</span><span class="nt">mat-form-field</span><span class="p">&gt;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>      <span class="p">&lt;</span><span class="nt">mat-label</span><span class="p">&gt;</span>test<span class="p">&lt;/</span><span class="nt">mat-label</span><span class="p">&gt;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>      <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span> <span class="na">matInput</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;drugName&quot;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      <span class="err">(</span><span class="na">input</span><span class="err">)=&quot;</span><span class="na">druginputChange</span><span class="err">($</span><span class="na">event</span><span class="err">)&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      <span class="err">[</span><span class="na">matAutocomplete</span><span class="err">]=&quot;</span><span class="na">automaticdrug</span><span class="err">&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      <span class="p">&gt;</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="p">&lt;/</span><span class="nt">mat-form-field</span><span class="p">&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">&lt;</span><span class="nt">mat-autocomplete</span> <span class="err">#</span><span class="na">automaticdrug</span><span class="p">&gt;</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>      <span class="p">&lt;</span><span class="nt">mat-option</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;custom_line_height_generic&quot;</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let drug of drugList&quot;</span> <span class="err">[</span><span class="na">value</span><span class="err">]=&quot;</span><span class="na">drug</span><span class="err">&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;drug-info-block&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>                    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-sky&quot;</span><span class="p">&gt;</span>Generic Name :<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ drug.drug }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>                    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;display: flex; flex-wrap: wrap; gap: 16px;&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>                        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-red&quot;</span><span class="p">&gt;</span>Brand Name:<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ drug.brandname || &#39;NONE&#39;}}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>                        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-sky&quot;</span><span class="p">&gt;</span>RxNorm:<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ drug.rxNormCode || &#39;NONE&#39; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>                        <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;label-red&quot;</span><span class="p">&gt;</span>NDC :<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> {{ drug.ndc || &#39;NONE&#39; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>                    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>              &lt;hr&gt; //this is for linebreak
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        &lt;/mat-option&gt;     
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    &lt;/mat-autocomplete&gt;
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>  &lt;/div&gt;
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>              <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span> //this is for linebreak
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>        <span class="p">&lt;/</span><span class="nt">mat-option</span><span class="p">&gt;</span>     
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="p">&lt;/</span><span class="nt">mat-autocomplete</span><span class="p">&gt;</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div></p>
 <details>
   <summary>AutoComplete</summary>

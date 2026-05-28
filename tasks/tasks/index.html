@@ -1620,7 +1620,7 @@
   
   
   <span class="md-ellipsis">
-    matAutoSelect
+    matAutoComplete
     
   </span>
   
@@ -3033,35 +3033,35 @@
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>02. remove duplicate using filter
 </code></pre></div>
 <h3 id="if-else">If -- Else</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>&lt;div *ngIf=&quot;resource?.verificationStatus; else noVerification&quot;&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  &lt;b&gt;verificationStatus:&lt;/b&gt; {{ resource.verificationStatus.coding?.[0]?.code || &#39;N/A&#39; }}
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>&lt;/div&gt;
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;resource?.verificationStatus; else noVerification&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>verificationStatus:<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> {{ resource.verificationStatus.coding?.[0]?.code || &#39;N/A&#39; }}
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>&lt;ng-template #noVerification&gt;
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  &lt;div&gt;
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    &lt;b&gt;verificationStatus:&lt;/b&gt; Not available
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  &lt;/div&gt;
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>&lt;/ng-template&gt;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">&lt;</span><span class="nt">ng-template</span> <span class="err">#</span><span class="na">noVerification</span><span class="p">&gt;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>verificationStatus:<span class="p">&lt;/</span><span class="nt">b</span><span class="p">&gt;</span> Not available
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span>
 </code></pre></div>
 <h3 id="example2-if-else_if-if">example:2 If -- Else_if -- if</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    &lt;!-- IF value === &#39;a&#39; --&gt;
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>&lt;div *ngIf=&quot;regForm.get(&#39;firstNameFc&#39;)?.value === &#39;a&#39;; else checkB&quot;&gt;
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    <span class="cm">&lt;!-- IF value === &#39;a&#39; --&gt;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;regForm.get(&#39;firstNameFc&#39;)?.value === &#39;a&#39;; else checkB&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  A value
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>&lt;/div&gt;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>&lt;!-- ELSE IF value === &#39;b&#39; --&gt;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>&lt;ng-template #checkB&gt;
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  &lt;div *ngIf=&quot;regForm.get(&#39;firstNameFc&#39;)?.value === &#39;b&#39;; else checkC&quot;&gt;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="cm">&lt;!-- ELSE IF value === &#39;b&#39; --&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">&lt;</span><span class="nt">ng-template</span> <span class="err">#</span><span class="na">checkB</span><span class="p">&gt;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="err">*</span><span class="na">ngIf</span><span class="o">=</span><span class="s">&quot;regForm.get(&#39;firstNameFc&#39;)?.value === &#39;b&#39;; else checkC&quot;</span><span class="p">&gt;</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    B value
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  &lt;/div&gt;
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>&lt;/ng-template&gt;
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>&lt;!-- ELSE --&gt;
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>&lt;ng-template #checkC&gt;
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  &lt;div&gt;
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="cm">&lt;!-- ELSE --&gt;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="p">&lt;</span><span class="nt">ng-template</span> <span class="err">#</span><span class="na">checkC</span><span class="p">&gt;</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>  <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    C value
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  &lt;/div&gt;
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>&lt;/ng-template&gt;
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span>
 </code></pre></div>
 <h3 id="02-remove-duplicate-using-filter">02: Remove duplicate using filter</h3>
 <details>
@@ -3375,31 +3375,31 @@
   </code></pre>
 </details>
 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>checkdata:any[]=[] ;// here manam emptArray with name Checkdata ani tiskunam
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nx">checkdata</span><span class="o">:</span><span class="kt">any</span><span class="p">[]</span><span class="o">=</span><span class="p">[]</span><span class="w"> </span><span class="p">;</span><span class="c1">// here manam emptArray with name Checkdata ani tiskunam</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  getResourceData() {
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    this.fhirDataService.getResourceData().subscribe({
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>      next: (res) =&gt; {
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>        this.resouceData = res?.filter(item =&gt;{
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>          if(!this.checkdata.includes(item?.resourceType)){
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>           this.checkdata.push(item?.resourceType)
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nx">getResourceData</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">fhirDataService</span><span class="p">.</span><span class="nx">getResourceData</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">({</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">      </span><span class="nx">next</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">resouceData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">res</span><span class="o">?</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;{</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">          </span><span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="k">this</span><span class="p">.</span><span class="nx">checkdata</span><span class="p">.</span><span class="nx">includes</span><span class="p">(</span><span class="nx">item</span><span class="o">?</span><span class="p">.</span><span class="nx">resourceType</span><span class="p">)){</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">           </span><span class="k">this</span><span class="p">.</span><span class="nx">checkdata</span><span class="p">.</span><span class="nx">push</span><span class="p">(</span><span class="nx">item</span><span class="o">?</span><span class="p">.</span><span class="nx">resourceType</span><span class="p">)</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a> // so ! ante checkdata[] lo resourceType anedi lekunte(includes) then ha resourceType ni 
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a> //     this.checkdata.push(...) ani push chestuanm
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w"> </span><span class="c1">// so ! ante checkdata[] lo resourceType anedi lekunte(includes) then ha resourceType ni </span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w"> </span><span class="c1">//     this.checkdata.push(...) ani push chestuanm</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>          }
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>          else {
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>            console.log(&#39;data is duplicate&#39;)
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>          }
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>       })
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>        console.log(this.checkdata,&#39;this is duplicating findin&#39;)
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">          </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">            </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;data is duplicate&#39;</span><span class="p">)</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">       </span><span class="p">})</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">checkdata</span><span class="p">,</span><span class="s1">&#39;this is duplicating findin&#39;</span><span class="p">)</span>
 <a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>      },
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>      error: (err) =&gt; {
-<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>        console.error(&#39;Error fetching resource data:&#39;, err);
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>      }
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>    });
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>  }
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">      </span><span class="p">},</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">      </span><span class="nx">error</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">err</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">&#39;Error fetching resource data:&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">err</span><span class="p">);</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">  </span><span class="p">}</span>
 </code></pre></div>
 
 

@@ -1620,7 +1620,7 @@
   
   
   <span class="md-ellipsis">
-    matAutoSelect
+    matAutoComplete
     
   </span>
   
@@ -2994,63 +2994,63 @@
   <h1>SelectAll</h1>
 
 <h3 id="select-all">Select all</h3>
-<div class="highlight"><span class="filename">bed-reports.html</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    &lt;div class=&quot;col-12&quot;&gt;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        &lt;div class=&quot;mat-form-field-block&quot;&gt;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            &lt;mat-form-field appearance=&quot;outline&quot; class=&quot;example-full-width&quot;&gt;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                &lt;mat-label&gt;Nurse Stations&lt;/mat-label&gt;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                &lt;mat-select formControlName=&quot;nurseStations&quot; multiple #selectnurse&gt;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                  &lt;app-mat-select-search (searchChange)=&quot;searchNurseStation($event)&quot; 
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                     (closeEvent)=&quot;onCloseEvent(selectnurse)&quot;&gt;
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                   &lt;/app-mat-select-search&gt; 
+<div class="highlight"><span class="filename">bed-reports.html</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-12&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mat-form-field-block&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>            <span class="p">&lt;</span><span class="nt">mat-form-field</span> <span class="na">appearance</span><span class="o">=</span><span class="s">&quot;outline&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;example-full-width&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>                <span class="p">&lt;</span><span class="nt">mat-label</span><span class="p">&gt;</span>Nurse Stations<span class="p">&lt;/</span><span class="nt">mat-label</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>                <span class="p">&lt;</span><span class="nt">mat-select</span> <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;nurseStations&quot;</span> <span class="na">multiple</span> <span class="err">#</span><span class="na">selectnurse</span><span class="p">&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>                  <span class="p">&lt;</span><span class="nt">app-mat-select-search</span> <span class="err">(</span><span class="na">searchChange</span><span class="err">)=&quot;</span><span class="na">searchNurseStation</span><span class="err">($</span><span class="na">event</span><span class="err">)&quot;</span> 
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>                     <span class="err">(</span><span class="na">closeEvent</span><span class="err">)=&quot;</span><span class="na">onCloseEvent</span><span class="err">(</span><span class="na">selectnurse</span><span class="err">)&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>                   <span class="p">&lt;/</span><span class="nt">app-mat-select-search</span><span class="p">&gt;</span> 
 <a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                    &lt;mat-option  [disabled]=&quot;nurseStations?.length === 0&quot; #allSelected 
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                      (click)=&quot;toggleAllSelection()&quot; [value]=&quot;0&quot;&gt;All&lt;/mat-option&gt;
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>                    <span class="p">&lt;</span><span class="nt">mat-option</span>  <span class="err">[</span><span class="na">disabled</span><span class="err">]=&quot;</span><span class="na">nurseStations</span><span class="err">?.</span><span class="na">length </span><span class="o">=</span><span class="s">==</span> <span class="na">0</span><span class="err">&quot;</span> <span class="err">#</span><span class="na">allSelected</span> 
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>                      <span class="err">(</span><span class="na">click</span><span class="err">)=&quot;</span><span class="na">toggleAllSelection</span><span class="err">()&quot;</span> <span class="err">[</span><span class="na">value</span><span class="err">]=&quot;</span><span class="na">0</span><span class="err">&quot;</span><span class="p">&gt;</span>All<span class="p">&lt;/</span><span class="nt">mat-option</span><span class="p">&gt;</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                  &lt;mat-option *ngFor=&quot;let item of nurseStations|filter:searchNsWord:[&#39;nursingStation&#39;]&quot; 
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                    (click)=&quot;tosslePerOne(allSelected.viewValue)&quot; 
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                    [value]=&quot;item.mnemonic&quot;&gt;{{item?.nursingStation}}
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                  &lt;/mat-option&gt;
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>                  <span class="p">&lt;</span><span class="nt">mat-option</span> <span class="err">*</span><span class="na">ngFor</span><span class="o">=</span><span class="s">&quot;let item of nurseStations|filter:searchNsWord:[&#39;nursingStation&#39;]&quot;</span> 
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                    <span class="err">(</span><span class="na">click</span><span class="err">)=&quot;</span><span class="na">tosslePerOne</span><span class="err">(</span><span class="na">allSelected</span><span class="err">.</span><span class="na">viewValue</span><span class="err">)&quot;</span> 
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                    <span class="err">[</span><span class="na">value</span><span class="err">]=&quot;</span><span class="na">item</span><span class="err">.</span><span class="na">mnemonic</span><span class="err">&quot;</span><span class="p">&gt;</span>{{item?.nursingStation}}
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                  <span class="p">&lt;/</span><span class="nt">mat-option</span><span class="p">&gt;</span>
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                &lt;/mat-select&gt;
-<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>              &lt;/mat-form-field&gt;
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        &lt;/div&gt;
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    &lt;/div&gt;
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>                <span class="p">&lt;/</span><span class="nt">mat-select</span><span class="p">&gt;</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>              <span class="p">&lt;/</span><span class="nt">mat-form-field</span><span class="p">&gt;</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 </code></pre></div>
-<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>s-1 : nurseStations=[]; // this is get method[dropDownMethod]
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        getNurseStation(locationId:number): void {
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>            this.bedManagementService.getNursingStation(locationId)
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>            .pipe(takeUntil(this.onDestroy$)).subscribe((res) =&gt; {
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            //  console.log(res);
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>            this.nurseStations = res.body;
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            }, (error) =&gt; {
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>            });
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>          }
+<div class="highlight"><span class="filename">ts.file</span><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nx">s</span><span class="o">-</span><span class="nx">1</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">nurseStations</span><span class="o">=</span><span class="p">[];</span><span class="w"> </span><span class="c1">// this is get method[dropDownMethod]</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">        </span><span class="nx">getNurseStation</span><span class="p">(</span><span class="nx">locationId</span><span class="o">:</span><span class="kt">number</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">bedManagementService</span><span class="p">.</span><span class="nx">getNursingStation</span><span class="p">(</span><span class="nx">locationId</span><span class="p">)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">            </span><span class="p">.</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">takeUntil</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">onDestroy$</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">            </span><span class="c1">//  console.log(res);</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">nurseStations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">res</span><span class="p">.</span><span class="nx">body</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">            </span><span class="p">},</span><span class="w"> </span><span class="p">(</span><span class="nx">error</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">            </span><span class="p">});</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">          </span><span class="p">}</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  s-2: searchNsWord;
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>        searchNurseStation(event){
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>            if(typeof(event)===&#39;string&#39;)
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>            this.searchNsWord = event;
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>            }
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  s-3:  toggleAllSelection() {
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>            if (this.allSelected.selected) {
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>            this.bedReportForm.controls.nurseStations
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>                .patchValue([...this.nurseStations.map(item =&gt; item.mnemonic), 0]);
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>            } else {
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>            this.bedReportForm.controls.nurseStations.patchValue([]);
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>            }
-<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>           }
-<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>  s-4:  onCloseEvent(select){
-<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a>             select.close();
-<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>            }  
-<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>  s-5:   @ViewChild(&#39;allSelected&#39;) allSelected:MatOption;
-<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>        tosslePerOne(all) {
-<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>            if (this.allSelected.selected) {
-<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>            this.allSelected.deselect();
-<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a>            return false;
-<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a>            }
-<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>            if (this.bedReportForm.controls.nurseStations.value.length == this.nurseStations.length)
-<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>            this.allSelected.select();
-<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>        }                 
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="nx">s</span><span class="o">-</span><span class="nx">2</span><span class="o">:</span><span class="w"> </span><span class="kt">searchNsWord</span><span class="p">;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nx">searchNurseStation</span><span class="p">(</span><span class="nx">event</span><span class="p">){</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="ow">typeof</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span><span class="o">===</span><span class="s1">&#39;string&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">searchNsWord</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">event</span><span class="p">;</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="nx">s</span><span class="o">-</span><span class="nx">3</span><span class="o">:</span><span class="w">  </span><span class="kt">toggleAllSelection</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">allSelected</span><span class="p">.</span><span class="nx">selected</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">bedReportForm</span><span class="p">.</span><span class="nx">controls</span><span class="p">.</span><span class="nx">nurseStations</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">                </span><span class="p">.</span><span class="nx">patchValue</span><span class="p">([...</span><span class="k">this</span><span class="p">.</span><span class="nx">nurseStations</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="nx">item</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">mnemonic</span><span class="p">),</span><span class="w"> </span><span class="mf">0</span><span class="p">]);</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">bedReportForm</span><span class="p">.</span><span class="nx">controls</span><span class="p">.</span><span class="nx">nurseStations</span><span class="p">.</span><span class="nx">patchValue</span><span class="p">([]);</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">           </span><span class="p">}</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">  </span><span class="nx">s</span><span class="o">-</span><span class="nx">4</span><span class="o">:</span><span class="w">  </span><span class="kt">onCloseEvent</span><span class="p">(</span><span class="nx">select</span><span class="p">){</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">             </span><span class="nx">select</span><span class="p">.</span><span class="nx">close</span><span class="p">();</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">            </span><span class="p">}</span><span class="w">  </span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">  </span><span class="nx">s</span><span class="o">-</span><span class="mf">5</span><span class="o">:</span><span class="w">   </span><span class="kd">@ViewChild</span><span class="p">(</span><span class="s1">&#39;allSelected&#39;</span><span class="p">)</span><span class="w"> </span><span class="nx">allSelected</span><span class="o">:</span><span class="kt">MatOption</span><span class="p">;</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">        </span><span class="nx">tosslePerOne</span><span class="p">(</span><span class="nx">all</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">allSelected</span><span class="p">.</span><span class="nx">selected</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">allSelected</span><span class="p">.</span><span class="nx">deselect</span><span class="p">();</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">bedReportForm</span><span class="p">.</span><span class="nx">controls</span><span class="p">.</span><span class="nx">nurseStations</span><span class="p">.</span><span class="nx">value</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">nurseStations</span><span class="p">.</span><span class="nx">length</span><span class="p">)</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="nx">allSelected</span><span class="p">.</span><span class="nx">select</span><span class="p">();</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">        </span><span class="p">}</span><span class="w">                 </span>
 </code></pre></div>
 <div class="highlight"><span class="filename">filterPipe</span><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>import { Pipe, PipeTransform } from &#39;@angular/core&#39;;
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>

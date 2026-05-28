@@ -1620,7 +1620,7 @@
   
   
   <span class="md-ellipsis">
-    matAutoSelect
+    matAutoComplete
     
   </span>
   
@@ -2994,34 +2994,34 @@
   <h1>ConditionInHtml</h1>
 
 <h3 id="how-to-use-condition-in-html-instead-of-ts">how to use condition in html instead of ts</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> s-1: here this is dropdown field name is Category
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>       &lt;mat-label&gt;Category&lt;/mat-label&gt;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w"> </span><span class="nx">s</span><span class="o">-</span><span class="nx">1</span><span class="o">:</span><span class="w"> </span><span class="kt">here</span><span class="w"> </span><span class="k">this</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">dropdown</span><span class="w"> </span><span class="nx">field</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="nx">is</span><span class="w"> </span><span class="nx">Category</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">       </span><span class="o">&lt;</span><span class="nx">mat</span><span class="o">-</span><span class="nx">label</span><span class="o">&gt;</span><span class="nx">Category</span><span class="o">&lt;</span><span class="err">/mat-label&gt;</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        &lt;mat-select formControlName=&quot;categoryFc&quot; multiple #selectCat&gt;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>          &lt;mat-option *ngFor=&quot;let item of categories| [value]=&quot;item.name&quot; &gt;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>            {{item.name}}
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>          &lt;/mat-option&gt;
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        &lt;/mat-select&gt;
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>s-2:
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>     so paina vuna category ane dropdown array motam lo okavela value ni laboratory ani select cheskunte 
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>     array motam then only show this below checkbox else no
-<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>        @if(patientReportForm.value?.categoryFc?.includes(&#39;Laboratory&#39;)){
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>              &lt;div class=&quot;mt-2&quot;&gt;
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>                &lt;mat-checkbox class=&quot;example-margin&quot;  formControlName=&quot;isCritical&quot; 
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>                  &gt;Critical Lab
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>                &lt;/mat-checkbox&gt;
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>              &lt;/div&gt;
-<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>            }    
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">        </span><span class="o">&lt;</span><span class="nx">mat</span><span class="o">-</span><span class="nx">select</span><span class="w"> </span><span class="nx">formControlName</span><span class="o">=</span><span class="s2">&quot;categoryFc&quot;</span><span class="w"> </span><span class="nx">multiple</span><span class="w"> </span><span class="n">#selectCat</span><span class="o">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">          </span><span class="o">&lt;</span><span class="nx">mat</span><span class="o">-</span><span class="nx">option</span><span class="w"> </span><span class="o">*</span><span class="nx">ngFor</span><span class="o">=</span><span class="s2">&quot;let item of categories| [value]=&quot;</span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="s2">&quot; &gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="s2">            {{item.name}}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="s2">          &lt;/mat-option&gt;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="s2">        &lt;/mat-select&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="s2">s-2:</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="s2">     so paina vuna category ane dropdown array motam lo okavela value ni laboratory ani select cheskunte </span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="s2">     array motam then only show this below checkbox else no</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="s2">        @if(patientReportForm.value?.categoryFc?.includes(&#39;Laboratory&#39;)){</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="s2">              &lt;div class=&quot;</span><span class="nx">mt</span><span class="o">-</span><span class="mf">2</span><span class="s2">&quot;&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="s2">                &lt;mat-checkbox class=&quot;</span><span class="nx">example</span><span class="o">-</span><span class="nx">margin</span><span class="s2">&quot;  formControlName=&quot;</span><span class="nx">isCritical</span><span class="s2">&quot; </span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="s2">                  &gt;Critical Lab</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="s2">                &lt;/mat-checkbox&gt;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="s2">              &lt;/div&gt;</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="s2">            }    </span>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
-<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a> s-3: if array motam lo kakunda only laboratory vunte           
-<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>            &lt;!-- critical Lab checkbox --&gt;
-<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>           @if(patientReportForm.value?.category[0]===&#39;Laboratory&#39;){
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>              &lt;div class=&quot;mt-2&quot;&gt;
-<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>                &lt;mat-checkbox class=&quot;example-margin&quot;  formControlName=&quot;isCritical&quot; 
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>                  &gt;Critical Lab
-<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>                &lt;/mat-checkbox&gt;
-<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>              &lt;/div&gt;
-<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>            }                      
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="s2"> s-3: if array motam lo kakunda only laboratory vunte           </span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="s2">            &lt;!-- critical Lab checkbox --&gt;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="s2">           @if(patientReportForm.value?.category[0]===&#39;Laboratory&#39;){</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="s2">              &lt;div class=&quot;</span><span class="nx">mt</span><span class="o">-</span><span class="mf">2</span><span class="s2">&quot;&gt;</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="s2">                &lt;mat-checkbox class=&quot;</span><span class="nx">example</span><span class="o">-</span><span class="nx">margin</span><span class="s2">&quot;  formControlName=&quot;</span><span class="nx">isCritical</span><span class="err">&quot;</span><span class="w"> </span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">                  </span><span class="o">&gt;</span><span class="nx">Critical</span><span class="w"> </span><span class="nx">Lab</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">                </span><span class="o">&lt;</span><span class="err">/mat-checkbox&gt;</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">              </span><span class="o">&lt;</span><span class="err">/div&gt;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">            </span><span class="p">}</span><span class="w">                      </span>
 </code></pre></div>
 
 

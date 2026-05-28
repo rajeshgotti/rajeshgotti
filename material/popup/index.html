@@ -1620,7 +1620,7 @@
   
   
   <span class="md-ellipsis">
-    matAutoSelect
+    matAutoComplete
     
   </span>
   
@@ -2994,31 +2994,31 @@
   <h1>PopUp</h1>
 
 <h3 id="popup-pop-up">PopUp pop up</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> ## pop up with tempalteDriven form ===
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>&lt;ng-template #moveRef&gt;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> &lt;div class=&quot;modalHeader&quot;&gt;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   &lt;div class=&quot;modalHeader clearfix&quot;&gt;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>     &lt;div class=&quot;modal-about&quot;&gt;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>       &lt;div class=&quot;font-weight-bold &quot;&gt;
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        &lt;span class=&quot;mx-4&quot;&gt;Patient ID: &lt;strong&gt;{{ patientId }}&lt;/strong&gt;&lt;/span&gt; 
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        &lt;span&gt;Patient Name: &lt;strong&gt;{{ patientName }}&lt;/strong&gt;&lt;/span&gt;
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>     &lt;/div&gt;
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   &lt;/div&gt;
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a> &lt;/div&gt;
+<div class="highlight"><span class="filename">html.file</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> ## pop up with tempalteDriven form ===
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">ng-template</span> <span class="err">#</span><span class="na">moveRef</span><span class="p">&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a> <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;modalHeader&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;modalHeader clearfix&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;modal-about&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>       <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;font-weight-bold &quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>        <span class="p">&lt;</span><span class="nt">span</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mx-4&quot;</span><span class="p">&gt;</span>Patient ID: <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>{{ patientId }}<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> 
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>Patient Name: <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>{{ patientName }}<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>   <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  &lt;button mat-icon-button (click)=&quot;closePopup()&quot; aria-label=&quot;Close dialog&quot;&gt;
-<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>     &lt;mat-icon&gt;close&lt;/mat-icon&gt;
-<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  &lt;/button&gt;
-<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  &lt;/div&gt;
-<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>&lt;/ng-template&gt;
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>  <span class="p">&lt;</span><span class="nt">button</span> <span class="na">mat-icon-button</span> <span class="err">(</span><span class="na">click</span><span class="err">)=&quot;</span><span class="na">closePopup</span><span class="err">()&quot;</span> <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;Close dialog&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>     <span class="p">&lt;</span><span class="nt">mat-icon</span><span class="p">&gt;</span>close<span class="p">&lt;/</span><span class="nt">mat-icon</span><span class="p">&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  <span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p">&lt;/</span><span class="nt">ng-template</span><span class="p">&gt;</span>
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>step-1: import {ViewChild} from &#39;@angular/core&#39;;
 <a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>        import { MatDialog, MatDialogRef } from &#39;@angular/material/dialog&#39;;
 <a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a>
 <a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>step-2: constructor(private dialog: MatDialog){}
-<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        @ViewChild(&#39;moveRef&#39;)moveRef:TemplateRef&lt;any&gt;; 
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>        @ViewChild(&#39;moveRef&#39;)moveRef:TemplateRef<span class="p">&lt;</span><span class="nt">any</span><span class="p">&gt;</span>; 
 <a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
-<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  moveRefs=inject(MatDialogRef&lt;any&gt;);
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>  moveRefs=inject(MatDialogRef<span class="p">&lt;</span><span class="nt">any</span><span class="p">&gt;</span>);
 <a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>  movedropDown(){
 <a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>    this.moveRefs = this.dialog.open(this.moveRef, {
 <a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>    width: &#39;100vh&#39;,
