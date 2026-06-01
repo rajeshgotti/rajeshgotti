@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../matSelect/">
+        <link rel="prev" href="../AllSelect/">
       
       
-        <link rel="next" href="../matAutoSelect/">
+        <link rel="next" href="../debounceTime/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1592,29 +1592,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../matSelect/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    matSelect
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1712,29 +1689,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../matAutoSelect/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    matAutoComplete
-    
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -3097,10 +3051,11 @@
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  <span class="err">[</span><span class="na">items</span><span class="err">]=&quot;</span><span class="na">loopingData</span><span class="err">&quot;</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;gender&quot;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  <span class="na">bindLabel</span><span class="o">=</span><span class="s">&quot;description&quot;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="err">[</span><span class="na">searchFn</span><span class="err">]=&quot;</span><span class="na">genderSearch</span><span class="err">&quot;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="err">(</span><span class="na">change</span><span class="err">)=&quot;</span><span class="na">changeGender</span><span class="err">($</span><span class="na">event</span><span class="err">)&quot;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="p">&gt;</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">&lt;/</span><span class="nt">ng-select</span><span class="p">&gt;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>  <span class="na">bindValue</span><span class="o">=</span><span class="s">&quot;conceptId&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  <span class="err">[</span><span class="na">searchFn</span><span class="err">]=&quot;</span><span class="na">genderSearch</span><span class="err">&quot;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>  <span class="err">(</span><span class="na">change</span><span class="err">)=&quot;</span><span class="na">changeGender</span><span class="err">($</span><span class="na">event</span><span class="err">)&quot;</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  <span class="p">&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="p">&lt;/</span><span class="nt">ng-select</span><span class="p">&gt;</span>
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>genderSearch(searchValue, item) {
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  return item?.conceptName?.toLowerCase().includes(searchValue?.toLowerCase());
@@ -3108,16 +3063,17 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>changeGender(data){
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  // this.filterData=this.pronsData.filter((ele)=&gt;ele.name === data?.name);
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>  if(data?.name){
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    this.loopingData=this.filteredData;
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>  }else{
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    this.removeMethod();// remove method when click on * icon then this will execute
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>  }
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>}
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a> removeMethod(){  // this is Removed method
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>  this.loopingData=this.AllorginalData;
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a> }
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  if(data?.name){
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    this.loopingData=this.filteredData;
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>  }else{
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    this.removeMethod();// remove method when click on * icon then this will execute
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>  }
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>}
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a> removeMethod(){  // this is Removed method
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>  this.loopingData=this.AllorginalData;
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a> }
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ng-select lo search default ga vuntundi.
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
