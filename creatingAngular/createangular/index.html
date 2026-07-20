@@ -1078,6 +1078,75 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/lazyLoading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LazyLoading
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/changeDetection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ChangeDetection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/interceptors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interceptor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1890,6 +1959,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matButton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatButton
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2385,6 +2477,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rlc-on-srcnew-file-environmentts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rlc on Src/New file environment.ts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-2-configure-httpclient" class="md-nav__link">
     <span class="md-ellipsis">
       ⚙️ Step 2: Configure HttpClient
@@ -2417,6 +2518,30 @@
       🚫 CORS Error Fix (.NET Backend)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🚫 CORS Error Fix (.NET Backend)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-with-header-manul-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      html with header manul styles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#falcon-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      falcon styles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3466,6 +3591,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#rlc-on-srcnew-file-environmentts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rlc on Src/New file environment.ts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#step-2-configure-httpclient" class="md-nav__link">
     <span class="md-ellipsis">
       ⚙️ Step 2: Configure HttpClient
@@ -3498,6 +3632,30 @@
       🚫 CORS Error Fix (.NET Backend)
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="🚫 CORS Error Fix (.NET Backend)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-with-header-manul-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      html with header manul styles
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#falcon-styles" class="md-nav__link">
+    <span class="md-ellipsis">
+      falcon styles
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3635,114 +3793,58 @@
 <a id="__codelineno-9-31" name="__codelineno-9-31" href="#__codelineno-9-31"></a>        with localPortNO: iii)   ng s --host 192.168.21.59 --port 4200.
 </code></pre></div>
 </details>
-<details class="note">
-<summary>🧩 Angular Project with api Examples</summary>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>step:1  ==create environment file ==
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>        export const environment={
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>          baseUrl:&#39;https://localhost:7014/api/&#39;,  //e url swagger lodi
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>          Student:&#39;Students&#39;
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>        }
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>step:2 =&gt; app.config.ts
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>        porviders:[
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>        provideHttpClient(), // add this line
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a>        ]   
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>step:3 =&gt; go to ur service file
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a>        export class StudentService {
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a>          constructor(private http:HttpClient){}
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a>
-<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a>          getStudent(){
-<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>           return this.http.get(environment.baseUrl+environment.Student)
-<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a>          }
-<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a>        }   
-<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>step:4 =&gt; goto ts.fle 
-<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a>        export class StudentService implements Oninit{ 
-<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a>         constructor(private ser:StudentService){}
-<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a>         ngOnInit() {
-<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a>          this.data();
-<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a>         }
-<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a>           mydata
-<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a>         data(){
-<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a>          this.ser.getStudent().subscribe({next:(res)=&gt;{
-<a id="__codelineno-10-27" name="__codelineno-10-27" href="#__codelineno-10-27"></a>              console.log(res,&#39;res&#39;)
-<a id="__codelineno-10-28" name="__codelineno-10-28" href="#__codelineno-10-28"></a>                   this.mydata=res;    
-<a id="__codelineno-10-29" name="__codelineno-10-29" href="#__codelineno-10-29"></a>            }
-<a id="__codelineno-10-30" name="__codelineno-10-30" href="#__codelineno-10-30"></a>          })
-<a id="__codelineno-10-31" name="__codelineno-10-31" href="#__codelineno-10-31"></a>         }
-<a id="__codelineno-10-32" name="__codelineno-10-32" href="#__codelineno-10-32"></a>             }  
-<a id="__codelineno-10-33" name="__codelineno-10-33" href="#__codelineno-10-33"></a>
-<a id="__codelineno-10-34" name="__codelineno-10-34" href="#__codelineno-10-34"></a>  ===if get cors error==
-<a id="__codelineno-10-35" name="__codelineno-10-35" href="#__codelineno-10-35"></a>
-<a id="__codelineno-10-36" name="__codelineno-10-36" href="#__codelineno-10-36"></a>builder.Services.AddDbContext&lt;StudentDbContext&gt;(options =&gt;
-<a id="__codelineno-10-37" name="__codelineno-10-37" href="#__codelineno-10-37"></a>    options.UseSqlServer(builder.Configuration.GetConnectionString(&quot;DefaultConnection&quot;)));
-<a id="__codelineno-10-38" name="__codelineno-10-38" href="#__codelineno-10-38"></a>// Enable CORS  // add this below lines to avoid cors error
-<a id="__codelineno-10-39" name="__codelineno-10-39" href="#__codelineno-10-39"></a>builder.Services.AddCors(options =&gt;
-<a id="__codelineno-10-40" name="__codelineno-10-40" href="#__codelineno-10-40"></a>{
-<a id="__codelineno-10-41" name="__codelineno-10-41" href="#__codelineno-10-41"></a>    options.AddPolicy(&quot;AllowAngularClient&quot;,
-<a id="__codelineno-10-42" name="__codelineno-10-42" href="#__codelineno-10-42"></a>        policy =&gt;
-<a id="__codelineno-10-43" name="__codelineno-10-43" href="#__codelineno-10-43"></a>        {
-<a id="__codelineno-10-44" name="__codelineno-10-44" href="#__codelineno-10-44"></a>            policy.WithOrigins(&quot;http://localhost:4200&quot;) // your Angular dev server
-<a id="__codelineno-10-45" name="__codelineno-10-45" href="#__codelineno-10-45"></a>                  .AllowAnyHeader()
-<a id="__codelineno-10-46" name="__codelineno-10-46" href="#__codelineno-10-46"></a>                  .AllowAnyMethod();
-<a id="__codelineno-10-47" name="__codelineno-10-47" href="#__codelineno-10-47"></a>        });
-<a id="__codelineno-10-48" name="__codelineno-10-48" href="#__codelineno-10-48"></a>});
-<a id="__codelineno-10-49" name="__codelineno-10-49" href="#__codelineno-10-49"></a>
-<a id="__codelineno-10-50" name="__codelineno-10-50" href="#__codelineno-10-50"></a>app.UseHttpsRedirection();
-<a id="__codelineno-10-51" name="__codelineno-10-51" href="#__codelineno-10-51"></a>app.UseCors(&quot;AllowAngularClient&quot;); // add this line
-<a id="__codelineno-10-52" name="__codelineno-10-52" href="#__codelineno-10-52"></a>app.UseAuthorization();
-</code></pre></div>
-</details>
 <h3 id="how-to-crete-angular-project-in-some-clear-way">How to crete Angular Project in some clear way</h3>
 <details class="note" open="open">
 <summary>🧩 Angular Setup &amp; Basic Routing (Step-by-Step)</summary>
 <h2 id="project-setup">🚀 Project Setup</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w"> </span>step:1<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@angular/cli<span class="w">    </span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w"> </span>step:2<span class="w"> </span>ng<span class="w"> </span>new<span class="w"> </span>yourProjectName<span class="w">                       </span>EX:<span class="w"> </span>ng<span class="w"> </span>new<span class="w"> </span>Employee
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w"> </span>step:3<span class="w"> </span>move<span class="w"> </span>to<span class="w"> </span>ur<span class="w"> </span>directory<span class="w"> </span>-&gt;<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>yourProjectName<span class="w">   </span>EX:<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Employee
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w"> </span>step:1<span class="w"> </span>npm<span class="w"> </span>install<span class="w"> </span>-g<span class="w"> </span>@angular/cli<span class="w">    </span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w"> </span>step:2<span class="w"> </span>ng<span class="w"> </span>new<span class="w"> </span>yourProjectName<span class="w">                       </span>EX:<span class="w"> </span>ng<span class="w"> </span>new<span class="w"> </span>Employee
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w"> </span>step:3<span class="w"> </span>move<span class="w"> </span>to<span class="w"> </span>ur<span class="w"> </span>directory<span class="w"> </span>-&gt;<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>yourProjectName<span class="w">   </span>EX:<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>Employee
 </code></pre></div>
 <h2 id="install-ui-libraries-bootstrap-angular-material">Install UI Libraries (Bootstrap + Angular Material)</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>npm<span class="w"> </span>i<span class="w"> </span>bootstrap
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>ng<span class="w"> </span>add<span class="w"> </span>@angular/material
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>npm<span class="w"> </span>i<span class="w"> </span>bootstrap
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>ng<span class="w"> </span>add<span class="w"> </span>@angular/material
 </code></pre></div>
 <p>👉 After installing, open <strong>angular.json</strong> and add styles:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nt">&quot;styles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="s2">&quot;@angular/material/prebuilt-themes/azure-blue.css&quot;</span><span class="p">,</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="s2">&quot;node_modules/bootstrap/dist/css/bootstrap.css&quot;</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">&quot;styles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="s2">&quot;@angular/material/prebuilt-themes/azure-blue.css&quot;</span><span class="p">,</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="w">  </span><span class="s2">&quot;node_modules/bootstrap/dist/css/bootstrap.css&quot;</span>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="p">]</span>
 </code></pre></div>
 <h2 id="create-components-services">Create Components &amp; Services</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="c1"># Create a component</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>ng<span class="w"> </span>g<span class="w"> </span>c<span class="w"> </span>compName
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="c1"># Create a service</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>ng<span class="w"> </span>g<span class="w"> </span>s<span class="w"> </span>serviceName
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="c1"># Create a component</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>ng<span class="w"> </span>g<span class="w"> </span>c<span class="w"> </span>compName
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="c1"># Create a service</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>ng<span class="w"> </span>g<span class="w"> </span>s<span class="w"> </span>serviceName
 </code></pre></div>
 <h2 id="add-routing-in-html">🔗 Add Routing in HTML</h2>
 <p>Open <strong>app.component.html</strong> and add:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/parent&quot;</span><span class="p">&gt;</span>Student<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-primary&quot;</span> <span class="na">routerLink</span><span class="o">=</span><span class="s">&quot;/parent&quot;</span><span class="p">&gt;</span>Student<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="p">&lt;</span><span class="nt">router-outlet</span><span class="p">&gt;&lt;/</span><span class="nt">router-outlet</span><span class="p">&gt;</span>
 </code></pre></div>
 <p>👉 <code>router-outlet</code> is where your pages will load.</p>
 <h2 id="configure-routes">🛣️ Configure Routes</h2>
 <p>Open <strong>app.routes.ts</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">routes</span><span class="o">:</span><span class="w"> </span><span class="kt">Routes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;parent&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="kt">Parent</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;child&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="kt">Child</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">];</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">routes</span><span class="o">:</span><span class="w"> </span><span class="kt">Routes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;parent&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="kt">Parent</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nx">path</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;child&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">component</span><span class="o">:</span><span class="w"> </span><span class="kt">Child</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">];</span>
 </code></pre></div>
 <h2 id="import-router-module">📦 Import Router Module</h2>
 <p>Open <strong>app.ts</strong> (or main module):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">RouterOutlet</span><span class="p">,</span><span class="w"> </span><span class="nx">RouterModule</span><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nx">imports</span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">RouterOutlet</span><span class="p">,</span><span class="w"> </span><span class="nx">RouterModule</span><span class="p">]</span>
 </code></pre></div>
 <h2 id="run-the-application">▶️ Run the Application</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1"># Normal run</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>ng<span class="w"> </span>s
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>ng<span class="w"> </span>s<span class="w"> </span>--open<span class="w">   </span><span class="c1"># opens browser automatically</span>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="c1"># Run on specific port</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>ng<span class="w"> </span>s<span class="w"> </span>--port<span class="w"> </span><span class="m">2423</span>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="c1"># Run with custom host + port</span>
-<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>ng<span class="w"> </span>s<span class="w"> </span>--host<span class="w"> </span><span class="m">192</span>.168.21.59<span class="w"> </span>--port<span class="w"> </span><span class="m">4200</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1"># Normal run</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>ng<span class="w"> </span>s
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>ng<span class="w"> </span>s<span class="w"> </span>--open<span class="w">   </span><span class="c1"># opens browser automatically</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="c1"># Run on specific port</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>ng<span class="w"> </span>s<span class="w"> </span>--port<span class="w"> </span><span class="m">2423</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="c1"># Run with custom host + port</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>ng<span class="w"> </span>s<span class="w"> </span>--host<span class="w"> </span><span class="m">192</span>.168.21.59<span class="w"> </span>--port<span class="w"> </span><span class="m">4200</span>
 </code></pre></div>
 <hr />
 <p>✅ Now your Angular project is ready with routing and UI libraries!</p>
@@ -3751,92 +3853,255 @@
 <details class="note" open="open">
 <summary>🔗 Angular API Integration (Step-by-Step Guide)</summary>
 <h2 id="step-1-create-environment-file">🧩 Step 1: Create Environment File</h2>
+<h2 id="rlc-on-srcnew-file-environmentts">Rlc on Src/New file environment.ts</h2>
 <p>👉 Define your API base URL and endpoints</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">environment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://localhost:7014/api/&#39;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Swagger URL</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span><span class="nx">Student</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Students&#39;</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="k">export</span><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">environment</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="nx">baseUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;https://localhost:7014/api/&#39;</span><span class="p">,</span><span class="w">  </span><span class="c1">// Swagger URL</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">  </span><span class="nx">Student</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Students&#39;</span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">}</span>
 </code></pre></div>
 <hr />
 <h2 id="step-2-configure-httpclient">⚙️ Step 2: Configure HttpClient</h2>
-<p>📄 File: app.config.ts</p>
+<p>📄 app.config.ts</p>
 <p>👉 Add HttpClient provider</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nx">providers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="nx">provideHttpClient</span><span class="p">(),</span><span class="w"> </span><span class="c1">// required for API calls</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">]</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nx">providers</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nx">provideHttpClient</span><span class="p">(),</span><span class="w"> </span><span class="c1">// required for API calls</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="p">]</span>
 </code></pre></div>
 <hr />
 <h2 id="step-3-create-service-api-call">🔧 Step 3: Create Service (API Call)</h2>
 <p>📄 File: student.service.ts</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">HttpClient</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/common/http&#39;</span><span class="p">;</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Injectable</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">environment</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../environments/environment&#39;</span><span class="p">;</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>
-<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="kd">@Injectable</span><span class="p">({</span><span class="w"> </span><span class="nx">providedIn</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="w"> </span><span class="p">})</span>
-<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">StudentService</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>
-<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">http</span><span class="o">:</span><span class="w"> </span><span class="kt">HttpClient</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>
-<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">  </span><span class="nx">getStudent</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="nx">environment</span><span class="p">.</span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">environment</span><span class="p">.</span><span class="nx">Student</span><span class="p">);</span>
-<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">HttpClient</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/common/http&#39;</span><span class="p">;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Injectable</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">environment</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;../environments/environment&#39;</span><span class="p">;</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="kd">@Injectable</span><span class="p">({</span><span class="w"> </span><span class="nx">providedIn</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;root&#39;</span><span class="w"> </span><span class="p">})</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">StudentService</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">http</span><span class="o">:</span><span class="w"> </span><span class="kt">HttpClient</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">    </span><span class="nx">getAllPatients</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="nx">Observable</span><span class="o">&lt;</span><span class="nx">HttpResponse</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">http</span><span class="p">.</span><span class="nx">get</span><span class="o">&lt;</span><span class="nx">any</span><span class="o">&gt;</span><span class="p">(</span><span class="nx">environment</span><span class="p">.</span><span class="nx">baseUrl</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">environment</span><span class="p">.</span><span class="nx">postPatient</span><span class="p">,{</span><span class="nx">observe</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;response&#39;</span><span class="p">}</span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">    </span><span class="p">);</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="p">}</span>
 </code></pre></div>
 <hr />
 <h2 id="step-4-use-service-in-component">📦 Step 4: Use Service in Component</h2>
 <p>📄 File: student.component.ts</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Component</span><span class="p">,</span><span class="w"> </span><span class="nx">OnInit</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">StudentService</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./student.service&#39;</span><span class="p">;</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="kd">@Component</span><span class="p">({</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-student&#39;</span><span class="p">,</span>
-<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">  </span><span class="nx">templateUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./student.component.html&#39;</span>
-<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="p">})</span>
-<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">StudentComponent</span><span class="w"> </span><span class="k">implements</span><span class="w"> </span><span class="nx">OnInit</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a>
-<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="w">  </span><span class="nx">mydata</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">;</span>
-<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a>
-<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">ser</span><span class="o">:</span><span class="w"> </span><span class="kt">StudentService</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
-<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a>
-<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">  </span><span class="nx">ngOnInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">();</span>
-<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a>
-<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-19" name="__codelineno-22-19" href="#__codelineno-22-19"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ser</span><span class="p">.</span><span class="nx">getStudent</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">({</span>
-<a id="__codelineno-22-20" name="__codelineno-22-20" href="#__codelineno-22-20"></a><span class="w">      </span><span class="nx">next</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-21" name="__codelineno-22-21" href="#__codelineno-22-21"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;res&#39;</span><span class="p">);</span>
-<a id="__codelineno-22-22" name="__codelineno-22-22" href="#__codelineno-22-22"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">mydata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">res</span><span class="p">;</span>
-<a id="__codelineno-22-23" name="__codelineno-22-23" href="#__codelineno-22-23"></a><span class="w">      </span><span class="p">}</span>
-<a id="__codelineno-22-24" name="__codelineno-22-24" href="#__codelineno-22-24"></a><span class="w">    </span><span class="p">});</span>
-<a id="__codelineno-22-25" name="__codelineno-22-25" href="#__codelineno-22-25"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-22-26" name="__codelineno-22-26" href="#__codelineno-22-26"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">StudentService</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;./student.service&#39;</span><span class="p">;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Component</span><span class="p">,</span><span class="w"> </span><span class="nx">OnInit</span><span class="p">,</span><span class="w"> </span><span class="nx">OnDestroy</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Subject</span><span class="p">,</span><span class="w"> </span><span class="nx">takeUntil</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;rxjs&#39;</span><span class="p">;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="kd">@Component</span><span class="p">({</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-student&#39;</span><span class="p">,</span>
+<a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a><span class="w">  </span><span class="nx">templateUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./student.component.html&#39;</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a><span class="p">})</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">StudentComponent</span><span class="w"> </span><span class="k">implements</span><span class="w"> </span><span class="nx">OnInit</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9" href="#__codelineno-21-9"></a>
+<a id="__codelineno-21-10" name="__codelineno-21-10" href="#__codelineno-21-10"></a><span class="w">  </span><span class="nx">mydata</span><span class="o">:</span><span class="w"> </span><span class="kt">any</span><span class="p">;</span>
+<a id="__codelineno-21-11" name="__codelineno-21-11" href="#__codelineno-21-11"></a><span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">onDestroy$</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Subject</span><span class="o">&lt;</span><span class="ow">void</span><span class="o">&gt;</span><span class="p">();</span><span class="c1">// ondestroy</span>
+<a id="__codelineno-21-12" name="__codelineno-21-12" href="#__codelineno-21-12"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">ser</span><span class="o">:</span><span class="w"> </span><span class="kt">StudentService</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-21-13" name="__codelineno-21-13" href="#__codelineno-21-13"></a>
+<a id="__codelineno-21-14" name="__codelineno-21-14" href="#__codelineno-21-14"></a><span class="w">  </span><span class="nx">ngOnInit</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-15" name="__codelineno-21-15" href="#__codelineno-21-15"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">data</span><span class="p">();</span>
+<a id="__codelineno-21-16" name="__codelineno-21-16" href="#__codelineno-21-16"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-21-17" name="__codelineno-21-17" href="#__codelineno-21-17"></a>
+<a id="__codelineno-21-18" name="__codelineno-21-18" href="#__codelineno-21-18"></a><span class="w">  </span><span class="nx">data</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-19" name="__codelineno-21-19" href="#__codelineno-21-19"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">ser</span><span class="p">.</span><span class="nx">getStudent</span><span class="p">().</span><span class="nx">pipe</span><span class="p">(</span><span class="nx">takeUntil</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">onDestroy$</span><span class="p">)).</span><span class="nx">subscribe</span><span class="p">({</span>
+<a id="__codelineno-21-20" name="__codelineno-21-20" href="#__codelineno-21-20"></a><span class="w">      </span><span class="nx">next</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">res</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-21" name="__codelineno-21-21" href="#__codelineno-21-21"></a><span class="w">        </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">res</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;res&#39;</span><span class="p">);</span>
+<a id="__codelineno-21-22" name="__codelineno-21-22" href="#__codelineno-21-22"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="nx">mydata</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">res</span><span class="p">;</span>
+<a id="__codelineno-21-23" name="__codelineno-21-23" href="#__codelineno-21-23"></a><span class="w">      </span><span class="p">}</span>
+<a id="__codelineno-21-24" name="__codelineno-21-24" href="#__codelineno-21-24"></a><span class="w">    </span><span class="p">});</span>
+<a id="__codelineno-21-25" name="__codelineno-21-25" href="#__codelineno-21-25"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-21-26" name="__codelineno-21-26" href="#__codelineno-21-26"></a><span class="w">  </span><span class="nx">ngOnDestroy</span><span class="p">()</span><span class="o">:</span><span class="w"> </span><span class="ow">void</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-27" name="__codelineno-21-27" href="#__codelineno-21-27"></a><span class="w">     </span><span class="c1">// emits value to stop subscriptions</span>
+<a id="__codelineno-21-28" name="__codelineno-21-28" href="#__codelineno-21-28"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">onDestroy$</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>
+<a id="__codelineno-21-29" name="__codelineno-21-29" href="#__codelineno-21-29"></a><span class="w">    </span><span class="c1">// safely closes subject</span>
+<a id="__codelineno-21-30" name="__codelineno-21-30" href="#__codelineno-21-30"></a><span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">onDestroy$</span><span class="p">.</span><span class="nx">complete</span><span class="p">()</span>
+<a id="__codelineno-21-31" name="__codelineno-21-31" href="#__codelineno-21-31"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-21-32" name="__codelineno-21-32" href="#__codelineno-21-32"></a><span class="p">}</span>
 </code></pre></div>
 <hr />
 <h2 id="cors-error-fix-net-backend">🚫 CORS Error Fix (.NET Backend)</h2>
 <p>👉 If you get CORS error, update your backend</p>
 <p>📄 File: Program.cs</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="o">&lt;</span><span class="n">StudentDbContext</span><span class="o">&gt;</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">    </span><span class="n">options</span><span class="p">.</span><span class="n">UseSqlServer</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Configuration</span><span class="p">.</span><span class="n">GetConnectionString</span><span class="p">(</span><span class="s">&quot;DefaultConnection&quot;</span><span class="p">)));</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>
-<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="c1">// Enable CORS</span>
-<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddCors</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span>
-<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="p">{</span>
-<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">    </span><span class="n">options</span><span class="p">.</span><span class="n">AddPolicy</span><span class="p">(</span><span class="s">&quot;AllowAngularClient&quot;</span><span class="p">,</span>
-<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">        </span><span class="n">policy</span><span class="w"> </span><span class="o">=&gt;</span>
-<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">            </span><span class="n">policy</span><span class="p">.</span><span class="n">WithOrigins</span><span class="p">(</span><span class="s">&quot;http://localhost:4200&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Angular app URL</span>
-<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="w">                  </span><span class="p">.</span><span class="n">AllowAnyHeader</span><span class="p">()</span>
-<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a><span class="w">                  </span><span class="p">.</span><span class="n">AllowAnyMethod</span><span class="p">();</span>
-<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a><span class="w">        </span><span class="p">});</span>
-<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a><span class="p">});</span>
-<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>
-<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a><span class="n">app</span><span class="p">.</span><span class="n">UseHttpsRedirection</span><span class="p">();</span>
-<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a><span class="n">app</span><span class="p">.</span><span class="n">UseCors</span><span class="p">(</span><span class="s">&quot;AllowAngularClient&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// enable CORS</span>
-<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a><span class="n">app</span><span class="p">.</span><span class="n">UseAuthorization</span><span class="p">();</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="o">&lt;</span><span class="n">StudentDbContext</span><span class="o">&gt;</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">    </span><span class="n">options</span><span class="p">.</span><span class="n">UseSqlServer</span><span class="p">(</span><span class="n">builder</span><span class="p">.</span><span class="n">Configuration</span><span class="p">.</span><span class="n">GetConnectionString</span><span class="p">(</span><span class="s">&quot;DefaultConnection&quot;</span><span class="p">)));</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="c1">// Enable CORS</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddCors</span><span class="p">(</span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="p">{</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">    </span><span class="n">options</span><span class="p">.</span><span class="n">AddPolicy</span><span class="p">(</span><span class="s">&quot;AllowAngularClient&quot;</span><span class="p">,</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">        </span><span class="n">policy</span><span class="w"> </span><span class="o">=&gt;</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="w">            </span><span class="n">policy</span><span class="p">.</span><span class="n">WithOrigins</span><span class="p">(</span><span class="s">&quot;http://localhost:4200&quot;</span><span class="p">)</span><span class="w"> </span><span class="c1">// Angular app URL</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w">                  </span><span class="p">.</span><span class="n">AllowAnyHeader</span><span class="p">()</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">                  </span><span class="p">.</span><span class="n">AllowAnyMethod</span><span class="p">();</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="w">        </span><span class="p">});</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="p">});</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a>
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="n">app</span><span class="p">.</span><span class="n">UseHttpsRedirection</span><span class="p">();</span>
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="n">app</span><span class="p">.</span><span class="n">UseCors</span><span class="p">(</span><span class="s">&quot;AllowAngularClient&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// enable CORS</span>
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="n">app</span><span class="p">.</span><span class="n">UseAuthorization</span><span class="p">();</span>
 </code></pre></div>
 <hr />
 <p>✅ Now your Angular app can successfully call backend APIs without CORS issues.</p>
+</details>
+<h3 id="html-with-header-manul-styles">html with header manul styles</h3>
+<details class="note">
+<summary>Reactive Form - Patient Suffix Field</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;body&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a>    <span class="p">&lt;</span><span class="nt">form</span> <span class="err">[</span><span class="na">formGroup</span><span class="err">]=&quot;</span><span class="na">dummyForm</span><span class="err">&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;card m-2 p-2&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;header-manual&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a>          <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>Patients<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-12&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a>          <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a>            <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-2 col-md-2&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-12" name="__codelineno-23-12" href="#__codelineno-23-12"></a>              <span class="p">&lt;</span><span class="nt">mat-form-field</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;example-full-width&quot;</span> <span class="na">appearance</span><span class="o">=</span><span class="s">&quot;outline&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-13" name="__codelineno-23-13" href="#__codelineno-23-13"></a>                <span class="p">&lt;</span><span class="nt">mat-label</span><span class="p">&gt;</span>Suffix<span class="p">&lt;/</span><span class="nt">mat-label</span><span class="p">&gt;</span>
+<a id="__codelineno-23-14" name="__codelineno-23-14" href="#__codelineno-23-14"></a>                <span class="p">&lt;</span><span class="nt">input</span>
+<a id="__codelineno-23-15" name="__codelineno-23-15" href="#__codelineno-23-15"></a>                  <span class="na">appAllow2chars</span>
+<a id="__codelineno-23-16" name="__codelineno-23-16" href="#__codelineno-23-16"></a>                  <span class="na">type</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+<a id="__codelineno-23-17" name="__codelineno-23-17" href="#__codelineno-23-17"></a>                  <span class="na">aria-label</span><span class="o">=</span><span class="s">&quot;text&quot;</span>
+<a id="__codelineno-23-18" name="__codelineno-23-18" href="#__codelineno-23-18"></a>                  <span class="na">placeholder</span><span class="o">=</span><span class="s">&quot;Suffix&quot;</span>
+<a id="__codelineno-23-19" name="__codelineno-23-19" href="#__codelineno-23-19"></a>                  <span class="na">matInput</span>
+<a id="__codelineno-23-20" name="__codelineno-23-20" href="#__codelineno-23-20"></a>                  <span class="na">formControlName</span><span class="o">=</span><span class="s">&quot;suffix&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-23-21" name="__codelineno-23-21" href="#__codelineno-23-21"></a>              <span class="p">&lt;/</span><span class="nt">mat-form-field</span><span class="p">&gt;</span>
+<a id="__codelineno-23-22" name="__codelineno-23-22" href="#__codelineno-23-22"></a>            <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-23-23" name="__codelineno-23-23" href="#__codelineno-23-23"></a>          <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-23-24" name="__codelineno-23-24" href="#__codelineno-23-24"></a>        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-23-25" name="__codelineno-23-25" href="#__codelineno-23-25"></a>
+<a id="__codelineno-23-26" name="__codelineno-23-26" href="#__codelineno-23-26"></a>      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-23-27" name="__codelineno-23-27" href="#__codelineno-23-27"></a>    <span class="p">&lt;/</span><span class="nt">form</span><span class="p">&gt;</span>
+<a id="__codelineno-23-28" name="__codelineno-23-28" href="#__codelineno-23-28"></a>  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<a id="__codelineno-23-29" name="__codelineno-23-29" href="#__codelineno-23-29"></a><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></div>
+</details>
+<h3 id="falcon-styles">falcon styles</h3>
+<details class="note">
+<summary>styles.scss - Angular Material Theme, Global Styles &amp; AG Grid</summary>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="k">@use</span><span class="w"> </span><span class="s1">&#39;@angular/material&#39;</span><span class="w"> </span><span class="nt">as</span><span class="w"> </span><span class="nt">mat</span><span class="o">;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a><span class="o">@</span><span class="nt">import</span><span class="w"> </span><span class="s1">&#39;ag-grid-community/styles/ag-grid.css&#39;</span><span class="o">;</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="o">@</span><span class="nt">import</span><span class="w"> </span><span class="s1">&#39;ag-grid-community/styles/ag-theme-alpine.css&#39;</span><span class="o">;</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="o">/*</span><span class="w"> </span><span class="o">=======================</span>
+<a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="w">   </span><span class="nt">Angular</span><span class="w"> </span><span class="nt">Material</span><span class="w"> </span><span class="nt">Theme</span>
+<a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a><span class="w">   </span><span class="o">=======================</span><span class="w"> </span><span class="o">*/</span>
+<a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="nt">html</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a><span class="w">  </span><span class="k">@include</span><span class="nd"> mat</span><span class="o">.</span><span class="nf">theme</span><span class="p">((</span>
+<a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w">    </span><span class="no">color</span><span class="o">:</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="w">      </span><span class="n">primary</span><span class="o">:</span><span class="w"> </span><span class="n">mat</span><span class="o">.</span><span class="nv">$azure-palette</span><span class="o">,</span>
+<a id="__codelineno-24-12" name="__codelineno-24-12" href="#__codelineno-24-12"></a><span class="w">      </span><span class="n">tertiary</span><span class="o">:</span><span class="w"> </span><span class="n">mat</span><span class="o">.</span><span class="nv">$blue-palette</span><span class="o">,</span>
+<a id="__codelineno-24-13" name="__codelineno-24-13" href="#__codelineno-24-13"></a><span class="w">    </span><span class="p">)</span><span class="o">,</span>
+<a id="__codelineno-24-14" name="__codelineno-24-14" href="#__codelineno-24-14"></a><span class="w">    </span><span class="n">typography</span><span class="o">:</span><span class="w"> </span><span class="n">Roboto</span><span class="o">,</span>
+<a id="__codelineno-24-15" name="__codelineno-24-15" href="#__codelineno-24-15"></a><span class="w">    </span><span class="n">density</span><span class="o">:</span><span class="w"> </span><span class="mi">0</span><span class="o">,</span>
+<a id="__codelineno-24-16" name="__codelineno-24-16" href="#__codelineno-24-16"></a><span class="w">  </span><span class="p">));</span>
+<a id="__codelineno-24-17" name="__codelineno-24-17" href="#__codelineno-24-17"></a><span class="p">}</span>
+<a id="__codelineno-24-18" name="__codelineno-24-18" href="#__codelineno-24-18"></a>
+<a id="__codelineno-24-19" name="__codelineno-24-19" href="#__codelineno-24-19"></a><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-20" name="__codelineno-24-20" href="#__codelineno-24-20"></a><span class="w">  </span><span class="nt">color-scheme</span><span class="nd">:</span><span class="w"> </span><span class="nt">light</span><span class="o">;</span>
+<a id="__codelineno-24-21" name="__codelineno-24-21" href="#__codelineno-24-21"></a><span class="w">  </span><span class="nt">background-color</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--mat-sys-surface</span><span class="o">);</span>
+<a id="__codelineno-24-22" name="__codelineno-24-22" href="#__codelineno-24-22"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--mat-sys-on-surface</span><span class="o">);</span>
+<a id="__codelineno-24-23" name="__codelineno-24-23" href="#__codelineno-24-23"></a><span class="w">  </span><span class="nt">font</span><span class="nd">:</span><span class="w"> </span><span class="nt">var</span><span class="o">(</span><span class="nt">--mat-sys-body-medium</span><span class="o">);</span>
+<a id="__codelineno-24-24" name="__codelineno-24-24" href="#__codelineno-24-24"></a><span class="w">  </span><span class="nt">margin</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-24-25" name="__codelineno-24-25" href="#__codelineno-24-25"></a><span class="p">}</span>
+<a id="__codelineno-24-26" name="__codelineno-24-26" href="#__codelineno-24-26"></a>
+<a id="__codelineno-24-27" name="__codelineno-24-27" href="#__codelineno-24-27"></a><span class="cm">/* =======================</span>
+<a id="__codelineno-24-28" name="__codelineno-24-28" href="#__codelineno-24-28"></a><span class="cm">   Global Styles</span>
+<a id="__codelineno-24-29" name="__codelineno-24-29" href="#__codelineno-24-29"></a><span class="cm">   ======================= */</span>
+<a id="__codelineno-24-30" name="__codelineno-24-30" href="#__codelineno-24-30"></a><span class="nt">html</span><span class="o">,</span>
+<a id="__codelineno-24-31" name="__codelineno-24-31" href="#__codelineno-24-31"></a><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-32" name="__codelineno-24-32" href="#__codelineno-24-32"></a><span class="w">  </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-24-33" name="__codelineno-24-33" href="#__codelineno-24-33"></a><span class="p">}</span>
+<a id="__codelineno-24-34" name="__codelineno-24-34" href="#__codelineno-24-34"></a>
+<a id="__codelineno-24-35" name="__codelineno-24-35" href="#__codelineno-24-35"></a><span class="nt">body</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-36" name="__codelineno-24-36" href="#__codelineno-24-36"></a><span class="w">  </span><span class="nt">font-family</span><span class="nd">:</span><span class="w"> </span><span class="nt">Roboto</span><span class="o">,</span><span class="w"> </span><span class="s2">&quot;Helvetica Neue&quot;</span><span class="o">,</span><span class="w"> </span><span class="nt">sans-serif</span><span class="o">;</span>
+<a id="__codelineno-24-37" name="__codelineno-24-37" href="#__codelineno-24-37"></a><span class="p">}</span>
+<a id="__codelineno-24-38" name="__codelineno-24-38" href="#__codelineno-24-38"></a>
+<a id="__codelineno-24-39" name="__codelineno-24-39" href="#__codelineno-24-39"></a><span class="cm">/* =======================</span>
+<a id="__codelineno-24-40" name="__codelineno-24-40" href="#__codelineno-24-40"></a><span class="cm">   Form Controls</span>
+<a id="__codelineno-24-41" name="__codelineno-24-41" href="#__codelineno-24-41"></a><span class="cm">   ======================= */</span>
+<a id="__codelineno-24-42" name="__codelineno-24-42" href="#__codelineno-24-42"></a><span class="nc">.example-full-width</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-43" name="__codelineno-24-43" href="#__codelineno-24-43"></a><span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-24-44" name="__codelineno-24-44" href="#__codelineno-24-44"></a><span class="p">}</span>
+<a id="__codelineno-24-45" name="__codelineno-24-45" href="#__codelineno-24-45"></a>
+<a id="__codelineno-24-46" name="__codelineno-24-46" href="#__codelineno-24-46"></a><span class="nc">.example-full-width</span><span class="w"> </span><span class="nt">input</span><span class="o">[</span><span class="nt">type</span><span class="o">=</span><span class="s2">&quot;time&quot;</span><span class="o">]</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-47" name="__codelineno-24-47" href="#__codelineno-24-47"></a><span class="w">  </span><span class="nt">min-width</span><span class="nd">:</span><span class="w"> </span><span class="nt">35px</span><span class="o">;</span>
+<a id="__codelineno-24-48" name="__codelineno-24-48" href="#__codelineno-24-48"></a><span class="p">}</span>
+<a id="__codelineno-24-49" name="__codelineno-24-49" href="#__codelineno-24-49"></a>
+<a id="__codelineno-24-50" name="__codelineno-24-50" href="#__codelineno-24-50"></a><span class="nc">.float-right</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-51" name="__codelineno-24-51" href="#__codelineno-24-51"></a><span class="w">  </span><span class="nt">float</span><span class="nd">:</span><span class="w"> </span><span class="nt">right</span><span class="o">;</span>
+<a id="__codelineno-24-52" name="__codelineno-24-52" href="#__codelineno-24-52"></a><span class="p">}</span>
+<a id="__codelineno-24-53" name="__codelineno-24-53" href="#__codelineno-24-53"></a>
+<a id="__codelineno-24-54" name="__codelineno-24-54" href="#__codelineno-24-54"></a><span class="cm">/* =======================</span>
+<a id="__codelineno-24-55" name="__codelineno-24-55" href="#__codelineno-24-55"></a><span class="cm">   Card Styling</span>
+<a id="__codelineno-24-56" name="__codelineno-24-56" href="#__codelineno-24-56"></a><span class="cm">   ======================= */</span>
+<a id="__codelineno-24-57" name="__codelineno-24-57" href="#__codelineno-24-57"></a><span class="nc">.card</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-58" name="__codelineno-24-58" href="#__codelineno-24-58"></a><span class="w">  </span><span class="nt">min-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">40px</span><span class="o">;</span>
+<a id="__codelineno-24-59" name="__codelineno-24-59" href="#__codelineno-24-59"></a><span class="w">  </span><span class="nt">margin-bottom</span><span class="nd">:</span><span class="w"> </span><span class="nt">5px</span><span class="o">;</span>
+<a id="__codelineno-24-60" name="__codelineno-24-60" href="#__codelineno-24-60"></a><span class="p">}</span>
+<a id="__codelineno-24-61" name="__codelineno-24-61" href="#__codelineno-24-61"></a>
+<a id="__codelineno-24-62" name="__codelineno-24-62" href="#__codelineno-24-62"></a><span class="cm">/* =======================</span>
+<a id="__codelineno-24-63" name="__codelineno-24-63" href="#__codelineno-24-63"></a><span class="cm">   Header Styling</span>
+<a id="__codelineno-24-64" name="__codelineno-24-64" href="#__codelineno-24-64"></a><span class="cm">   ======================= */</span>
+<a id="__codelineno-24-65" name="__codelineno-24-65" href="#__codelineno-24-65"></a><span class="nc">.header-manual</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-66" name="__codelineno-24-66" href="#__codelineno-24-66"></a><span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#d2e3f1</span><span class="o">;</span>
+<a id="__codelineno-24-67" name="__codelineno-24-67" href="#__codelineno-24-67"></a><span class="w">  </span><span class="nt">border-bottom</span><span class="nd">:</span><span class="w"> </span><span class="nt">1px</span><span class="w"> </span><span class="nt">solid</span><span class="w"> </span><span class="nn">#e2e2e2</span><span class="o">;</span>
+<a id="__codelineno-24-68" name="__codelineno-24-68" href="#__codelineno-24-68"></a><span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="nc">.3em</span><span class="w"> </span><span class="nt">1em</span><span class="o">;</span>
+<a id="__codelineno-24-69" name="__codelineno-24-69" href="#__codelineno-24-69"></a><span class="w">  </span><span class="nt">margin-bottom</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="nc">.3em</span><span class="o">;</span>
+<a id="__codelineno-24-70" name="__codelineno-24-70" href="#__codelineno-24-70"></a><span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-24-71" name="__codelineno-24-71" href="#__codelineno-24-71"></a><span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">10px</span><span class="w"> </span><span class="nt">10px</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-24-72" name="__codelineno-24-72" href="#__codelineno-24-72"></a><span class="p">}</span>
+<a id="__codelineno-24-73" name="__codelineno-24-73" href="#__codelineno-24-73"></a>
+<a id="__codelineno-24-74" name="__codelineno-24-74" href="#__codelineno-24-74"></a><span class="nt">header</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-75" name="__codelineno-24-75" href="#__codelineno-24-75"></a><span class="w">  </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">200px</span><span class="o">;</span>
+<a id="__codelineno-24-76" name="__codelineno-24-76" href="#__codelineno-24-76"></a><span class="w">  </span><span class="nt">line-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">200px</span><span class="o">;</span>
+<a id="__codelineno-24-77" name="__codelineno-24-77" href="#__codelineno-24-77"></a><span class="w">  </span><span class="nt">text-align</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<a id="__codelineno-24-78" name="__codelineno-24-78" href="#__codelineno-24-78"></a><span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nn">#303e49</span><span class="o">;</span>
+<a id="__codelineno-24-79" name="__codelineno-24-79" href="#__codelineno-24-79"></a><span class="p">}</span>
+<a id="__codelineno-24-80" name="__codelineno-24-80" href="#__codelineno-24-80"></a>
+<a id="__codelineno-24-81" name="__codelineno-24-81" href="#__codelineno-24-81"></a><span class="nc">.inner_header</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-82" name="__codelineno-24-82" href="#__codelineno-24-82"></a><span class="w">  </span><span class="nt">background</span><span class="nd">:</span><span class="w"> </span><span class="nt">none</span><span class="o">;</span>
+<a id="__codelineno-24-83" name="__codelineno-24-83" href="#__codelineno-24-83"></a><span class="w">  </span><span class="nt">border-radius</span><span class="nd">:</span><span class="w"> </span><span class="nt">5px</span><span class="w"> </span><span class="nt">5px</span><span class="w"> </span><span class="nt">0</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-24-84" name="__codelineno-24-84" href="#__codelineno-24-84"></a><span class="p">}</span>
+<a id="__codelineno-24-85" name="__codelineno-24-85" href="#__codelineno-24-85"></a>
+<a id="__codelineno-24-86" name="__codelineno-24-86" href="#__codelineno-24-86"></a><span class="nc">.inner_header</span><span class="w"> </span><span class="nt">h2</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-87" name="__codelineno-24-87" href="#__codelineno-24-87"></a><span class="w">  </span><span class="nt">color</span><span class="nd">:</span><span class="w"> </span><span class="nt">rgb</span><span class="o">(</span><span class="nt">29</span><span class="o">,</span><span class="w"> </span><span class="nt">117</span><span class="o">,</span><span class="w"> </span><span class="nt">184</span><span class="o">);</span>
+<a id="__codelineno-24-88" name="__codelineno-24-88" href="#__codelineno-24-88"></a><span class="w">  </span><span class="nt">font-weight</span><span class="nd">:</span><span class="w"> </span><span class="nt">500</span><span class="o">;</span>
+<a id="__codelineno-24-89" name="__codelineno-24-89" href="#__codelineno-24-89"></a><span class="p">}</span>
+<a id="__codelineno-24-90" name="__codelineno-24-90" href="#__codelineno-24-90"></a>
+<a id="__codelineno-24-91" name="__codelineno-24-91" href="#__codelineno-24-91"></a><span class="cm">/* =======================</span>
+<a id="__codelineno-24-92" name="__codelineno-24-92" href="#__codelineno-24-92"></a><span class="cm">   AG Grid Styling</span>
+<a id="__codelineno-24-93" name="__codelineno-24-93" href="#__codelineno-24-93"></a><span class="cm">   ======================= */</span>
+<a id="__codelineno-24-94" name="__codelineno-24-94" href="#__codelineno-24-94"></a><span class="nc">.ag_height-100</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-95" name="__codelineno-24-95" href="#__codelineno-24-95"></a><span class="w">  </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-24-96" name="__codelineno-24-96" href="#__codelineno-24-96"></a><span class="w">  </span><span class="nt">max-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-24-97" name="__codelineno-24-97" href="#__codelineno-24-97"></a><span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-24-98" name="__codelineno-24-98" href="#__codelineno-24-98"></a><span class="w">  </span><span class="nt">max-width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-24-99" name="__codelineno-24-99" href="#__codelineno-24-99"></a><span class="p">}</span>
+<a id="__codelineno-24-100" name="__codelineno-24-100" href="#__codelineno-24-100"></a>
+<a id="__codelineno-24-101" name="__codelineno-24-101" href="#__codelineno-24-101"></a><span class="nc">.ag_wrap_control</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-102" name="__codelineno-24-102" href="#__codelineno-24-102"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<a id="__codelineno-24-103" name="__codelineno-24-103" href="#__codelineno-24-103"></a><span class="w">  </span><span class="nt">flex-direction</span><span class="nd">:</span><span class="w"> </span><span class="nt">row</span><span class="o">;</span>
+<a id="__codelineno-24-104" name="__codelineno-24-104" href="#__codelineno-24-104"></a><span class="w">  </span><span class="nt">flex</span><span class="nd">:</span><span class="w"> </span><span class="nt">1</span><span class="w"> </span><span class="nt">1</span><span class="w"> </span><span class="nt">auto</span><span class="o">;</span>
+<a id="__codelineno-24-105" name="__codelineno-24-105" href="#__codelineno-24-105"></a><span class="w">  </span><span class="nt">height</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-24-106" name="__codelineno-24-106" href="#__codelineno-24-106"></a><span class="w">  </span><span class="nt">min-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-24-107" name="__codelineno-24-107" href="#__codelineno-24-107"></a><span class="w">  </span><span class="nt">padding</span><span class="nd">:</span><span class="w"> </span><span class="nt">0</span><span class="o">;</span>
+<a id="__codelineno-24-108" name="__codelineno-24-108" href="#__codelineno-24-108"></a><span class="w">  </span><span class="nt">width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-24-109" name="__codelineno-24-109" href="#__codelineno-24-109"></a><span class="w">  </span><span class="nt">max-width</span><span class="nd">:</span><span class="w"> </span><span class="nt">100</span><span class="err">%</span><span class="o">;</span>
+<a id="__codelineno-24-110" name="__codelineno-24-110" href="#__codelineno-24-110"></a><span class="p">}</span>
+<a id="__codelineno-24-111" name="__codelineno-24-111" href="#__codelineno-24-111"></a>
+<a id="__codelineno-24-112" name="__codelineno-24-112" href="#__codelineno-24-112"></a><span class="nc">.ag-theme-material.ag_widthsize</span><span class="w"> </span><span class="nc">.ag-cell</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-113" name="__codelineno-24-113" href="#__codelineno-24-113"></a><span class="w">  </span><span class="nt">display</span><span class="nd">:</span><span class="w"> </span><span class="nt">flex</span><span class="o">;</span>
+<a id="__codelineno-24-114" name="__codelineno-24-114" href="#__codelineno-24-114"></a><span class="w">  </span><span class="nt">align-items</span><span class="nd">:</span><span class="w"> </span><span class="nt">center</span><span class="o">;</span>
+<a id="__codelineno-24-115" name="__codelineno-24-115" href="#__codelineno-24-115"></a><span class="w">  </span><span class="nt">min-height</span><span class="nd">:</span><span class="w"> </span><span class="nt">20px</span><span class="o">;</span>
+<a id="__codelineno-24-116" name="__codelineno-24-116" href="#__codelineno-24-116"></a><span class="p">}</span>
+</code></pre></div>
 </details>
 
 
