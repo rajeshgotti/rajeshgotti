@@ -1331,6 +1331,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3399,6 +3423,30 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Summary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      example
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example2
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -3421,7 +3469,7 @@
 
   <h1>ChangeDetection</h1>
 
-<details class="note" open="open">
+<details class="note">
 <summary>Angular Change Detection - Telugu Brief Explanation</summary>
 <h2 id="what-is-change-detection">What is Change Detection?</h2>
 <p><strong>Change Detection</strong> అనేది Angular యొక్క mechanism.</p>
@@ -3740,6 +3788,227 @@ manually UI refresh చేయడానికి ఉపయోగిస్తా�
 <div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a>Manually Tell Angular
 <a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
 <a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a>&quot;Refresh This Component&quot;
+</code></pre></div>
+</details>
+<h3 id="example">example</h3>
+<p>Angular లో <strong>Change Detection</strong> అనేది component లోని data change అయినప్పుడు, ఆ change ని detect చేసి UI/HTML ని automatically update చేసే mechanism.</p>
+<p>ఉదాహరణ:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Rajesh&#39;</span><span class="p">;</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="nx">changeName</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Kumar&#39;</span><span class="p">;</span>
+<a id="__codelineno-32-5" name="__codelineno-32-5" href="#__codelineno-32-5"></a><span class="p">}</span>
+</code></pre></div>
+<p>HTML:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>{{ name }}<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</code></pre></div>
+<p><code>name</code> value change అయినప్పుడు Angular Change Detection run చేసి UI లో:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>Rajesh
+</code></pre></div>
+<p>నుంచి:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>Kumar
+</code></pre></div>
+<p>గా update చేస్తుంది.</p>
+<h3 id="example2">Example2</h3>
+<details class="example" open="open">
+<summary>Angular Change Detection — OnPush Strategy</summary>
+<p><strong>Change Detection అంటే ఏంటి?</strong></p>
+<p>Angular లో <strong>Change Detection</strong> అనేది component లోని data change అయినప్పుడు, ఆ change ని detect చేసి UI (HTML view) ని automatically update చేసే mechanism.</p>
+<p>అంటే variable value మారితే, screen మీద కనిపించే value కూడా update అవుతుంది.</p>
+<hr />
+<p><strong>Default Strategy vs OnPush</strong></p>
+<p><strong>Default Change Detection</strong></p>
+<p>Default strategy లో Angular ప్రతి చిన్న event వచ్చినప్పుడు components ని check చేస్తుంది.</p>
+<p>ఉదాహరణకు:</p>
+<ul>
+<li>Button click</li>
+<li>HTTP response</li>
+<li>setTimeout</li>
+<li>Mouse event</li>
+<li>Keyboard event</li>
+</ul>
+<p>Components ఎక్కువగా ఉన్నప్పుడు unnecessary checks జరగడం వల్ల performance తగ్గే అవకాశం ఉంటుంది.</p>
+<hr />
+<p><strong>OnPush Change Detection</strong></p>
+<p><code>ChangeDetectionStrategy.OnPush</code> వాడితే Angular ఆ component ని అవసరమైనప్పుడు మాత్రమే check చేస్తుంది.</p>
+<p>సాధారణంగా ముఖ్యమైన cases:</p>
+<ul>
+<li><code>@Input()</code> property reference change అయినప్పుడు</li>
+<li>Component లో event fire అయినప్పుడు</li>
+<li><code>async</code> pipe emit చేసినప్పుడు</li>
+<li>Manually <code>markForCheck()</code> లేదా <code>detectChanges()</code> call చేసినప్పుడు</li>
+</ul>
+<p>దీని వల్ల unnecessary change detection checks తగ్గి performance improve అవుతుంది.</p>
+<hr />
+<p><strong>Example</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">ChangeDetectionStrategy</span><span class="p">,</span><span class="w"> </span><span class="nx">ChangeDetectorRef</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s1">&#39;@angular/core&#39;</span><span class="p">;</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="kd">@Component</span><span class="p">({</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">  </span><span class="nx">selector</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;app-dynamicpatient-information&#39;</span><span class="p">,</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a><span class="w">  </span><span class="nx">templateUrl</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;./dynamicpatient-information.component.html&#39;</span><span class="p">,</span>
+<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="w">  </span><span class="nx">changeDetection</span><span class="o">:</span><span class="w"> </span><span class="kt">ChangeDetectionStrategy.OnPush</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a><span class="p">})</span>
+<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">DynamicPatientInformationComponent</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>
+<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="w">  </span><span class="kr">constructor</span><span class="p">(</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a><span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="nx">changeDetectorRef</span><span class="o">:</span><span class="w"> </span><span class="kt">ChangeDetectorRef</span>
+<a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a><span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+<a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>
+<a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a><span class="p">}</span>
+</code></pre></div>
+<p>ఇక్కడ:</p>
+<p><code>ChangeDetectionStrategy.OnPush</code></p>
+<p>component కి <strong>OnPush change detection strategy</strong> enable చేస్తుంది.</p>
+<p><code>ChangeDetectorRef</code></p>
+<p>change detection ని manually control చేయడానికి ఉపయోగిస్తాం.</p>
+<hr />
+<p><strong>markForCheck() ఎందుకు use చేస్తాం?</strong></p>
+<p>OnPush component లో async operation ద్వారా data update అయినప్పుడు కొన్నిసార్లు Angular కి ఆ component ని check చేయమని manually చెప్పాలి.</p>
+<p>ఉదాహరణ:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">patientService</span><span class="p">.</span><span class="nx">getPatient</span><span class="p">().</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
+<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">patientData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
+<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">changeDetectorRef</span><span class="p">.</span><span class="nx">markForCheck</span><span class="p">();</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>
+<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a><span class="p">});</span>
+</code></pre></div>
+<p>ఇక్కడ API response వచ్చిన తర్వాత:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>API Response
+<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>     ↓
+<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>patientData update
+<a id="__codelineno-38-4" name="__codelineno-38-4" href="#__codelineno-38-4"></a>     ↓
+<a id="__codelineno-38-5" name="__codelineno-38-5" href="#__codelineno-38-5"></a>markForCheck()
+<a id="__codelineno-38-6" name="__codelineno-38-6" href="#__codelineno-38-6"></a>     ↓
+<a id="__codelineno-38-7" name="__codelineno-38-7" href="#__codelineno-38-7"></a>Angular component ని check చేస్తుంది
+<a id="__codelineno-38-8" name="__codelineno-38-8" href="#__codelineno-38-8"></a>     ↓
+<a id="__codelineno-38-9" name="__codelineno-38-9" href="#__codelineno-38-9"></a>UI update అవుతుంది
+</code></pre></div>
+<p><code>markForCheck()</code> అంటే:</p>
+<p><strong>"Angular, ఈ component data change అయింది. Next change detection cycle లో ఈ component ని check చేయి."</strong></p>
+<hr />
+<p><strong>detectChanges()</strong></p>
+<p><code>detectChanges()</code> కూడా change detection కోసం ఉపయోగిస్తాం.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">patientData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="k">this</span><span class="p">.</span><span class="nx">changeDetectorRef</span><span class="p">.</span><span class="nx">detectChanges</span><span class="p">();</span>
+</code></pre></div>
+<p><code>detectChanges()</code> ఉపయోగిస్తే ఆ component మీద change detection ని <strong>immediately run</strong> చేయమని Angular కి చెప్తాం.</p>
+<hr />
+<p><strong>markForCheck() vs detectChanges()</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>markForCheck()</code></td>
+<td>Next change detection cycle లో component ని check చేయమని mark చేస్తుంది</td>
+</tr>
+<tr>
+<td><code>detectChanges()</code></td>
+<td>వెంటనే change detection run చేస్తుంది</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p><strong>Real-Time Example</strong></p>
+<p>Patient information API call చేస్తున్నామని అనుకుందాం.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="k">this</span><span class="p">.</span><span class="nx">patientService</span><span class="p">.</span><span class="nx">getPatient</span><span class="p">(</span><span class="nx">patientId</span><span class="p">).</span><span class="nx">subscribe</span><span class="p">((</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">patientData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">data</span><span class="p">;</span>
+<a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a>
+<a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="w">  </span><span class="k">this</span><span class="p">.</span><span class="nx">changeDetectorRef</span><span class="p">.</span><span class="nx">markForCheck</span><span class="p">();</span>
+<a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a>
+<a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a><span class="p">});</span>
+</code></pre></div>
+<p>Flow:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>Patient API
+<a id="__codelineno-41-2" name="__codelineno-41-2" href="#__codelineno-41-2"></a>     ↓
+<a id="__codelineno-41-3" name="__codelineno-41-3" href="#__codelineno-41-3"></a>Response వచ్చింది
+<a id="__codelineno-41-4" name="__codelineno-41-4" href="#__codelineno-41-4"></a>     ↓
+<a id="__codelineno-41-5" name="__codelineno-41-5" href="#__codelineno-41-5"></a>patientData update
+<a id="__codelineno-41-6" name="__codelineno-41-6" href="#__codelineno-41-6"></a>     ↓
+<a id="__codelineno-41-7" name="__codelineno-41-7" href="#__codelineno-41-7"></a>markForCheck()
+<a id="__codelineno-41-8" name="__codelineno-41-8" href="#__codelineno-41-8"></a>     ↓
+<a id="__codelineno-41-9" name="__codelineno-41-9" href="#__codelineno-41-9"></a>Angular Change Detection
+<a id="__codelineno-41-10" name="__codelineno-41-10" href="#__codelineno-41-10"></a>     ↓
+<a id="__codelineno-41-11" name="__codelineno-41-11" href="#__codelineno-41-11"></a>Patient Information UI Update
+</code></pre></div>
+<hr />
+<p><strong>Simple గా గుర్తుపెట్టుకోవాలి</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Default
+<a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>   ↓
+<a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>Angular ఎక్కువ checks చేస్తుంది
+<a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>   ↓
+<a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>Performance comparatively lower
+<a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>
+<a id="__codelineno-42-7" name="__codelineno-42-7" href="#__codelineno-42-7"></a>
+<a id="__codelineno-42-8" name="__codelineno-42-8" href="#__codelineno-42-8"></a>OnPush
+<a id="__codelineno-42-9" name="__codelineno-42-9" href="#__codelineno-42-9"></a>   ↓
+<a id="__codelineno-42-10" name="__codelineno-42-10" href="#__codelineno-42-10"></a>Required changes మాత్రమే check చేస్తుంది
+<a id="__codelineno-42-11" name="__codelineno-42-11" href="#__codelineno-42-11"></a>   ↓
+<a id="__codelineno-42-12" name="__codelineno-42-12" href="#__codelineno-42-12"></a>Performance better
+</code></pre></div>
+<hr />
+<p><strong>ChangeDetectorRef Methods</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>ChangeDetectorRef
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>      │
+<a id="__codelineno-43-3" name="__codelineno-43-3" href="#__codelineno-43-3"></a>      ├── markForCheck()
+<a id="__codelineno-43-4" name="__codelineno-43-4" href="#__codelineno-43-4"></a>      │       ↓
+<a id="__codelineno-43-5" name="__codelineno-43-5" href="#__codelineno-43-5"></a>      │   Next cycle లో check చేయమని mark చేస్తుంది
+<a id="__codelineno-43-6" name="__codelineno-43-6" href="#__codelineno-43-6"></a>      │
+<a id="__codelineno-43-7" name="__codelineno-43-7" href="#__codelineno-43-7"></a>      └── detectChanges()
+<a id="__codelineno-43-8" name="__codelineno-43-8" href="#__codelineno-43-8"></a>              ↓
+<a id="__codelineno-43-9" name="__codelineno-43-9" href="#__codelineno-43-9"></a>          Immediately change detection run చేస్తుంది
+</code></pre></div>
+<hr />
+<p><strong>Real-Time Project లో ఎందుకు OnPush use చేస్తాం?</strong></p>
+<p>పెద్ద applications లో చాలా components ఉంటాయి.</p>
+<p>Patient Information, Chart, Reports, Forms, Tables, WebSocket updates లాంటి components లో unnecessary change detection తగ్గించడానికి <code>OnPush</code> ఉపయోగిస్తాం.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a>Large Application
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a>      ↓
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a>Many Components
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a>      ↓
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a>OnPush
+<a id="__codelineno-44-6" name="__codelineno-44-6" href="#__codelineno-44-6"></a>      ↓
+<a id="__codelineno-44-7" name="__codelineno-44-7" href="#__codelineno-44-7"></a>Unnecessary Checks తగ్గుతాయి
+<a id="__codelineno-44-8" name="__codelineno-44-8" href="#__codelineno-44-8"></a>      ↓
+<a id="__codelineno-44-9" name="__codelineno-44-9" href="#__codelineno-44-9"></a>Better Performance
+</code></pre></div>
+<hr />
+<p><strong>Interview Answer</strong></p>
+<blockquote>
+<p>Change Detection is the mechanism Angular uses to detect data changes and update the UI. By default Angular performs change detection frequently, whereas OnPush reduces unnecessary checks and improves performance. In OnPush components, when data is updated through asynchronous operations, we can use <code>markForCheck()</code> to tell Angular to check the component in the next change detection cycle.</p>
+</blockquote>
+<hr />
+<p><strong>Easy Way to Remember</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a>Change Detection
+<a id="__codelineno-45-2" name="__codelineno-45-2" href="#__codelineno-45-2"></a>      ↓
+<a id="__codelineno-45-3" name="__codelineno-45-3" href="#__codelineno-45-3"></a>Data change detect చేయడం
+<a id="__codelineno-45-4" name="__codelineno-45-4" href="#__codelineno-45-4"></a>      ↓
+<a id="__codelineno-45-5" name="__codelineno-45-5" href="#__codelineno-45-5"></a>UI update చేయడం
+<a id="__codelineno-45-6" name="__codelineno-45-6" href="#__codelineno-45-6"></a>
+<a id="__codelineno-45-7" name="__codelineno-45-7" href="#__codelineno-45-7"></a>
+<a id="__codelineno-45-8" name="__codelineno-45-8" href="#__codelineno-45-8"></a>OnPush
+<a id="__codelineno-45-9" name="__codelineno-45-9" href="#__codelineno-45-9"></a>      ↓
+<a id="__codelineno-45-10" name="__codelineno-45-10" href="#__codelineno-45-10"></a>Unnecessary checks తగ్గించడం
+<a id="__codelineno-45-11" name="__codelineno-45-11" href="#__codelineno-45-11"></a>      ↓
+<a id="__codelineno-45-12" name="__codelineno-45-12" href="#__codelineno-45-12"></a>Performance improve చేయడం
+<a id="__codelineno-45-13" name="__codelineno-45-13" href="#__codelineno-45-13"></a>
+<a id="__codelineno-45-14" name="__codelineno-45-14" href="#__codelineno-45-14"></a>
+<a id="__codelineno-45-15" name="__codelineno-45-15" href="#__codelineno-45-15"></a>markForCheck()
+<a id="__codelineno-45-16" name="__codelineno-45-16" href="#__codelineno-45-16"></a>      ↓
+<a id="__codelineno-45-17" name="__codelineno-45-17" href="#__codelineno-45-17"></a>&quot;Angular, data change అయింది
+<a id="__codelineno-45-18" name="__codelineno-45-18" href="#__codelineno-45-18"></a> next cycle లో check చేయి&quot;
+<a id="__codelineno-45-19" name="__codelineno-45-19" href="#__codelineno-45-19"></a>
+<a id="__codelineno-45-20" name="__codelineno-45-20" href="#__codelineno-45-20"></a>
+<a id="__codelineno-45-21" name="__codelineno-45-21" href="#__codelineno-45-21"></a>detectChanges()
+<a id="__codelineno-45-22" name="__codelineno-45-22" href="#__codelineno-45-22"></a>      ↓
+<a id="__codelineno-45-23" name="__codelineno-45-23" href="#__codelineno-45-23"></a>&quot;Angular, ఇప్పుడే check చేయి&quot;
 </code></pre></div>
 </details>
 
