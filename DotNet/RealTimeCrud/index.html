@@ -1,0 +1,4255 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../mysql2/">
+      
+      
+        <link rel="next" href="../mysql/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>RealTimeCrud - Rajesh Angular Document</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../customWord.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#real-time-crud" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Rajesh Angular Document" class="md-header__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rajesh Angular Document
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              RealTimeCrud
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../angular/viewEncapsulation/" class="md-tabs__link">
+          
+  
+  
+  Angular
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../clickEvent/clickEvent/" class="md-tabs__link">
+          
+  
+  
+  ClickEvent
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Ag-grid/ag-grid/" class="md-tabs__link">
+          
+  
+  
+  AG- GRID
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Methods/arrayMethods/" class="md-tabs__link">
+          
+  
+  
+  Methods
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../dropDowns/AllSelect/" class="md-tabs__link">
+          
+  
+  
+  DropDowns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../material/matSelect/" class="md-tabs__link">
+          
+  
+  
+  Material
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Only-images/onlyimages/" class="md-tabs__link">
+          
+  
+  
+  ONLY IMAGES
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../files/file/" class="md-tabs__link">
+          
+  
+  
+  PDF Files
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../creatingAngular/createangular/" class="md-tabs__link">
+          
+  
+  
+  CreateNewProject
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Crud/falconCrud/" class="md-tabs__link">
+          
+  
+  
+  Crud
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mk_docs/mkdocs/" class="md-tabs__link">
+          
+  
+  
+  mk_docs
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../tasks/tasks/" class="md-tabs__link">
+          
+  
+  
+  Tasks
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../mysql2/" class="md-tabs__link">
+          
+  
+  
+  DotNet
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../Css/css/" class="md-tabs__link">
+          
+  
+  
+  Css
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Rajesh Angular Document" class="md-nav__button md-logo" aria-label="Rajesh Angular Document" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Rajesh Angular Document
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Angular
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Angular
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewEncapsulation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Encapsulation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/binding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Binding
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/input/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Input
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/output/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    OutPut
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/viewchild/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ViewChild
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/pipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pipe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/custompipe/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomPipe
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/Directive/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Directive
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/customDirective/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomDirective
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/reactiveForm/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ReactiveForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/templateDrivenform/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TemplateDrivenForms
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/formarray/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FormArray
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/customValidator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CustomValidator
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/componentStructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ComponentStructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/services/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Services
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/signal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Signal
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/behaviour/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    BehaviourSubject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/forkJoin/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ForkJoin
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/localStorage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LocalStorage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/lifeCycleHooks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LifeCycleHooks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/ngrxStore/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NGRX(Store)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/routes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/lazyLoading/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    LazyLoading
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/changeDetection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ChangeDetection
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../angular/interceptors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Interceptor
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ClickEvent
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            ClickEvent
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/clickEvent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ClickEvent
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/matdilog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatDialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/swal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SwalFire
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/shortcutkeys/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ShortCutKeys
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../clickEvent/github/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    GitHub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AG- GRID
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            AG- GRID
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/ag-grid/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    AG-Grid
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/cellrender/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CellRender
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Ag-grid/searchFilter/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SearchFilter
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Methods
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Methods
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/arrayMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ArrayMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/stringMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    StringMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/objectMethods/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ObjectMethods
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Methods/task/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MethodsTask
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    DropDowns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            DropDowns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/AllSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    selectAll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/ngselect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ngSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dropDowns/debounceTime/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    debounceTime
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Material
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Material
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matSelect/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatSelect
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/autoComplete/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatAutoComplete
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matFormField/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatFormField
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matexpansion/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatExpansionalPanel
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matradio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatRadioButton
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matdialog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatDialog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/popup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    PopUp
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/date/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Date
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/sidenav/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SideNav
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../material/matButton/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    MatButton
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    ONLY IMAGES
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            ONLY IMAGES
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Only-images/onlyimages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    images
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    PDF Files
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            PDF Files
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../files/file/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Files
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    CreateNewProject
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            CreateNewProject
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../creatingAngular/createangular/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NewProject
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Crud
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            Crud
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/falconCrud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    RealTimeCrud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/crud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CrudJsonServer
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/crudWithValidation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    CrudWithReactiveValidation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/TemplateDriven/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    TemplateDrivenFormValidation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/validations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Validations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Crud/falconServices/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    falconServices
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    mk_docs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            mk_docs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mk_docs/mkdocs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Mk_Docs
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mk_docs/consoletab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConsoleTab
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tasks
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            Tasks
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/tasks/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    tasks
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/SSN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SSN
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/conditionInHtml/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ConditionInHtml
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/NoramSearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    NormalSearch
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tasks/SelectAll/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    SelectAll
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    DotNet
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            DotNet
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sql
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    RealTimeCrud
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    RealTimeCrud
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real Time Crud
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-database-in-ssms" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 1 — Create Database in SSMS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-web-api-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 2 — Create Web API Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-install-ef-core-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 3 — Install EF Core Packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-models-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 4 — Create Models Folder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-create-data-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 5 — Create Data Folder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-configure-dbcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 6 — Configure DbContext
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-configure-connection-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 7 — Configure Connection String
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-configure-ef-core-in-programcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 8 — Configure EF Core in Program.cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-create-employee-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 9 — Create Employee Controller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-create-get-stored-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 10 — Create GET Stored Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-11-create-get-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 11 — Create GET API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-12-create-insertupdate-stored-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 12 — Create INSERT/UPDATE Stored Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-13-create-post-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 13 — Create POST API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-14-create-delete-stored-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 14 — Create DELETE Stored Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-15-create-delete-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 15 — Create DELETE API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-16-test-apis-in-swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 16 — Test APIs in Swagger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-17-create-angular-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 17 — Create Angular Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-18-create-angular-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 18 — Create Angular Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-19-configure-angular-api-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 19 — Configure Angular API URL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-20-create-angular-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 20 — Create Angular Component
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-21-implement-get-in-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 21 — Implement GET in Angular
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-22-implement-post-in-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 22 — Implement POST in Angular
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-23-implement-edit-in-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 23 — Implement EDIT in Angular
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-24-implement-delete-in-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 24 — Implement DELETE in Angular
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-25-final-crud-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 25 — Final CRUD Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step1-create-ssms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step:1 Create SSMS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-remaining-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 2 remaining VS code
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    storeProcedure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../crudExplantionTelugu/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    crudExpanTelugu
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    corsError
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Crud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Crud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../FullStackCrud/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    FullStackCrud
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Css
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            Css
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Css/css/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    css
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Css/Others/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Others
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Css/Explanations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Explanations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" hidden>
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#real-time-crud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Real Time Crud
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      Steps
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-create-database-in-ssms" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 1 — Create Database in SSMS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-create-web-api-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 2 — Create Web API Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-install-ef-core-packages" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 3 — Install EF Core Packages
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-create-models-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 4 — Create Models Folder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-create-data-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 5 — Create Data Folder
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-configure-dbcontext" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 6 — Configure DbContext
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-configure-connection-string" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 7 — Configure Connection String
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-configure-ef-core-in-programcs" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 8 — Configure EF Core in Program.cs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-create-employee-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 9 — Create Employee Controller
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-create-get-stored-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 10 — Create GET Stored Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-11-create-get-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 11 — Create GET API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-12-create-insertupdate-stored-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 12 — Create INSERT/UPDATE Stored Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-13-create-post-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 13 — Create POST API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-14-create-delete-stored-procedure" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 14 — Create DELETE Stored Procedure
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-15-create-delete-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 15 — Create DELETE API
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-16-test-apis-in-swagger" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 16 — Test APIs in Swagger
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-17-create-angular-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 17 — Create Angular Project
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-18-create-angular-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 18 — Create Angular Service
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-19-configure-angular-api-url" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 19 — Configure Angular API URL
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-20-create-angular-component" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 20 — Create Angular Component
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-21-implement-get-in-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 21 — Implement GET in Angular
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-22-implement-post-in-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 22 — Implement POST in Angular
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-23-implement-edit-in-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 23 — Implement EDIT in Angular
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-24-implement-delete-in-angular" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 24 — Implement DELETE in Angular
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-25-final-crud-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 25 — Final CRUD Flow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step1-create-ssms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step:1 Create SSMS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-remaining-vs-code" class="md-nav__link">
+    <span class="md-ellipsis">
+      STEP 2 remaining VS code
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+  
+
+
+
+
+  <h1>RealTimeCrud</h1>
+
+<h3 id="real-time-crud">Real Time Crud</h3>
+<h3 id="steps">Steps</h3>
+<details class="example">
+<summary>Office Project — Step-by-Step</summary>
+<h3 id="step-1-create-database-in-ssms">STEP 1 — Create Database in SSMS</h3>
+<ul>
+<li>Open <strong>SSMS</strong></li>
+<li>Open <strong>New Query</strong></li>
+<li>Create database: <code>OfficeDB</code></li>
+<li>Create table: <code>Employee</code></li>
+<li>Add fields:<ul>
+<li><code>EmpId</code></li>
+<li><code>EmpFName</code></li>
+<li><code>EmpLName</code></li>
+<li><code>Gender</code></li>
+</ul>
+</li>
+<li>Insert dummy employee data.</li>
+</ul>
+<h3 id="step-2-create-web-api-project">STEP 2 — Create Web API Project</h3>
+<ul>
+<li>Open <strong>Visual Studio</strong></li>
+<li>Select <strong>Create a new project</strong></li>
+<li>Select <strong>ASP.NET Core Web API</strong></li>
+<li>Project name: <code>Office</code></li>
+<li>Select required <strong>.NET version</strong></li>
+<li>Select <strong>Create</strong></li>
+</ul>
+<h3 id="step-3-install-ef-core-packages">STEP 3 — Install EF Core Packages</h3>
+<ul>
+<li>R/C on <strong>Office Project</strong></li>
+<li>Select <strong>Manage NuGet Packages</strong></li>
+<li>Search and install:<ul>
+<li><code>Microsoft.EntityFrameworkCore.SqlServer</code></li>
+<li><code>Microsoft.EntityFrameworkCore.Tools</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-4-create-models-folder">STEP 4 — Create Models Folder</h3>
+<ul>
+<li>R/C on <strong>Office Project</strong></li>
+<li>Select <strong>Add → New Folder</strong></li>
+<li>Name: <code>Models</code></li>
+<li>R/C on <strong>Models</strong></li>
+<li>Select <strong>Add → Class</strong></li>
+<li>Name: <code>EmployeeModel.cs</code></li>
+<li>Add fields:<ul>
+<li><code>EmpId</code></li>
+<li><code>EmpFName</code></li>
+<li><code>EmpLName</code></li>
+<li><code>Gender</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-5-create-data-folder">STEP 5 — Create Data Folder</h3>
+<ul>
+<li>R/C on <strong>Office Project</strong></li>
+<li>Select <strong>Add → New Folder</strong></li>
+<li>Name: <code>Data</code></li>
+<li>R/C on <strong>Data</strong></li>
+<li>Select <strong>Add → Class</strong></li>
+<li>Name: <code>OfficeDbContext.cs</code></li>
+</ul>
+<h3 id="step-6-configure-dbcontext">STEP 6 — Configure DbContext</h3>
+<ul>
+<li>Open <code>OfficeDbContext.cs</code></li>
+<li>Inherit from <code>DbContext</code></li>
+<li>Add constructor with <code>DbContextOptions&lt;OfficeDbContext&gt;</code></li>
+<li>Add <code>DbSet&lt;EmployeeModel&gt;</code></li>
+<li>Configure <code>EmpId</code> as primary key</li>
+<li>If SQL table name is <code>Employee</code>, map the model to table name <code>Employee</code></li>
+</ul>
+<h3 id="step-7-configure-connection-string">STEP 7 — Configure Connection String</h3>
+<ul>
+<li>Open <code>appsettings.json</code></li>
+<li>Add <code>ConnectionStrings</code></li>
+<li>Add connection string name: <code>DefaultConnection</code></li>
+<li>Set database name: <code>OfficeDB</code></li>
+<li>Set your SQL Server name</li>
+</ul>
+<h3 id="step-8-configure-ef-core-in-programcs">STEP 8 — Configure EF Core in Program.cs</h3>
+<ul>
+<li>Open <code>Program.cs</code></li>
+<li>Add <code>OfficeDbContext</code></li>
+<li>Configure <code>UseSqlServer()</code></li>
+<li>Read <code>DefaultConnection</code> from <code>appsettings.json</code></li>
+</ul>
+<h3 id="step-9-create-employee-controller">STEP 9 — Create Employee Controller</h3>
+<ul>
+<li>R/C on <strong>Controllers</strong></li>
+<li>Select <strong>Add → Controller</strong></li>
+<li>Select <strong>API Controller - Empty</strong></li>
+<li>Name: <code>EmployeeController.cs</code></li>
+<li>Inject <code>OfficeDbContext</code></li>
+</ul>
+<h3 id="step-10-create-get-stored-procedure">STEP 10 — Create GET Stored Procedure</h3>
+<ul>
+<li>Open SSMS</li>
+<li>Select <code>OfficeDB</code></li>
+<li>Create Stored Procedure: <code>GetEmployees</code></li>
+<li>Select:<ul>
+<li><code>EmpId</code></li>
+<li><code>EmpFName</code></li>
+<li><code>EmpLName</code></li>
+<li><code>Gender</code></li>
+</ul>
+</li>
+<li>Test using <code>EXEC GetEmployees</code></li>
+</ul>
+<h3 id="step-11-create-get-api">STEP 11 — Create GET API</h3>
+<ul>
+<li>Open <code>EmployeeController.cs</code></li>
+<li>Create <code>[HttpGet]</code></li>
+<li>Call the GET Stored Procedure through EF Core</li>
+<li>Return <code>List&lt;EmployeeModel&gt;</code></li>
+</ul>
+<h3 id="step-12-create-insertupdate-stored-procedure">STEP 12 — Create INSERT/UPDATE Stored Procedure</h3>
+<ul>
+<li>Open SSMS</li>
+<li>Select <code>OfficeDB</code></li>
+<li>Create Stored Procedure: <code>InsertEmployee</code></li>
+<li>Add parameters:<ul>
+<li><code>@EmpId</code></li>
+<li><code>@EmpFName</code></li>
+<li><code>@EmpLName</code></li>
+<li><code>@Gender</code></li>
+</ul>
+</li>
+<li>Add condition:<ul>
+<li><code>EmpId = 0</code> → Insert</li>
+<li><code>EmpId != 0</code> → Update</li>
+</ul>
+</li>
+<li>Generate new <code>EmpId</code> for new records</li>
+<li>Test the Stored Procedure</li>
+</ul>
+<h3 id="step-13-create-post-api">STEP 13 — Create POST API</h3>
+<ul>
+<li>Open <code>EmployeeController.cs</code></li>
+<li>Create <code>[HttpPost]</code></li>
+<li>Accept <code>EmployeeModel</code></li>
+<li>Call <code>InsertEmployee</code> Stored Procedure through EF Core</li>
+<li>Return the result</li>
+</ul>
+<h3 id="step-14-create-delete-stored-procedure">STEP 14 — Create DELETE Stored Procedure</h3>
+<ul>
+<li>Open SSMS</li>
+<li>Select <code>OfficeDB</code></li>
+<li>Create Stored Procedure: <code>DeleteEmployee</code></li>
+<li>Add parameter: <code>@EmpId</code></li>
+<li>Delete employee using <code>EmpId</code></li>
+<li>Test using <code>EXEC DeleteEmployee</code></li>
+</ul>
+<h3 id="step-15-create-delete-api">STEP 15 — Create DELETE API</h3>
+<ul>
+<li>Open <code>EmployeeController.cs</code></li>
+<li>Create <code>[HttpDelete("{empId}")]</code></li>
+<li>Receive <code>empId</code></li>
+<li>Call <code>DeleteEmployee</code> Stored Procedure through EF Core</li>
+<li>Return the result</li>
+</ul>
+<h3 id="step-16-test-apis-in-swagger">STEP 16 — Test APIs in Swagger</h3>
+<ul>
+<li>Run the project</li>
+<li>Open Swagger</li>
+<li>Test:<ul>
+<li><code>GET /api/Employee</code></li>
+<li><code>POST /api/Employee</code></li>
+<li><code>DELETE /api/Employee/{empId}</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-17-create-angular-project">STEP 17 — Create Angular Project</h3>
+<ul>
+<li>Open Angular project</li>
+<li>Create <code>Models</code> folder</li>
+<li>Create <code>EmpModels</code></li>
+<li>Add:<ul>
+<li><code>empId</code></li>
+<li><code>empFName</code></li>
+<li><code>empLName</code></li>
+<li><code>gender</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-18-create-angular-service">STEP 18 — Create Angular Service</h3>
+<ul>
+<li>R/C on <code>app</code></li>
+<li>Create <code>Services</code> folder</li>
+<li>Create <code>emp-service</code></li>
+<li>Add:<ul>
+<li><code>getemp()</code></li>
+<li><code>postEmps()</code></li>
+<li><code>deleteEmployee()</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-19-configure-angular-api-url">STEP 19 — Configure Angular API URL</h3>
+<ul>
+<li>Open <code>environment.ts</code></li>
+<li>Add:<ul>
+<li><code>baseurl2</code></li>
+<li><code>getEmp</code></li>
+</ul>
+</li>
+<li>Set API URL to your Web API <code>/api/Employee</code></li>
+</ul>
+<h3 id="step-20-create-angular-component">STEP 20 — Create Angular Component</h3>
+<ul>
+<li>Create <code>Test</code> component</li>
+<li>Create Reactive Form</li>
+<li>Add controls:<ul>
+<li><code>empFName</code></li>
+<li><code>empLName</code></li>
+<li><code>gender</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="step-21-implement-get-in-angular">STEP 21 — Implement GET in Angular</h3>
+<ul>
+<li>Call <code>getemp()</code></li>
+<li>Subscribe to API response</li>
+<li>Store response in <code>getAllEmp</code></li>
+<li>Display employees using <code>*ngFor</code></li>
+</ul>
+<h3 id="step-22-implement-post-in-angular">STEP 22 — Implement POST in Angular</h3>
+<ul>
+<li>Create <code>empSave()</code></li>
+<li>Create <code>EmpModels</code> object</li>
+<li>Set <code>empId = 0</code> for new record</li>
+<li>Set existing <code>empId</code> for edit</li>
+<li>Call <code>postEmps()</code></li>
+<li>Refresh employee list after save</li>
+</ul>
+<h3 id="step-23-implement-edit-in-angular">STEP 23 — Implement EDIT in Angular</h3>
+<ul>
+<li>Add <strong>Edit</strong> button</li>
+<li>Pass selected employee to <code>editEmp()</code></li>
+<li>Store <code>empId</code></li>
+<li>Use <code>patchValue()</code> to load employee data into the form</li>
+</ul>
+<h3 id="step-24-implement-delete-in-angular">STEP 24 — Implement DELETE in Angular</h3>
+<ul>
+<li>Add <strong>Delete</strong> button</li>
+<li>Pass selected employee to <code>deleteEmp()</code></li>
+<li>Send <code>empId</code> in URL</li>
+<li>Call <code>deleteEmployee()</code></li>
+<li>Refresh employee list after delete</li>
+</ul>
+<h3 id="step-25-final-crud-flow">STEP 25 — Final CRUD Flow</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Angular
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>    ↓
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>Employee Service
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    ↓
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>Web API Controller
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    ↓
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>EF Core
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    ↓
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Stored Procedure
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>    ↓
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>SQL Server
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>GET
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  ↓
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>GetEmployees
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>POST
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>  ↓
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>InsertEmployee
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>  ↓
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>EmpId = 0  → INSERT
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>EmpId != 0 → UPDATE
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>DELETE
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>  ↓
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>DeleteEmployee
+</code></pre></div>
+</details>
+<h3 id="step1-create-ssms">Step:1 Create SSMS</h3>
+<details class="example">
+<summary>SQL Server — Employee CRUD Stored Procedures</summary>
+<p><strong>1. CREATE DATABASE</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">OfficeDB</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="k">GO</span>
+</code></pre></div>
+<p><strong>2. USE DATABASE</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="n">USE</span><span class="w"> </span><span class="n">OfficeDB</span><span class="p">;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">GO</span>
+</code></pre></div>
+<p><strong>3. CREATE EMPLOYEE TABLE</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">Employee</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">(</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">EmpId</span><span class="w">    </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="n">EmpFName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="n">EmpLName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">    </span><span class="n">Gender</span><span class="w">   </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">);</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="k">GO</span>
+</code></pre></div>
+<p><strong>4. INSERT DUMMY EMPLOYEE DATA</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Employee</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">(</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">EmpId</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="n">EmpFName</span><span class="p">,</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">EmpLName</span><span class="p">,</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="n">Gender</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p">)</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">VALUES</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Rajesh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Kumar&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Male&#39;</span><span class="p">),</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Ravi&#39;</span><span class="p">,</span><span class="w">   </span><span class="s1">&#39;Sharma&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Male&#39;</span><span class="p">),</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Priya&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Reddy&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Female&#39;</span><span class="p">),</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Anjali&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Patel&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Female&#39;</span><span class="p">),</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Suresh&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Naidu&#39;</span><span class="p">,</span><span class="w">  </span><span class="s1">&#39;Male&#39;</span><span class="p">);</span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="k">GO</span>
+</code></pre></div>
+<p><strong>5. GET EMPLOYEES STORED PROCEDURE</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">GetEmployees</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">AS</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">BEGIN</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="k">SELECT</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">        </span><span class="n">EmpId</span><span class="p">,</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">        </span><span class="n">EmpFName</span><span class="p">,</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="n">EmpLName</span><span class="p">,</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">        </span><span class="n">Gender</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employee</span><span class="p">;</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="k">GO</span>
+</code></pre></div>
+<p><strong>6. TEST GET EMPLOYEES</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">EXEC</span><span class="w"> </span><span class="n">GetEmployees</span><span class="p">;</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">GO</span>
+</code></pre></div>
+<p><strong>7. INSERT / UPDATE EMPLOYEE STORED PROCEDURE</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">InsertEmployee</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">    </span><span class="o">@</span><span class="n">EmpId</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="o">@</span><span class="n">EmpFName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="o">@</span><span class="n">EmpLName</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="o">@</span><span class="n">Gender</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="k">AS</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="k">BEGIN</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="cm">/* New Employee */</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="k">IF</span><span class="w"> </span><span class="p">(</span><span class="o">@</span><span class="n">EmpId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="k">BEGIN</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="k">DECLARE</span><span class="w"> </span><span class="o">@</span><span class="n">NewEmpId</span><span class="w"> </span><span class="nb">INT</span><span class="p">;</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">        </span><span class="k">SELECT</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">            </span><span class="o">@</span><span class="n">NewEmpId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">ISNULL</span><span class="p">(</span><span class="k">MAX</span><span class="p">(</span><span class="n">EmpId</span><span class="p">),</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">        </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employee</span><span class="p">;</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a>
+<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">        </span><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">Employee</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">        </span><span class="p">(</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">            </span><span class="n">EmpId</span><span class="p">,</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">            </span><span class="n">EmpFName</span><span class="p">,</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">            </span><span class="n">EmpLName</span><span class="p">,</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">            </span><span class="n">Gender</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">        </span><span class="p">)</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">        </span><span class="k">VALUES</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">        </span><span class="p">(</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">            </span><span class="o">@</span><span class="n">NewEmpId</span><span class="p">,</span>
+<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">            </span><span class="o">@</span><span class="n">EmpFName</span><span class="p">,</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">            </span><span class="o">@</span><span class="n">EmpLName</span><span class="p">,</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">            </span><span class="o">@</span><span class="n">Gender</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">        </span><span class="p">);</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a>
+<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">    </span><span class="k">END</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a>
+<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">    </span><span class="cm">/* Existing Employee - Update */</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">    </span><span class="k">ELSE</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">    </span><span class="k">BEGIN</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>
+<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">        </span><span class="k">UPDATE</span><span class="w"> </span><span class="n">Employee</span>
+<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="w">        </span><span class="k">SET</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="w">            </span><span class="n">EmpFName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">EmpFName</span><span class="p">,</span>
+<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="w">            </span><span class="n">EmpLName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">EmpLName</span><span class="p">,</span>
+<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a><span class="w">            </span><span class="n">Gender</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">Gender</span>
+<a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a><span class="w">        </span><span class="k">WHERE</span><span class="w"> </span><span class="n">EmpId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">EmpId</span><span class="p">;</span>
+<a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a>
+<a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a><span class="w">    </span><span class="k">END</span>
+<a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a>
+<a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a><span class="k">GO</span>
+</code></pre></div>
+<p><strong>8. DELETE EMPLOYEE STORED PROCEDURE</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">PROCEDURE</span><span class="w"> </span><span class="n">DeleteEmployee</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="o">@</span><span class="n">EmpId</span><span class="w"> </span><span class="nb">INT</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">AS</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="k">BEGIN</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">    </span><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employee</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="k">WHERE</span><span class="w"> </span><span class="n">EmpId</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">@</span><span class="n">EmpId</span><span class="p">;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="k">END</span><span class="p">;</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="k">GO</span>
+</code></pre></div>
+<p><strong>9. CHECK EMPLOYEE DATA</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">Employee</span><span class="p">;</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">GO</span>
+</code></pre></div>
+<hr />
+<p><strong>Complete SQL Flow</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>OfficeDB
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>   ↓
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>Employee Table
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>   ↓
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>┌─────────────────────────────┐
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>│ GetEmployees                │ → SELECT
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>│ InsertEmployee              │ → INSERT / UPDATE
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>│ DeleteEmployee              │ → DELETE
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>└─────────────────────────────┘
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>   ↓
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>Employee Data
+</code></pre></div>
+<p><strong>Easy way to remember</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>CREATE DATABASE
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>     ↓
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>USE DATABASE
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>     ↓
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>CREATE TABLE
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>     ↓
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>INSERT DATA
+<a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a>     ↓
+<a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a>CREATE STORED PROCEDURES
+<a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>     ↓
+<a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a>GET / INSERT / UPDATE / DELETE
+</code></pre></div>
+</details>
+<h3 id="step-2-remaining-vs-code">STEP 2 remaining VS code</h3>
+<details class="example" open="open">
+<summary>Employee CRUD — ASP.NET Core Web API</summary>
+<p><strong>1. EmployeeModel.cs</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.ComponentModel.DataAnnotations</span><span class="p">;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Office.Models</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">EmployeeModel</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="na">[Key]</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">EmpId</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">EmpFName</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">EmpLName</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">Gender</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>2. OfficeDbContext.cs</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.EntityFrameworkCore</span><span class="p">;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">Office.Models</span><span class="p">;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Office.Data</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="p">{</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">OfficeDbContext</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">DbContext</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">OfficeDbContext</span><span class="p">(</span><span class="n">DbContextOptions</span><span class="o">&lt;</span><span class="n">OfficeDbContext</span><span class="o">&gt;</span><span class="w"> </span><span class="n">options</span><span class="p">)</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">            </span><span class="p">:</span><span class="w"> </span><span class="k">base</span><span class="p">(</span><span class="n">options</span><span class="p">)</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a>
+<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a>
+<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">DbSet</span><span class="o">&lt;</span><span class="n">EmployeeModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">Employee</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">        </span><span class="c1">// Get Employees</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">EmployeeModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetEmployees</span><span class="p">()</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">Employee</span><span class="p">.</span><span class="n">ToList</span><span class="p">();</span>
+<a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a>
+<a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="w">        </span><span class="c1">// Create / Update Employee</span>
+<a id="__codelineno-14-23" name="__codelineno-14-23" href="#__codelineno-14-23"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">CreateEmployee</span><span class="p">(</span><span class="n">EmployeeModel</span><span class="w"> </span><span class="n">employee</span><span class="p">)</span>
+<a id="__codelineno-14-24" name="__codelineno-14-24" href="#__codelineno-14-24"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-14-25" name="__codelineno-14-25" href="#__codelineno-14-25"></a><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Database</span><span class="p">.</span><span class="n">ExecuteSqlRaw</span><span class="p">(</span>
+<a id="__codelineno-14-26" name="__codelineno-14-26" href="#__codelineno-14-26"></a><span class="w">                </span><span class="s">&quot;EXEC InsertEmployee @EmpId={0}, @EmpFName={1}, @EmpLName={2}, @Gender={3}&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-27" name="__codelineno-14-27" href="#__codelineno-14-27"></a><span class="w">                </span><span class="n">employee</span><span class="p">.</span><span class="n">EmpId</span><span class="p">,</span>
+<a id="__codelineno-14-28" name="__codelineno-14-28" href="#__codelineno-14-28"></a><span class="w">                </span><span class="n">employee</span><span class="p">.</span><span class="n">EmpFName</span><span class="p">,</span>
+<a id="__codelineno-14-29" name="__codelineno-14-29" href="#__codelineno-14-29"></a><span class="w">                </span><span class="n">employee</span><span class="p">.</span><span class="n">EmpLName</span><span class="p">,</span>
+<a id="__codelineno-14-30" name="__codelineno-14-30" href="#__codelineno-14-30"></a><span class="w">                </span><span class="n">employee</span><span class="p">.</span><span class="n">Gender</span>
+<a id="__codelineno-14-31" name="__codelineno-14-31" href="#__codelineno-14-31"></a><span class="w">            </span><span class="p">);</span>
+<a id="__codelineno-14-32" name="__codelineno-14-32" href="#__codelineno-14-32"></a>
+<a id="__codelineno-14-33" name="__codelineno-14-33" href="#__codelineno-14-33"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<a id="__codelineno-14-34" name="__codelineno-14-34" href="#__codelineno-14-34"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-35" name="__codelineno-14-35" href="#__codelineno-14-35"></a>
+<a id="__codelineno-14-36" name="__codelineno-14-36" href="#__codelineno-14-36"></a><span class="w">        </span><span class="c1">// Delete Employee</span>
+<a id="__codelineno-14-37" name="__codelineno-14-37" href="#__codelineno-14-37"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="nf">DeleteEmployee</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">empId</span><span class="p">)</span>
+<a id="__codelineno-14-38" name="__codelineno-14-38" href="#__codelineno-14-38"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-14-39" name="__codelineno-14-39" href="#__codelineno-14-39"></a><span class="w">            </span><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="n">Database</span><span class="p">.</span><span class="n">ExecuteSqlRaw</span><span class="p">(</span>
+<a id="__codelineno-14-40" name="__codelineno-14-40" href="#__codelineno-14-40"></a><span class="w">                </span><span class="s">&quot;EXEC DeleteEmployee @EmpId={0}&quot;</span><span class="p">,</span>
+<a id="__codelineno-14-41" name="__codelineno-14-41" href="#__codelineno-14-41"></a><span class="w">                </span><span class="n">empId</span>
+<a id="__codelineno-14-42" name="__codelineno-14-42" href="#__codelineno-14-42"></a><span class="w">            </span><span class="p">);</span>
+<a id="__codelineno-14-43" name="__codelineno-14-43" href="#__codelineno-14-43"></a>
+<a id="__codelineno-14-44" name="__codelineno-14-44" href="#__codelineno-14-44"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">result</span><span class="p">.</span><span class="n">ToString</span><span class="p">();</span>
+<a id="__codelineno-14-45" name="__codelineno-14-45" href="#__codelineno-14-45"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-14-46" name="__codelineno-14-46" href="#__codelineno-14-46"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-47" name="__codelineno-14-47" href="#__codelineno-14-47"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>3. Program.cs</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="n">builder</span><span class="p">.</span><span class="n">Services</span><span class="p">.</span><span class="n">AddDbContext</span><span class="o">&lt;</span><span class="n">OfficeDbContext</span><span class="o">&gt;</span><span class="p">(</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="w">    </span><span class="n">options</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="n">options</span><span class="p">.</span><span class="n">UseSqlServer</span><span class="p">(</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="w">        </span><span class="n">builder</span><span class="p">.</span><span class="n">Configuration</span><span class="p">.</span><span class="n">GetConnectionString</span><span class="p">(</span><span class="s">&quot;DefaultConnection&quot;</span><span class="p">)</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="w">    </span><span class="p">)</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="p">);</span>
+</code></pre></div>
+<p><strong>4. appsettings.json</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="p">{</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="nt">&quot;ConnectionStrings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="nt">&quot;DefaultConnection&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Server=DESKTOP-N3618OU;Database=OfficeDB;Trusted_Connection=True;TrustServerCertificate=True;&quot;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>5. EmployeeController.cs</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">Microsoft.AspNetCore.Mvc</span><span class="p">;</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="k">using</span><span class="w"> </span><span class="nn">Office.Data</span><span class="p">;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="k">using</span><span class="w"> </span><span class="nn">Office.Models</span><span class="p">;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Office.Controllers</span>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a><span class="p">{</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="w">    </span><span class="na">[Route(&quot;[controller]</span><span class="s">&quot;)]</span>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="w">    </span><span class="na">[ApiController]</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">EmployeeController</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">ControllerBase</span>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="w">        </span><span class="k">private</span><span class="w"> </span><span class="k">readonly</span><span class="w"> </span><span class="n">OfficeDbContext</span><span class="w"> </span><span class="n">_context</span><span class="p">;</span>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="nf">EmployeeController</span><span class="p">(</span><span class="n">OfficeDbContext</span><span class="w"> </span><span class="n">context</span><span class="p">)</span>
+<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="w">            </span><span class="n">_context</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">context</span><span class="p">;</span>
+<a id="__codelineno-17-16" name="__codelineno-17-16" href="#__codelineno-17-16"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-17" name="__codelineno-17-17" href="#__codelineno-17-17"></a>
+<a id="__codelineno-17-18" name="__codelineno-17-18" href="#__codelineno-17-18"></a><span class="w">        </span><span class="na">[HttpGet]</span>
+<a id="__codelineno-17-19" name="__codelineno-17-19" href="#__codelineno-17-19"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">List</span><span class="o">&lt;</span><span class="n">EmployeeModel</span><span class="o">&gt;</span><span class="w"> </span><span class="n">GetEmployees</span><span class="p">()</span>
+<a id="__codelineno-17-20" name="__codelineno-17-20" href="#__codelineno-17-20"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-17-21" name="__codelineno-17-21" href="#__codelineno-17-21"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">_context</span><span class="p">.</span><span class="n">GetEmployees</span><span class="p">();</span>
+<a id="__codelineno-17-22" name="__codelineno-17-22" href="#__codelineno-17-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-23" name="__codelineno-17-23" href="#__codelineno-17-23"></a>
+<a id="__codelineno-17-24" name="__codelineno-17-24" href="#__codelineno-17-24"></a><span class="w">        </span><span class="na">[HttpPost]</span>
+<a id="__codelineno-17-25" name="__codelineno-17-25" href="#__codelineno-17-25"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">CreateEmployee</span><span class="p">(</span><span class="n">EmployeeModel</span><span class="w"> </span><span class="n">employee</span><span class="p">)</span>
+<a id="__codelineno-17-26" name="__codelineno-17-26" href="#__codelineno-17-26"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-17-27" name="__codelineno-17-27" href="#__codelineno-17-27"></a><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_context</span><span class="p">.</span><span class="n">CreateEmployee</span><span class="p">(</span><span class="n">employee</span><span class="p">);</span>
+<a id="__codelineno-17-28" name="__codelineno-17-28" href="#__codelineno-17-28"></a>
+<a id="__codelineno-17-29" name="__codelineno-17-29" href="#__codelineno-17-29"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nf">Ok</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JsonResult</span><span class="p">(</span><span class="n">str</span><span class="p">));</span>
+<a id="__codelineno-17-30" name="__codelineno-17-30" href="#__codelineno-17-30"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-31" name="__codelineno-17-31" href="#__codelineno-17-31"></a>
+<a id="__codelineno-17-32" name="__codelineno-17-32" href="#__codelineno-17-32"></a><span class="w">        </span><span class="na">[HttpDelete(&quot;{empId}&quot;)]</span>
+<a id="__codelineno-17-33" name="__codelineno-17-33" href="#__codelineno-17-33"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">DeleteEmployee</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">empId</span><span class="p">)</span>
+<a id="__codelineno-17-34" name="__codelineno-17-34" href="#__codelineno-17-34"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-17-35" name="__codelineno-17-35" href="#__codelineno-17-35"></a><span class="w">            </span><span class="kt">string</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_context</span><span class="p">.</span><span class="n">DeleteEmployee</span><span class="p">(</span><span class="n">empId</span><span class="p">);</span>
+<a id="__codelineno-17-36" name="__codelineno-17-36" href="#__codelineno-17-36"></a>
+<a id="__codelineno-17-37" name="__codelineno-17-37" href="#__codelineno-17-37"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="nf">Ok</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">JsonResult</span><span class="p">(</span><span class="n">str</span><span class="p">));</span>
+<a id="__codelineno-17-38" name="__codelineno-17-38" href="#__codelineno-17-38"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-17-39" name="__codelineno-17-39" href="#__codelineno-17-39"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-17-40" name="__codelineno-17-40" href="#__codelineno-17-40"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>6. Complete Employee CRUD Flow</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Client / Swagger
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>       ↓
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>EmployeeController
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>       ↓
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>OfficeDbContext
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>       ↓
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a>┌─────────────────────────────┐
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>│ GetEmployees()              │ → Employee Table
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a>│ CreateEmployee()            │ → InsertEmployee SP
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>│ DeleteEmployee()            │ → DeleteEmployee SP
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a>└─────────────────────────────┘
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a>       ↓
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>SQL Server
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a>       ↓
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a>    OfficeDB
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a>       ↓
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a>  Employee Table
+</code></pre></div>
+</details>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+      <div class="md-progress" data-md-component="progress" role="progressbar"></div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["search.highlight", "search.suggest", "navigation.instant", "navigation.instant.progress", "navigation.instant.preview", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "content.code.copy"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+        <script src="../../customWord.js"></script>
+      
+    
+  </body>
+</html>
