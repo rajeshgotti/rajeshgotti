@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../validation/">
+        <link rel="prev" href="../RealTimeCrud/">
       
       
-        <link rel="next" href="../mysql/">
+        <link rel="next" href="../mysql2/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>sql - Rajesh Angular Document</title>
+        <title>Validations - Rajesh Angular Document</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#step-1-create-a-database" class="md-skip">
+        <a href="#1-create-mobilerequestdto" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              sql
+              Validations
             
           </span>
         </div>
@@ -2744,29 +2744,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../validation/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Validations
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -2782,7 +2759,7 @@
   
   
   <span class="md-ellipsis">
-    sql
+    Validations
     
   </span>
   
@@ -2795,7 +2772,7 @@
   
   
   <span class="md-ellipsis">
-    sql
+    Validations
     
   </span>
   
@@ -2816,141 +2793,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-create-a-database" class="md-nav__link">
+  <a href="#1-create-mobilerequestdto" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Create a Database
+      1. Create MobileRequestDto
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-use-the-database" class="md-nav__link">
+  <a href="#2-validation-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Use the Database
+      2. Validation Rules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-table" class="md-nav__link">
+  <a href="#3-controller-does-not-need-manual-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Create a Table
+      3. Controller Does Not Need Manual Validation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-insert-records-into-the-table" class="md-nav__link">
+  <a href="#4-controller" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Insert Records into the Table
+      4. Controller
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-view-inserted-records" class="md-nav__link">
+  <a href="#5-complete-validation-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 5: View Inserted Records
+      5. Complete Validation Flow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-update-data" class="md-nav__link">
+  <a href="#6-easy-way-to-remember" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 6: Update Data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-7-delete-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 7: Delete Data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-8-alter-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 8: Alter Table
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 8: Alter Table">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-new-column" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Add New Column
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modify-existing-column" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Modify Existing Column
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rename-column-mysql-80" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Rename Column (MySQL 8.0+)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#drop-column" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Drop Column
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-9-drop-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 9: Drop Table
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-10-drop-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 10: Drop Database
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Final Flow
+      6. Easy Way to Remember
     </span>
   </a>
   
@@ -2960,6 +2850,29 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mysql2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    sql
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -3235,141 +3148,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#step-1-create-a-database" class="md-nav__link">
+  <a href="#1-create-mobilerequestdto" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 1: Create a Database
+      1. Create MobileRequestDto
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-2-use-the-database" class="md-nav__link">
+  <a href="#2-validation-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 2: Use the Database
+      2. Validation Rules
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-3-create-a-table" class="md-nav__link">
+  <a href="#3-controller-does-not-need-manual-validation" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 3: Create a Table
+      3. Controller Does Not Need Manual Validation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-4-insert-records-into-the-table" class="md-nav__link">
+  <a href="#4-controller" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 4: Insert Records into the Table
+      4. Controller
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-5-view-inserted-records" class="md-nav__link">
+  <a href="#5-complete-validation-flow" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 5: View Inserted Records
+      5. Complete Validation Flow
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#step-6-update-data" class="md-nav__link">
+  <a href="#6-easy-way-to-remember" class="md-nav__link">
     <span class="md-ellipsis">
-      Step 6: Update Data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-7-delete-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 7: Delete Data
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-8-alter-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 8: Alter Table
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Step 8: Alter Table">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#add-new-column" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Add New Column
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#modify-existing-column" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Modify Existing Column
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rename-column-mysql-80" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Rename Column (MySQL 8.0+)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#drop-column" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Drop Column
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-9-drop-table" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 9: Drop Table
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#step-10-drop-database" class="md-nav__link">
-    <span class="md-ellipsis">
-      Step 10: Drop Database
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-flow" class="md-nav__link">
-    <span class="md-ellipsis">
-      ✅ Final Flow
+      6. Easy Way to Remember
     </span>
   </a>
   
@@ -3393,101 +3219,106 @@
 
 
 
-  <h1>sql</h1>
+  <h1>Validations</h1>
 
-<details class="note" open="open">
-<summary>Step-by-Step MySQL Example</summary>
-<h2 id="step-1-create-a-database">Step 1: Create a Database</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">emp</span><span class="p">;</span>
+<details class="example" open="open">
+<summary>ASP.NET Core — DTO Validation</summary>
+<h3 id="1-create-mobilerequestdto">1. Create MobileRequestDto</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">using</span><span class="w"> </span><span class="nn">System.ComponentModel.DataAnnotations</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="k">namespace</span><span class="w"> </span><span class="nn">Mobile.DTOs</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">public</span><span class="w"> </span><span class="k">class</span><span class="w"> </span><span class="nc">MobileRequestDto</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">        </span><span class="na">[Required(ErrorMessage = &quot;Mobile name is required&quot;)]</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">MobileName</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="na">[Required(ErrorMessage = &quot;Mobile model is required&quot;)]</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="n">MobileModel</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="na">[Range(1, 10000000, ErrorMessage = &quot;Price must be greater than 0&quot;)]</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="kt">decimal</span><span class="w"> </span><span class="n">Price</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">get</span><span class="p">;</span><span class="w"> </span><span class="k">set</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="step-2-use-the-database">Step 2: Use the Database</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="n">USE</span><span class="w"> </span><span class="n">emp</span><span class="p">;</span>
+<h3 id="2-validation-rules">2. Validation Rules</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>MobileName
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>    ↓
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>[Required]
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    ↓
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Cannot be empty
 </code></pre></div>
-<hr />
-<h2 id="step-3-create-a-table">Step 3: Create a Table</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="n">PatientId</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">IDENTITY</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="n">Name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="n">StartDate</span><span class="w"> </span><span class="nb">DATE</span><span class="p">,</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="n">Email</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">Null</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="n">IsPrivate</span><span class="w"> </span><span class="nb">BIT</span><span class="p">,</span><span class="w"> </span><span class="o">//</span><span class="w"> </span><span class="nb">bit</span><span class="w"> </span><span class="n">means</span><span class="w"> </span><span class="nb">boolean</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="k">sql</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="n">SmsEnabled</span><span class="w"> </span><span class="nb">BIT</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="o">//</span><span class="k">to</span><span class="w"> </span><span class="n">make</span><span class="w"> </span><span class="n">boolen</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="mi">0</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>MobileModel
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>    ↓
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>[Required]
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    ↓
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>Cannot be empty
 </code></pre></div>
-<hr />
-<h2 id="step-4-insert-records-into-the-table">Step 4: Insert Records into the Table</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">users</span><span class="w"> </span><span class="p">(</span><span class="n">Name</span><span class="p">,</span><span class="w"> </span><span class="n">Email</span><span class="p">)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">VALUES</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">(</span><span class="s1">&#39;Bob Jones&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;bob@example.com&#39;</span><span class="p">),</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">(</span><span class="s1">&#39;Carol Lee&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;carol@example.com&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>Price
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    ↓
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>[Range(1, 10000000)]
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>    ↓
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>Must be between 1 and 10,000,000
 </code></pre></div>
-<hr />
-<h2 id="step-5-view-inserted-records">Step 5: View Inserted Records</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">SELECT</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
+<h3 id="3-controller-does-not-need-manual-validation">3. Controller Does Not Need Manual Validation</h3>
+<p>Because the controller has:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="na">[ApiController]</span>
 </code></pre></div>
-<hr />
-<h2 id="step-6-update-data">Step 6: Update Data</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">UPDATE</span><span class="w"> </span><span class="n">users</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">SET</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Robert Jones&#39;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<p>ASP.NET Core automatically checks the DTO validation rules.</p>
+<p>Therefore, manual validation like:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">ModelState</span><span class="p">.</span><span class="n">IsValid</span><span class="p">)</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nf">BadRequest</span><span class="p">(</span><span class="n">ModelState</span><span class="p">);</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="step-7-delete-data">Step 7: Delete Data</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">DELETE</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="n">users</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">WHERE</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
+<p>is normally <strong>not required</strong> when using <code>[ApiController]</code>.</p>
+<h3 id="4-controller">4. Controller</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="na">[HttpPost]</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="k">public</span><span class="w"> </span><span class="n">IActionResult</span><span class="w"> </span><span class="nf">PostMobile</span><span class="p">(</span><span class="n">MobileRequestDto</span><span class="w"> </span><span class="n">mobile</span><span class="p">)</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="p">{</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="kt">var</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">_service</span><span class="p">.</span><span class="n">AddMobile</span><span class="p">(</span><span class="n">mobile</span><span class="p">);</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nf">Ok</span><span class="p">(</span><span class="n">result</span><span class="p">);</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="p">}</span>
 </code></pre></div>
-<hr />
-<h2 id="step-8-alter-table">Step 8: Alter Table</h2>
-<h3 id="add-new-column">✅ Add New Column</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="k">ADD</span><span class="w"> </span><span class="n">phone</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">15</span><span class="p">),</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="n">IsPrivate</span><span class="w"> </span><span class="nb">BIT</span><span class="w"> </span><span class="k">NULL</span><span class="p">;</span>
+<h3 id="5-complete-validation-flow">5. Complete Validation Flow</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Angular / Client
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>      ↓
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>POST Request
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      ↓
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>Controller
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>      ↓
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>MobileRequestDto
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>      ↓
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>DataAnnotations Validation
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>      ↓
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>┌─────────────────────────────┐
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>│ [Required]                  │
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>│ [Range]                     │
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>└─────────────────────────────┘
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>      ↓
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>[ApiController]
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>      ↓
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a>Validation Failed?
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a>   ↙           ↘
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a> YES            NO
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a>  ↓              ↓
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a>400 Bad         Service
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a>Request           ↓
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a>              AddMobile()
 </code></pre></div>
-<hr />
-<h3 id="modify-existing-column">✅ Modify Existing Column</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="k">MODIFY</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">150</span><span class="p">);</span>
-</code></pre></div>
-<hr />
-<h3 id="rename-column-mysql-80">✅ Rename Column (MySQL 8.0+)</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">RENAME</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">email</span><span class="w"> </span><span class="k">TO</span><span class="w"> </span><span class="n">user_email</span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<h3 id="drop-column">✅ Drop Column</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">ALTER</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">DROP</span><span class="w"> </span><span class="k">COLUMN</span><span class="w"> </span><span class="n">phone</span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<h2 id="step-9-drop-table">Step 9: Drop Table</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">users</span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<h2 id="step-10-drop-database">Step 10: Drop Database</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="k">DROP</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">emp</span><span class="p">;</span>
-</code></pre></div>
-<hr />
-<h2 id="final-flow">✅ Final Flow</h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Create Database
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>    ↓
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>Use Database
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>    ↓
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>Create Table
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>    ↓
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>Insert Records
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>    ↓
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>View Data
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>    ↓
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>Update Data
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a>    ↓
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>Delete Data
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a>    ↓
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a>Alter Table
-<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a>    ↓
-<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a>Drop Table
-<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>    ↓
-<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a>Drop Database
+<h3 id="6-easy-way-to-remember">6. Easy Way to Remember</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>DTO
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>  ↓
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Validation Attributes
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>  ↓
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>[ApiController]
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>  ↓
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Automatic Validation
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>  ↓
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Controller
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>  ↓
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>Service
 </code></pre></div>
 </details>
 
